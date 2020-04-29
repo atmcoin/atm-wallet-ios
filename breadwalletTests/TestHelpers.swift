@@ -11,7 +11,7 @@ import XCTest
 @testable import breadwallet
 @testable import BRCrypto
 
-let testWalletSecAttrService = "com.brd.testnetQA.tests"
+let testWalletSecAttrService = "cash.just.testnetQA.tests"
 
 typealias CoreCurrency = BRCrypto.Currency
 typealias AppCurrency = breadwallet.Currency

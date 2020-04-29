@@ -14,8 +14,8 @@ import UIKit
 class CoreSystem: Subscriber, Trackable {
     
     private var system: System?
-    private let queue = DispatchQueue(label: "com.brd.CoreSystem", qos: .utility)
-    private let listenerQueue = DispatchQueue(label: "com.brd.CoreSystem.listener", qos: .utility)
+    private let queue = DispatchQueue(label: "cash.just.CoreSystem", qos: .utility)
+    private let listenerQueue = DispatchQueue(label: "cash.just.CoreSystem.listener", qos: .utility)
 
     // MARK: Wallets + Currencies
 

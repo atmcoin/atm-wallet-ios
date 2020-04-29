@@ -3583,7 +3583,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwalletTests;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.breadwalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
@@ -3608,7 +3608,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwalletTests;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.breadwalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
@@ -3631,7 +3631,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwalletUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.breadwalletUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = breadwallet;
@@ -3654,7 +3654,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwalletUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.breadwalletUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = breadwallet;
@@ -3778,7 +3778,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brd.internalQA.Tests;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.internalQA.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
@@ -3801,7 +3801,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brd.internalQA.UITests;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.internalQA.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = breadwallet;
@@ -3860,7 +3860,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brd.internalQA.Screenshots;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.internalQA.Screenshots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = breadwallet;
@@ -3982,7 +3982,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brd.internalQA.Tests;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.internalQA.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
@@ -4005,7 +4005,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brd.internalQA.UITests;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.internalQA.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = breadwallet;
@@ -4064,7 +4064,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brd.internalQA.Screenshots;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.internalQA.Screenshots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = breadwallet;
@@ -4187,7 +4187,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brd.internalQA.Tests;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.internalQA.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
@@ -4210,7 +4210,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brd.internalQA.UITests;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.internalQA.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = breadwallet;
@@ -4269,7 +4269,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brd.internalQA.Screenshots;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.internalQA.Screenshots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = breadwallet;
@@ -4293,7 +4293,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.Screenshots;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.Screenshots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = breadwallet;
@@ -4317,7 +4317,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.Screenshots;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.Screenshots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = breadwallet;
@@ -4341,7 +4341,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.Screenshots;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.Screenshots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = breadwallet;
@@ -4465,7 +4465,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwalletTests;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.breadwalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
@@ -4488,7 +4488,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwalletUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.breadwalletUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = breadwallet;
@@ -4547,7 +4547,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.Screenshots;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.Screenshots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = breadwallet;
@@ -4671,7 +4671,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwalletTests;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.breadwalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
@@ -4694,7 +4694,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwalletUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.breadwalletUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = breadwallet;
@@ -4753,7 +4753,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.Screenshots;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.Screenshots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = breadwallet;
@@ -4875,7 +4875,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwalletTests;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.breadwalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
@@ -4898,7 +4898,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwalletUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = cash.just.breadwalletUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = breadwallet;
