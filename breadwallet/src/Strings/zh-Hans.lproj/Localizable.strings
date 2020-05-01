@@ -1,9 +1,9 @@
 /* App name */
-"About.appName.android" = "BRD";
+"About.appName.android" = "Coinsquare";
 /* About screen blog label */
 "About.blog" = "博客";
 /* About screen footer */
-"About.footer" = "由全球 BRD 团队制作。版本%1$@构建%2$@";
+"About.footer" = "由全球 Coinsquare 团队制作。版本%1$@构建%2$@";
 /* Privay Policy button label */
 "About.privacy" = "隐私政策";
 /* About screen reddit label */
@@ -15,7 +15,7 @@
 /* About screen twitter label */
 "About.twitter" = "Twitter";
 /* About screen wallet ID label */
-"About.walletID" = "BRD 奖励 ID";
+"About.walletID" = "Coinsquare 奖励 ID";
 /* Close modal button accessibility label */
 "AccessibilityLabels.close" = "关闭";
 /* Support center accessibiliy label */
@@ -29,7 +29,7 @@
 /* Loading Wallet Message */
 "Account.loadingMessage" = "正在加载钱包";
 /* Default wallet name */
-"AccountHeader.defaultWalletName" = "我的 BRD";
+"AccountHeader.defaultWalletName" = "我的 Coinsquare";
 /* Third party keyboard warning */
 "Alert.customKeyboard.android" = "看起来您正在使用第三方键盘，它可以记录您键入的内容并窃取您的密钥（Paper Key）。请切换到默认的安卓键盘以便获得额外保护。";
 /* Error alert title */
@@ -37,11 +37,11 @@
 /* Keystore error */
 "Alert.keystore.generic.android" = "您的安卓操作系统密钥库存在问题，请联系support@breadwallet.com";
 /* KeyStore error, keys are invalidated */
-"Alert.keystore.invalidated.android" = "您的 BRD 加密数据最近因为您的安卓系统屏幕锁定被禁用而失效。";
+"Alert.keystore.invalidated.android" = "您的 Coinsquare 加密数据最近因为您的安卓系统屏幕锁定被禁用而失效。";
 /* Warn user key store data has been invalidate because the user changed their security settings. The user must uninstall. */
-"Alert.keystore.invalidated.uninstall.android" = "我们无法继续，因为您的屏幕锁定设置已更改(例如，密码已禁用，指纹已更改)。出于安全考虑，安卓已永久锁定了您的密钥存储。因此，您必须通过卸载删除BRD应用数据。\n\n请放心，您的资金很安全！ 重新安装应用后才能用纸质密匙还原您的钱包。";
+"Alert.keystore.invalidated.uninstall.android" = "我们无法继续，因为您的屏幕锁定设置已更改(例如，密码已禁用，指纹已更改)。出于安全考虑，安卓已永久锁定了您的密钥存储。因此，您必须通过卸载删除Coinsquare应用数据。\n\n请放心，您的资金很安全！ 重新安装应用后才能用纸质密匙还原您的钱包。";
 /* Warn user key store data has been invalidate because the user changed their security settings. The user must wipe their app data. */
-"Alert.keystore.invalidated.wipe.android" = "我们无法继续，因为您的屏幕锁定设置已更改(例如，密码已禁用，指纹已更改)。出于安全考虑，安卓已永久锁定了您的密钥存储。因此，必须擦除您的BRD应用数据。\n\n请放心，您的资金很安全！ 用你的纸质密匙还原您的钱包。";
+"Alert.keystore.invalidated.wipe.android" = "我们无法继续，因为您的屏幕锁定设置已更改(例如，密码已禁用，指纹已更改)。出于安全考虑，安卓已永久锁定了您的密钥存储。因此，必须擦除您的Coinsquare应用数据。\n\n请放心，您的资金很安全！ 用你的纸质密匙还原您的钱包。";
 /* Keystore error title */
 "Alert.keystore.title.android" = "安卓系统密钥库错误";
 /* No internet alert message */
@@ -71,11 +71,11 @@
 /* Fingerprint was recognized by the scanner */
 "Alerts.touchIdSucceeded.android" = "已识别指纹";
 /* Tell the user where they can enable permissions to access device storage. */
-"Android.allowFileSystemAccess" = "请在您的设备设置中启用存储空间使用权限：“设置” > “应用” > “BRD” > “权限”。";
+"Android.allowFileSystemAccess" = "请在您的设备设置中启用存储空间使用权限：“设置” > “应用” > “Coinsquare” > “权限”。";
 /* The "home" screen is the name of the top level menu for the app. */
 "Android.BCH.welcome.message" = "您钱包中的任何比特币现金 (BCH) 均可通过主屏幕访问。";
 /* Warning about using apps that can alter the screen */
-"Android.screenAlteringMessage" = "您应禁用屏幕更改应用（如 Twilight），否则 BRD 将无法正常工作。";
+"Android.screenAlteringMessage" = "您应禁用屏幕更改应用（如 Twilight），否则 Coinsquare 将无法正常工作。";
 /* An app that alters the screen ("screen-altering app") has been detected. */
 "Android.screenAlteringTitle" = "检测到屏幕更改应用";
 /* JSON Serialization error message */
@@ -223,7 +223,7 @@
 /* Email unavailable alert title */
 "ErrorMessages.emailUnavailableTitle" = "电子邮箱不可用";
 /* Message that gets shown when we've detected the user has encountered the looping lock-screen bug. (preserve [ ] characters) */
-"ErrorMessages.loopingLockScreen.android" = "由于您的 Android 版本错误，BRD 无法验证。[Please tap here for more information.]";
+"ErrorMessages.loopingLockScreen.android" = "由于您的 Android 版本错误，Coinsquare 无法验证。[Please tap here for more information.]";
 /* Messaging unavailable alert title */
 "ErrorMessages.messagingUnavailableMessage" = "本设备未被配置来发送消息。";
 /* Messaging unavailable alert title */
@@ -232,14 +232,14 @@
 "ErrorMessages.touchIdFailed.android" = "未识别出指纹。请再试一次。";
 /* You can customize your Face ID Spending Limit from the [menu] */
 "FaceIDSettings.customizeText" = "您可以在 %1$@ 自定义面部识别支出限额。";
-/* Text describing the purpose of the Face ID settings in the BRD app. */
-"FaceIDSettings.explanatoryText" = "使用 Face ID 指纹解锁您的 BRD 应用并支付。";
+/* Text describing the purpose of the Face ID settings in the Coinsquare app. */
+"FaceIDSettings.explanatoryText" = "使用 Face ID 指纹解锁您的 Coinsquare 应用并支付。";
 /* Face Id screen label */
-"FaceIDSettings.label" = "使用面部识别解锁 BRD，在设置的限额内汇款。";
+"FaceIDSettings.label" = "使用面部识别解锁 Coinsquare，在设置的限额内汇款。";
 /* Title of the screen for setting the Face ID Spending Limit */
 "FaceIDSettings.linkText" = "面部识别支出限额页";
-/* Setting to turn on Face ID for BRD */
-"FaceIDSettings.switchLabel" = "为 BRD 启用面部识别";
+/* Setting to turn on Face ID for Coinsquare */
+"FaceIDSettings.switchLabel" = "为 Coinsquare 启用面部识别";
 /* Face ID settings view title */
 "FaceIDSettings.title" = "面部识别";
 /* Text label for a toggle that enables Face ID for sending money. */
@@ -248,8 +248,8 @@
 "FaceIDSettings.unavailableAlertMessage" = "您在本设备上还未设置面部识别。立刻前往设置>面部识别与密码进行设置。";
 /* Face ID unavailable alert title */
 "FaceIDSettings.unavailableAlertTitle" = "未设置面部识别";
-/* Text label for a toggle that enables Face ID for unlocking the BRD app. */
-"FaceIDSettings.unlockTitleText" = "启用 Face ID 人脸解锁 BRD";
+/* Text label for a toggle that enables Face ID for unlocking the Coinsquare app. */
+"FaceIDSettings.unlockTitleText" = "启用 Face ID 人脸解锁 Coinsquare";
 /* Face Id spending limit screen title */
 "FaceIDSpendingLimit.title" = "面部识别支出限额";
 /* Economy fee */
@@ -309,13 +309,13 @@
 /* Caption for graphics */
 "Import.leftCaption" = "私钥";
 /* Import wallet intro screen message */
-"Import.message" = "私钥通常以 QR 码形式打印在纸上，用于离线存储资金。 兑换私钥，用一笔交易将其控制的全部资金转入 BRD。";
+"Import.message" = "私钥通常以 QR 码形式打印在纸上，用于离线存储资金。 兑换私钥，用一笔交易将其控制的全部资金转入 Coinsquare。";
 /* Enter password alert view title */
 "Import.password" = "本私钥受到密码保护。";
 /* password textfield placeholder */
 "Import.passwordPlaceholder" = "密码";
 /* Caption for graphics */
-"Import.rightCaption" = "您的 BRD 钱包";
+"Import.rightCaption" = "您的 Coinsquare 钱包";
 /* Scan Private key button label */
 "Import.scan" = "扫描私钥";
 /* Import wallet success alert title */
@@ -335,9 +335,9 @@
 /* Ignore jailbreak warning button */
 "JailbreakWarnings.ignore" = "忽略";
 /* Jailbreak warning message */
-"JailbreakWarnings.messageWithBalance" = "设备安全性受损\n任何'越狱'应用都可能访问 BRD 的密钥链数据并盗取您的比特币！立即擦除这个钱包并在一台安全设备上进行恢复。";
+"JailbreakWarnings.messageWithBalance" = "设备安全性受损\n任何'越狱'应用都可能访问 Coinsquare 的密钥链数据并盗取您的比特币！立即擦除这个钱包并在一台安全设备上进行恢复。";
 /* Jailbreak warning message */
-"JailbreakWarnings.messageWithoutBalance" = "设备安全性受损\n任何'越狱'应用都可能访问 BRD 的密钥链数据并盗取您的比特币！请您仅在未越狱设备上使用 BRD 。";
+"JailbreakWarnings.messageWithoutBalance" = "设备安全性受损\n任何'越狱'应用都可能访问 Coinsquare 的密钥链数据并盗取您的比特币！请您仅在未越狱设备上使用 Coinsquare 。";
 /* Jailbreak warning title */
 "JailbreakWarnings.title" = "警告";
 /* Wipe wallet button */
@@ -359,7 +359,7 @@
 /* Location services disabled error */
 "LocationPlugin.disabled" = "位置服务被禁用。";
 /* No permissions for location services */
-"LocationPlugin.notAuthorized" = "BRD 无权限访问位置服务。";
+"LocationPlugin.notAuthorized" = "Coinsquare 无权限访问位置服务。";
 /* Wallet creation date prefix */
 "ManageWallet.creationDatePrefix" = "您在%1$@上创建了您的钱包";
 /* Manage wallet description text */
@@ -370,6 +370,8 @@
 "ManageWallet.title" = "管理钱包";
 /* "Add [a] Wallet [to the home screen]" */
 "MenuButton.addWallet" = "添加钱包";
+/* Menu button title */
+"MenuButton.cashATMWithdrawl" = "ATM Cash Withdrawal";
 /* Menu button title */
 "MenuButton.lock" = "锁住钱包";
 /* (Click here to) manage (your list of) wallets */
@@ -433,13 +435,13 @@
 /* Onboarding screen Page 1 title */
 "OnboardingPageOne.title" = "欢迎来到你新的世界钱包！";
 /* Onboarding screen Page 3 subtitle */
-"OnboardingPageThree.subtitle" = "轻松又安全地与 BRD 进行投资和多样化";
+"OnboardingPageThree.subtitle" = "轻松又安全地与 Coinsquare 进行投资和多样化";
 /* Onboarding screen Page 3 title */
 "OnboardingPageThree.title" = "购买并交易比特币,代币和其他数字货币。";
 /* Onboarding screen Page 2 subtitle */
 "OnboardingPageTwo.subtitle" = "我们有价值超过 600 亿美元的资产受到保护。";
 /* Onboarding screen Page 2 title */
-"OnboardingPageTwo.title" = "加入全球数百万人信赖的BRD。";
+"OnboardingPageTwo.title" = "加入全球数百万人信赖的Coinsquare。";
 /* Eg. Send 1.0Eth to purchase CCC */
 "PaymentConfirmation.amountText" = "发送%1$@以购买%2$@";
 /* Payment confirmation view title */
@@ -497,7 +499,7 @@
 /* Transaction rejected prompt title */
 "Prompts.RecommendRescan.title" = "交易被拒";
 /* Share data prompt body */
-"Prompts.ShareData.body" = "与我们分享您的匿名数据来帮助改善 BRD。";
+"Prompts.ShareData.body" = "与我们分享您的匿名数据来帮助改善 Coinsquare。";
 /* Share data prompt title */
 "Prompts.ShareData.title" = "分享匿名数据";
 /* Enable touch ID prompt body */
@@ -511,7 +513,7 @@
 /* Button on fingerprint prompt so the user can enter their PIN instead */
 "Prompts.TouchId.usePin.android" = "密码";
 /* Upgrade PIN prompt body. */
-"Prompts.UpgradePin.body" = "BRD 已升级到使用 6 位 PIN。点击此处升级。";
+"Prompts.UpgradePin.body" = "Coinsquare 已升级到使用 6 位 PIN。点击此处升级。";
 /* Upgrade PIN prompt title. */
 "Prompts.UpgradePin.title" = "升级 PIN";
 /* Body text for the push notifications prompt. */
@@ -519,11 +521,11 @@
 /* Push notifications are disabled alert title" */
 "PushNotifications.disabled" = "提示已禁用";
 /* Body text when push notifications are disabled. */
-"PushNotifications.disabledBody" = "开启接收 BRD 特惠版更新通知。";
+"PushNotifications.disabledBody" = "开启接收 Coinsquare 特惠版更新通知。";
 /* Body text when push notifications are enabled. */
-"PushNotifications.enabledBody" = "您正在接收 BRD 特惠版更新。";
-/* Instructions to enable push notifications for BRD in the phone's system settings. */
-"PushNotifications.enableInstructions" = "疑似关闭通知。请进入设置启用 BRD 通知。";
+"PushNotifications.enabledBody" = "您正在接收 Coinsquare 特惠版更新。";
+/* Instructions to enable push notifications for Coinsquare in the phone's system settings. */
+"PushNotifications.enableInstructions" = "疑似关闭通知。请进入设置启用 Coinsquare 通知。";
 /* Push notifications toggle switch label */
 "PushNotifications.label" = "接收推送通知";
 /* Push notifications are off label */
@@ -537,9 +539,9 @@
 /* Google play review prompt, revivew button */
 "RateAppPrompt.Button.Dismiss.Android" = "不了，谢谢。";
 /* Google play review prompt, dismiss button */
-"RateAppPrompt.Button.RateApp.Android" = "评价BRD";
+"RateAppPrompt.Button.RateApp.Android" = "评价Coinsquare";
 /* Google play review prompt title */
-"RateAppPrompt.Title.Android" = "评价BRD";
+"RateAppPrompt.Title.Android" = "评价Coinsquare";
 /* Address copied message. */
 "Receive.copied" = "已复制到剪贴板。";
 /* Share via email button label */
@@ -561,7 +563,7 @@
 /* Enter paper key instruction */
 "RecoverWallet.instruction" = "输入纸键";
 /* Recover wallet intro */
-"RecoverWallet.intro" = "用您的纸键恢复您的 BRD。";
+"RecoverWallet.intro" = "用您的纸键恢复您的 Coinsquare。";
 /* Invalid paper key message */
 "RecoverWallet.invalid" = "您输入的纸键无效。请仔细检查每个单词并重试。";
 /* Previous button accessibility label */
@@ -620,14 +622,14 @@
 "RecoveryKeyFlow.rememberToWriteDownReminder" = "请记得将这些字词写下来。如果您忘记了,请滑动以返回。";
 /* Instruction displayed when the user is resetting the PIN, which requires the recovery key to be entered */
 "RecoveryKeyFlow.resetPINInstruction" = "请输入恢复密钥以重置您的 PIN 码。";
-/* Assures the user that BRD will keep the user's funds secure. */
+/* Assures the user that Coinsquare will keep the user's funds secure. */
 "RecoveryKeyFlow.securityAssurance" = "鉴于在交易中您的资金可得到最佳的安全和隐私保障,您可放心购买和交易。";
 /* Recommends that the user stores the recovery key in a secure location */
-"RecoveryKeyFlow.storeSecurelyRecommendation" = "请将您的密钥存放在安全的地方。此密钥为恢复您的钱包的唯一方法。BRD 不会保留副本。";
+"RecoveryKeyFlow.storeSecurelyRecommendation" = "请将您的密钥存放在安全的地方。此密钥为恢复您的钱包的唯一方法。Coinsquare 不会保留副本。";
 /* Title for the success page after the recovery key has been set up */
 "RecoveryKeyFlow.successHeading" = "恭喜！您已完成恢复密钥设置。";
 /* Subtitle for the success page after the recovery key has been set up */
-"RecoveryKeyFlow.successSubheading" = "您现已可以在您的 BRD 钱包中进行存款,交易以及购买加密货币。";
+"RecoveryKeyFlow.successSubheading" = "您现已可以在您的 Coinsquare 钱包中进行存款,交易以及购买加密货币。";
 /* Title displayed to the user on the intro screen when unlinking a wallet */
 "RecoveryKeyFlow.unlinkWallet" = "取消钱包与此设备的关联。";
 /* Subtitle displayed to the user on the intro screen when unlinking a wallet. */
@@ -657,7 +659,7 @@
 /* extimated time */
 "ReScan.body1" = "20-45 分钟";
 /* Syncing explanation */
-"ReScan.body2" = "如果某次交易在比特币网络上显示为已完成，却不在您的 BRD 里。";
+"ReScan.body2" = "如果某次交易在比特币网络上显示为已完成，却不在您的 Coinsquare 里。";
 /* Syncing explanation */
 "ReScan.body3" = "你反复得到交易被拒绝的出错信息。";
 /* Start Sync button label */
@@ -673,7 +675,7 @@
 /* Rewards view expanded body. */
 "RewardsView.expandedBody" = "了解如何节省交易费用并激活未来的奖励计划。";
 /* Rewards view expanded title. */
-"RewardsView.expandedTitle" = "介绍BRD奖励计划。";
+"RewardsView.expandedTitle" = "介绍Coinsquare奖励计划。";
 /* Rewards view title */
 "RewardsView.normalTitle" = "奖励";
 /* Scan bitcoin address camera flash toggle */
@@ -698,11 +700,11 @@
 /* Paper Key button title */
 "SecurityCenter.paperKeyTitle.android" = "纸键";
 /* PIN button description */
-"SecurityCenter.pinDescription" = "保护您的 BRD 免遭未授权用户盗用。";
+"SecurityCenter.pinDescription" = "保护您的 Coinsquare 免遭未授权用户盗用。";
 /* PIN button title */
 "SecurityCenter.pinTitle" = "6 位 PIN";
 /* Touch ID button description */
-"SecurityCenter.touchIdDescription" = "方便地解锁 BRD，在设定限额下汇钱。";
+"SecurityCenter.touchIdDescription" = "方便地解锁 Coinsquare，在设定限额下汇钱。";
 /* Touch ID button title */
 "SecurityCenter.touchIdTitle" = "触摸 ID";
 /* Security center fingerprint authentication button */
@@ -724,13 +726,13 @@
 /* Balance: $4.00 */
 "Send.balance" = "余额：%1$@";
 /* Instructions how to allow the camera access for the app */
-"Send.cameraUnavailabeMessage.android" = "在“设置”>“应用”>“BRD”>“权限”中允许访问相机";
+"Send.cameraUnavailabeMessage.android" = "在“设置”>“应用”>“Coinsquare”>“权限”中允许访问相机";
 /* Permission required to access camera */
-"Send.cameraUnavailabeTitle.android" = "BRD 没有访问相机的权限";
+"Send.cameraUnavailabeTitle.android" = "Coinsquare 没有访问相机的权限";
 /* Camera not allowed message */
 "Send.cameraunavailableMessage" = "前往“设置”以允许访问照相机。";
 /* Camera not allowed alert title */
-"Send.cameraUnavailableTitle" = "BRD 不允许访问照相机";
+"Send.cameraUnavailableTitle" = "Coinsquare 不允许访问照相机";
 /* Warning when sending to self. */
 "Send.containsAddress" = "目标是您自己的地址。您不能发送给您自己。";
 /* Could not create transaction alert title */
@@ -814,7 +816,7 @@
 /* Enable segwit. */
 "Settings.EnableSegwit" = "启用 SegWit";
 /* Are you enjoying bread alert message body */
-"Settings.enjoying" = "您喜欢 BRD 吗？";
+"Settings.enjoying" = "您喜欢 Coinsquare 吗？";
 /* Face ID spending limit label */
 "Settings.faceIdLimit" = "面部识别支出限额";
 /* Redeem the funds stored on this private key. */
@@ -854,7 +856,7 @@
 /* Unlink/delete your wallet from the current device. */
 "Settings.wipe" = "取消与此设备的链接";
 /* Share data view body */
-"ShareData.body" = "同我们分享您的匿名数据来帮助改善 BRD。这不包括任何财务信息。我们尊重您的财务隐私。";
+"ShareData.body" = "同我们分享您的匿名数据来帮助改善 Coinsquare。这不包括任何财务信息。我们尊重您的财务隐私。";
 /* Share data header */
 "ShareData.header" = "共享数据？";
 /* Share data switch label. */
@@ -862,9 +864,9 @@
 /* button label */
 "StartPaperPhrase.againButtonTitle" = "再次书写纸键";
 /* Paper key explanation text. */
-"StartPaperPhrase.body" = "如果您的手机丢失、被盗、损坏或升级，纸上密钥是恢复 BRD 的唯一方法。\n\n\n我们将向您显示一张单词表，请将其写在纸上并保存在安全的地方。";
+"StartPaperPhrase.body" = "如果您的手机丢失、被盗、损坏或升级，纸上密钥是恢复 Coinsquare 的唯一方法。\n\n\n我们将向您显示一张单词表，请将其写在纸上并保存在安全的地方。";
 /* Paper key explanation text (Android-version) */
-"StartPaperPhrase.Body.Android" = "在手机丢失,被盗,损坏或升级情况下,纸钥是您恢复 BRD 的唯一方法。\n\n您需要提供纸钥以更改手机安全设置。\n\n我们将向您展示一份单词列表,请您记录在纸上并妥善保管。";
+"StartPaperPhrase.Body.Android" = "在手机丢失,被盗,损坏或升级情况下,纸钥是您恢复 Coinsquare 的唯一方法。\n\n您需要提供纸钥以更改手机安全设置。\n\n我们将向您展示一份单词列表,请您记录在纸上并妥善保管。";
 /* button label */
 "StartPaperPhrase.buttonTitle" = "写下纸键";
 /* Argument is date; date should be on a new line */
@@ -917,16 +919,16 @@
 "TouchIdSettings.disabledWarning.body.android" = "您尚未在此设备上启用指纹认证。前往“设置” ->“安全”来设置指纹认证。";
 /* Fingerprint Is Not Setup */
 "TouchIdSettings.disabledWarning.title.android" = "指纹认证未启用";
-/* Text that describes the purpose of the Touch ID settings in the BRD app. */
-"TouchIdSettings.explanatoryText" = "使用 Touch ID 指纹解锁您的 BRD 应用并支付。";
+/* Text that describes the purpose of the Touch ID settings in the Coinsquare app. */
+"TouchIdSettings.explanatoryText" = "使用 Touch ID 指纹解锁您的 Coinsquare 应用并支付。";
 /* Touch Id screen label */
-"TouchIdSettings.label" = "请用指纹解锁 BRD 并在设定限额下汇钱。";
+"TouchIdSettings.label" = "请用指纹解锁 Coinsquare 并在设定限额下汇钱。";
 /* Link Text (see TouchIdSettings.customizeText) */
 "TouchIdSettings.linkText" = "Touch ID 支出限额屏幕";
 /* Spending Limit: b100,000 ($100) */
 "TouchIdSettings.spendingLimit" = "支出限制：%1$@ (%2$@)";
 /* Touch id switch label. */
-"TouchIdSettings.switchLabel" = "针对 BRD 启用触摸 ID";
+"TouchIdSettings.switchLabel" = "针对 Coinsquare 启用触摸 ID";
 /* Enable fingerprint for this wallet called Bread */
 "TouchIdSettings.switchLabel.android" = "指纹认证";
 /* Touch ID settings view title */
@@ -939,8 +941,8 @@
 "TouchIdSettings.unavailableAlertMessage" = "您尚未在本设备上设置触摸 ID。现在前往设置 -> 触摸 ID和密码进行设置。";
 /* Touch ID unavailable alert title */
 "TouchIdSettings.unavailableAlertTitle" = "触摸 ID 未设置";
-/* Text label for the toggle that enables Touch ID for unlocking the BRD app. */
-"TouchIdSettings.unlockTitleText" = "启用 Touch ID 指纹解锁BRD";
+/* Text label for the toggle that enables Touch ID for unlocking the Coinsquare app. */
+"TouchIdSettings.unlockTitleText" = "启用 Touch ID 指纹解锁Coinsquare";
 /* Always require passcode option */
 "TouchIdSpendingLimit" = "始终需要密码";
 /* Touch ID spending limit screen body */
@@ -981,7 +983,7 @@
 "Transaction.sentTo" = "已发送至 %1$@";
 /* eg. Starting balance: $50.00 */
 "Transaction.starting" = "期初余额：%1$@";
-/* e.g. "[The money you paid was a] Fee for token transfer: BRD" (BRD is the token that was transfered) */
+/* e.g. "[The money you paid was a] Fee for token transfer: Coinsquare" (Coinsquare is the token that was transfered) */
 "Transaction.tokenTransfer" = "代币转让费用： %1$@";
 /* Waiting to be confirmed string */
 "Transaction.waiting" = "等待确认中。部分商家需要进行确认以完成交易。预估时间：1-2 小时。";
@@ -1093,7 +1095,7 @@ eg. 182930 (45061 confirmations) */
 /* Instruction to touch the sensor for fingerprint authentication */
 "UnlockScreen.touchIdInstructions.android" = "触控感应器";
 /* TouchID prompt text */
-"UnlockScreen.touchIdPrompt" = "解锁您的 BRD。";
+"UnlockScreen.touchIdPrompt" = "解锁您的 Coinsquare。";
 /* Device authentication body */
 "UnlockScreen.touchIdPrompt.android" = "请解锁您的安卓设备以便继续。";
 /* Unlock with TouchID accessibility label */
@@ -1103,7 +1105,7 @@ eg. 182930 (45061 confirmations) */
 /* Update PIN caption text */
 "UpdatePin.caption" = "请牢记此 PIN 码。如果您忘记，您将无法访问您的比特币。";
 /* PIN creation info. */
-"UpdatePin.createInstruction" = "您的 PIN 码将用于解锁您的 BRD 并发送款项。";
+"UpdatePin.createInstruction" = "您的 PIN 码将用于解锁您的 Coinsquare 并发送款项。";
 /* Update PIN title */
 "UpdatePin.createTitle" = "设置 PIN 码";
 /* Update PIN title */
@@ -1137,7 +1139,7 @@ eg. 182930 (45061 confirmations) */
 /* Authorize transaction with touch id message */
 "VerifyPin.touchIdMessage" = "授权此交易";
 /* 'No wallet' warning for watch app */
-"Watch.noWalletWarning" = "打开 BRD iPhone app 以设置您的钱包。";
+"Watch.noWalletWarning" = "打开 Coinsquare iPhone app 以设置您的钱包。";
 /* Dismiss button label */
 "Webview.dismiss" = "忽略";
 /* Webview loading error message */
@@ -1145,9 +1147,9 @@ eg. 182930 (45061 confirmations) */
 /* Updating webview message */
 "Webview.updating" = "正在更新...";
 /* Welcome screen text. (?) will be replaced with the help icon users should look for. */
-"Welcome.body" = "Breadwallet 更名为 BRD， 并增加了全新的界面和功能。如果您需要帮助，请使用在大多数设备屏幕右上角的(?)";
+"Welcome.body" = "Breadwallet 更名为 Coinsquare， 并增加了全新的界面和功能。如果您需要帮助，请使用在大多数设备屏幕右上角的(?)";
 /* Top title of welcome screen */
-"Welcome.title" = "欢迎使用BRD！";
+"Welcome.title" = "欢迎使用Coinsquare！";
 /* Wipe wallet alert message */
 "WipeWallet.alertMessage" = "您确认要删除此钱包吗？";
 /* Wipe wallet alert title */
@@ -1161,7 +1163,7 @@ eg. 182930 (45061 confirmations) */
 /* Instructions for unlinking the wallet */
 "WipeWallet.startMessage" = "取消钱包链接可将其从本设备移除。一旦钱包链接被取消，您可以启用新钱包，或恢复本设备的其他钱包。";
 /* Start wipe wallet view warning */
-"WipeWallet.startWarning" = "您无法再在这个设备上使用现在的BRD钱包。 现在的一切资金都留在纸键上。";
+"WipeWallet.startWarning" = "您无法再在这个设备上使用现在的Coinsquare钱包。 现在的一切资金都留在纸键上。";
 /* Unlink this wallet from this device. */
 "WipeWallet.title" = "取消钱包的链接";
 /* Wipe wallet button title */
