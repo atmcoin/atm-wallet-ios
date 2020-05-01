@@ -1,9 +1,9 @@
 /* App name */
-"About.appName.android" = "BRD";
+"About.appName.android" = "Coinsquare";
 /* About screen blog label */
 "About.blog" = "Blog";
 /* About screen footer */
-"About.footer" = "Gemaakt door het globale BRD team. Versie %1$@ Bouw %2$@";
+"About.footer" = "Gemaakt door het globale Coinsquare team. Versie %1$@ Bouw %2$@";
 /* Privay Policy button label */
 "About.privacy" = "Privacyverklaring";
 /* About screen reddit label */
@@ -15,7 +15,7 @@
 /* About screen twitter label */
 "About.twitter" = "Twitter";
 /* About screen wallet ID label */
-"About.walletID" = "BRD-beloningenidentificatie";
+"About.walletID" = "Coinsquare-beloningenidentificatie";
 /* Close modal button accessibility label */
 "AccessibilityLabels.close" = "Sluiten";
 /* Support center accessibiliy label */
@@ -29,7 +29,7 @@
 /* Loading Wallet Message */
 "Account.loadingMessage" = "Portemonnee laden";
 /* Default wallet name */
-"AccountHeader.defaultWalletName" = "Mijn BRD";
+"AccountHeader.defaultWalletName" = "Mijn Coinsquare";
 /* Third party keyboard warning */
 "Alert.customKeyboard.android" = "Het lijkt erop dat u een toetsenbord van een derde gebruikt. Deze kan bijhouden wat u typt en eventueel uw sleutel stelen. Schakel alstublieft over naar het standaard Android toetsenbord voor extra veiligheid.";
 /* Error alert title */
@@ -37,11 +37,11 @@
 /* Keystore error */
 "Alert.keystore.generic.android" = "Er is een probleem met uw Android OS keystore, neem alstublieft contact op met support@breadwallet.com";
 /* KeyStore error, keys are invalidated */
-"Alert.keystore.invalidated.android" = "Uw door BRD geëncrypteerde data is onlangs ongeldig gemaakt omdat uw Android schermvergrendeling is uitgeschakeld.";
+"Alert.keystore.invalidated.android" = "Uw door Coinsquare geëncrypteerde data is onlangs ongeldig gemaakt omdat uw Android schermvergrendeling is uitgeschakeld.";
 /* Warn user key store data has been invalidate because the user changed their security settings. The user must uninstall. */
-"Alert.keystore.invalidated.uninstall.android" = "We kunnen niet doorgaan omdat uw instellingen voor schermvergrendeling zijn gewijzigd (bijv. wachtwoord was uitgeschakeld, vingerafdrukken waren gewijzigd). Om veiligheidsredenen heeft Android uw sleutelarchief permanent gesloten. Daarom moeten uw BRD-app-gegevens worden gewist door de installatie ongedaan te maken.\n\nGeen zorgen, uw geld is nog steeds veilig! Installeer de app opnieuw en herstel uw portemonnee met behulp van uw papieren sleutel.";
+"Alert.keystore.invalidated.uninstall.android" = "We kunnen niet doorgaan omdat uw instellingen voor schermvergrendeling zijn gewijzigd (bijv. wachtwoord was uitgeschakeld, vingerafdrukken waren gewijzigd). Om veiligheidsredenen heeft Android uw sleutelarchief permanent gesloten. Daarom moeten uw Coinsquare-app-gegevens worden gewist door de installatie ongedaan te maken.\n\nGeen zorgen, uw geld is nog steeds veilig! Installeer de app opnieuw en herstel uw portemonnee met behulp van uw papieren sleutel.";
 /* Warn user key store data has been invalidate because the user changed their security settings. The user must wipe their app data. */
-"Alert.keystore.invalidated.wipe.android" = "We kunnen niet doorgaan omdat uw instellingen voor schermvergrendeling zijn gewijzigd (bijv. wachtwoord was uitgeschakeld, vingerafdrukken waren gewijzigd). Om veiligheidsredenen heeft Android uw sleutelarchief permanent gesloten. Daarom moeten uw BRD-app-gegevens worden gewist.\n\nGeen zorgen, uw geld is nog steeds veilig! Herstel uw portemonnee met behulp van uw papieren sleutel.";
+"Alert.keystore.invalidated.wipe.android" = "We kunnen niet doorgaan omdat uw instellingen voor schermvergrendeling zijn gewijzigd (bijv. wachtwoord was uitgeschakeld, vingerafdrukken waren gewijzigd). Om veiligheidsredenen heeft Android uw sleutelarchief permanent gesloten. Daarom moeten uw Coinsquare-app-gegevens worden gewist.\n\nGeen zorgen, uw geld is nog steeds veilig! Herstel uw portemonnee met behulp van uw papieren sleutel.";
 /* Keystore error title */
 "Alert.keystore.title.android" = "Android KeyStore fout";
 /* No internet alert message */
@@ -71,11 +71,11 @@
 /* Fingerprint was recognized by the scanner */
 "Alerts.touchIdSucceeded.android" = "Vingerafdruk geaccepteerd";
 /* Tell the user where they can enable permissions to access device storage. */
-"Android.allowFileSystemAccess" = "Schakel opslagtoestemmingen in uw apparaatinstellingen in: \"Instellingen\"> \"Apps\"> \"BRD\"> \"Toestemmingen\".";
+"Android.allowFileSystemAccess" = "Schakel opslagtoestemmingen in uw apparaatinstellingen in: \"Instellingen\"> \"Apps\"> \"Coinsquare\"> \"Toestemmingen\".";
 /* The "home" screen is the name of the top level menu for the app. */
 "Android.BCH.welcome.message" = "Elke BCH in uw wallet is toegankelijk via het startscherm.";
 /* Warning about using apps that can alter the screen */
-"Android.screenAlteringMessage" = "BRD zal niet goed werken tenzij schermveranderende apps (zoals Twilight) zijn uitgeschakeld.";
+"Android.screenAlteringMessage" = "Coinsquare zal niet goed werken tenzij schermveranderende apps (zoals Twilight) zijn uitgeschakeld.";
 /* An app that alters the screen ("screen-altering app") has been detected. */
 "Android.screenAlteringTitle" = "Schermveranderende app gedetecteerd";
 /* JSON Serialization error message */
@@ -223,7 +223,7 @@
 /* Email unavailable alert title */
 "ErrorMessages.emailUnavailableTitle" = "E-mail niet beschikbaar";
 /* Message that gets shown when we've detected the user has encountered the looping lock-screen bug. (preserve [ ] characters) */
-"ErrorMessages.loopingLockScreen.android" = "BRD kan niet gewaarmerkt worden vanwege een fout in uw versie van Android. [Klik hier voor meer informatie.]";
+"ErrorMessages.loopingLockScreen.android" = "Coinsquare kan niet gewaarmerkt worden vanwege een fout in uw versie van Android. [Klik hier voor meer informatie.]";
 /* Messaging unavailable alert title */
 "ErrorMessages.messagingUnavailableMessage" = "Dit apparaat is niet geconfigureerd om berichten te sturen.";
 /* Messaging unavailable alert title */
@@ -232,14 +232,14 @@
 "ErrorMessages.touchIdFailed.android" = "Vingerafdruk niet herkend. Probeer het alstublieft opnieuw.";
 /* You can customize your Face ID Spending Limit from the [menu] */
 "FaceIDSettings.customizeText" = "Je kunt de bestedingslimiet van je Face-ID aanpassen vanuit het %1$@.";
-/* Text describing the purpose of the Face ID settings in the BRD app. */
-"FaceIDSettings.explanatoryText" = "Gebruik Face ID om uw BRD-app te ontgrendelen en geld te verzenden.";
+/* Text describing the purpose of the Face ID settings in the Coinsquare app. */
+"FaceIDSettings.explanatoryText" = "Gebruik Face ID om uw Coinsquare-app te ontgrendelen en geld te verzenden.";
 /* Face Id screen label */
-"FaceIDSettings.label" = "Gebruik uw gezicht om uw BRD te ontgrendelen en verstuur geld tot een vastgestelde limiet.";
+"FaceIDSettings.label" = "Gebruik uw gezicht om uw Coinsquare te ontgrendelen en verstuur geld tot een vastgestelde limiet.";
 /* Title of the screen for setting the Face ID Spending Limit */
 "FaceIDSettings.linkText" = "Scherm bestedingslimiet Face-ID";
-/* Setting to turn on Face ID for BRD */
-"FaceIDSettings.switchLabel" = "Face-ID voor BRD inschakelen";
+/* Setting to turn on Face ID for Coinsquare */
+"FaceIDSettings.switchLabel" = "Face-ID voor Coinsquare inschakelen";
 /* Face ID settings view title */
 "FaceIDSettings.title" = "Face-ID";
 /* Text label for a toggle that enables Face ID for sending money. */
@@ -248,8 +248,8 @@
 "FaceIDSettings.unavailableAlertMessage" = "Je hebt op dit apparaat geen Face-ID ingesteld. Ga naar Instellingen->Face-ID en Wachtwoord om dit nu in te stellen.";
 /* Face ID unavailable alert title */
 "FaceIDSettings.unavailableAlertTitle" = "Face-ID niet ingesteld";
-/* Text label for a toggle that enables Face ID for unlocking the BRD app. */
-"FaceIDSettings.unlockTitleText" = "Schakel Face ID in om BRD te ontgrendelen";
+/* Text label for a toggle that enables Face ID for unlocking the Coinsquare app. */
+"FaceIDSettings.unlockTitleText" = "Schakel Face ID in om Coinsquare te ontgrendelen";
 /* Face Id spending limit screen title */
 "FaceIDSpendingLimit.title" = "Bestedingslimiet Face-ID";
 /* Economy fee */
@@ -309,13 +309,13 @@
 /* Caption for graphics */
 "Import.leftCaption" = "Wallet om te importeren";
 /* Import wallet intro screen message */
-"Import.message" = "Private keys worden vaak afgedrukt op papier als een QR-code en gebruikt om middelen online op te slaan. Wissel een persoonlijke sleutel in om al het geld dat het beheert over te schrijven naar je BRD via een enkele transactie.";
+"Import.message" = "Private keys worden vaak afgedrukt op papier als een QR-code en gebruikt om middelen online op te slaan. Wissel een persoonlijke sleutel in om al het geld dat het beheert over te schrijven naar je Coinsquare via een enkele transactie.";
 /* Enter password alert view title */
 "Import.password" = "Deze private key is beveiligd met een wachtwoord.";
 /* password textfield placeholder */
 "Import.passwordPlaceholder" = "wachtwoord";
 /* Caption for graphics */
-"Import.rightCaption" = "Jouw BRD Portemonnee";
+"Import.rightCaption" = "Jouw Coinsquare Portemonnee";
 /* Scan Private key button label */
 "Import.scan" = "Scan private key ";
 /* Import wallet success alert title */
@@ -335,9 +335,9 @@
 /* Ignore jailbreak warning button */
 "JailbreakWarnings.ignore" = "Negeren";
 /* Jailbreak warning message */
-"JailbreakWarnings.messageWithBalance" = "APPARAAT BEVEILIGING BESCHADIGD\nElke 'jailbreak' app heeft toegang tot de sleutelhanger data van BRD en kan hiermee je Bitcoins stelen! Wis deze portemonnee direct en herstel het op een veilig apparaat.";
+"JailbreakWarnings.messageWithBalance" = "APPARAAT BEVEILIGING BESCHADIGD\nElke 'jailbreak' app heeft toegang tot de sleutelhanger data van Coinsquare en kan hiermee je Bitcoins stelen! Wis deze portemonnee direct en herstel het op een veilig apparaat.";
 /* Jailbreak warning message */
-"JailbreakWarnings.messageWithoutBalance" = "APPARAAT BEVEILIGING BESCHADIGD\nElke 'jailbreak' app heeft toegang tot de sleutelhanger data van BRD en kan hiermee je Bitcoins stelen. Gebruik BRD a.u.b. alleen op een niet-gejailbreakt apparaat.";
+"JailbreakWarnings.messageWithoutBalance" = "APPARAAT BEVEILIGING BESCHADIGD\nElke 'jailbreak' app heeft toegang tot de sleutelhanger data van Coinsquare en kan hiermee je Bitcoins stelen. Gebruik Coinsquare a.u.b. alleen op een niet-gejailbreakt apparaat.";
 /* Jailbreak warning title */
 "JailbreakWarnings.title" = "WAARSCHUWING";
 /* Wipe wallet button */
@@ -359,7 +359,7 @@
 /* Location services disabled error */
 "LocationPlugin.disabled" = "Locatievoorzieningen zijn uitgeschakeld.";
 /* No permissions for location services */
-"LocationPlugin.notAuthorized" = "BRD heeft geen toestemming om locatievoorzieningen te gebruiken.";
+"LocationPlugin.notAuthorized" = "Coinsquare heeft geen toestemming om locatievoorzieningen te gebruiken.";
 /* Wallet creation date prefix */
 "ManageWallet.creationDatePrefix" = "Je hebt je portemonnee gecreëerd op %1$@";
 /* Manage wallet description text */
@@ -370,6 +370,8 @@
 "ManageWallet.title" = "Portemonnee Beheren";
 /* "Add [a] Wallet [to the home screen]" */
 "MenuButton.addWallet" = "Voeg Wallet toe";
+/* Menu button title */
+"MenuButton.cashATMWithdrawl" = "ATM Cash Withdrawal";
 /* Menu button title */
 "MenuButton.lock" = "Portemonnee Vergrendelen";
 /* (Click here to) manage (your list of) wallets */
@@ -433,13 +435,13 @@
 /* Onboarding screen Page 1 title */
 "OnboardingPageOne.title" = "Welkom bij uw nieuwe wereldwijde portemonnee!";
 /* Onboarding screen Page 3 subtitle */
-"OnboardingPageThree.subtitle" = "Investeer en diversifieer met BRD, snel en veilig.";
+"OnboardingPageThree.subtitle" = "Investeer en diversifieer met Coinsquare, snel en veilig.";
 /* Onboarding screen Page 3 title */
 "OnboardingPageThree.title" = "Koop en handel in bitcoin, tokens en andere digitale valuta.";
 /* Onboarding screen Page 2 subtitle */
 "OnboardingPageTwo.subtitle" = "We hebben meer dan $6 miljard USD waard aan aandelen onder onze bescherming.";
 /* Onboarding screen Page 2 title */
-"OnboardingPageTwo.title" = "Sluit je aan bij miljoenen mensen over de hele wereld die op BRD vertrouwen.";
+"OnboardingPageTwo.title" = "Sluit je aan bij miljoenen mensen over de hele wereld die op Coinsquare vertrouwen.";
 /* Eg. Send 1.0Eth to purchase CCC */
 "PaymentConfirmation.amountText" = "%1$@ versturen om %2$@ te kopen";
 /* Payment confirmation view title */
@@ -497,7 +499,7 @@
 /* Transaction rejected prompt title */
 "Prompts.RecommendRescan.title" = "Transactie Geweigerd";
 /* Share data prompt body */
-"Prompts.ShareData.body" = "Help ons bij het verbeteren van BRD door je anonieme data met ons te delen";
+"Prompts.ShareData.body" = "Help ons bij het verbeteren van Coinsquare door je anonieme data met ons te delen";
 /* Share data prompt title */
 "Prompts.ShareData.title" = "Deel Anonieme Data";
 /* Enable touch ID prompt body */
@@ -511,7 +513,7 @@
 /* Button on fingerprint prompt so the user can enter their PIN instead */
 "Prompts.TouchId.usePin.android" = "PIN";
 /* Upgrade PIN prompt body. */
-"Prompts.UpgradePin.body" = "BRD is geüpgrade naar een 6-cijferige PIN. Tik hier om te upgraden.";
+"Prompts.UpgradePin.body" = "Coinsquare is geüpgrade naar een 6-cijferige PIN. Tik hier om te upgraden.";
 /* Upgrade PIN prompt title. */
 "Prompts.UpgradePin.title" = "PIN Upgraden";
 /* Body text for the push notifications prompt. */
@@ -519,11 +521,11 @@
 /* Push notifications are disabled alert title" */
 "PushNotifications.disabled" = "Meldingen Uitgeschakeld";
 /* Body text when push notifications are disabled. */
-"PushNotifications.disabledBody" = "Schakel meldingen in om speciale aanbiedingen en updates van BRD te ontvangen.";
+"PushNotifications.disabledBody" = "Schakel meldingen in om speciale aanbiedingen en updates van Coinsquare te ontvangen.";
 /* Body text when push notifications are enabled. */
-"PushNotifications.enabledBody" = "U ontvangt speciale aanbiedingen en updates van BRD.";
-/* Instructions to enable push notifications for BRD in the phone's system settings. */
-"PushNotifications.enableInstructions" = "U ontvangt speciale aanbiedingen en updates van BRD. Ga naar Instellingen van BRD i om meldingen in te schakelen.";
+"PushNotifications.enabledBody" = "U ontvangt speciale aanbiedingen en updates van Coinsquare.";
+/* Instructions to enable push notifications for Coinsquare in the phone's system settings. */
+"PushNotifications.enableInstructions" = "U ontvangt speciale aanbiedingen en updates van Coinsquare. Ga naar Instellingen van Coinsquare i om meldingen in te schakelen.";
 /* Push notifications toggle switch label */
 "PushNotifications.label" = "Pushmeldingen ontvangen";
 /* Push notifications are off label */
@@ -537,9 +539,9 @@
 /* Google play review prompt, revivew button */
 "RateAppPrompt.Button.Dismiss.Android" = "Nee bedankt";
 /* Google play review prompt, dismiss button */
-"RateAppPrompt.Button.RateApp.Android" = "Beoordeel BRD";
+"RateAppPrompt.Button.RateApp.Android" = "Beoordeel Coinsquare";
 /* Google play review prompt title */
-"RateAppPrompt.Title.Android" = "Beoordeel BRD";
+"RateAppPrompt.Title.Android" = "Beoordeel Coinsquare";
 /* Address copied message. */
 "Receive.copied" = "Gekopieerd naar plakbord.";
 /* Share via email button label */
@@ -561,7 +563,7 @@
 /* Enter paper key instruction */
 "RecoverWallet.instruction" = "Papieren Sleutel Invoeren";
 /* Recover wallet intro */
-"RecoverWallet.intro" = "Herstel je BRD met je papieren sleutel.";
+"RecoverWallet.intro" = "Herstel je Coinsquare met je papieren sleutel.";
 /* Invalid paper key message */
 "RecoverWallet.invalid" = "De papieren sleutel die je hebt ingevoerd is ongeldig. Check ieder woord a.u.b. en probeer het opnieuw.";
 /* Previous button accessibility label */
@@ -620,14 +622,14 @@
 "RecoveryKeyFlow.rememberToWriteDownReminder" = "Vergeet niet om deze woorden op te schrijven. Veeg terug als u het vergeten bent.";
 /* Instruction displayed when the user is resetting the PIN, which requires the recovery key to be entered */
 "RecoveryKeyFlow.resetPINInstruction" = "Voer uw herstelcode in om uw PIN opnieuw in te stellen.";
-/* Assures the user that BRD will keep the user's funds secure. */
+/* Assures the user that Coinsquare will keep the user's funds secure. */
 "RecoveryKeyFlow.securityAssurance" = "Koop en handel in de wetenschap dat uw fondsen beschermd zijn met de beste veiligheid en privacy die er zijn.";
 /* Recommends that the user stores the recovery key in a secure location */
-"RecoveryKeyFlow.storeSecurelyRecommendation" = "Bewaar uw code op een veilige plek. Dit is de enige manier om uw wallet terug te krijgen. BRD bewaart geen kopie.";
+"RecoveryKeyFlow.storeSecurelyRecommendation" = "Bewaar uw code op een veilige plek. Dit is de enige manier om uw wallet terug te krijgen. Coinsquare bewaart geen kopie.";
 /* Title for the success page after the recovery key has been set up */
 "RecoveryKeyFlow.successHeading" = "Gefeliciteerd! U heeft de instellingen van uw herstelcode voltooid.";
 /* Subtitle for the success page after the recovery key has been set up */
-"RecoveryKeyFlow.successSubheading" = "U bent nu klaar om te storten, handelen en crypto van uw BRD-wallet te kopen.";
+"RecoveryKeyFlow.successSubheading" = "U bent nu klaar om te storten, handelen en crypto van uw Coinsquare-wallet te kopen.";
 /* Title displayed to the user on the intro screen when unlinking a wallet */
 "RecoveryKeyFlow.unlinkWallet" = "Ontkoppel uw wallet van dit apparaat.";
 /* Subtitle displayed to the user on the intro screen when unlinking a wallet. */
@@ -657,7 +659,7 @@
 /* extimated time */
 "ReScan.body1" = "20-45 minuten";
 /* Syncing explanation */
-"ReScan.body2" = "Als een transactie als voltooid staat op het Bitcoin netwerk maar niet in je BRD.";
+"ReScan.body2" = "Als een transactie als voltooid staat op het Bitcoin netwerk maar niet in je Coinsquare.";
 /* Syncing explanation */
 "ReScan.body3" = "Je kreeg herhaaldelijk een foutmelding die zei dat je transactie werd afgewezen.";
 /* Start Sync button label */
@@ -673,7 +675,7 @@
 /* Rewards view expanded body. */
 "RewardsView.expandedBody" = "Leer hoe je kan besparen op handelskosten en toekomstige beloningen vrijspeelt.";
 /* Rewards view expanded title. */
-"RewardsView.expandedTitle" = "Introductie van BRD-beloningen.";
+"RewardsView.expandedTitle" = "Introductie van Coinsquare-beloningen.";
 /* Rewards view title */
 "RewardsView.normalTitle" = "Beloningen";
 /* Scan bitcoin address camera flash toggle */
@@ -698,11 +700,11 @@
 /* Paper Key button title */
 "SecurityCenter.paperKeyTitle.android" = "Papieren Sleutel";
 /* PIN button description */
-"SecurityCenter.pinDescription" = "Beschermt je BRD van ongeautoriseerde gebruikers.";
+"SecurityCenter.pinDescription" = "Beschermt je Coinsquare van ongeautoriseerde gebruikers.";
 /* PIN button title */
 "SecurityCenter.pinTitle" = "6-cijferige PIN";
 /* Touch ID button description */
-"SecurityCenter.touchIdDescription" = "Ontgrendel je BRD handig en stuur geld tot een bepaalde ingestelde limiet.";
+"SecurityCenter.touchIdDescription" = "Ontgrendel je Coinsquare handig en stuur geld tot een bepaalde ingestelde limiet.";
 /* Touch ID button title */
 "SecurityCenter.touchIdTitle" = "Touch ID";
 /* Security center fingerprint authentication button */
@@ -724,13 +726,13 @@
 /* Balance: $4.00 */
 "Send.balance" = "Balans: %1$@";
 /* Instructions how to allow the camera access for the app */
-"Send.cameraUnavailabeMessage.android" = "Sta cameratoegang toe via \"Instellingen\" > \"Apps\" > \"BRD\" > \"Toestemmingen\"";
+"Send.cameraUnavailabeMessage.android" = "Sta cameratoegang toe via \"Instellingen\" > \"Apps\" > \"Coinsquare\" > \"Toestemmingen\"";
 /* Permission required to access camera */
-"Send.cameraUnavailabeTitle.android" = "BRD heeft geen toegang tot de camera";
+"Send.cameraUnavailabeTitle.android" = "Coinsquare heeft geen toegang tot de camera";
 /* Camera not allowed message */
 "Send.cameraunavailableMessage" = "Ga naar Instellingen om camera gebruik toe te staan.";
 /* Camera not allowed alert title */
-"Send.cameraUnavailableTitle" = "BRD heeft geen toestemming voor het gebruik van de camera";
+"Send.cameraUnavailableTitle" = "Coinsquare heeft geen toestemming voor het gebruik van de camera";
 /* Warning when sending to self. */
 "Send.containsAddress" = "De bestemming is je eigen adres. Je kunt het niet naar jezelf sturen.";
 /* Could not create transaction alert title */
@@ -814,7 +816,7 @@
 /* Enable segwit. */
 "Settings.EnableSegwit" = "Activeer SegWit";
 /* Are you enjoying bread alert message body */
-"Settings.enjoying" = "Vind je BRD leuk?";
+"Settings.enjoying" = "Vind je Coinsquare leuk?";
 /* Face ID spending limit label */
 "Settings.faceIdLimit" = "Bestedingslimiet Face-ID";
 /* Redeem the funds stored on this private key. */
@@ -854,7 +856,7 @@
 /* Unlink/delete your wallet from the current device. */
 "Settings.wipe" = "Ontkoppelen van dit toestel";
 /* Share data view body */
-"ShareData.body" = "Help om BRD te verbeteren door je anonieme data met ons te delen. Dit bevat geen financiële informatie. We respecteren je financiële privacy.";
+"ShareData.body" = "Help om Coinsquare te verbeteren door je anonieme data met ons te delen. Dit bevat geen financiële informatie. We respecteren je financiële privacy.";
 /* Share data header */
 "ShareData.header" = "Data Delen?";
 /* Share data switch label. */
@@ -862,9 +864,9 @@
 /* button label */
 "StartPaperPhrase.againButtonTitle" = "Schrijf Papieren Sleutel Opnieuw Op";
 /* Paper key explanation text. */
-"StartPaperPhrase.body" = "Je papieren sleutel is de enige manier om je BRD te herstellen als je telefoon verloren, gestolen, kapot of geüpgrade is.\n\nWe zullen je een lijst met woorden laten zie die je op een papiertje moet schrijven en veilig moet bewaren.";
+"StartPaperPhrase.body" = "Je papieren sleutel is de enige manier om je Coinsquare te herstellen als je telefoon verloren, gestolen, kapot of geüpgrade is.\n\nWe zullen je een lijst met woorden laten zie die je op een papiertje moet schrijven en veilig moet bewaren.";
 /* Paper key explanation text (Android-version) */
-"StartPaperPhrase.Body.Android" = "Uw papieren sleutel is de enige manier om uw BRD te herstellen indien u uw telefoon kwijtraakt of als deze gestolen of geüpgraded wordt. \n\nU heeft uw papieren sleutel tevens nodig indien u de beveiligingsinstellingen van uw apparaat aanpast.\n\nWe tonen u een lijst met woorden die u op een stuk papier kunt opschrijven en veilig dient te bewaren.";
+"StartPaperPhrase.Body.Android" = "Uw papieren sleutel is de enige manier om uw Coinsquare te herstellen indien u uw telefoon kwijtraakt of als deze gestolen of geüpgraded wordt. \n\nU heeft uw papieren sleutel tevens nodig indien u de beveiligingsinstellingen van uw apparaat aanpast.\n\nWe tonen u een lijst met woorden die u op een stuk papier kunt opschrijven en veilig dient te bewaren.";
 /* button label */
 "StartPaperPhrase.buttonTitle" = "Schrijf Papieren Sleutel Op";
 /* Argument is date; date should be on a new line */
@@ -917,16 +919,16 @@
 "TouchIdSettings.disabledWarning.body.android" = "U heeft authenticatie met vingerafdruk niet ingesteld op dit apparaat. Ga naar Instellingen -> Beveiliging om dit in te stellen.";
 /* Fingerprint Is Not Setup */
 "TouchIdSettings.disabledWarning.title.android" = "Authenticatie met vingerafdruk niet ingesteld";
-/* Text that describes the purpose of the Touch ID settings in the BRD app. */
-"TouchIdSettings.explanatoryText" = "Gebruik Touch ID om uw BRD-app te ontgrendelen en geld te verzenden.";
+/* Text that describes the purpose of the Touch ID settings in the Coinsquare app. */
+"TouchIdSettings.explanatoryText" = "Gebruik Touch ID om uw Coinsquare-app te ontgrendelen en geld te verzenden.";
 /* Touch Id screen label */
-"TouchIdSettings.label" = "Gebruik je vingerafdruk om je BRD te ontgrendelen en geld tot een ingestelde limiet te versturen.";
+"TouchIdSettings.label" = "Gebruik je vingerafdruk om je Coinsquare te ontgrendelen en geld tot een ingestelde limiet te versturen.";
 /* Link Text (see TouchIdSettings.customizeText) */
 "TouchIdSettings.linkText" = "Touch-ID uitgavenlimietscherm";
 /* Spending Limit: b100,000 ($100) */
 "TouchIdSettings.spendingLimit" = "Bestedingslimiet: %1$@ (%2$@)";
 /* Touch id switch label. */
-"TouchIdSettings.switchLabel" = "Schakel Touch ID in voor BRD";
+"TouchIdSettings.switchLabel" = "Schakel Touch ID in voor Coinsquare";
 /* Enable fingerprint for this wallet called Bread */
 "TouchIdSettings.switchLabel.android" = "Stel authenticatie met vingerafdruk";
 /* Touch ID settings view title */
@@ -939,8 +941,8 @@
 "TouchIdSettings.unavailableAlertMessage" = "Je hebt je Touch ID niet ingesteld op dit apparaat. Ga naar Instellingen -> Touch ID & Wachtwoord om het nu in te stellen.";
 /* Touch ID unavailable alert title */
 "TouchIdSettings.unavailableAlertTitle" = "Touch ID Niet Ingesteld";
-/* Text label for the toggle that enables Touch ID for unlocking the BRD app. */
-"TouchIdSettings.unlockTitleText" = "Schakel Touch ID in om BRD te ontgrendelen";
+/* Text label for the toggle that enables Touch ID for unlocking the Coinsquare app. */
+"TouchIdSettings.unlockTitleText" = "Schakel Touch ID in om Coinsquare te ontgrendelen";
 /* Always require passcode option */
 "TouchIdSpendingLimit" = "Vraag altijd naar wachtwoord";
 /* Touch ID spending limit screen body */
@@ -981,7 +983,7 @@
 "Transaction.sentTo" = "verstuurd naar %1$@";
 /* eg. Starting balance: $50.00 */
 "Transaction.starting" = "Startbalans: %1$@";
-/* e.g. "[The money you paid was a] Fee for token transfer: BRD" (BRD is the token that was transfered) */
+/* e.g. "[The money you paid was a] Fee for token transfer: Coinsquare" (Coinsquare is the token that was transfered) */
 "Transaction.tokenTransfer" = "Fee voor token verzending: %1$@";
 /* Waiting to be confirmed string */
 "Transaction.waiting" = "Wachtend op bevestiging. Sommige handelaren willen bevestiging om een transactie af te roden. Geschatte tijd: 1-2 uur.";
@@ -1093,7 +1095,7 @@ eg. 182930 (45061 confirmations) */
 /* Instruction to touch the sensor for fingerprint authentication */
 "UnlockScreen.touchIdInstructions.android" = "Aanraaksensor";
 /* TouchID prompt text */
-"UnlockScreen.touchIdPrompt" = "Ontgrendel je BRD.";
+"UnlockScreen.touchIdPrompt" = "Ontgrendel je Coinsquare.";
 /* Device authentication body */
 "UnlockScreen.touchIdPrompt.android" = "Ontgrendel alstublieft uw Android-apparaat om door te gaan.";
 /* Unlock with TouchID accessibility label */
@@ -1103,7 +1105,7 @@ eg. 182930 (45061 confirmations) */
 /* Update PIN caption text */
 "UpdatePin.caption" = "Onthoud deze PIN. Als je deze vergeet, zul je niet in staat zijn om bij je Bitcoins te kunnen.";
 /* PIN creation info. */
-"UpdatePin.createInstruction" = "Je PIN zal worden gebruikt om je BRD te ontgrendelen en geld te versturen.";
+"UpdatePin.createInstruction" = "Je PIN zal worden gebruikt om je Coinsquare te ontgrendelen en geld te versturen.";
 /* Update PIN title */
 "UpdatePin.createTitle" = "PIN Instellen";
 /* Update PIN title */
@@ -1137,7 +1139,7 @@ eg. 182930 (45061 confirmations) */
 /* Authorize transaction with touch id message */
 "VerifyPin.touchIdMessage" = "Autoriseer deze transactie";
 /* 'No wallet' warning for watch app */
-"Watch.noWalletWarning" = "Open de BRD iPhone app om je portemonnee in te stellen.";
+"Watch.noWalletWarning" = "Open de Coinsquare iPhone app om je portemonnee in te stellen.";
 /* Dismiss button label */
 "Webview.dismiss" = "Verwerpen";
 /* Webview loading error message */
@@ -1145,9 +1147,9 @@ eg. 182930 (45061 confirmations) */
 /* Updating webview message */
 "Webview.updating" = "Updaten...";
 /* Welcome screen text. (?) will be replaced with the help icon users should look for. */
-"Welcome.body" = "Breadwallet is omgedoopt tot BRD, met een gloednieuw uiterlijk en enkele nieuwe functies.\n\nAls u hulp nodig hebt, zoek naar de (?) rechtsboven in de meeste schermen.";
+"Welcome.body" = "Breadwallet is omgedoopt tot Coinsquare, met een gloednieuw uiterlijk en enkele nieuwe functies.\n\nAls u hulp nodig hebt, zoek naar de (?) rechtsboven in de meeste schermen.";
 /* Top title of welcome screen */
-"Welcome.title" = "Welkom bij BRD!";
+"Welcome.title" = "Welkom bij Coinsquare!";
 /* Wipe wallet alert message */
 "WipeWallet.alertMessage" = "Weet je zeker dat je deze portomonnee wilt verwijderen?";
 /* Wipe wallet alert title */
@@ -1161,7 +1163,7 @@ eg. 182930 (45061 confirmations) */
 /* Instructions for unlinking the wallet */
 "WipeWallet.startMessage" = "Ontkoppel je portemonnee om het te verwijderen van dit toestel. Wanneer deze portemonnee ontkoppeld is kunt u een nieuwe portemonnee beginnen of een andere portemonnee laden op dit toestel.";
 /* Start wipe wallet view warning */
-"WipeWallet.startWarning" = "U zal niet langer uw huidige BRD portemonnee kunnen bereiken vanaf dit apparaat. Uw saldo zal hetzelfde blijven.";
+"WipeWallet.startWarning" = "U zal niet langer uw huidige Coinsquare portemonnee kunnen bereiken vanaf dit apparaat. Uw saldo zal hetzelfde blijven.";
 /* Unlink this wallet from this device. */
 "WipeWallet.title" = "Portemonnee Ontkoppelen";
 /* Wipe wallet button title */
