@@ -536,6 +536,10 @@ class ModalPresenter: Subscriber, Trackable {
         
         // MARK: Root Menu
         var rootItems: [MenuItem] = [
+            MenuItem(title: S.MenuButton.cashATMWithdrawl, icon: MenuItem.Icon.atmMap) { [weak self] in
+                self?.presentATMCashWithdrawl()
+            },
+
             // Scan QR Code
             MenuItem(title: S.MenuButton.scan, icon: MenuItem.Icon.scan) { [weak self] in
                 self?.presentLoginScan()
@@ -573,9 +577,8 @@ class ModalPresenter: Subscriber, Trackable {
                 menuNav.pushViewController(AboutViewController(), animated: true)
             }
         ]
-        
+
         // MARK: Developer/QA Menu
-        
         if E.isSimulator || E.isDebug || E.isTestFlight {
             var developerItems = [MenuItem]()
             
@@ -787,7 +790,13 @@ class ModalPresenter: Subscriber, Trackable {
         let addr = unsafeBitCast(o, to: Int.self)
         return String(format: "%p", addr)
     }
-    
+
+    private func presentATMCashWithdrawl() {
+        if let url = URL(string: C.cniWACUrl) {
+            UIApplication.shared.open(url)
+        }
+    }
+
     private func presentConnectionModeScreen(menuNav: UINavigationController) {
         guard let kv = Backend.kvStore, let walletInfo = WalletInfo(kvStore: kv) else {
             return assertionFailure()
