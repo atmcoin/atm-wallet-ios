@@ -11,11 +11,11 @@ import UIKit
 extension UIColor {
         
     static var newGradientStart: UIColor {
-        return UIColor.fromHex("FB5491")
+        return UIColor.fromHex("ffffff")
     }
 
     static var newGradientEnd: UIColor {
-        return UIColor.fromHex("FAA03F")
+        return UIColor.fromHex("ffffff")
     }
 
     static var darkBackground: UIColor {
@@ -64,7 +64,7 @@ extension UIColor {
     }
     
     static var orangeButton: UIColor {
-        return UIColor.fromHex("E7AA41")
+        return UIColor.fromHex("106881")
     }
 
     static var secondaryButton: UIColor {
@@ -291,7 +291,7 @@ extension UIColor {
     }
     
     static var onboardingOrangeText: UIColor {
-        return UIColor.fromHex("EA8017")
+        return UIColor.fromHex("106881")
     }
 
     static var rewardsViewNormalTitle: UIColor {
