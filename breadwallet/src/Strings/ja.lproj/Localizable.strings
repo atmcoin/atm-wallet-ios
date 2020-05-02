@@ -433,11 +433,11 @@
 /* Onboarding screen Page 4 title */
 "OnboardingPageFour.title" = "最低50ドルから,今すぐ投資を始めましょう！";
 /* Onboarding screen Page 1 title */
-"OnboardingPageOne.title" = "新しいグローバルウォレットにようこそ！";
+"OnboardingPageOne.title" = "Welcome to your ATM enabled virtual currency wallet. ";
 /* Onboarding screen Page 3 subtitle */
 "OnboardingPageThree.subtitle" = "Coinsquareで容易に安全に投資して多様化しましょう。";
 /* Onboarding screen Page 3 title */
-"OnboardingPageThree.title" = "ビットコイン,トークン,その他のデジタル通貨を購入・取引しましょう。";
+"OnboardingPageThree.title" = "Send and receive bitcoin, tokens, and other digital currencies.";
 /* Onboarding screen Page 2 subtitle */
 "OnboardingPageTwo.subtitle" = "当社の保護下には,60億USドル超相当の資産があります。";
 /* Onboarding screen Page 2 title */
