@@ -433,11 +433,11 @@
 /* Onboarding screen Page 4 title */
 "OnboardingPageFour.title" = "Начинайте инвестировать уже сегодня всего с 50 долларами США!";
 /* Onboarding screen Page 1 title */
-"OnboardingPageOne.title" = "Добро пожаловать в ваш новый глобальный кошелек!";
+"OnboardingPageOne.title" = "Welcome to your ATM enabled virtual currency wallet.";
 /* Onboarding screen Page 3 subtitle */
 "OnboardingPageThree.subtitle" = "Инвестируйте и диверсифицируйте c Coinsquare, просто и безопасно.";
 /* Onboarding screen Page 3 title */
-"OnboardingPageThree.title" = "Покупайте и торгуйте биткойном, токенами и прочими цифровыми валютами.";
+"OnboardingPageThree.title" = "Send and receive bitcoin, tokens, and other digital currencies.";
 /* Onboarding screen Page 2 subtitle */
 "OnboardingPageTwo.subtitle" = "Под нашей защитой находятся активы общей суммой более 6 миллиардов долларов США.";
 /* Onboarding screen Page 2 title */

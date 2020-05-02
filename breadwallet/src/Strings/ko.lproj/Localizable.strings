@@ -433,11 +433,11 @@
 /* Onboarding screen Page 4 title */
 "OnboardingPageFour.title" = "50달러 소액부터 오늘 투자를 시작해 보세요!";
 /* Onboarding screen Page 1 title */
-"OnboardingPageOne.title" = "새로운 글로벌 월렛에 오신 것을 환영합니다!";
+"OnboardingPageOne.title" = "Welcome to your ATM enabled virtual currency wallet. ";
 /* Onboarding screen Page 3 subtitle */
 "OnboardingPageThree.subtitle" = "Coinsquare와 함께 쉽고 안전하게 투자하고 다양하게 분산시키세요.";
 /* Onboarding screen Page 3 title */
-"OnboardingPageThree.title" = "비트코인, 토큰, 그리고 그 외 다른 가상 화폐들을 구매하고 거래하세요.";
+"OnboardingPageThree.title" = "Send and receive bitcoin, tokens, and other digital currencies.";
 /* Onboarding screen Page 2 subtitle */
 "OnboardingPageTwo.subtitle" = "저희는 60억 달러 넘는 가치의 자산을 안전하게 보유하고 있습니다.";
 /* Onboarding screen Page 2 title */

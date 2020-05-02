@@ -433,11 +433,11 @@
 /* Onboarding screen Page 4 title */
 "OnboardingPageFour.title" = "今天就开始投资吧,只需 50 美元！";
 /* Onboarding screen Page 1 title */
-"OnboardingPageOne.title" = "欢迎来到你新的世界钱包！";
+"OnboardingPageOne.title" = "Welcome to your ATM enabled virtual currency wallet. ";
 /* Onboarding screen Page 3 subtitle */
 "OnboardingPageThree.subtitle" = "轻松又安全地与 Coinsquare 进行投资和多样化";
 /* Onboarding screen Page 3 title */
-"OnboardingPageThree.title" = "购买并交易比特币,代币和其他数字货币。";
+"OnboardingPageThree.title" = "Send and receive bitcoin, tokens, and other digital currencies.";
 /* Onboarding screen Page 2 subtitle */
 "OnboardingPageTwo.subtitle" = "我们有价值超过 600 亿美元的资产受到保护。";
 /* Onboarding screen Page 2 title */

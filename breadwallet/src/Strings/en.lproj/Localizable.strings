@@ -433,11 +433,11 @@
 /* Onboarding screen Page 4 title */
 "OnboardingPageFour.title" = "Start investing today with as little as $50!";
 /* Onboarding screen Page 1 title */
-"OnboardingPageOne.title" = "Welcome to your new global wallet!";
+"OnboardingPageOne.title" = "Welcome to your ATM enabled virtual currency wallet.";
 /* Onboarding screen Page 3 subtitle */
 "OnboardingPageThree.subtitle" = "Invest and diversify with Coinsquare, easily and securely.";
 /* Onboarding screen Page 3 title */
-"OnboardingPageThree.title" = "Buy and trade bitcoin, tokens, and other digital currencies.";
+"OnboardingPageThree.title" = "Send and receive bitcoin, tokens, and other digital currencies.";
 /* Onboarding screen Page 2 subtitle */
 "OnboardingPageTwo.subtitle" = "We have over $6 billion USD worth of assets under protection.";
 /* Onboarding screen Page 2 title */
