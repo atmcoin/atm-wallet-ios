@@ -170,6 +170,10 @@
 "Button.wipe.android" = "지우기";
 /* Yes button */
 "Button.yes" = "예";
+/* Map button */
+"Button.map" = "Map";
+/* Search button */
+"Button.search" = "Search";
 /* Camera plugin instruction */
 "CameraPlugin.centerInstruction" = "박스안에 귀하의 ID를 중앙에 두세요";
 /* Amount to Send: ($1.00) */
@@ -419,7 +423,7 @@
 /* Node Selector view title */
 "NodeSelector.title" = "비트코인 노드";
 /* Onboarding screen 'I'll browse first' button */
-"Onboarding.browseFirst" = "먼저 둘러볼게요";
+"Onboarding.browseFirst" = "Setup Wallet";
 /* Onboarding screen 'Buy some coin' button */
 "Onboarding.buyCoin" = "코인을 조금 구매";
 /* Onboarding screen 'Get started' (create new wallet) button */

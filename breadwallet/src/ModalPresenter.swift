@@ -792,9 +792,26 @@ class ModalPresenter: Subscriber, Trackable {
     }
 
     private func presentATMCashWithdrawl() {
-        if let url = URL(string: C.cniWACUrl) {
-            UIApplication.shared.open(url)
-        }
+//        if let url = URL(string: C.cniWACUrl) {
+//            UIApplication.shared.open(url)
+            let vc = WACMenuViewController()
+            vc.modalPresentationStyle = .overFullScreen
+            self.topViewController?.present(vc, animated: true, completion: nil)
+
+//            let vc = WACMapViewController()
+//            vc.preloa
+//            vc.modalPresentationStyle = .overFullScreen
+//            self.topViewController?.present(vc, animated: true, completion: nil)
+/*
+            let vc = BRWebViewController(bundleName: C.webBundle,
+                                         mountPoint: mountPoint,
+                                         walletAuthenticator: keyStore)
+            vc.startServer()
+            vc.preload()
+            vc.modalPresentationStyle = .overFullScreen
+            self.topViewController?.present(vc, animated: true, completion: nil)
+  */
+//        }
     }
 
     private func presentConnectionModeScreen(menuNav: UINavigationController) {

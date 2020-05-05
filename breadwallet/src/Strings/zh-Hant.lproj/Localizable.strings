@@ -170,6 +170,10 @@
 "Button.wipe.android" = "消除";
 /* Yes button */
 "Button.yes" = "要";
+/* Map button */
+"Button.map" = "Map";
+/* Search button */
+"Button.search" = "Search";
 /* Camera plugin instruction */
 "CameraPlugin.centerInstruction" = "將您的 ID 在方塊置中";
 /* Amount to Send: ($1.00) */
@@ -419,7 +423,7 @@
 /* Node Selector view title */
 "NodeSelector.title" = "比特幣節點";
 /* Onboarding screen 'I'll browse first' button */
-"Onboarding.browseFirst" = "我先瀏覽一下";
+"Onboarding.browseFirst" = "Setup Wallet";
 /* Onboarding screen 'Buy some coin' button */
 "Onboarding.buyCoin" = "購買一些貨幣";
 /* Onboarding screen 'Get started' (create new wallet) button */

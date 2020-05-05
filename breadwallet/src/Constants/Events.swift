@@ -49,7 +49,7 @@ public enum Event: String {
     case skipButton
     case nextButton
     case browseFirstButton
-    case buyCoinButton
+   // case buyCoinButton
 
     case openWallet
     case banner

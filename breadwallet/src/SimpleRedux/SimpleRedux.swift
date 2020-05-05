@@ -52,8 +52,8 @@ enum TriggerName {
     case openFile(Data)
     case receivedPaymentRequest(PaymentRequest?)
     case scanQr
-    case authenticateForPlatform(String, Bool, (PlatformAuthResult)->Void) // (prompt, allowBiometricAuth, callback)
-    case confirmTransaction(Currency?, Amount?, Amount?, FeeLevel, String, (Bool)->Void) // currency, amount, fee, displayFeeLevel, address, callback
+    case authenticateForPlatform(String, Bool, (PlatformAuthResult) -> Void) // (prompt, allowBiometricAuth, callback)
+    case confirmTransaction(Currency?, Amount?, Amount?, FeeLevel, String, (Bool) -> Void) // currency, amount, fee, displayFeeLevel, address, callback
     case hideStatusBar
     case showStatusBar
     case lightWeightAlert(String)

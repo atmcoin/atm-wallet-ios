@@ -30,7 +30,6 @@ struct OnboardingPage {
  *  As the user taps the Next button and transitions through the screens, video clips
  *  are played in the background.
  */
-
 // swiftlint:disable type_body_length
 class OnboardingViewController: UIViewController {
     
@@ -284,11 +283,11 @@ class OnboardingViewController: UIViewController {
             
         pages.append(OnboardingPage(heading: S.OnboardingScreen.pageThreeTitle,
                            subheading: "",
-                           videoClip: "onboarding-video-coins-out"))
+                           videoClip: "onboarding-video-coins-in"))
             
         pages.append(OnboardingPage(heading: "",
                            subheading: "",
-                           videoClip: "onboarding-video-coins-in"))
+                           videoClip: "onboarding-video-coins-out"))
     }
         
     private func makeHeadingLabel(text: String, font: UIFont, color: UIColor) -> UILabel {
@@ -358,7 +357,7 @@ class OnboardingViewController: UIViewController {
     private func topButtonText(pageIndex: Int) -> String {
         switch pageIndex {
         case 0:                 return S.OnboardingScreen.getStarted
-        case lastPageIndex:     return S.OnboardingScreen.buyCoin
+       // case lastPageIndex:     return S.OnboardingScreen.buyCoin
         default:
             return ""
         }
@@ -711,10 +710,6 @@ class OnboardingViewController: UIViewController {
             // 'Create new wallet'
             self.animateToNextPage()
             logEvent(.getStartedButton, screen: .landingPage)
-        } else if self.pageIndex == self.lastPageIndex {
-            // 'Buy some coin'
-            exitWith(action: .createWalletBuyCoin)
-            logEvent(.buyCoinButton, screen: .finalPage)
         }
     }
     
