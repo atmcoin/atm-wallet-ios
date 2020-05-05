@@ -306,11 +306,11 @@ class ApplicationController: Subscriber, Trackable {
         keyStore.authenticateWithBlockchainDB(client: bdbAuthClient) { result in
             switch result {
             case .success(let jwt):
-                assert(!jwt.isExpired)
+                //assert(!jwt.isExpired)
                 completion(jwt.token)
             case .failure(let error):
                 print("[BDB] authentication failure: \(error)")
-                assertionFailure()
+                //assertionFailure()
                 completion(nil)
             }
         }
