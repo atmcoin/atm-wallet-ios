@@ -19,6 +19,7 @@ enum S {
         static let redX = "\u{274C}"
     }
 
+
     enum Button {
         static let ok = NSLocalizedString("Button.ok", value:"OK", comment: "OK button label")
         static let cancel = NSLocalizedString("Button.cancel", value:"Cancel", comment: "Cancel button label")
@@ -40,6 +41,8 @@ enum S {
         static let doneAction = NSLocalizedString("Button.done", value: "Done", comment: "Done button title")
         static let skip = NSLocalizedString("Button.skip", value: "Skip", comment: "Skip button title")
         static let confirm = NSLocalizedString("Button.confirm", value: "Confirm", comment: "Confirm button title")
+        static let map = NSLocalizedString("Button.map", value:"OK", comment: "Map button label")
+        static let search = NSLocalizedString("Button.search", value:"OK", comment: "Search button label")
     }
 
     enum Alert {
@@ -423,8 +426,8 @@ enum S {
     }
 
     enum OnboardingScreen {
-        static let browseFirst = NSLocalizedString("Onboarding.browseFirst", value: "I\'ll browse first", comment: "Button that allows the user to browse the app after completing onboarding")
-        static let buyCoin = NSLocalizedString("Onboarding.buyCoin", value: "Buy some coin", comment: "Button that allows the user to go directly to buying cryptocurrency after completing onboarding.")
+        static let browseFirst = NSLocalizedString("Onboarding.browseFirst", value: "Setup Wallet", comment: "Button that allows the user to browse the app after completing onboarding")
+       // static let buyCoin = NSLocalizedString("Onboarding.buyCoin", value: "Buy some coin", comment: "Button that allows the user to go directly to buying cryptocurrency after completing onboarding.")
         static let getStarted = NSLocalizedString("Onboarding.getStarted", value: "Get started", comment: "Button that launches the onboarding flow to create a new crypto wallet")
         static let next = NSLocalizedString("Onboarding.next", value: "Next", comment: "Button that navigates to the next page in the onboarding flow.")
         static let restoreWallet = NSLocalizedString("Onboarding.restoreWallet", value: "Restore wallet", comment: "Button that allows the user to restore an existing crypto wallet")

@@ -170,6 +170,10 @@
 "Button.wipe.android" = "Effacez";
 /* Yes button */
 "Button.yes" = "Oui";
+/* Map button */
+"Button.map" = "Map";
+/* Search button */
+"Button.search" = "Search";
 /* Camera plugin instruction */
 "CameraPlugin.centerInstruction" = "Centrez votre identifiant dans le champ";
 /* Amount to Send: ($1.00) */
@@ -419,7 +423,7 @@
 /* Node Selector view title */
 "NodeSelector.title" = "Nœuds Bitcoin";
 /* Onboarding screen 'I'll browse first' button */
-"Onboarding.browseFirst" = "Je vais d'abord explorer le site";
+"Onboarding.browseFirst" = "Setup Wallet";
 /* Onboarding screen 'Buy some coin' button */
 "Onboarding.buyCoin" = "Acheter de la monnaie";
 /* Onboarding screen 'Get started' (create new wallet) button */

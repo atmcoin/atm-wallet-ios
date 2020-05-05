@@ -63,6 +63,9 @@
 		3AB3EE0F227A23B400414616 /* ASADataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3EE0E227A23B400414616 /* ASADataFormatter.swift */; };
 		3AB3EE11227A27DD00414616 /* ASADataFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3EE10227A27DD00414616 /* ASADataFormatterTests.swift */; };
 		3AEF7B72234A4E3C005BE184 /* RequestUrlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF7B71234A4E3C005BE184 /* RequestUrlTests.swift */; };
+		5FE4707E2461B6320061B2E9 /* WACMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE470702461B6310061B2E9 /* WACMenuViewController.swift */; };
+		5FE4707F2461BA760061B2E9 /* WACMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2D2695246087390019864C /* WACMapViewController.swift */; };
+		5FE470802461BA820061B2E9 /* WACSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2D2696246087390019864C /* WACSearchViewController.swift */; };
 		71014F7C2327E49400DA1373 /* fiatcurrencies.json in Resources */ = {isa = PBXBuildFile; fileRef = 71014F7B2327E49400DA1373 /* fiatcurrencies.json */; };
 		710B036221F67888007E8A2A /* MockClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B036121F67888007E8A2A /* MockClasses.swift */; };
 		710B036421F8C208007E8A2A /* AppRatingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B036321F8C208007E8A2A /* AppRatingManager.swift */; };
@@ -756,6 +759,11 @@
 		3AB3EE0E227A23B400414616 /* ASADataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ASADataFormatter.swift; path = src/Utilities/ASADataFormatter.swift; sourceTree = "<group>"; };
 		3AB3EE10227A27DD00414616 /* ASADataFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASADataFormatterTests.swift; sourceTree = "<group>"; };
 		3AEF7B71234A4E3C005BE184 /* RequestUrlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUrlTests.swift; sourceTree = "<group>"; };
+		5F2D2695246087390019864C /* WACMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACMapViewController.swift; sourceTree = "<group>"; };
+		5F2D2696246087390019864C /* WACSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACSearchViewController.swift; sourceTree = "<group>"; };
+		5F2D2697246087390019864C /* WACVerifyConfirmationCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACVerifyConfirmationCodeViewController.swift; sourceTree = "<group>"; };
+		5F2D2698246087390019864C /* WACGetATMCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACGetATMCodeViewController.swift; sourceTree = "<group>"; };
+		5FE470702461B6310061B2E9 /* WACMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WACMenuViewController.swift; path = src/ViewControllers/WAC/WACMenuViewController.swift; sourceTree = "<group>"; };
 		71014F7B2327E49400DA1373 /* fiatcurrencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fiatcurrencies.json; path = Resources/fiatcurrencies.json; sourceTree = "<group>"; };
 		710B036121F67888007E8A2A /* MockClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockClasses.swift; path = MockClasses/MockClasses.swift; sourceTree = "<group>"; };
 		710B036321F8C208007E8A2A /* AppRatingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppRatingManager.swift; path = src/Utilities/AppRatingManager.swift; sourceTree = "<group>"; };
@@ -1391,6 +1399,19 @@
 			name = Charts;
 			sourceTree = "<group>";
 		};
+		5F2D26942460866E0019864C /* WAC */ = {
+			isa = PBXGroup;
+			children = (
+				5FE470702461B6310061B2E9 /* WACMenuViewController.swift */,
+				5F2D2698246087390019864C /* WACGetATMCodeViewController.swift */,
+				5F2D2695246087390019864C /* WACMapViewController.swift */,
+				5F2D2696246087390019864C /* WACSearchViewController.swift */,
+				5F2D2697246087390019864C /* WACVerifyConfirmationCodeViewController.swift */,
+			);
+			name = WAC;
+			path = breadwallet;
+			sourceTree = SOURCE_ROOT;
+		};
 		710B035B21F6603C007E8A2A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -1854,6 +1875,7 @@
 		CE20C8EF1DBAF6D300C8397A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5F2D26942460866E0019864C /* WAC */,
 				713CD88822401946004657D4 /* RecoverKey */,
 				CE1E5F241EF081F300BD0F72 /* Import */,
 				E843C10F2188CBDA00F46672 /* Onboarding */,
@@ -2973,6 +2995,7 @@
 				7CAF4EDF22CE80D100326168 /* AssetCollection.swift in Sources */,
 				CEE6282A1EA98B6D001035AA /* DispatchQueue+Additions.swift in Sources */,
 				CEC6AA3D1DEE687000EE5AFD /* RadialGradientView.swift in Sources */,
+				5FE470802461BA820061B2E9 /* WACSearchViewController.swift in Sources */,
 				CEEC70921E95DA4400EF788E /* GradientSwitch.swift in Sources */,
 				CE0CD1591DBFBCF5004023DA /* ModalPresenter.swift in Sources */,
 				7CEA35D5232A9D1200FB58C4 /* Identifier.swift in Sources */,
@@ -3128,6 +3151,7 @@
 				CEA3626A1E01150D0061FC0E /* CGContext+Additions.swift in Sources */,
 				7C6ACCB41FEB34470028ABFA /* TxLabelCell.swift in Sources */,
 				7C40DE2D20E09207000E289D /* ToggleButton.swift in Sources */,
+				5FE4707E2461B6320061B2E9 /* WACMenuViewController.swift in Sources */,
 				22A9A9541DF61945000F0016 /* BRReplicatedKVStore.swift in Sources */,
 				71249916221F466800BEA491 /* Prompt.swift in Sources */,
 				CE6B6B4A1E54C0CB00B31405 /* SecurityCenterCell.swift in Sources */,
@@ -3152,6 +3176,7 @@
 				CE2A1C4E210B7BB7003E9B69 /* PigeonRequest.swift in Sources */,
 				CEB909F51E5FE63D001804DC /* EnterPhraseViewController.swift in Sources */,
 				713CD88A2240198A004657D4 /* RecoveryKeyIntroViewController.swift in Sources */,
+				5FE4707F2461BA760061B2E9 /* WACMapViewController.swift in Sources */,
 				CE6D0F971DE8B73A00BD4BCF /* ModalTransitionDelegate.swift in Sources */,
 				1B1AFFA01FB7EF7C00E61908 /* BiometricsSettingsViewController.swift in Sources */,
 			);

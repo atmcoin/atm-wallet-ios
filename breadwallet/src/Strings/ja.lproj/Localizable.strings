@@ -170,6 +170,10 @@
 "Button.wipe.android" = "消去";
 /* Yes button */
 "Button.yes" = "はい";
+/* Map button */
+"Button.map" = "Map";
+/* Search button */
+"Button.search" = "Search";
 /* Camera plugin instruction */
 "CameraPlugin.centerInstruction" = "ご自身のIDをこのボックス内の中央に配置してください";
 /* Amount to Send: ($1.00) */
@@ -419,7 +423,7 @@
 /* Node Selector view title */
 "NodeSelector.title" = "ビットコインノード";
 /* Onboarding screen 'I'll browse first' button */
-"Onboarding.browseFirst" = "まずは閲覧";
+"Onboarding.browseFirst" = "Setup Wallet";
 /* Onboarding screen 'Buy some coin' button */
 "Onboarding.buyCoin" = "コインを購入";
 /* Onboarding screen 'Get started' (create new wallet) button */
