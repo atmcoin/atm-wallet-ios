@@ -102,9 +102,9 @@ jobs:
           command: |
             security default-keychain
             security unlock-keychain -p test ~/Library/Keychains/default.keychain
-            echo  git add --all * 
-            echo   git commit -m "circelci build"
-            echo  ./scripts/makebuild.sh 4.0 27  
+            git add --all * 
+            git commit -m "circelci build"
+            ./scripts/makebuild.sh 4.0 27  
             
       - run:
           name: xcodebuild  build 
