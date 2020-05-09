@@ -77,7 +77,7 @@ jobs:
       - run:
           name: Rename provision 
           command: |
-            sed s/PRODUCT_BUNDLE_IDENTIFIER\s=\scash.just.wallet;/PRODUCT_BUNDLE_IDENTIFIER=cash.just.wallet;\n\t\t\t\tPROVISIONING_PROFILE_SPECIFIER=wallet-CNI-distribution2;/g  breadwallet.xcodeproj/project.pbxproj          > breadwallet.xcodeproj/project.pbxproj.rnm
+            sed "s/PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;/PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;\n\t\t\t\tPROVISIONING_PROFILE_SPECIFIER = wallet-CNI-distribution2;/g"  breadwallet.xcodeproj/project.pbxproj  > breadwallet.xcodeproj/project.pbxproj.rnm
             cp breadwallet.xcodeproj/project.pbxproj.rnm breadwallet.xcodeproj/project.pbxproj 
             
             uuid=`grep UUID -A1 -a .circleci/mobileprovision/wallet-CNI-distribution2.mobileprovision | grep -io "[-A-F0-9]\{36\}"`
