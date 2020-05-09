@@ -103,9 +103,9 @@ jobs:
             security default-keychain
             security unlock-keychain -p test ~/Library/Keychains/default.keychain
             git add --all * 
-            git commit -m "circelci build"
+            git commit -m "circleci build"
             mkdir build
-            cp .circelci/config/exportOptions.plist build
+            cp .circleci/config/exportOptions.plist build
             ./scripts/makebuild.sh 4.0 27  
             
       - run:
