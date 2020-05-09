@@ -31,11 +31,11 @@ jobs:
           keys:
             - v1-dependencies
       - run:
-          name: Install prerequisites
+          name: Install prerequisites (disabled)
           command: |
-            sudo gem install xcpretty 
-            brew --cache
-            brew install ghostscript ImageMagick SwiftLint
+            echo sudo gem install xcpretty 
+            echo brew --cache
+            echo brew install ghostscript ImageMagick SwiftLint
 
 
       # save cache
