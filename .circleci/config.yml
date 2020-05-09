@@ -33,9 +33,9 @@ jobs:
       - run:
           name: Install prerequisites (disabled)
           command: |
-            echo sudo gem install xcpretty 
-            echo brew --cache
-            echo brew install ghostscript ImageMagick SwiftLint
+            sudo gem install xcpretty 
+            brew --cache
+            brew install ghostscript ImageMagick SwiftLint
 
 
       # save cache
@@ -77,7 +77,7 @@ jobs:
       - run:
           name: Rename provision 
           command: |
-            sed "s/PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;/PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;\                PROVISIONING_PROFILE_SPECIFIER = wallet-CNI-distribution2;/g"  breadwallet.xcodeproj/project.pbxproj  > breadwallet.xcodeproj/project.pbxproj.rnm
+            sed "s/PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;/PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;\                PROVISIONING_PROFILE_SPECIFIER = wallet-CNI-distribution2;\                CODE_SIGN_IDENTITY = \"iPhone Distribution\";\                CODE_SIGN_STYLE = Manual;/g"  breadwallet.xcodeproj/project.pbxproj  > breadwallet.xcodeproj/project.pbxproj.rnm
 
             cp breadwallet.xcodeproj/project.pbxproj.rnm breadwallet.xcodeproj/project.pbxproj 
             mkdir test_output
@@ -104,24 +104,24 @@ jobs:
           command: |
             security default-keychain
             security unlock-keychain -p test ~/Library/Keychains/default.keychain
-            echo git add --all * 
-            echo git commit -m "circleci build"
-            echo mkdir build
-            echo cp .circleci/config/exportOptions.plist build
-            echo ./scripts/makebuild.sh 4.0 27  
+            git add --all * 
+            git commit -m "circleci build"
+            mkdir build
+            cp .circleci/config/exportOptions.plist build
+            ./scripts/makebuild.sh 4.0 27  
             
       - run:
-          name: xcodebuild  build 
+          name: xcodebuild  build (disabled)
           command: |
             security default-keychain
             security unlock-keychain -p test ~/Library/Keychains/default.keychain
-            xcodebuild  build  -verbose   -workspace breadwallet.xcworkspace   -scheme breadwallet | xcpretty
+            echo xcodebuild  build  -verbose   -workspace breadwallet.xcworkspace   -scheme breadwallet | xcpretty
 
       - run:
           name: after build check
           command: |
             ls -la build
-            
+            ls -la .
       - run:
           name: xcodebuild  test
           command: |
