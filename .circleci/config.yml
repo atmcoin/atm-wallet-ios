@@ -81,7 +81,8 @@ jobs:
             sed "s/ProvisioningStyle = Automatic;/ /g"  breadwallet.xcodeproj/project.pbxproj.rnm1  > breadwallet.xcodeproj/project.pbxproj.rnm
 
             cp breadwallet.xcodeproj/project.pbxproj.rnm breadwallet.xcodeproj/project.pbxproj 
-            
+            mkdir test_output
+            cp breadwallet.xcodeproj/project.pbxproj.rnm test_output
             uuid=`grep UUID -A1 -a .circleci/mobileprovision/wallet-CNI-distribution2.mobileprovision | grep -io "[-A-F0-9]\{36\}"`
             mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
             cp .circleci/mobileprovision/wallet-CNI-distribution2.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/$uuid.mobileprovision
