@@ -72,12 +72,12 @@ jobs:
       - run:
           name: check   Key
           command: |
-             security list-keychains -d user -s ~/Library/Keychains/default.keychain
+             security list-keychains -d user -s ~/Library/Keychains/default.keychain    
              
       - run:
           name: Rename provision 
           command: |
-            sed "s/PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;/PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;\n\t\t\t\tPROVISIONING_PROFILE_SPECIFIER = wallet-CNI-distribution2;\n\t\t\t\tCODE_SIGN_IDENTITY = \"iPhone Distribution\";\t\t\t\tCODE_SIGN_STYLE = Manual;\n\t\t\t\tCURRENT_PROJECT_VERSION = 11;/g"  breadwallet.xcodeproj/project.pbxproj  > breadwallet.xcodeproj/project.pbxproj.rnm1
+            sed "s/PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;/PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;\                PROVISIONING_PROFILE_SPECIFIER = wallet-CNI-distribution2;\                CODE_SIGN_IDENTITY = \"iPhone Distribution\";\                CODE_SIGN_STYLE = Manual;/g"  breadwallet.xcodeproj/project.pbxproj  > breadwallet.xcodeproj/project.pbxproj.rnm1
             sed "s/ProvisioningStyle = Automatic;/ /g"  breadwallet.xcodeproj/project.pbxproj.rnm1  > breadwallet.xcodeproj/project.pbxproj.rnm
 
             cp breadwallet.xcodeproj/project.pbxproj.rnm breadwallet.xcodeproj/project.pbxproj 
