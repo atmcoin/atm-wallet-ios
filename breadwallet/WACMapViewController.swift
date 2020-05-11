@@ -13,6 +13,7 @@ import WacSDK
 class WACMapViewController: UIViewController {
 
     var client: WAC?
+    var clientSessionKey: String?
 
     private static let meters: Int = 50000
 
@@ -47,7 +48,7 @@ class WACMapViewController: UIViewController {
     func initWAC() {
         client = WAC.init()
         let listener = self
-        client?.login(listener)
+        client?.createSession(listener)
     }
 
     func addSubviews() {
@@ -211,15 +212,15 @@ extension WACMapViewController: UITextFieldDelegate {
     }
 }
 
-extension WACMapViewController: LoginProtocol {
+extension WACMapViewController: SessionCallback {
 
-    func onLogin(_ sessionKey: String) {
+    func onSessionCreated(_ sessionKey: String) {
         print(sessionKey)
         clientSessionKey = sessionKey
     }
 
     func onError(_ errorMessage: String?) {
-        showAlert("Error", message: errorMessage!)
+        showAlert(title: "Error", message: errorMessage!)
     }
 
 }

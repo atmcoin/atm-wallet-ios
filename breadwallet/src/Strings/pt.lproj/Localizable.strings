@@ -88,6 +88,34 @@
 "ATMMapView.title" = "ATM Cash Locations Map";
 /* ATM Cash Locatios View Sub Title */
 "ATMMapView.subTitle" = "";
+/* ATM Code Title */
+"ATMCode.title" = "";
+/* Verification Code Title */
+"VerificationCode.title" = "Confirmation Code";
+/* Verification Code Label */
+"VerificationCode.label" = "We Texted You a Confirmation Code";
+/* Verification Code Label */
+"VerificationCode.actionLabel" = "Enter token";
+/* Verification Code Action Instructions */
+"VerificationCode.actionInstructions" = "Check your phone for the confirmation token we sent you. It may take a couple of minutes.";
+/* Verification Code Confirm Button */
+"VerificationCode.buttonConfirm" = "Confirm";
+/* Cash Token Label */
+"CashToken.label" = "Withdrawl Status";
+/* Cash Token Label */
+"CashToken.awaitingFunds" = "Awaiting Funds";
+/* Cash Token Action Instructions */
+"CashToken.actionInstructions" = "Please send bitcoin to this address to withdraw at the ATM. Scan QR code or copy and paste to send bitcoin. Note that it may take a few minutes for the transfer to be confirmed.";
+/* Cash Token Please Verify */
+"CashToken.pleaseVerify" = "Please Verify";
+/* Cash Token Amount */
+"CashToken.amountUSD" = "Amount (USD)";
+/* Cash Token Location */
+"CashToken.location" = "Location";
+/* Cash Token Location */
+"CashToken.amountBTC" = "Amount (BTC)";
+/* Cash Token Location */
+"CashToken.amountBTC" = "Send To Address";
 /* Send BCH view body. */
 "BCH.body" = "Introduza abaixo um endereço de destino da BCH. Toda a BCH que estiver na sua conta no momento da divisão (%1$@) será enviada.";
 /* Confirm sending <$5.00> to <address>? */
