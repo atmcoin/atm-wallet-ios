@@ -42,7 +42,8 @@ enum S {
         static let skip = NSLocalizedString("Button.skip", value: "Skip", comment: "Skip button title")
         static let confirm = NSLocalizedString("Button.confirm", value: "Confirm", comment: "Confirm button title")
         static let map = NSLocalizedString("Button.map", value:"OK", comment: "Map button label")
-        static let search = NSLocalizedString("Button.search", value:"OK", comment: "Search button label")
+        static let search = NSLocalizedString("Button.search", value:"Search", comment: "Search button label")
+        static let close = NSLocalizedString("Button.close", value:"Close", comment: "Close button label")
     }
 
     enum Alert {
@@ -53,6 +54,19 @@ enum S {
         static let somethingWentWrong = NSLocalizedString("Alert.somethingWentWrong", value: "Something went wrong. Please try again.", comment: "General error message with 'Try again'")
     }
 
+    enum ATMMapView {
+        static let title = NSLocalizedString("ATMMapView.title", value: "ATM Cash Locations Map", comment: "ATM MapView title")
+        static let subTitle = NSLocalizedString("ATMMapView.subTitle", value: "", comment: "ATM MapView sub title")
+    }
+
+    enum ATMCode {
+        static let title = NSLocalizedString("ATMCode.title", value: "ATM Cash Code", comment: "ATM Cash Code title")
+    }
+
+    enum VerifyConfirmation {
+        static let title = NSLocalizedString("VerifyConfirmation.title", value: "Verify Confirmation Code", comment: "Verify Confirmation Code title")
+    }
+    
     enum Scanner {
         static let flashButtonLabel = NSLocalizedString("Scanner.flashButtonLabel", value:"Camera Flash", comment: "Scan bitcoin address camera flash toggle")
         static let paymentPrompTitle = NSLocalizedString("Scanner.paymentPromptTitle", value:"Send Payment", comment: "alert dialog title")

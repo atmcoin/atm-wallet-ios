@@ -84,6 +84,30 @@
 "ApiClient.notReady" = "Wallet nicht bereit";
 /* API Token error message */
 "ApiClient.tokenError" = "API-Token konnte nicht abgerufen werden";
+/* ATM Cash Locatios View Title */
+"ATMMapView.title" = "ATM Cash Locations Map";
+/* ATM Cash Locations View Sub Title */
+"ATMMapView.subTitle" = "";
+/* ATM Code Title */
+"ATMCode.title" = "";
+/* Verification Code Title */
+"VerificationCode.title" = "Confirmation Code";
+/* Verification Code Label */
+"VerificationCode.label" = "We Texted You a Confirmation Code";
+/* Verification Code Label */
+"VerificationCode.actionLabel" = "Enter token";
+/* Verification Code Action Instructions */
+"VerificationCode.actionInstructions" = "Check your phone for the confirmation token we sent you. It may take a couple of minutes.";
+/* Verification Code Confirm Button */
+"VerificationCode.buttonConfirm" = "Confirm";
+/* Cash Token Label */
+"CashToken.label" = "Withdrawl Status";
+/* Cash Token Label */
+"CashToken.awaitingFunds" = "Awaiting Funds";
+/* Cash Token Action Instructions */
+"CashToken.actionInstructions" = Please send bitcoin to this address to withdraw at the ATM. Scan QR code or copy and paste to send bitcoin. Note that it may take a few minutes for the transfer to be confirmed."
+/* Cash Token Please Verify */
+"CashToken.pleaseVerify" = "Please Verify";
 /* Send BCH view body. */
 "BCH.body" = "Geben Sie unten eine Ziel-BCH-Adresse ein. Das gesamte BCH Guthaben aus Ihrem Wallet zur Zeit der Aufspaltung (%1$@) wird versendet.";
 /* Confirm sending <$5.00> to <address>? */
@@ -174,6 +198,8 @@
 "Button.map" = "Map";
 /* Search button */
 "Button.search" = "Search";
+/* Close button */
+"Button.close" = "Close";
 /* Camera plugin instruction */
 "CameraPlugin.centerInstruction" = "Zentriere deinen Ausweis im Rechteck";
 /* Amount to Send: ($1.00) */

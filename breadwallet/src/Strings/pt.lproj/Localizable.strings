@@ -84,6 +84,10 @@
 "ApiClient.notReady" = "Carteira não preparada";
 /* API Token error message */
 "ApiClient.tokenError" = "Não foi possível obter o token API";
+/* ATM Cash Locatios View Title */
+"ATMMapView.title" = "ATM Cash Locations Map";
+/* ATM Cash Locatios View Sub Title */
+"ATMMapView.subTitle" = "";
 /* Send BCH view body. */
 "BCH.body" = "Introduza abaixo um endereço de destino da BCH. Toda a BCH que estiver na sua conta no momento da divisão (%1$@) será enviada.";
 /* Confirm sending <$5.00> to <address>? */
@@ -174,6 +178,8 @@
 "Button.map" = "Map";
 /* Search button */
 "Button.search" = "Search";
+/* Close button */
+"Button.close" = "Close";
 /* Camera plugin instruction */
 "CameraPlugin.centerInstruction" = "Centre a sua ID na caixa";
 /* Amount to Send: ($1.00) */

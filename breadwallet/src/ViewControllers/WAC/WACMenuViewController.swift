@@ -78,16 +78,24 @@ class WACMenuViewController: UIViewController {
 //        rightCaption.textAlignment = .center
 //        warning.text = S.Import.importWarning
 
-        // Set up the tap handler for the "Scan Private Key" button.
         mapButton.tap = strongify(self) { myself in
             let map = WACMapViewController()
-            myself.parent?.present(map, animated: true, completion: nil)
+//            myself.parent?.present(map, animated: true, completion: nil)
+            myself.present(map, animated: true, completion: nil)
         }
-        // Set up the tap handler for the "Scan Private Key" button.
+
         searchButton.tap = strongify(self) { myself in
             let search = WACSearchViewController()
-            myself.parent?.present(search, animated: true, completion: nil)
+            search.modalPresentationStyle = .overFullScreen
+//            myself.parent?.present(search, animated: true, completion: nil)
+            myself.present(search, animated: true, completion: nil)
         }
+    }
+
+    func initWAC() {
+        client = WAC.init()
+        let listener = self
+        client?.login(listener)
     }
 
     /*
