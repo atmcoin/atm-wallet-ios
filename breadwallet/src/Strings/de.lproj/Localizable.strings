@@ -105,9 +105,17 @@
 /* Cash Token Label */
 "CashToken.awaitingFunds" = "Awaiting Funds";
 /* Cash Token Action Instructions */
-"CashToken.actionInstructions" = Please send bitcoin to this address to withdraw at the ATM. Scan QR code or copy and paste to send bitcoin. Note that it may take a few minutes for the transfer to be confirmed."
+"CashToken.actionInstructions" = "Please send bitcoin to this address to withdraw at the ATM. Scan QR code or copy and paste to send bitcoin. Note that it may take a few minutes for the transfer to be confirmed.";
 /* Cash Token Please Verify */
 "CashToken.pleaseVerify" = "Please Verify";
+/* Cash Token Amount */
+"CashToken.amountUSD" = "Amount (USD)";
+/* Cash Token Location */
+"CashToken.location" = "Location";
+/* Cash Token Location */
+"CashToken.amountBTC" = "Amount (BTC)";
+/* Cash Token Location */
+"CashToken.amountBTC" = "Send To Address";
 /* Send BCH view body. */
 "BCH.body" = "Geben Sie unten eine Ziel-BCH-Adresse ein. Das gesamte BCH Guthaben aus Ihrem Wallet zur Zeit der Aufspaltung (%1$@) wird versendet.";
 /* Confirm sending <$5.00> to <address>? */

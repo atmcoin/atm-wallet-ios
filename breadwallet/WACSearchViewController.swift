@@ -11,11 +11,12 @@ import WacSDK
 
 class WACSearchViewController: UIViewController {
 
+    var client: WAC?
+    var clientSessionKey: String?
+
     @IBOutlet weak var searchBar: UITextField!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var tableSearchResults: UITableView!
-
-    var client: WAC?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,7 @@ class WACSearchViewController: UIViewController {
     func initWAC() {
         client = WAC.init()
         let listener = self
-        client?.login(listener)
+        client?.createSession(listener)
     }
 
     @IBAction func search(_ sender: Any) {
@@ -70,15 +71,15 @@ extension WACSearchViewController: UITableViewDataSource {
     }
 }
 
-extension WACVerifyConfirmationCodeViewController: LoginProtocol {
+extension WACSearchViewController: SessionCallback {
 
-    func onLogin(_ sessionKey: String) {
+    func onSessionCreated(_ sessionKey: String) {
         print(sessionKey)
         clientSessionKey = sessionKey
     }
 
     func onError(_ errorMessage: String?) {
-        showAlert("Error", message: errorMessage!)
+        showAlert(title: "Error", message: errorMessage!)
     }
 
 }

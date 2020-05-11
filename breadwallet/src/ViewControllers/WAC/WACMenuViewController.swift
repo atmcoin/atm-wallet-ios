@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import WacSDK
 
 class WACMenuViewController: UIViewController {
+
+    var client: WAC?
+    var clientSessionKey: String?
+
     private let message = UILabel.wrapping(font: .customBody(size: 16.0), color: .white)
     private let mapButton = BRDButton(title: S.Button.map, type: .primary)
     private let searchButton = BRDButton(title: S.Button.search, type: .primary)
@@ -95,7 +100,7 @@ class WACMenuViewController: UIViewController {
     func initWAC() {
         client = WAC.init()
         let listener = self
-        client?.login(listener)
+        client?.createSession(listener)
     }
 
     /*
@@ -107,5 +112,18 @@ class WACMenuViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
+
+extension WACMenuViewController: SessionCallback {
+
+    func onSessionCreated(_ sessionKey: String) {
+        print(sessionKey)
+        clientSessionKey = sessionKey
+    }
+
+    func onError(_ errorMessage: String?) {
+        showAlert(title: "Error", message: errorMessage!)
+    }
 
 }

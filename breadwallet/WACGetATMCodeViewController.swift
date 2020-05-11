@@ -19,10 +19,13 @@ class WACGetATMCodeViewController: UIViewController {
     private let amountTextField: UITextField = UITextField()
     private let firstNameTextField: UITextField = UITextField()
     private let lastNameTextField: UITextField = UITextField()
-    private let phoneTextField: UITextField = UITextField()
+    private let telephoneTextField: UITextField = UITextField()
+    private let emailTextField: UITextField = UITextField()
+    private let codeTextField: UITextField = UITextField()
+
     private let atmIdTextField: UILabel = UILabel()
 
-    private let nextButton = BRDButton(title: S.Button.close, type: .primary)
+    private let sendCoinButton = BRDButton(title: S.Button.close, type: .primary)
 
  //   var sessionKey: String
 
@@ -39,13 +42,17 @@ class WACGetATMCodeViewController: UIViewController {
     func initWAC() {
         client = WAC.init()
         let listener = self
-        client?.login(listener)
+        client?.createSession(listener)
     }
 
     func addSubviews() {
     }
 
     func setupATMQuery() {
+        sendCoinButton.tap = strongify(self) { myself in
+            myself.sendCoin()
+            myself.dismiss(animated: true, completion: nil)
+        }
     }
 
     func addConstraints() {
@@ -61,33 +68,23 @@ class WACGetATMCodeViewController: UIViewController {
     }
 
     func setInitialData() {
-        nextButton.tap = strongify(self) { myself in
-            myself.getATMCode()
-            myself.dismiss(animated: true, completion: nil)
-        }
+
     }
 
-    func getATMCode() {
-        initWAC()
-
-        client?.createCode(atmIdTextField.text!, amountTextField.text!, codeTextField.text!,
+    func sendCoint() {
+        client?.createCashCode(atmIdTextField.text!, amountTextField.text!, codeTextField.text!,
            completion: { (response: CashCodeResponse) in
             if response.result == "ok" {
-                let pCodeTextField = response.data?.items?[0].secureCode!
-
-                client?.sendVerificationCode(firstNameTextField.text!, self.lastNameTextField.text!, phoneNumber: self.telephoneTextField.text!,
-                                             email: self.emailTextField.text!, completion: { (response: SendCodeResponse) in
-                                                if response.result == "error" {
-                                                    let message = response.error?.message
-                                                    self.showAlert("Error", message: message!)
-                                                }
-                })
+                let codeTextField = response.data?.items?[0].secureCode!
             } else {
-                self.showAlert("Error", message: (response.error?.message)!)
+                self.showAlert(title: "Error", message: (response.error?.message)!)
             }
         })
     }
 
+    func sendCoin() {
+        // code to transfer to send coin feature goes here
+    }
 
     /*
     // MARK: - Navigation
@@ -101,29 +98,15 @@ class WACGetATMCodeViewController: UIViewController {
 
 }
 
-extension WACGetATMCodeViewController: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.resignFirstResponder()
-        doSearch(search: textField.text!)
-    }
+extension WACGetATMCodeViewController: SessionCallback {
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        doSearch(search: textField.text!)
-        return true
-    }
-}
-}
-
-extension WACGetATMCodeViewController: LoginProtocol {
-
-    func onLogin(_ sessionKey: String) {
+    func onSessionCreated(_ sessionKey: String) {
         print(sessionKey)
         clientSessionKey = sessionKey
     }
 
     func onError(_ errorMessage: String?) {
-        showAlert("Error", message: errorMessage!)
+        showAlert(title: "Error", message: errorMessage!)
     }
 
 }

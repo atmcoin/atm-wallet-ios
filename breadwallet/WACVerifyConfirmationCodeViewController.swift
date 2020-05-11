@@ -10,9 +10,13 @@ import UIKit
 import WacSDK
 
 class WACVerifyConfirmationCodeViewController: UIViewController {
-    @IBOutlet weak var confirmationCode: UITextField!
+    
+    var verificationCode: UITextField = UITextField()
+    var atmid: UITextField = UITextField()
+    var amount: UITextField = UITextField()
 
     var client: WAC?
+    var clientSessionKey: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,28 +36,26 @@ class WACVerifyConfirmationCodeViewController: UIViewController {
 
     @IBAction func confirm(_ sender: Any) {
 
-        
-        client?.checkCodeStatus(confirmationCode.text!, completion: { (response: CodeStatusResponse) in
+        client?.createCashCode(atmid.text!, amount.text!, verificationCode.text!, completion: { (response: CashCodeResponse) in
             if response.result == "error" {
                 let message = response.error?.message
-                self.showAlert("Error", message: message!)
+                self.showAlert(title: "Error", message: message!)
             } else {
-                self.showAlert("Result", message: response.result)
+                self.showAlert(title: "Result", message: response.result)
             }
         })
-
     }
 }
 
-extension WACVerifyConfirmationCodeViewController: LoginProtocol {
+extension WACVerifyConfirmationCodeViewController: SessionCallback {
 
-    func onLogin(_ sessionKey: String) {
+    func onSessionCreated(_ sessionKey: String) {
         print(sessionKey)
         clientSessionKey = sessionKey
     }
 
     func onError(_ errorMessage: String?) {
-        showAlert("Error", message: errorMessage!)
+        showAlert(title: "Error", message: errorMessage!)
     }
 
 }

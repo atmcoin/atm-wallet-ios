@@ -63,6 +63,15 @@
 		3AB3EE0F227A23B400414616 /* ASADataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3EE0E227A23B400414616 /* ASADataFormatter.swift */; };
 		3AB3EE11227A27DD00414616 /* ASADataFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3EE10227A27DD00414616 /* ASADataFormatterTests.swift */; };
 		3AEF7B72234A4E3C005BE184 /* RequestUrlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF7B71234A4E3C005BE184 /* RequestUrlTests.swift */; };
+		5F469DF424696D170091DA11 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F469DF324696D170091DA11 /* PromiseKit.framework */; };
+		5F469DF5246985BB0091DA11 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F469DF324696D170091DA11 /* PromiseKit.framework */; };
+		5F469DF6246985BB0091DA11 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F469DF324696D170091DA11 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F469DF8246988970091DA11 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F469DF7246988970091DA11 /* Alamofire.framework */; };
+		5F469DF9246988970091DA11 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F469DF7246988970091DA11 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F469DFB24698A1D0091DA11 /* WACGetATMCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2D2698246087390019864C /* WACGetATMCodeViewController.swift */; };
+		5F469DFC24698A240091DA11 /* WACVerifyConfirmationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2D2697246087390019864C /* WACVerifyConfirmationCodeViewController.swift */; };
+		5F469DFD2469A4F50091DA11 /* WacSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F469DCF246948F20091DA11 /* WacSDK.framework */; };
+		5F469DFE2469A4F50091DA11 /* WacSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F469DCF246948F20091DA11 /* WacSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5FE4707E2461B6320061B2E9 /* WACMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE470702461B6310061B2E9 /* WACMenuViewController.swift */; };
 		5FE4707F2461BA760061B2E9 /* WACMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2D2695246087390019864C /* WACMapViewController.swift */; };
 		5FE470802461BA820061B2E9 /* WACSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2D2696246087390019864C /* WACSearchViewController.swift */; };
@@ -671,8 +680,11 @@
 			dstSubfolderSpec = 10;
 			files = (
 				754AE0B71DFCA870007FD001 /* libbz2.framework in Embed Frameworks */,
+				5F469DFE2469A4F50091DA11 /* WacSDK.framework in Embed Frameworks */,
 				7CD03E8623429F580084F00F /* SwiftProtobuf.framework in Embed Frameworks */,
 				7C662B0D222F515F0008814C /* ../$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)/BRCrypto.framework in Embed Frameworks */,
+				5F469DF9246988970091DA11 /* Alamofire.framework in Embed Frameworks */,
+				5F469DF6246985BB0091DA11 /* PromiseKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -764,6 +776,9 @@
 		5F2D2696246087390019864C /* WACSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACSearchViewController.swift; sourceTree = "<group>"; };
 		5F2D2697246087390019864C /* WACVerifyConfirmationCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACVerifyConfirmationCodeViewController.swift; sourceTree = "<group>"; };
 		5F2D2698246087390019864C /* WACGetATMCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACGetATMCodeViewController.swift; sourceTree = "<group>"; };
+		5F469DCF246948F20091DA11 /* WacSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WacSDK.framework; sourceTree = "<group>"; };
+		5F469DF324696D170091DA11 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
+		5F469DF7246988970091DA11 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		5FE470702461B6310061B2E9 /* WACMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WACMenuViewController.swift; path = src/ViewControllers/WAC/WACMenuViewController.swift; sourceTree = "<group>"; };
 		5FE4708124629C660061B2E9 /* UIMapView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIMapView+Additions.swift"; path = "src/Extensions/UIMapView+Additions.swift"; sourceTree = "<group>"; };
 		71014F7B2327E49400DA1373 /* fiatcurrencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fiatcurrencies.json; path = Resources/fiatcurrencies.json; sourceTree = "<group>"; };
@@ -1267,11 +1282,15 @@
 				7CBC6B2E21751ECA00899AFB /* iAd.framework in Frameworks */,
 				7C662B0C222F515F0008814C /* ../$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)/BRCrypto.framework in Frameworks */,
 				22A9A9661DF61FEE000F0016 /* WebKit.framework in Frameworks */,
+				5F469DF424696D170091DA11 /* PromiseKit.framework in Frameworks */,
 				22A9A9641DF61FE7000F0016 /* Security.framework in Frameworks */,
+				5F469DFD2469A4F50091DA11 /* WacSDK.framework in Frameworks */,
 				22A9A9621DF61FE0000F0016 /* SystemConfiguration.framework in Frameworks */,
 				22A9A9601DF61FD8000F0016 /* CoreLocation.framework in Frameworks */,
 				22A9A95E1DF61FD0000F0016 /* PushKit.framework in Frameworks */,
+				5F469DF5246985BB0091DA11 /* PromiseKit.framework in Frameworks */,
 				7CD03E8523429F580084F00F /* SwiftProtobuf.framework in Frameworks */,
+				5F469DF8246988970091DA11 /* Alamofire.framework in Frameworks */,
 				22717B062315D3E300F77F4E /* CloudKit.framework in Frameworks */,
 				223DB21B1DF69F0F0076A151 /* libbz2.framework in Frameworks */,
 			);
@@ -1596,6 +1615,9 @@
 		75A2A7F11DA5935F00A983D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5F469DF7246988970091DA11 /* Alamofire.framework */,
+				5F469DF324696D170091DA11 /* PromiseKit.framework */,
+				5F469DCF246948F20091DA11 /* WacSDK.framework */,
 				22717B052315D3E300F77F4E /* CloudKit.framework */,
 				7C4D64CA222C511900DE2C2B /* libresolv.tbd */,
 				7C4D64B7222B5F3B00DE2C2B /* ../$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)/BRCrypto.framework */,
@@ -2349,6 +2371,7 @@
 				75A2A8031DA5935F00A983D8 /* Embed App Extensions */,
 				22A9A9831DF63288000F0016 /* Embed Frameworks */,
 				7CDC6A5521125C14004AE68E /* Thin Frameworks */,
+				5F469DFA246988F60091DA11 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -2846,6 +2869,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5F469DFA246988F60091DA11 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 		7C3C4695218253DC0036D95A /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2862,7 +2902,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    if [ \"${CONFIGURATION}\" == \"Release\" ]; then\n        exit 0;\n    else\n        echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint or install via homebrew\"\n        exit 1\n    fi\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n#    swiftlint\n     exit 0\nelse\n    if [ \"${CONFIGURATION}\" == \"Release\" ]; then\n        exit 0;\n    else\n        echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint or install via homebrew\"\n        exit 1\n    fi\nfi\n";
 		};
 		7CDC6A5521125C14004AE68E /* Thin Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2961,6 +3001,7 @@
 				CE6D0E5C1E14BFA700137DF1 /* KeyboardNotificationInfo.swift in Sources */,
 				CEA05CC31F21B53C00D850F0 /* FeeSelector.swift in Sources */,
 				E89C0611216A8BE70012CE0D /* GetUserEmailPromptView.swift in Sources */,
+				5F469DFB24698A1D0091DA11 /* WACGetATMCodeViewController.swift in Sources */,
 				CE20C8F21DBAF71500C8397A /* ApplicationController.swift in Sources */,
 				22A9A9491DF61945000F0016 /* BRBSPatch.swift in Sources */,
 				CE92F9F61DEDF6890046B516 /* UIViewControllerContextTransitioning+BRAdditions.swift in Sources */,
@@ -2980,6 +3021,7 @@
 				CE36454A1E7B426B0079D0CF /* ClearNumberPad.swift in Sources */,
 				3A93890922A303800081FCF9 /* BezierView.swift in Sources */,
 				CE124D001E69170900DFA146 /* SyncingView.swift in Sources */,
+				5F469DFC24698A240091DA11 /* WACVerifyConfirmationCodeViewController.swift in Sources */,
 				CE20C90E1DBE52B000C8397A /* UIView+BRWAdditions.swift in Sources */,
 				7C424A6E20FD34F20064557E /* NotificationHandler.swift in Sources */,
 				7C35E719200AF3940064808F /* TxListViewModel.swift in Sources */,
@@ -3537,6 +3579,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -3574,6 +3618,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -3768,6 +3814,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -3973,6 +4021,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -4178,6 +4228,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -4455,6 +4507,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -4661,6 +4715,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -4866,6 +4922,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
