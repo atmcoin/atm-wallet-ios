@@ -84,6 +84,10 @@
 "ApiClient.notReady" = "電子錢包尚未就緒";
 /* API Token error message */
 "ApiClient.tokenError" = "無法擷取 API 權杖";
+/* ATM Cash Locatios View Title */
+"ATMMapView.title" = "ATM Cash Locations Map";
+/* ATM Cash Locatios View Sub Title */
+"ATMMapView.subTitle" = "";
 /* Send BCH view body. */
 "BCH.body" = "在下方輸入目的地 BCH 地址。分叉（%1$@）之時錢包內所有的 BCH 都會送出。";
 /* Confirm sending <$5.00> to <address>? */
@@ -174,6 +178,8 @@
 "Button.map" = "Map";
 /* Search button */
 "Button.search" = "Search";
+/* Close button */
+"Button.close" = "Close";
 /* Camera plugin instruction */
 "CameraPlugin.centerInstruction" = "將您的 ID 在方塊置中";
 /* Amount to Send: ($1.00) */

@@ -23,13 +23,10 @@ struct OnboardingPage {
     var videoClip: String
 }
 
-/**
- *  Takes the user through a sequence of onboarding screens (product walkthrough)
- *  and allows the user to either create a new wallet or restore an existing wallet.
- *
- *  As the user taps the Next button and transitions through the screens, video clips
- *  are played in the background.
- */
+// Takes the user through a sequence of onboarding screens (product walkthrough)
+// and allows the user to either create a new wallet or restore an existing wallet.
+//  As the user taps the Next button and transitions through the screens, video clips
+// are played in the background.
 // swiftlint:disable type_body_length
 class OnboardingViewController: UIViewController {
     

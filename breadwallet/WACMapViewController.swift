@@ -8,46 +8,116 @@
 
 import UIKit
 import MapKit
+import WacSDK
 
 class WACMapViewController: UIViewController {
 
-    @IBOutlet weak var mapATMs: MKMapView!
-    @IBOutlet weak var searchQuery: UITextField!
-    
+    var client: WAC?
+
+    private static let meters: Int = 50000
+
+    private let headingLabel = UILabel()
+    private let mapATMs = MKMapView.wrapping(meters: WACMapViewController.meters)
+    private let searchQuery = UITextField()
+    private let searchButton = UIButton()
+    private let closeButton = BRDButton(title: S.Button.close, type: .primary)
+
+    private let headingTopMargin: CGFloat = 28
+    private let headingLeftRightMargin: CGFloat = 25
+
+    private let searchButtonHeight: CGFloat = 30
+    private let searchButtonWidth: CGFloat = 50
+
     var locationManager = CLLocationManager()
     var matchingItems: [MKMapItem] = []
 
     var pointAnnotation: MKPointAnnotation!
     var pinAnnotationView: MKPinAnnotationView!
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        initWAC()
+        addSubviews()
+        setupSearchQuery()
+        addConstraints()
+        initLabels()
+        setInitialData()
+    }
+
+    func initWAC() {
+        client = WAC.init()
+        let listener = self
+        client?.login(listener)
+    }
+
+    func addSubviews() {
+        view.addSubview(headingLabel)
+        view.addSubview(searchQuery)
+        view.addSubview(searchButton)
+        view.addSubview(mapATMs)
+        view.addSubview(closeButton)
+    }
+
+    func setupSearchQuery() {
+        searchQuery.delegate = self
+        searchQuery.backgroundColor = Theme.tertiaryBackground
+        searchQuery.layer.cornerRadius = 2.0
+        searchQuery.textColor = Theme.primaryText
+//        searchQuery.attributedPlaceholder = NSAttributedString(string: "search string",
+//                                                              attributes: [ NSAttributedString.Key.foregroundColor: UIColor.emailPlaceholderText ])
+    }
+
+    func addConstraints() {
+
+        headingLabel.constrain([
+            headingLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: headingTopMargin),
+            headingLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: C.padding[1]),
+            headingLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -C.padding[1])
+        ])
+
+        searchQuery.constrain([
+            searchQuery.topAnchor.constraint(equalTo: headingLabel.bottomAnchor, constant: C.padding[1]),
+            searchQuery.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: C.padding[1]),
+            searchQuery.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -C.padding[1]),
+            searchQuery.constraint(.height, constant: searchButtonHeight)
+        ])
+
+        searchButton.constrain([
+            searchButton.topAnchor.constraint(equalTo: searchQuery.bottomAnchor, constant: C.padding[2]),
+            searchButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: C.padding[1]),
+            searchButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -C.padding[1]),
+            searchButton.constraint(.height, constant: searchButtonHeight)
+        ])
 
         mapATMs.constrain([
+            mapATMs.topAnchor.constraint(equalTo: searchButton.bottomAnchor, constant: C.padding[1]),
             mapATMs.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: C.padding[1]),
-            mapATMs.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -C.padding[1]) ])
+            mapATMs.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -C.padding[1]),
+            mapATMs.heightAnchor.constraint(equalTo: mapATMs.widthAnchor, multiplier: 1.0)
+        ])
 
-        //Zoom to user location
-        let noLocation = CLLocationCoordinate2D()
-        let viewRegion = MKCoordinateRegion(center: noLocation, latitudinalMeters: 50000, longitudinalMeters: 50000)
-        mapATMs.setRegion(viewRegion, animated: false)
-//        mapATMs.showsUserLocation = true
-        mapATMs.isScrollEnabled = true
-        mapATMs.isZoomEnabled = true
+        closeButton.constrain([
+            closeButton.topAnchor.constraint(greaterThanOrEqualTo: mapATMs.bottomAnchor, constant: C.padding[1]),
+            closeButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: headingLeftRightMargin),
+            closeButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -headingLeftRightMargin),
+            closeButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -headingTopMargin)
+        ])
 
-        if #available(iOS 13.0, *) {
-            self.overrideUserInterfaceStyle = .dark
-        } else {
-            // Fallback on earlier versions
-        }
+    }
 
-        // Do any additional setup after loading the view.
-//        mapATMs.isUserLocationVisible = true
+    func initLabels() {
+        headingLabel.textColor = Theme.primaryText
+        headingLabel.font = Theme.h2Title
+        headingLabel.text = S.ATMMapView.title
+        headingLabel.textAlignment = .center
+        headingLabel.numberOfLines = 1
+        headingLabel.adjustsFontSizeToFitWidth = true
+    }
+
+    func setInitialData() {
+        //searchButton.setTitle(S.Button.search, for: .normal)
+
         mapATMs.delegate = self
-        mapATMs.showsScale = true
-        mapATMs.showsCompass = true
-
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
@@ -59,26 +129,29 @@ class WACMapViewController: UIViewController {
 
         //Zoom to user location
         if let userLocation = locationManager.location?.coordinate {
-            let viewRegion = MKCoordinateRegion(center: userLocation, latitudinalMeters: 50000, longitudinalMeters: 50000)
+            let viewRegion = MKCoordinateRegion(center: userLocation,
+                                                latitudinalMeters: CLLocationDistance(WACMapViewController.meters),
+                                                longitudinalMeters: CLLocationDistance(WACMapViewController.meters))
             mapATMs.setRegion(viewRegion, animated: false)
         }
 
         DispatchQueue.main.async {
             self.locationManager.startUpdatingLocation()
         }
-    }
-    
-    @IBAction func Close(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+
+        searchButton.tap = strongify(self) { myself in
+            myself.searchQuery.resignFirstResponder()
+            myself.doSearch(search: myself.searchQuery.text!)
+        }
+
+        closeButton.tap = strongify(self) { myself in
+            myself.dismiss(animated: true, completion: nil)
+        }
     }
 
-    @IBAction func search(_ sender: Any) {
-        doSearch()
-    }
-
-    func doSearch() {
+    func doSearch(search: String) {
         let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery = searchQuery.text
+        request.naturalLanguageQuery = search
         request.region = mapATMs.region
         let search = MKLocalSearch(request: request)
 
@@ -112,7 +185,8 @@ extension WACMapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last!
         let region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude),
-                                        latitudinalMeters: 50000, longitudinalMeters: 50000)
+                                                            latitudinalMeters: CLLocationDistance(WACMapViewController.meters),
+                                                            longitudinalMeters: CLLocationDistance(WACMapViewController.meters))
         mapATMs.setRegion(region, animated: true)
         locationManager.stopUpdatingLocation()
     }
@@ -126,12 +200,26 @@ extension WACMapViewController: MKMapViewDelegate {
 extension WACMapViewController: UITextFieldDelegate {
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        doSearch()
+        textField.resignFirstResponder()
+        doSearch(search: textField.text!)
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        doSearch()
+        doSearch(search: textField.text!)
         return true
     }
+}
+
+extension WACMapViewController: LoginProtocol {
+
+    func onLogin(_ sessionKey: String) {
+        print(sessionKey)
+        clientSessionKey = sessionKey
+    }
+
+    func onError(_ errorMessage: String?) {
+        showAlert("Error", message: errorMessage!)
+    }
+
 }

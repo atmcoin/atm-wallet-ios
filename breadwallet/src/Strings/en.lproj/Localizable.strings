@@ -84,6 +84,14 @@
 "ApiClient.notReady" = "Wallet not ready";
 /* API Token error message */
 "ApiClient.tokenError" = "Unable to retrieve API token";
+/* ATM Cash Locatios View Title */
+"ATMMapView.title" = "ATM Cash Locations Map";
+/* ATM Cash Locatios View Sub Title */
+"ATMMapView.subTitle" = "";
+/* ATM Cash Locatios View Title */
+"ATMMapView.title" = "ATM Cash Locations Map";
+/* ATM Cash Locatios View Sub Title */
+"ATMMapView.subTitle" = "";
 /* Send BCH view body. */
 "BCH.body" = "Enter a destination BCH address below. All BCH in your wallet at the time of the fork (%1$@) will be sent.";
 /* Confirm sending <$5.00> to <address>? */
@@ -174,6 +182,8 @@
 "Button.map" = "Map";
 /* Search button */
 "Button.search" = "Search";
+/* Close button */
+"Button.close" = "Close";
 /* Camera plugin instruction */
 "CameraPlugin.centerInstruction" = "Center your ID in the box";
 /* Amount to Send: ($1.00) */

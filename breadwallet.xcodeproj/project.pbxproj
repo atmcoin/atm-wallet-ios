@@ -66,6 +66,7 @@
 		5FE4707E2461B6320061B2E9 /* WACMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE470702461B6310061B2E9 /* WACMenuViewController.swift */; };
 		5FE4707F2461BA760061B2E9 /* WACMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2D2695246087390019864C /* WACMapViewController.swift */; };
 		5FE470802461BA820061B2E9 /* WACSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2D2696246087390019864C /* WACSearchViewController.swift */; };
+		5FE4708224629C660061B2E9 /* UIMapView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4708124629C660061B2E9 /* UIMapView+Additions.swift */; };
 		71014F7C2327E49400DA1373 /* fiatcurrencies.json in Resources */ = {isa = PBXBuildFile; fileRef = 71014F7B2327E49400DA1373 /* fiatcurrencies.json */; };
 		710B036221F67888007E8A2A /* MockClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B036121F67888007E8A2A /* MockClasses.swift */; };
 		710B036421F8C208007E8A2A /* AppRatingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B036321F8C208007E8A2A /* AppRatingManager.swift */; };
@@ -764,6 +765,7 @@
 		5F2D2697246087390019864C /* WACVerifyConfirmationCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACVerifyConfirmationCodeViewController.swift; sourceTree = "<group>"; };
 		5F2D2698246087390019864C /* WACGetATMCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACGetATMCodeViewController.swift; sourceTree = "<group>"; };
 		5FE470702461B6310061B2E9 /* WACMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WACMenuViewController.swift; path = src/ViewControllers/WAC/WACMenuViewController.swift; sourceTree = "<group>"; };
+		5FE4708124629C660061B2E9 /* UIMapView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIMapView+Additions.swift"; path = "src/Extensions/UIMapView+Additions.swift"; sourceTree = "<group>"; };
 		71014F7B2327E49400DA1373 /* fiatcurrencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fiatcurrencies.json; path = Resources/fiatcurrencies.json; sourceTree = "<group>"; };
 		710B036121F67888007E8A2A /* MockClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockClasses.swift; path = MockClasses/MockClasses.swift; sourceTree = "<group>"; };
 		710B036321F8C208007E8A2A /* AppRatingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppRatingManager.swift; path = src/Utilities/AppRatingManager.swift; sourceTree = "<group>"; };
@@ -1950,6 +1952,7 @@
 				7CBF4B6320081BCE00E003AA /* KeyedDecodingContainer+Additions.swift */,
 				7CBABD9B20181D890077CB55 /* NSMutableAttributedString+Additions.swift */,
 				7C377EC120F6C29E00E8CF1C /* UIAlertController+Additions.swift */,
+				5FE4708124629C660061B2E9 /* UIMapView+Additions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -3029,6 +3032,7 @@
 				CED82D4E1E575A5500507A9B /* main.swift in Sources */,
 				CEEC708E1E954AAB00EF788E /* AboutCell.swift in Sources */,
 				22A9A9461DF61945000F0016 /* BRAPIClient.swift in Sources */,
+				5FE4708224629C660061B2E9 /* UIMapView+Additions.swift in Sources */,
 				7C6628392107B8D600ABCD10 /* PigeonExchange.swift in Sources */,
 				CEAA9E9B1DC2B9320066731D /* ConfirmPhraseView.swift in Sources */,
 				CEA0471120FD1B9B00F2694A /* PigeonCrypto.swift in Sources */,
