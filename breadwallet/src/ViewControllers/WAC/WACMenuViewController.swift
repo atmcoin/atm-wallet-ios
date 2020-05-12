@@ -13,6 +13,7 @@ class WACMenuViewController: UIViewController {
     var client: WAC?
     var clientSessionKey: String?
 
+    private let closeButton = BRDButton(title: "X", type: .secondary)
     private let message = UILabel.wrapping(font: .customBody(size: 16.0), color: .white)
     private let mapButton = BRDButton(title: S.Button.map, type: .primary)
     private let searchButton = BRDButton(title: S.Button.search, type: .primary)
@@ -29,6 +30,7 @@ class WACMenuViewController: UIViewController {
     }
 
     func addSubviews() {
+        view.addSubview(closeButton)
         view.addSubview(message)
         view.addSubview(mapButton)
         view.addSubview(searchButton)
@@ -71,6 +73,13 @@ class WACMenuViewController: UIViewController {
             mapButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: C.padding[1]),
             mapButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -C.padding[1]),
             mapButton.constraint(.height, constant: C.Sizes.buttonHeight) ])
+        
+        closeButton.constrain([
+            closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            closeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            closeButton.constraint(.height, constant: 32),
+            closeButton.constraint(.width, constant: 32)
+        ])
     }
 
     func setInitialData() {
@@ -94,6 +103,10 @@ class WACMenuViewController: UIViewController {
             search.modalPresentationStyle = .overFullScreen
 //            myself.parent?.present(search, animated: true, completion: nil)
             myself.present(search, animated: true, completion: nil)
+        }
+        
+        closeButton.tap = strongify(self) { myself in
+            self.dismiss(animated: true, completion: nil)
         }
     }
 
