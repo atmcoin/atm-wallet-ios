@@ -1551,6 +1551,7 @@
 				CE20C8F01DBAF6E100C8397A /* Extensions */,
 				CE20C90A1DBC59C500C8397A /* FlowControllers */,
 				CEAA9E9C1DC2F8270066731D /* Fonts */,
+				B3648E2D246B32230002EA21 /* Frameworks */,
 				75A2A79C1DA5934300A983D8 /* LaunchScreen.storyboard */,
 				CE6D0E5A1E14BF8400137DF1 /* Models */,
 				22A9A9311DF61930000F0016 /* Platform */,
@@ -1878,6 +1879,13 @@
 				B3648E26246A77B80002EA21 /* AtmInfoView.xib */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		B3648E2D246B32230002EA21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		CE08B2A120F66807009FA568 /* Pigeon */ = {
@@ -2884,8 +2892,8 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
+				"$(SRCROOT)/breadwallet/Frameworks/Alamofire.framework",
+				"$(SRCROOT)/breadwallet/Frameworks/PromiseKit.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
