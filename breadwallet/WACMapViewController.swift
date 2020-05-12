@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 import WacSDK
 
+private let kAtmAnnotationViewReusableIdentifier = "kAtmAnnotationViewReusableIdentifier"
+
 class WACMapViewController: UIViewController {
 
     var client: WAC?
@@ -20,7 +22,7 @@ class WACMapViewController: UIViewController {
     private let headingLabel = UILabel()
     private let mapATMs = MKMapView.wrapping(meters: WACMapViewController.meters)
     private let searchQuery = UITextField()
-    private let searchButton = UIButton()
+    private let searchButton = BRDButton(title: S.Button.search, type: .primary)
     private let closeButton = BRDButton(title: S.Button.close, type: .primary)
 
     private let headingTopMargin: CGFloat = 28
@@ -29,11 +31,18 @@ class WACMapViewController: UIViewController {
     private let searchButtonHeight: CGFloat = 30
     private let searchButtonWidth: CGFloat = 50
 
-    var locationManager = CLLocationManager()
+    lazy var locationManager: CLLocationManager = {
+        var _locationManager = CLLocationManager()
+        _locationManager.delegate = self
+        _locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        return _locationManager
+    }()
     var matchingItems: [MKMapItem] = []
 
     var pointAnnotation: MKPointAnnotation!
     var pinAnnotationView: MKPinAnnotationView!
+    var atmAnnotations: Array<AtmAnnotation> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +53,22 @@ class WACMapViewController: UIViewController {
         initLabels()
         setInitialData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        checkLocationAuthorizationStatus()
+    }
+    
+    func checkLocationAuthorizationStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            mapATMs.showsUserLocation = true
+        }
+    }
 
     func initWAC() {
         client = WAC.init()
@@ -52,6 +77,7 @@ class WACMapViewController: UIViewController {
     }
 
     func addSubviews() {
+        view.backgroundColor = Theme.primaryBackground
         view.addSubview(headingLabel)
         view.addSubview(searchQuery)
         view.addSubview(searchButton)
@@ -117,16 +143,9 @@ class WACMapViewController: UIViewController {
 
     func setInitialData() {
         //searchButton.setTitle(S.Button.search, for: .normal)
-
+        mapATMs.register(AtmAnnotationView.self,
+                         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         mapATMs.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.delegate = self
-
-        // Check for Location Services
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.requestWhenInUseAuthorization()
-        }
 
         //Zoom to user location
         if let userLocation = locationManager.location?.coordinate {
@@ -134,10 +153,6 @@ class WACMapViewController: UIViewController {
                                                 latitudinalMeters: CLLocationDistance(WACMapViewController.meters),
                                                 longitudinalMeters: CLLocationDistance(WACMapViewController.meters))
             mapATMs.setRegion(viewRegion, animated: false)
-        }
-
-        DispatchQueue.main.async {
-            self.locationManager.startUpdatingLocation()
         }
 
         searchButton.tap = strongify(self) { myself in
@@ -178,6 +193,18 @@ class WACMapViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func getAtmList() {
+        client?.getAtmList(completion: { (response: WacSDK.AtmListResponse) in
+            if let items = response.data?.items {
+                for atmMachine in items {
+                    let annotation = AtmAnnotation.init(atm: atmMachine)
+                    self.atmAnnotations.append(annotation)
+                }
+            }
+            self.mapATMs.addAnnotations(self.atmAnnotations)
+        })
+    }
 
 }
 
@@ -192,10 +219,28 @@ extension WACMapViewController: CLLocationManagerDelegate {
         locationManager.stopUpdatingLocation()
     }
     
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+    
 }
 
 extension WACMapViewController: MKMapViewDelegate {
-
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            
+            if annotation is MKUserLocation { return nil }
+            
+            var annotationView = mapATMs.dequeueReusableAnnotationView(withIdentifier: kAtmAnnotationViewReusableIdentifier)
+            
+            if annotationView == nil {
+                annotationView = AtmAnnotationView(annotation: annotation, reuseIdentifier: kAtmAnnotationViewReusableIdentifier)
+                (annotationView as! AtmAnnotationView).atmMarkerAnnotationViewDelegate = self as? AtmInfoViewDelegate
+            } else {
+                annotationView!.annotation = annotation
+            }
+            
+            return annotationView
+        }
 }
 
 extension WACMapViewController: UITextFieldDelegate {
@@ -217,6 +262,7 @@ extension WACMapViewController: SessionCallback {
     func onSessionCreated(_ sessionKey: String) {
         print(sessionKey)
         clientSessionKey = sessionKey
+        getAtmList()
     }
 
     func onError(_ errorMessage: String?) {
