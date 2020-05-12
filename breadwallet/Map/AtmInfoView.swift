@@ -1,11 +1,7 @@
 // 
 //  AtmInfoView.swift
-//  breadwallet
 //
 //  Created by Giancarlo Pacheco on 5/12/20.
-//  Copyright © 2020 Breadwinner AG. All rights reserved.
-//
-//  See the LICENSE file at the project root for license information.
 //
 
 import UIKit
@@ -27,13 +23,17 @@ class AtmInfoView: UIView {
         self.atm = atm
         
         atmIdLabel.text = atm.addressDesc
-//        TODO: add labels to show info
+//        TODO: add labels to show info. Not sure what info to display
     }
     
     // MARK: - Hit test. We need to override this to detect hits in our custom callout.
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         // Check if it hit our annotation detail view components.
-        
         return self
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("callout touches ended")
+        // TODO: navigate to request code view
     }
 }
