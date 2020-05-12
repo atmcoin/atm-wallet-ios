@@ -1424,10 +1424,7 @@
 				5F2D2695246087390019864C /* WACMapViewController.swift */,
 				5F2D2696246087390019864C /* WACSearchViewController.swift */,
 				5F2D2697246087390019864C /* WACVerifyConfirmationCodeViewController.swift */,
-				B3648E20246A68F20002EA21 /* AtmAnnotation.swift */,
-				B3648E22246A70460002EA21 /* AtmAnnotationView.swift */,
-				B3648E24246A70B30002EA21 /* AtmInfoView.swift */,
-				B3648E26246A77B80002EA21 /* AtmInfoView.xib */,
+				B3648E28246B2D460002EA21 /* Map */,
 			);
 			name = WAC;
 			path = breadwallet;
@@ -1870,6 +1867,17 @@
 				9AE800C621FFF81C00D5058C /* rewardsIcon-70.gif */,
 			);
 			name = "Rewards Icon Frames";
+			sourceTree = "<group>";
+		};
+		B3648E28246B2D460002EA21 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				B3648E20246A68F20002EA21 /* AtmAnnotation.swift */,
+				B3648E22246A70460002EA21 /* AtmAnnotationView.swift */,
+				B3648E24246A70B30002EA21 /* AtmInfoView.swift */,
+				B3648E26246A77B80002EA21 /* AtmInfoView.xib */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		CE08B2A120F66807009FA568 /* Pigeon */ = {

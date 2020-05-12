@@ -1,16 +1,12 @@
 // 
 //  AtmAnnotationView.swift
-//  breadwallet
 //
 //  Created by Giancarlo Pacheco on 5/12/20.
-//  Copyright © 2020 Breadwinner AG. All rights reserved.
-//
-//  See the LICENSE file at the project root for license information.
 //
 
 import MapKit
 
-private let kAtmPinImage = UIImage(named: "pin")!
+private let kAtmPinImage = UIImage(named: "atm")!
 private let kAtmAnimationTime = 0.300
 
 class AtmAnnotationView: MKAnnotationView {
@@ -100,7 +96,7 @@ class AtmAnnotationView: MKAnnotationView {
         else { // test in our custom callout.
             if customCalloutView != nil {
                 return customCalloutView!.hitTest(convert(point, to: customCalloutView!), with: event)
-            } else { return nil }
+            } else {  return nil }
         }
     }
 }
