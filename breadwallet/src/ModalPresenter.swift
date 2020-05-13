@@ -536,8 +536,8 @@ class ModalPresenter: Subscriber, Trackable {
         
         // MARK: Root Menu
         var rootItems: [MenuItem] = [
-            MenuItem(title: S.MenuButton.cashATMWithdrawl, icon: MenuItem.Icon.atmMap) { [weak self] in
-                self?.presentATMCashWithdrawl()
+            MenuItem(title: S.MenuButton.cashATMWithdrawl, icon: MenuItem.Icon.atmMap) {
+                menuNav.pushViewController(WACMapViewController(), animated: true)
             },
 
             // Scan QR Code
@@ -789,29 +789,6 @@ class ModalPresenter: Subscriber, Trackable {
     func addressOf<T: AnyObject>(_ o: T) -> String {
         let addr = unsafeBitCast(o, to: Int.self)
         return String(format: "%p", addr)
-    }
-
-    private func presentATMCashWithdrawl() {
-//        if let url = URL(string: C.cniWACUrl) {
-//            UIApplication.shared.open(url)
-            let vc = WACMenuViewController()
-            vc.modalPresentationStyle = .overFullScreen
-            self.topViewController?.present(vc, animated: true, completion: nil)
-
-//            let vc = WACMapViewController()
-//            vc.preloa
-//            vc.modalPresentationStyle = .overFullScreen
-//            self.topViewController?.present(vc, animated: true, completion: nil)
-/*
-            let vc = BRWebViewController(bundleName: C.webBundle,
-                                         mountPoint: mountPoint,
-                                         walletAuthenticator: keyStore)
-            vc.startServer()
-            vc.preload()
-            vc.modalPresentationStyle = .overFullScreen
-            self.topViewController?.present(vc, animated: true, completion: nil)
-  */
-//        }
     }
 
     private func presentConnectionModeScreen(menuNav: UINavigationController) {
