@@ -150,6 +150,8 @@ class WACMapViewController: UIViewController {
         self.addChild(bottomSheetVC!)
         self.view.addSubview(bottomSheetVC!.view)
         bottomSheetVC!.didMove(toParent: self)
+        
+        bottomSheetVC!.client = client
 
         let height = bottomSheetVC!.view.frame.height
         let width  = view.frame.width

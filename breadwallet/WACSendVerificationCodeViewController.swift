@@ -22,7 +22,7 @@ class WACSendVerificationCodeViewController: UIViewController {
     @IBOutlet weak var lastNameTextView: UITextField!
     @IBOutlet weak var getAtmCodeButton: UIButton!
     
-    private var client: WAC?
+    public var client: WAC?
     public var atm: WacSDK.AtmMachine?
     private var listenForKeyboard = false
     private var keyboardShown = false
@@ -30,7 +30,6 @@ class WACSendVerificationCodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        client = WAC.init()
         self.getAtmCodeButton.isEnabled = false
         
         // Observe keyboard change
@@ -43,9 +42,10 @@ class WACSendVerificationCodeViewController: UIViewController {
     }
     
     @IBAction func getverificationCodeAction(_ sender: Any) {
+        self.view.endEditing(true)
         do {
             try client?.sendVerificationCode(firstNameTextView.text!, self.lastNameTextView.text!, phoneNumber: self.phoneNumberTextView.text!, email: "", completion: { (response: WacSDK.SendVerificationCodeResponse) in
-                
+                self.view.hideAnimated()
             })
         }
         catch {}
