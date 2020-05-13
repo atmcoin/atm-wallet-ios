@@ -15,21 +15,11 @@ private let kAtmAnnotationViewReusableIdentifier = "kAtmAnnotationViewReusableId
 class WACMapViewController: UIViewController {
 
     var client: WAC?
-    var clientSessionKey: String?
 
     private static let meters: Int = 50000
 
-    private let headingLabel = UILabel()
     private let mapATMs = MKMapView.wrapping(meters: WACMapViewController.meters)
-    private let searchQuery = UITextField()
-    private let searchButton = BRDButton(title: S.Button.search, type: .primary)
-    private let closeButton = BRDButton(title: S.Button.close, type: .primary)
-
-    private let headingTopMargin: CGFloat = 28
-    private let headingLeftRightMargin: CGFloat = 25
-
-    private let searchButtonHeight: CGFloat = 30
-    private let searchButtonWidth: CGFloat = 50
+    private let searchQuery = UISearchBar()
 
     lazy var locationManager: CLLocationManager = {
         var _locationManager = CLLocationManager()
@@ -38,11 +28,12 @@ class WACMapViewController: UIViewController {
         
         return _locationManager
     }()
-    var matchingItems: [MKMapItem] = []
 
     var pointAnnotation: MKPointAnnotation!
     var pinAnnotationView: MKPinAnnotationView!
     var atmAnnotations: Array<AtmAnnotation> = []
+    
+    var bottomSheetVC: WACSendVerificationCodeViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,18 +41,20 @@ class WACMapViewController: UIViewController {
         addSubviews()
         setupSearchQuery()
         addConstraints()
-        initLabels()
         setInitialData()
+        
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         checkLocationAuthorizationStatus()
+        addBottomSheetView()
     }
     
     func checkLocationAuthorizationStatus() {
@@ -77,72 +70,37 @@ class WACMapViewController: UIViewController {
     }
 
     func addSubviews() {
+        self.title = "ATM Cash Locations"
         view.backgroundColor = Theme.primaryBackground
-        view.addSubview(headingLabel)
         view.addSubview(searchQuery)
-        view.addSubview(searchButton)
         view.addSubview(mapATMs)
-        view.addSubview(closeButton)
     }
 
     func setupSearchQuery() {
         searchQuery.delegate = self
         searchQuery.backgroundColor = Theme.tertiaryBackground
         searchQuery.layer.cornerRadius = 2.0
-        searchQuery.textColor = Theme.primaryText
-//        searchQuery.attributedPlaceholder = NSAttributedString(string: "search string",
-//                                                              attributes: [ NSAttributedString.Key.foregroundColor: UIColor.emailPlaceholderText ])
     }
 
     func addConstraints() {
 
-        headingLabel.constrain([
-            headingLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: headingTopMargin),
-            headingLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: C.padding[1]),
-            headingLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -C.padding[1])
-        ])
-
         searchQuery.constrain([
-            searchQuery.topAnchor.constraint(equalTo: headingLabel.bottomAnchor, constant: C.padding[1]),
+            searchQuery.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
             searchQuery.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: C.padding[1]),
             searchQuery.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -C.padding[1]),
-            searchQuery.constraint(.height, constant: searchButtonHeight)
-        ])
-
-        searchButton.constrain([
-            searchButton.topAnchor.constraint(equalTo: searchQuery.bottomAnchor, constant: C.padding[2]),
-            searchButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: C.padding[1]),
-            searchButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -C.padding[1]),
-            searchButton.constraint(.height, constant: searchButtonHeight)
+            searchQuery.constraint(.height, constant: 32)
         ])
 
         mapATMs.constrain([
-            mapATMs.topAnchor.constraint(equalTo: searchButton.bottomAnchor, constant: C.padding[1]),
+            mapATMs.topAnchor.constraint(equalTo: searchQuery.bottomAnchor, constant: C.padding[1]),
             mapATMs.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: C.padding[1]),
             mapATMs.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -C.padding[1]),
-            mapATMs.heightAnchor.constraint(equalTo: mapATMs.widthAnchor, multiplier: 1.0)
+            mapATMs.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0.0)
         ])
 
-        closeButton.constrain([
-            closeButton.topAnchor.constraint(greaterThanOrEqualTo: mapATMs.bottomAnchor, constant: C.padding[1]),
-            closeButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: headingLeftRightMargin),
-            closeButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -headingLeftRightMargin),
-            closeButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -headingTopMargin)
-        ])
-
-    }
-
-    func initLabels() {
-        headingLabel.textColor = Theme.primaryText
-        headingLabel.font = Theme.h2Title
-        headingLabel.text = S.ATMMapView.title
-        headingLabel.textAlignment = .center
-        headingLabel.numberOfLines = 1
-        headingLabel.adjustsFontSizeToFitWidth = true
     }
 
     func setInitialData() {
-        //searchButton.setTitle(S.Button.search, for: .normal)
         mapATMs.register(AtmAnnotationView.self,
                          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         mapATMs.delegate = self
@@ -153,15 +111,6 @@ class WACMapViewController: UIViewController {
                                                 latitudinalMeters: CLLocationDistance(WACMapViewController.meters),
                                                 longitudinalMeters: CLLocationDistance(WACMapViewController.meters))
             mapATMs.setRegion(viewRegion, animated: false)
-        }
-
-        searchButton.tap = strongify(self) { myself in
-            myself.searchQuery.resignFirstResponder()
-            myself.doSearch(search: myself.searchQuery.text!)
-        }
-
-        closeButton.tap = strongify(self) { myself in
-            myself.dismiss(animated: true, completion: nil)
         }
     }
 
@@ -183,16 +132,6 @@ class WACMapViewController: UIViewController {
             self.mapATMs.centerCoordinate = coordinate
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func getAtmList() {
         client?.getAtmList(completion: { (response: WacSDK.AtmListResponse) in
@@ -204,6 +143,17 @@ class WACMapViewController: UIViewController {
             }
             self.mapATMs.addAnnotations(self.atmAnnotations)
         })
+    }
+    
+    func addBottomSheetView() {
+        bottomSheetVC = WACSendVerificationCodeViewController.init(nibName: "WACSendVerificationView", bundle: nil)
+        self.addChild(bottomSheetVC!)
+        self.view.addSubview(bottomSheetVC!.view)
+        bottomSheetVC!.didMove(toParent: self)
+
+        let height = bottomSheetVC!.view.frame.height
+        let width  = view.frame.width
+        bottomSheetVC!.view.frame = CGRect(x: 0, y: self.view.frame.size.height, width: width, height: height)
     }
 
 }
@@ -234,7 +184,7 @@ extension WACMapViewController: MKMapViewDelegate {
             
             if annotationView == nil {
                 annotationView = AtmAnnotationView(annotation: annotation, reuseIdentifier: kAtmAnnotationViewReusableIdentifier)
-                (annotationView as! AtmAnnotationView).atmMarkerAnnotationViewDelegate = self as? AtmInfoViewDelegate
+                (annotationView as! AtmAnnotationView).atmMarkerAnnotationViewDelegate = self
             } else {
                 annotationView!.annotation = annotation
             }
@@ -243,17 +193,10 @@ extension WACMapViewController: MKMapViewDelegate {
         }
 }
 
-extension WACMapViewController: UITextFieldDelegate {
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.resignFirstResponder()
-        doSearch(search: textField.text!)
-    }
-
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        doSearch(search: textField.text!)
-        return true
+extension WACMapViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        doSearch(search: searchBar.text!)
     }
 }
 
@@ -261,7 +204,6 @@ extension WACMapViewController: SessionCallback {
 
     func onSessionCreated(_ sessionKey: String) {
         print(sessionKey)
-        clientSessionKey = sessionKey
         getAtmList()
     }
 
@@ -269,4 +211,12 @@ extension WACMapViewController: SessionCallback {
         showAlert(title: "Error", message: errorMessage!)
     }
 
+}
+
+extension WACMapViewController: AtmInfoViewDelegate {
+    func detailsRequestedForAtm(atm: AtmMachine) {
+        self.bottomSheetVC?.setAtmInfo(atm)
+        self.bottomSheetVC?.showView()
+        self.searchQuery.resignFirstResponder()
+    }
 }

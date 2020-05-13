@@ -35,5 +35,6 @@ class AtmInfoView: UIView {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("callout touches ended")
         // TODO: navigate to request code view
+        delegate?.detailsRequestedForAtm(atm: self.atm)
     }
 }
