@@ -28,6 +28,10 @@ class CoreSystem: Subscriber, Trackable {
     func wallet(for currency: Currency) -> Wallet? {
         return wallets[currency.uid]
     }
+    
+    func currency(for currencyId: CurrencyId) -> Currency? {
+        return currencies[currencyId]
+    }
 
     // MARK: Lifecycle
 

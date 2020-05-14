@@ -173,8 +173,9 @@ extension WACAtmLocationsViewController: SessionCallback {
 extension WACAtmLocationsViewController: WACActionProtocol {
     func sendCashCode(_ cashCode: CashCode) {
         self.pCodeVC?.amount = cashCode.btcAmount
-        self.pCodeVC?.pCode = cashCode.secureCode
-        self.pCodeVC?.showView()
+        self.pCodeVC?.pCode = cashCode.address
+//        self.pCodeVC?.showView()
+        self.pCodeVC?.sendCoin(amount: cashCode.btcAmount!, address: cashCode.address!)
     }
     
     func withdrawal(requested cashCode: CashCode) {

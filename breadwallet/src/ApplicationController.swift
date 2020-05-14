@@ -21,7 +21,7 @@ class ApplicationController: Subscriber, Trackable {
     
     let window = UIWindow()
     private var startFlowController: StartFlowPresenter?
-    private var modalPresenter: ModalPresenter?
+    public var modalPresenter: ModalPresenter?
     private var alertPresenter: AlertPresenter?
     private let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
 
