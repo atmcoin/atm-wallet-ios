@@ -18,18 +18,15 @@ class WACActionViewController: UIViewController {
     public var keyboardShown = false
     public var actionCallback: WACActionProtocol?
     
+    var closeButton: UIButton!
+    var infoButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         roundViews()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        
+        addCloseButton()
+        addInfoButton()
     }
     
     func roundViews() {
@@ -44,12 +41,38 @@ class WACActionViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector:#selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    public func hideView() {
+    @objc public func hideView() {
         self.view.hideAnimated()
         NotificationCenter.default.removeObserver(self)
     }
     
     public func clearViews() {
+    }
+    
+    public func addCloseButton() {
+        closeButton = UIButton.icon(image: #imageLiteral(resourceName: "Close"), accessibilityLabel: "Close")
+        self.view.addSubview(closeButton)
+        closeButton.constrain([
+            closeButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0),
+            closeButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0),
+            closeButton.heightAnchor.constraint(equalToConstant: 40),
+            closeButton.widthAnchor.constraint(equalToConstant: 40)
+        ])
+        
+        closeButton.addTarget(self, action: #selector(hideView), for: .touchUpInside)
+    }
+    
+    public func addInfoButton() {
+        infoButton = UIButton.icon(image:#imageLiteral(resourceName: "Faq"), accessibilityLabel: "Info")
+        self.view.addSubview(infoButton)
+        infoButton.constrain([
+            infoButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0),
+            infoButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0),
+            infoButton.heightAnchor.constraint(equalToConstant: 40),
+            infoButton.widthAnchor.constraint(equalToConstant: 40)
+        ])
+        
+        closeButton.addTarget(self, action: #selector(hideView), for: .touchUpInside)
     }
     
     @objc func adjustForKeyboard(notification: Notification) {

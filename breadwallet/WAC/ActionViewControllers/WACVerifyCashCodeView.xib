@@ -51,10 +51,11 @@
                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jY0-tI-JEr">
-                    <rect key="frame" x="20" y="194.5" width="374" height="32"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jY0-tI-JEr">
+                    <rect key="frame" x="20" y="194.5" width="374" height="34"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="32" id="bS8-o9-1dH"/>
+                        <constraint firstAttribute="height" constant="34" id="bS8-o9-1dH"/>
                     </constraints>
                     <state key="normal" title="Confirm"/>
                     <connections>
@@ -85,7 +86,7 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="134.78260869565219" y="157.36607142857142"/>
+            <point key="canvasLocation" x="134.78260869565219" y="117.1875"/>
         </view>
     </objects>
 </document>

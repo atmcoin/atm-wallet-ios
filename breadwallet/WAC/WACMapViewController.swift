@@ -24,12 +24,14 @@ enum WACActionStrings: String {
 public enum WACAction {
     case sendVerificationCode
     case cashCodeVerification
+    case pCodeVerification
 }
 
 protocol WACActionProtocol {
     func actiondDidComplete(action: WACAction?)
     func withdraw(amount: String)
-    func withdrawal(requested cashCode:WacSDK.CashCode)
+    func withdrawal(requested cashCode: WacSDK.CashCode)
+    func sendCashCode(_ cashCode: WacSDK.CashCode)
 }
 
 // TODO: Localize strings
@@ -57,6 +59,7 @@ class WACMapViewController: UIViewController {
     
     var sendVerificationVC: WACSendVerificationCodeViewController?
     var verifyCashCodeVC: WACVerifyCashCodeViewController?
+    var pCodeVC: WACSendCoinViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +80,7 @@ class WACMapViewController: UIViewController {
         
         addSendVerificationView()
         addVerifyCashCodeView()
+        addPCodeView()
     }
     
     func checkLocationAuthorizationStatus() {
@@ -205,6 +209,11 @@ class WACMapViewController: UIViewController {
         verifyCashCodeVC = WACVerifyCashCodeViewController.init(nibName: "WACVerifyCashCodeView", bundle: nil)
         addSheetView(controller: verifyCashCodeVC!)
     }
+    
+    func addPCodeView() {
+        pCodeVC = WACSendCoinViewController.init(nibName: "WACSendCoinView", bundle: nil)
+        addSheetView(controller: pCodeVC!)
+    }
 
 }
 
@@ -275,10 +284,16 @@ extension WACMapViewController: AtmInfoViewDelegate {
 }
 
 extension WACMapViewController: WACActionProtocol {
+    func sendCashCode(_ cashCode: CashCode) {
+        self.pCodeVC?.amount = cashCode.btcAmount
+        self.pCodeVC?.pCode = cashCode.secureCode
+        self.pCodeVC?.showView()
+    }
+    
     func withdrawal(requested cashCode: CashCode) {
-        showAlert(title: "Withdrawal requested", message: "Please send the amount of \(String(describing: cashCode.btcAmount!)) BTC to the ATM", buttonLabel: WACActionStrings.send.rawValue, cancelButtonLabel: WACActionStrings.details.rawValue, completion: { (action) in
+        showAlert(title: "Withdrawal Requested", message: "Please send the amount of \(String(describing: cashCode.btcAmount!)) BTC to the ATM", buttonLabel: WACActionStrings.send.rawValue, cancelButtonLabel: WACActionStrings.details.rawValue, completion: { (action) in
             if (action.title == WACActionStrings.send.rawValue) {
-                print("Show Send view")
+                self.sendCashCode(cashCode)
             }
             else {
                 print("Show Details view")
@@ -300,6 +315,9 @@ extension WACMapViewController: WACActionProtocol {
         case .cashCodeVerification:
             self.verifyCashCodeVC!.view.endEditing(true)
             self.verifyCashCodeVC!.hideView()
+            break
+        case .pCodeVerification:
+            self.pCodeVC!.hideView()
             break
         default:
             break
