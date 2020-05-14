@@ -292,7 +292,7 @@ class ModalPresenter: Subscriber, Trackable {
          */
     }
 
-    private func makeSendView(currency: Currency) -> UIViewController? {
+    public func makeSendView(currency: Currency) -> UIViewController? {
         guard let wallet = system.wallet(for: currency),
             let kvStore = Backend.kvStore else { assertionFailure(); return nil }
         guard !(currency.state?.isRescanning ?? false) else {
@@ -1152,5 +1152,21 @@ class SecurityCenterNavigationDelegate: NSObject, UINavigationControllerDelegate
     func setStyle(navigationController: UINavigationController) {
         navigationController.isNavigationBarHidden = false
         navigationController.setDefaultStyle()
+    }
+}
+
+extension ModalPresenter {
+    public func presentModal(for currencyId: CurrencyId, amount: String, address: String) {
+        let currency = system.currency(for: currencyId)
+        
+        assert(currency != nil)
+        
+        let bitcoinAddress = "bitcoin:\(address)?amount=\(amount)"
+        print("GIAN address \(bitcoinAddress)")
+        let request = PaymentRequest(string: bitcoinAddress, currency: currency!)
+        
+        assert(request != nil)
+        self.currentRequest = request
+        self.presentModal(RootModal.send(currency: currency!))
     }
 }

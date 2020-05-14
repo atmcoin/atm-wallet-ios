@@ -55,6 +55,15 @@ class WACSendCoinViewController: WACActionViewController {
         })
     }
     
+    func sendCoin(amount: String, address: String) {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let applicationController = delegate.applicationController
+        let modalPresenter = applicationController.modalPresenter
+        
+        let currencyId = Currencies.btc.uid
+        modalPresenter!.presentModal(for: currencyId, amount: amount, address: address)
+    }
+    
     override func clearViews() {
         self.pCodeTextField.text = ""
         self.amountTextField.text = ""

@@ -29,8 +29,10 @@ class WACVerifyCashCodeViewController: WACActionViewController {
                 let message = response.error?.message
                 self.showAlert(title: "Error", message: message!)
             }
+            else {
+                self.actionCallback?.withdrawal(requested: (response.data?.items?.first)!)
+            }
             self.view.hideAnimated()
-            self.actionCallback?.withdrawal(requested: (response.data?.items?[0])!)
             self.actionCallback?.actiondDidComplete(action: .cashCodeVerification)
             self.clearViews()
         })
