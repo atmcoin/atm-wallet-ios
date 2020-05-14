@@ -178,7 +178,7 @@ extension WACAtmLocationsViewController: WACActionProtocol {
     }
     
     func withdrawal(requested cashCode: CashCode) {
-        showAlert(title: "Withdrawal Requested", message: "Please send the amount of \(String(describing: cashCode.btcAmount!)) BTC to the ATM", buttonLabel: WACActionStrings.send.rawValue, cancelButtonLabel: WACActionStrings.details.rawValue, completion: { (action) in
+        showAlert(title: "Withdrawal Requested", message: "Please send the amount of \(String(describing: cashCode.btcAmount!)) BTC to the ATM", buttonLabel: WACActionStrings.send.rawValue, /*cancelButtonLabel: WACActionStrings.details.rawValue,*/ completion: { (action) in
             if (action.title == WACActionStrings.send.rawValue) {
                 self.sendCashCode(cashCode)
             }
