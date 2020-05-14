@@ -330,7 +330,6 @@
 		9AE8FFFA21FE6FE000D5058C /* RewardsIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8FFF921FE6FE000D5058C /* RewardsIconView.swift */; };
 		B3648E3D246B52330002EA21 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3648E3B246B52320002EA21 /* Alamofire.framework */; };
 		B3648E3E246B52340002EA21 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3648E3C246B52330002EA21 /* PromiseKit.framework */; };
-		B3648E89246CE6C60002EA21 /* WACSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E7A246CE6C60002EA21 /* WACSearchViewController.swift */; };
 		B3648E8A246CE6C60002EA21 /* AtmInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E7C246CE6C60002EA21 /* AtmInfoView.swift */; };
 		B3648E8B246CE6C60002EA21 /* AtmAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E7D246CE6C60002EA21 /* AtmAnnotation.swift */; };
 		B3648E8C246CE6C60002EA21 /* AtmAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E7E246CE6C60002EA21 /* AtmAnnotationView.swift */; };
@@ -344,6 +343,10 @@
 		B3648E94246CE6C60002EA21 /* WACSendVerificationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E87246CE6C60002EA21 /* WACSendVerificationCodeViewController.swift */; };
 		B3648E95246CE6C60002EA21 /* WACSendCoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E88246CE6C60002EA21 /* WACSendCoinViewController.swift */; };
 		B3648EA3246CFA750002EA21 /* WACSendCoinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3648EA2246CFA750002EA21 /* WACSendCoinView.xib */; };
+		B3E57D6E246D121B005A5879 /* WACAtmLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E57D6D246D121B005A5879 /* WACAtmLocationsViewController.swift */; };
+		B3E57D7D246D15F9005A5879 /* WACAtmLocationsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E57D7C246D15F9005A5879 /* WACAtmLocationsView.xib */; };
+		B3E57D7F246D201D005A5879 /* WACListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E57D7E246D201D005A5879 /* WACListView.xib */; };
+		B3E57D81246D20FC005A5879 /* WACListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E57D80246D20FC005A5879 /* WACListViewController.swift */; };
 		CE0822641FCD1BD100EF371D /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0822631FCD1BD100EF371D /* HomeScreenViewController.swift */; };
 		CE0822661FCE059A00EF371D /* HomeScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0822651FCE059A00EF371D /* HomeScreenCell.swift */; };
 		CE08B2A320F66822009FA568 /* BRAPIClient+Pigeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE08B2A220F66822009FA568 /* BRAPIClient+Pigeon.swift */; };
@@ -1054,7 +1057,6 @@
 		9AE8FFF921FE6FE000D5058C /* RewardsIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RewardsIconView.swift; path = src/Views/AnimatedIcons/RewardsIconView.swift; sourceTree = "<group>"; };
 		B3648E3B246B52320002EA21 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		B3648E3C246B52330002EA21 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
-		B3648E7A246CE6C60002EA21 /* WACSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACSearchViewController.swift; sourceTree = "<group>"; };
 		B3648E7C246CE6C60002EA21 /* AtmInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtmInfoView.swift; sourceTree = "<group>"; };
 		B3648E7D246CE6C60002EA21 /* AtmAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtmAnnotation.swift; sourceTree = "<group>"; };
 		B3648E7E246CE6C60002EA21 /* AtmAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtmAnnotationView.swift; sourceTree = "<group>"; };
@@ -1068,6 +1070,10 @@
 		B3648E87246CE6C60002EA21 /* WACSendVerificationCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACSendVerificationCodeViewController.swift; sourceTree = "<group>"; };
 		B3648E88246CE6C60002EA21 /* WACSendCoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACSendCoinViewController.swift; sourceTree = "<group>"; };
 		B3648EA2246CFA750002EA21 /* WACSendCoinView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WACSendCoinView.xib; sourceTree = "<group>"; };
+		B3E57D6D246D121B005A5879 /* WACAtmLocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACAtmLocationsViewController.swift; sourceTree = "<group>"; };
+		B3E57D7C246D15F9005A5879 /* WACAtmLocationsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WACAtmLocationsView.xib; sourceTree = "<group>"; };
+		B3E57D7E246D201D005A5879 /* WACListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WACListView.xib; sourceTree = "<group>"; };
+		B3E57D80246D20FC005A5879 /* WACListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACListViewController.swift; sourceTree = "<group>"; };
 		CE0822631FCD1BD100EF371D /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreenViewController.swift; path = src/ViewControllers/HomeScreenViewController.swift; sourceTree = "<group>"; };
 		CE0822651FCE059A00EF371D /* HomeScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreenCell.swift; path = src/Views/HomeScreenCell.swift; sourceTree = "<group>"; };
 		CE08B2A220F66822009FA568 /* BRAPIClient+Pigeon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BRAPIClient+Pigeon.swift"; path = "src/Pigeon/BRAPIClient+Pigeon.swift"; sourceTree = "<group>"; };
@@ -1884,8 +1890,11 @@
 		B3648E79246CE6C60002EA21 /* WAC */ = {
 			isa = PBXGroup;
 			children = (
+				B3E57D6D246D121B005A5879 /* WACAtmLocationsViewController.swift */,
+				B3E57D7C246D15F9005A5879 /* WACAtmLocationsView.xib */,
 				B3648E80246CE6C60002EA21 /* WACMapViewController.swift */,
-				B3648E7A246CE6C60002EA21 /* WACSearchViewController.swift */,
+				B3E57D80246D20FC005A5879 /* WACListViewController.swift */,
+				B3E57D7E246D201D005A5879 /* WACListView.xib */,
 				B3648E7B246CE6C60002EA21 /* Map */,
 				B3648E81246CE6C60002EA21 /* ActionViewControllers */,
 			);
@@ -2732,6 +2741,7 @@
 				7C54FF9E2165866A007BF3EF /* currencies.json in Resources */,
 				9A926F9522034B3800CC2263 /* CellHighlight-3.png in Resources */,
 				9A926F6822034B3800CC2263 /* CellHighlight-53.png in Resources */,
+				B3E57D7D246D15F9005A5879 /* WACAtmLocationsView.xib in Resources */,
 				9A926F6622034B3800CC2263 /* CellHighlight-78.png in Resources */,
 				9A926F7E22034B3800CC2263 /* CellHighlight-4.png in Resources */,
 				9A926F5222034B3800CC2263 /* CellHighlight-5.png in Resources */,
@@ -2882,6 +2892,7 @@
 				9AE8010721FFF81F00D5058C /* rewardsIcon-16.gif in Resources */,
 				9A926F4D22034B3800CC2263 /* CellHighlight-68.png in Resources */,
 				9AE8010B21FFF81F00D5058C /* rewardsIcon-56.gif in Resources */,
+				B3E57D7F246D201D005A5879 /* WACListView.xib in Resources */,
 				9A926F6B22034B3800CC2263 /* CellHighlight-39.png in Resources */,
 				9A926F5B22034B3800CC2263 /* CellHighlight-32.png in Resources */,
 				9A926F7522034B3800CC2263 /* CellHighlight-33.png in Resources */,
@@ -3030,6 +3041,7 @@
 				71904FB92225AB3900A6D027 /* AnnouncementPromptView.swift in Sources */,
 				71999FDD22147CD90024271F /* Events.swift in Sources */,
 				CE0822641FCD1BD100EF371D /* HomeScreenViewController.swift in Sources */,
+				B3E57D81246D20FC005A5879 /* WACListViewController.swift in Sources */,
 				223DB2191DF691260076A151 /* BRSocketHelpers.c in Sources */,
 				CEF3E82D1DE528BF007C0A9E /* AlertView.swift in Sources */,
 				CE0F58A52111670E00ACF5F8 /* CheckoutConfirmationViewController.swift in Sources */,
@@ -3187,7 +3199,6 @@
 				CEAA9E971DC18E1F0066731D /* PhraseView.swift in Sources */,
 				CEF3E82F1DE534C5007C0A9E /* GradientView.swift in Sources */,
 				B3648E8B246CE6C60002EA21 /* AtmAnnotation.swift in Sources */,
-				B3648E89246CE6C60002EA21 /* WACSearchViewController.swift in Sources */,
 				CE6D0F991DE8B75900BD4BCF /* DismissModalAnimator.swift in Sources */,
 				CE4C1CC61ED65D830063E184 /* DrawableCircle.swift in Sources */,
 				7CBD57912107FAFA0042C388 /* PairedWalletIndex.swift in Sources */,
@@ -3223,6 +3234,7 @@
 				CE6DCC301E6666470044257B /* NonScrollingCollectionView.swift in Sources */,
 				71C44E90225D135E00EF4459 /* ConfirmRecoveryKeyViewController.swift in Sources */,
 				7CF913BE1FFC7DC30085CB70 /* TxMemoCell.swift in Sources */,
+				B3E57D6E246D121B005A5879 /* WACAtmLocationsViewController.swift in Sources */,
 				3A3D63DE22F10B58000DE920 /* ManageWalletsViewController.swift in Sources */,
 				22A9A9471DF61945000F0016 /* BRAPIProxy.swift in Sources */,
 				CE20C9011DBBFFF800C8397A /* Actions.swift in Sources */,

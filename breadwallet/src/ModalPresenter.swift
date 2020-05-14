@@ -537,7 +537,8 @@ class ModalPresenter: Subscriber, Trackable {
         // MARK: Root Menu
         var rootItems: [MenuItem] = [
             MenuItem(title: S.MenuButton.cashATMWithdrawl, icon: MenuItem.Icon.atmMap) {
-                menuNav.pushViewController(WACMapViewController(), animated: true)
+                let vc = WACAtmLocationsViewController(nibName: "WACAtmLocationsView", bundle: nil)
+                menuNav.pushViewController(vc, animated: true)
             },
 
             // Scan QR Code
