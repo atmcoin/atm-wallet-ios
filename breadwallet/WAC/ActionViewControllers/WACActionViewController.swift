@@ -119,9 +119,9 @@ extension UIViewController {
         alertController.addAction(UIAlertAction(title: buttonLabel, style: .default) { (action) in
             completion(action)
         })
-        alertController.addAction(UIAlertAction(title: cancelButtonLabel, style: .cancel) { (action) in
-            completion(action)
-        })
+//        alertController.addAction(UIAlertAction(title: cancelButtonLabel, style: .cancel) { (action) in
+//            completion(action)
+//        })
         present(alertController, animated: true, completion: nil)
     }
 }
