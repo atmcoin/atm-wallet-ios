@@ -11,7 +11,28 @@ import MapKit
 import WacSDK
 
 private let kAtmAnnotationViewReusableIdentifier = "kAtmAnnotationViewReusableIdentifier"
+private let kToggleTextList = "List"
+private let kToggleTextMap = "Map"
 
+enum WACActionStrings: String {
+    case list = "List"
+    case map = "Map"
+    case send = "Send"
+    case details = "Details"
+}
+
+public enum WACAction {
+    case sendVerificationCode
+    case cashCodeVerification
+}
+
+protocol WACActionProtocol {
+    func actiondDidComplete(action: WACAction?)
+    func withdraw(amount: String)
+    func withdrawal(requested cashCode:WacSDK.CashCode)
+}
+
+// TODO: Localize strings
 class WACMapViewController: UIViewController {
 
     var client: WAC?
@@ -20,6 +41,7 @@ class WACMapViewController: UIViewController {
 
     private let mapATMs = MKMapView.wrapping(meters: WACMapViewController.meters)
     private let searchQuery = UISearchBar()
+    private var rightBarbuttonItem: UIBarButtonItem?
 
     lazy var locationManager: CLLocationManager = {
         var _locationManager = CLLocationManager()
@@ -33,7 +55,8 @@ class WACMapViewController: UIViewController {
     var pinAnnotationView: MKPinAnnotationView!
     var atmAnnotations: Array<AtmAnnotation> = []
     
-    var bottomSheetVC: WACSendVerificationCodeViewController?
+    var sendVerificationVC: WACSendVerificationCodeViewController?
+    var verifyCashCodeVC: WACVerifyCashCodeViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,19 +65,18 @@ class WACMapViewController: UIViewController {
         setupSearchQuery()
         addConstraints()
         setInitialData()
+        addTogglenavigationItem()
         
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         checkLocationAuthorizationStatus()
-        addBottomSheetView()
+        
+        addSendVerificationView()
+        addVerifyCashCodeView()
     }
     
     func checkLocationAuthorizationStatus() {
@@ -67,6 +89,22 @@ class WACMapViewController: UIViewController {
         client = WAC.init()
         let listener = self
         client?.createSession(listener)
+    }
+    
+    @objc func toggleTapped() {
+        if (rightBarbuttonItem?.title == WACActionStrings.list.rawValue) {
+            // Show tableview
+            rightBarbuttonItem?.title = WACActionStrings.map.rawValue
+        }
+        else {
+            // Show Map
+            rightBarbuttonItem?.title = WACActionStrings.list.rawValue
+        }
+    }
+    
+    func addTogglenavigationItem() {
+        rightBarbuttonItem = UIBarButtonItem(title: WACActionStrings.list.rawValue, style: .plain, target: self, action: #selector(toggleTapped))
+        self.navigationItem.rightBarButtonItem = rightBarbuttonItem
     }
 
     func addSubviews() {
@@ -145,17 +183,27 @@ class WACMapViewController: UIViewController {
         })
     }
     
-    func addBottomSheetView() {
-        bottomSheetVC = WACSendVerificationCodeViewController.init(nibName: "WACSendVerificationView", bundle: nil)
-        self.addChild(bottomSheetVC!)
-        self.view.addSubview(bottomSheetVC!.view)
-        bottomSheetVC!.didMove(toParent: self)
+    func addSheetView(controller: WACActionViewController) {
+        self.addChild(controller)
+        self.view.addSubview(controller.view)
+        controller.didMove(toParent: self)
         
-        bottomSheetVC!.client = client
+        controller.client = client
+        controller.actionCallback = self
 
-        let height = bottomSheetVC!.view.frame.height
+        let height = controller.view.frame.height
         let width  = view.frame.width
-        bottomSheetVC!.view.frame = CGRect(x: 0, y: self.view.frame.size.height, width: width, height: height)
+        controller.view.frame = CGRect(x: 0, y: self.view.frame.size.height, width: width, height: height)
+    }
+    
+    func addSendVerificationView() {
+        sendVerificationVC = WACSendVerificationCodeViewController.init(nibName: "WACSendVerificationView", bundle: nil)
+        addSheetView(controller: sendVerificationVC!)
+    }
+    
+    func addVerifyCashCodeView() {
+        verifyCashCodeVC = WACVerifyCashCodeViewController.init(nibName: "WACVerifyCashCodeView", bundle: nil)
+        addSheetView(controller: verifyCashCodeVC!)
     }
 
 }
@@ -178,6 +226,7 @@ extension WACMapViewController: CLLocationManagerDelegate {
 }
 
 extension WACMapViewController: MKMapViewDelegate {
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
             
             if annotation is MKUserLocation { return nil }
@@ -217,8 +266,43 @@ extension WACMapViewController: SessionCallback {
 
 extension WACMapViewController: AtmInfoViewDelegate {
     func detailsRequestedForAtm(atm: AtmMachine) {
-        self.bottomSheetVC?.setAtmInfo(atm)
-        self.bottomSheetVC?.showView()
+        self.sendVerificationVC?.setAtmInfo(atm)
+        self.sendVerificationVC?.showView()
         self.searchQuery.resignFirstResponder()
+        
+        self.verifyCashCodeVC!.atm = atm
+    }
+}
+
+extension WACMapViewController: WACActionProtocol {
+    func withdrawal(requested cashCode: CashCode) {
+        showAlert(title: "Withdrawal requested", message: "Please send the amount of \(String(describing: cashCode.btcAmount!)) BTC to the ATM", buttonLabel: WACActionStrings.send.rawValue, cancelButtonLabel: WACActionStrings.details.rawValue, completion: { (action) in
+            if (action.title == WACActionStrings.send.rawValue) {
+                print("Show Send view")
+            }
+            else {
+                print("Show Details view")
+            }
+        })
+    }
+    
+    func withdraw(amount: String) {
+        self.verifyCashCodeVC!.amount = amount
+    }
+    
+    func actiondDidComplete(action: WACAction?) {
+        switch action {
+        case .sendVerificationCode:
+            self.sendVerificationVC!.view.endEditing(true)
+            self.sendVerificationVC!.hideView()
+            self.verifyCashCodeVC!.showView()
+            break
+        case .cashCodeVerification:
+            self.verifyCashCodeVC!.view.endEditing(true)
+            self.verifyCashCodeVC!.hideView()
+            break
+        default:
+            break
+        }
     }
 }

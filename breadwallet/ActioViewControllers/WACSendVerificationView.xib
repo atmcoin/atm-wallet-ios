@@ -39,7 +39,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
-                        <action selector="textDidChangeVerificationCode:" destination="-1" eventType="editingChanged" id="LK9-QF-8PF"/>
+                        <action selector="textDidChange:" destination="-1" eventType="editingChanged" id="Ka3-L4-yhG"/>
                     </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueb-T1-b63">
@@ -56,7 +56,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
-                        <action selector="textDidChangeVerificationCode:" destination="-1" eventType="editingChanged" id="LwG-5k-bNy"/>
+                        <action selector="textDidChange:" destination="-1" eventType="editingChanged" id="IAn-ib-6hm"/>
                     </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I agree to receive text messages specific to this transaction. Messaging rates may apply." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vO2-Yd-yK0">
@@ -82,9 +82,8 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofM-pJ-egC">
-                    <rect key="frame" x="157" y="283.5" width="100" height="32"/>
+                    <rect key="frame" x="20" y="283.5" width="374" height="32"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="23B-iv-Kgl"/>
                         <constraint firstAttribute="height" constant="32" id="EOA-nF-n13"/>
                     </constraints>
                     <state key="normal" title="Get ATM Code"/>
@@ -104,6 +103,8 @@
                 <constraint firstItem="DlL-Ge-lnf" firstAttribute="leading" secondItem="D4X-3v-ZXt" secondAttribute="trailing" constant="14" id="Djf-Pl-dsM"/>
                 <constraint firstItem="X9r-DF-UH1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Dlf-xC-0NT"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="afx-Df-vnD" secondAttribute="trailing" constant="20" id="Hgp-Tj-WoJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ofM-pJ-egC" secondAttribute="trailing" constant="20" id="Htc-JP-sRh"/>
+                <constraint firstItem="ofM-pJ-egC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="IV3-BA-Cq1"/>
                 <constraint firstItem="afx-Df-vnD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="IeC-WZ-aAM"/>
                 <constraint firstItem="afx-Df-vnD" firstAttribute="top" secondItem="m4T-AD-bX7" secondAttribute="bottom" constant="8" id="R93-MC-pT7"/>
                 <constraint firstItem="DlL-Ge-lnf" firstAttribute="width" secondItem="D4X-3v-ZXt" secondAttribute="width" id="TYl-UU-Tv3"/>
