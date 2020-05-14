@@ -43,6 +43,7 @@ class WACActionViewController: UIViewController {
     
     @objc public func hideView() {
         self.view.hideAnimated()
+        self.view.endEditing(true)
         NotificationCenter.default.removeObserver(self)
     }
     
