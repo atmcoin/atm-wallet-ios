@@ -72,7 +72,7 @@ class WACAtmLocationsViewController: UIViewController {
     }
     
     func initWAC() {
-        client = WAC.init()
+        client = WAC.init(url: "https://api-prd.just.cash")
         let listener = self
         client?.createSession(listener)
     }
