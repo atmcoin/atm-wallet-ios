@@ -1162,11 +1162,23 @@ extension ModalPresenter {
         assert(currency != nil)
         
         let bitcoinAddress = "bitcoin:\(address)?amount=\(amount)"
-        print("GIAN address \(bitcoinAddress)")
         let request = PaymentRequest(string: bitcoinAddress, currency: currency!)
         
         assert(request != nil)
         self.currentRequest = request
-        self.presentModal(RootModal.send(currency: currency!))
+        let modal = RootModal.send(currency: currency!)
+        self.presentModal(modal)
+        
+        let topVC = topViewController as! ModalViewController
+        let sendVC = topVC.childViewController as! SendViewController
+        sendVC.disableUI()
+    }
+}
+
+extension SendViewController {
+    func disableUI() {
+        self.amountView.view.isUserInteractionEnabled = false
+        self.addressCell.isUserInteractionEnabled = false
+        self.memoCell.isUserInteractionEnabled = false
     }
 }
