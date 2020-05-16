@@ -22,8 +22,22 @@ class AtmInfoView: UIView {
     func configureWithAtm(atm: WacSDK.AtmMachine) {
         self.atm = atm
         
-        atmIdLabel.text = atm.addressDesc
-//        TODO: add labels to show info. Not sure what info to display
+        atmIdLabel.text = getDetails(atm:atm)
+    }
+
+    private func getDetails(atm : AtmMachine) -> String {
+
+        //        TODO: show additional data possibly labelled
+
+        if atm.addressDesc.isNilOrEmpty {
+            return ""
+        } else if atm.city.isNilOrEmpty {
+            return atm.addressDesc!
+        } else if atm.addressDesc!.contains(atm.city!) {
+            return atm.addressDesc!
+        } else {
+            return atm.addressDesc! + " " + atm.city!
+        }
     }
     
     // MARK: - Hit test. We need to override this to detect hits in our custom callout.
