@@ -174,8 +174,8 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
     }
 
     private func setInitialData() {
-        view.backgroundColor = .darkBackground
-        subHeaderView.backgroundColor = .darkBackground
+        view.backgroundColor = .black
+        subHeaderView.backgroundColor = .black
         subHeaderView.clipsToBounds = false
         
         navigationItem.titleView = UIView()
