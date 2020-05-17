@@ -15,7 +15,7 @@
 /* About screen twitter label */
 "About.twitter" = "Twitter";
 /* About screen wallet ID label */
-"About.walletID" = "CoinsquareリワードID";
+"About.walletID" = "Coinsquare Wallet ID";
 /* Close modal button accessibility label */
 "AccessibilityLabels.close" = "閉じる";
 /* Support center accessibiliy label */

@@ -15,7 +15,7 @@
 /* About screen twitter label */
 "About.twitter" = "Twitter";
 /* About screen wallet ID label */
-"About.walletID" = "ID premio Coinsquare";
+"About.walletID" = "Coinsquare Wallet ID";
 /* Close modal button accessibility label */
 "AccessibilityLabels.close" = "Chiudi";
 /* Support center accessibiliy label */
