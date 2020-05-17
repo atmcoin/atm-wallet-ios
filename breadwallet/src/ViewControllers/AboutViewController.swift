@@ -50,13 +50,9 @@ class AboutViewController: UIViewController {
         logo.constrain(toSuperviewEdges: nil)
         
         let verticalMargin = (E.isIPhone6OrSmaller) ? C.padding[1] : C.padding[2]
-        
-        walletID.constrain([
-            walletID.topAnchor.constraint(equalTo: logoBackground.bottomAnchor, constant: verticalMargin),
-            walletID.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            walletID.trailingAnchor.constraint(equalTo: view.trailingAnchor) ])
+
         twitter.constrain([
-            twitter.topAnchor.constraint(equalTo: walletID.bottomAnchor, constant: verticalMargin),
+            twitter.topAnchor.constraint(equalTo: logoBackground.bottomAnchor, constant: verticalMargin),
             twitter.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             twitter.trailingAnchor.constraint(equalTo: view.trailingAnchor) ])
         reddit.constrain([
