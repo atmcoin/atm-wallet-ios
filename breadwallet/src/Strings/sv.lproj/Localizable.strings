@@ -14,6 +14,8 @@
 "About.title" = "Om";
 /* About screen twitter label */
 "About.twitter" = "Twitter";
+/* About screen wallet ID label */
+"About.walletID" = "Wallet-ID för Coinsquare";
 /* Close modal button accessibility label */
 "AccessibilityLabels.close" = "Stäng";
 /* Support center accessibiliy label */

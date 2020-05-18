@@ -50,7 +50,7 @@ class AboutViewController: UIViewController {
         logo.constrain(toSuperviewEdges: nil)
         
         let verticalMargin = (E.isIPhone6OrSmaller) ? C.padding[1] : C.padding[2]
-
+        
         twitter.constrain([
             twitter.topAnchor.constraint(equalTo: logoBackground.bottomAnchor, constant: verticalMargin),
             twitter.leadingAnchor.constraint(equalTo: view.leadingAnchor),
