@@ -40,9 +40,6 @@ mainBundleVersion=$("${plistBuddy}" -c "Print CFBundleVersion" "${plist}")
 mainBundleShortVersionString=$("${plistBuddy}" -c "Print CFBundleShortVersionString" "${plist}")
 echo "Current project version is ${mainBundleShortVersionString} (${mainBundleVersion})"
 
-# Increment the build number
-mainBundleVersion=$((${mainBundleVersion} + 1))
-
 # Set version number if specified
 if [ ! -z "$1" ]; then
     echo "Setting new version: ${1}"
