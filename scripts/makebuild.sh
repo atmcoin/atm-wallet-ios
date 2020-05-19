@@ -52,6 +52,8 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 if [ "$3" == "testnet" ]; then
 	scheme="BRD Testnet - TestFlight"
+elif [ "$3" == "ci" ]; then
+	scheme="breadwallet"
 else
 	scheme="BRD Internal - TestFlight"
 fi
@@ -66,7 +68,7 @@ if output=$(git status --porcelain) && [ -z "$output" ]; then
 	echo "Making $scheme version ${mainBundleShortVersionString} build ${mainBundleVersion} ..."
     echo
 	source ${script_dir}/archive.sh "${scheme}"
-	if [ "$3" != "testnet" ]; then
+	if [ "$3" != "testnet" && "$3" != "ci" ]; then
 		commit_changes
 	fi
 else
