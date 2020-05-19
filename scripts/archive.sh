@@ -1,9 +1,10 @@
 #!/bin/bash
 
+
 # check for config file
 if [ ! -f $PWD/build/exportOptions.plist ]; then
-  echo "ERROR: You must have a correctly configured exportOptions.plist file in the 'build' folder of the project, and you must run this script from the project root folder."
-  exit 1
+	mkdir -pv $PWD/build
+	cp $PWD/.circleci/config/exportOptions.plist $PWD/build/exportOptions.plist
 fi
 
 # use xcpretty if available for improved build output formatting
