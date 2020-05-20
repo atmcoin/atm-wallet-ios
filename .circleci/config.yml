@@ -118,7 +118,7 @@ jobs:
             git commit -m "circleci build"
             mkdir build
             cp .circleci/config/exportOptions.plist build
-            echo ./scripts/makebuild.sh 4.0 44 ci  
+            ./scripts/makebuild.sh 4.0 44 ci  
             
           no_output_timeout: 30m
             
@@ -127,7 +127,7 @@ jobs:
           command: |
             security default-keychain
             security unlock-keychain -p test ~/Library/Keychains/default.keychain
-            xcodebuild  build  -verbose   -workspace breadwallet.xcworkspace   -scheme breadwallet | xcpretty
+            echo xcodebuild  build  -verbose   -workspace breadwallet.xcworkspace   -scheme breadwallet | xcpretty
             
           no_output_timeout: 30m
 
