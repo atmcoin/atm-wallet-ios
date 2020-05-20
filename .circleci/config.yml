@@ -35,7 +35,7 @@ jobs:
           command: |
             sudo gem install xcpretty 
             brew --cache
-            brew install ghostscript ImageMagick SwiftLint
+            brew install ghostscript SwiftLint
 
 
       # save cache
