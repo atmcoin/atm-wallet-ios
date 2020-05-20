@@ -93,6 +93,7 @@ jobs:
           name: xcodebuild help 
           command: |
             xcodebuild --help
+            xcodebuild -project breadwallet.xcodeproj -list
                         
       - run:
           name: xcodebuild clean 
