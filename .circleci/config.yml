@@ -7,7 +7,7 @@ jobs:
   build:
 
     macos:
-      xcode: 11.4.0 # Specify the Xcode version to use
+      xcode: 11.4.1 # Specify the Xcode version to use
 
     steps:
       - checkout
@@ -31,7 +31,7 @@ jobs:
           keys:
             - v1-dependencies
       - run:
-          name: Install prerequisites (disabled)
+          name: Install prerequisites
           command: |
             sudo gem install xcpretty 
             brew --cache
@@ -99,6 +99,13 @@ jobs:
           name: xcodebuild clean 
           command: |
             xcodebuild clean -workspace breadwallet.xcworkspace -scheme breadwallet | xcpretty
+            
+      - run:
+          name: xcodebuild  build submodules
+          command: |
+            security default-keychain
+            security unlock-keychain -p test ~/Library/Keychains/default.keychain
+            xcodebuild  build  -verbose   -workspace breadwallet.xcworkspace   -scheme submodules | xcpretty
             
       - run:
           name: makebuild 
