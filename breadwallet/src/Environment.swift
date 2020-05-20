@@ -14,19 +14,11 @@ import UIKit
 struct E {
 
     static let isTestnet: Bool = {
-        #if TESTNET
-            return true
-        #else
-            return false
-        #endif
+        return false
     }()
     
     static let isTestFlight: Bool = {
-        #if TESTFLIGHT
-            return true
-        #else
-            return false
-        #endif
+        return false
     }()
     
     static let isSimulator: Bool = {
@@ -38,11 +30,7 @@ struct E {
     }()
     
     static let isDebug: Bool = {
-        #if DEBUG
-            return true
-        #else
-            return false
-        #endif
+        return false
     }()
     
     static let isScreenshots: Bool = {
