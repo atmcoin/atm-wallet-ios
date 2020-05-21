@@ -30,12 +30,7 @@ jobs:
       - restore_cache:
           keys:
             - v1-dependencies
-      - run:
-          name: Install prerequisites
-          command: |
-            sudo gem install xcpretty 
-            brew --cache
-            brew install ghostscript SwiftLint
+            
 
 
       # save cache
@@ -71,7 +66,12 @@ jobs:
             security default-keychain -s ~/Library/Keychains/default.keychain
 
 
-
+      - run:
+          name: Install prerequisites
+          command: |
+            sudo gem install xcpretty 
+            brew --cache
+            brew install ghostscript SwiftLint
             
       - run:
           name: check   Key
@@ -134,7 +134,7 @@ jobs:
             security default-keychain
             security set-keychain-settings -lut 9999
             security unlock-keychain -p test ~/Library/Keychains/default.keychain
-            xcodebuild  build  -verbose   -workspace breadwallet.xcworkspace   -scheme breadwallet | xcpretty
+            xcodebuild  build  -verbose   -workspace breadwallet.xcworkspace   -scheme breadwallet 
             
           no_output_timeout: 30m
 
