@@ -7,7 +7,7 @@ jobs:
   build:
 
     macos:
-      xcode: 11.4.0 # Specify the Xcode version to use
+      xcode: 11.4.1 # Specify the Xcode version to use
 
     steps:
       - checkout
@@ -30,12 +30,7 @@ jobs:
       - restore_cache:
           keys:
             - v1-dependencies
-      - run:
-          name: Install prerequisites (disabled)
-          command: |
-            sudo gem install xcpretty 
-            brew --cache
-            brew install ghostscript ImageMagick SwiftLint
+            
 
 
       # save cache
@@ -49,6 +44,9 @@ jobs:
           name: check  Key
           command: |
             mkdir -p ~/cert
+
+            echo $IOS_DISTRIBUTION_CERT > ~/cert/base64cert
+            base64 -d  ~/cert/base64cert > ~/cert/ios_distribution.cer            
             
             echo $IOS_DISTRIBUTION_P12 > ~/cert/base64p12
             base64 -d  ~/cert/base64p12 > ~/cert/ios_distribution.p12
@@ -60,14 +58,22 @@ jobs:
           command: |
             security create-keychain -p test  ~/Library/Keychains/default.keychain
             security unlock-keychain -p test ~/Library/Keychains/default.keychain
-
-           
-            security import ~/cert/ios_distribution.p12 -t agg  -P $IOS_DISTRIBUTION_P12_PASS -k ~/Library/Keychains/default.keychain
+            security set-keychain-settings -t 9999 -l ~/Library/Keychains/default.keychain
+            
+            security -v import .circleci/cert/apple.cer                                         -k ~/Library/Keychains/default.keychain -T /usr/bin/codesign
+            security -v import ~/cert/ios_distribution.cer                                 -k ~/Library/Keychains/default.keychain -T /usr/bin/codesign
+            security -v import  ~/cert/ios_distribution.p12  -t agg -P $IOS_DISTRIBUTION_P12_PASS -k ~/Library/Keychains/default.keychain -T /usr/bin/codesign
             security find-certificate -a  ~/Library/Keychains/default.keychain
            
             security default-keychain -s ~/Library/Keychains/default.keychain
 
 
+      - run:
+          name: Install prerequisites
+          command: |
+            sudo gem install xcpretty 
+            brew --cache
+            brew install ghostscript SwiftLint
             
       - run:
           name: check   Key
@@ -93,6 +99,7 @@ jobs:
           name: xcodebuild help 
           command: |
             xcodebuild --help
+            xcodebuild -project breadwallet.xcodeproj -list
                         
       - run:
           name: xcodebuild clean 
@@ -100,32 +107,45 @@ jobs:
             xcodebuild clean -workspace breadwallet.xcworkspace -scheme breadwallet | xcpretty
             
       - run:
+          name: xcodebuild  build submodules
+          command: |
+            security default-keychain
+            security set-keychain-settings -lut 9999
+            security unlock-keychain -p test ~/Library/Keychains/default.keychain
+            xcodebuild  build  -verbose   -workspace breadwallet.xcworkspace   -scheme submodules | xcpretty
+            
+      - run:
           name: makebuild 
           command: |
             security default-keychain
+            security set-keychain-settings -lut 9999
             security unlock-keychain -p test ~/Library/Keychains/default.keychain
+            git config --global user.name "circleci"
+            git config --global user.email circleci@just.cash
             git add --all * 
             git commit -m "circleci build"
             mkdir build
             cp .circleci/config/exportOptions.plist build
             ./scripts/makebuild.sh 4.0 44 ci  
             
+          no_output_timeout: 30m
+            
       - run:
           name: xcodebuild  build (disabled)
           command: |
             security default-keychain
+            security set-keychain-settings -lut 9999
             security unlock-keychain -p test ~/Library/Keychains/default.keychain
-            echo xcodebuild  build  -verbose   -workspace breadwallet.xcworkspace   -scheme breadwallet | xcpretty
+            echo xcodebuild  build  -verbose   -workspace breadwallet.xcworkspace   -scheme breadwallet | xcpretty 
+            
+          no_output_timeout: 30m
 
       - run:
           name: after build check
           command: |
             ls -la build
             ls -la .
-      - run:
-          name: xcodebuild  test
-          command: |
-            xcodebuild test -workspace breadwallet.xcworkspace -scheme breadwallet -destination 'platform=iOS Simulator,name=iPhone XR,OS=12.4' | xcpretty -s
+
 
             
       # Collect XML test results data to show in the UI, and save the same XML
