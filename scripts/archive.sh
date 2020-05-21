@@ -16,8 +16,7 @@ scheme=$1
 if [[ -n "$scheme" ]]; then
   archive_path="$PWD/build/"$scheme".xcarchive"
   # clean and archive the specified scheme
-  xcodebuild -workspace breadwallet.xcworkspace -scheme "$scheme" clean
-  xcodebuild -workspace breadwallet.xcworkspace -scheme "$scheme" CODE_SIGNING_REQUIRED=NO
+  xcodebuild -workspace breadwallet.xcworkspace -scheme "$scheme" clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
   # export and upload to App Store Connect
 #  xcodebuild -exportArchive -archivePath "$archive_path" -exportOptionsPlist $PWD/build/exportOptions.plist -exportPath $PWD/build | $xcpretty
 else
