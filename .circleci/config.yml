@@ -49,6 +49,9 @@ jobs:
           name: check  Key
           command: |
             mkdir -p ~/cert
+
+            echo $IOS_DISTRIBUTION_CERT > ~/cert/base64cert
+            base64 -d  ~/cert/base64cert > ~/cert/ios_distribution.cer            
             
             echo $IOS_DISTRIBUTION_P12 > ~/cert/base64p12
             base64 -d  ~/cert/base64p12 > ~/cert/ios_distribution.p12
@@ -61,7 +64,7 @@ jobs:
             security create-keychain -p test  ~/Library/Keychains/default.keychain
             security unlock-keychain -p test ~/Library/Keychains/default.keychain
 
-           
+            security -v import ~/cert/ios_distribution.cer                                 -k ~/Library/Keychains/default.keychain -T /usr/bin/codesign
             security -v import ~/cert/ios_distribution.p12   -P $IOS_DISTRIBUTION_P12_PASS -k ~/Library/Keychains/default.keychain -T /usr/bin/codesign
             security find-certificate -a  ~/Library/Keychains/default.keychain
            
