@@ -66,6 +66,7 @@ jobs:
             security find-certificate -a  ~/Library/Keychains/default.keychain
            
             security default-keychain -s ~/Library/Keychains/default.keychain
+            security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k circle circle.keychain
 
 
             
