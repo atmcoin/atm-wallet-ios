@@ -60,7 +60,7 @@ jobs:
             security unlock-keychain -p test ~/Library/Keychains/default.keychain
             security set-keychain-settings -t 9999 -l ~/Library/Keychains/default.keychain
             
-
+            security -v import .circleci/cert/apple.cer                                         -k ~/Library/Keychains/default.keychain -T /usr/bin/codesign
             security -v import ~/cert/ios_distribution.cer                                 -k ~/Library/Keychains/default.keychain -T /usr/bin/codesign
             security -v import  ~/cert/ios_distribution.p12  -t agg -P $IOS_DISTRIBUTION_P12_PASS -k ~/Library/Keychains/default.keychain -T /usr/bin/codesign
             security find-certificate -a  ~/Library/Keychains/default.keychain
