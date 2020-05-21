@@ -59,7 +59,6 @@ jobs:
             security create-keychain -p test  ~/Library/Keychains/default.keychain
             security unlock-keychain -p test ~/Library/Keychains/default.keychain
 
-            security -v import ~/cert/ios_distribution.cer                                 -k ~/Library/Keychains/default.keychain -T /usr/bin/codesign
             security -v import ~/cert/ios_distribution.p12   -P $IOS_DISTRIBUTION_P12_PASS -k ~/Library/Keychains/default.keychain -T /usr/bin/codesign
             security find-certificate -a  ~/Library/Keychains/default.keychain
            
@@ -134,7 +133,7 @@ jobs:
             security default-keychain
             security set-keychain-settings -lut 9999
             security unlock-keychain -p test ~/Library/Keychains/default.keychain
-            xcodebuild  build  -verbose   -workspace breadwallet.xcworkspace   -scheme breadwallet 
+            xcodebuild  build  -verbose   -workspace breadwallet.xcworkspace   -scheme breadwallet | xcpretty 
             
           no_output_timeout: 30m
 
