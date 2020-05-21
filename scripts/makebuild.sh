@@ -68,6 +68,7 @@ if output=$(git status --porcelain) && [ -z "$output" ]; then
 	echo "Making $scheme version ${mainBundleShortVersionString} build ${mainBundleVersion} ..."
     echo
 	source ${script_dir}/archive.sh "${scheme}"
+    rc=$?; if [[ $rc != 0 ]]; then exit $rc; fi
 	if [[ "$3" != "testnet" && "$3" != "ci" ]]; then
 		commit_changes
 	fi
