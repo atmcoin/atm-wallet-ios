@@ -14,13 +14,14 @@ class WACSendVerificationCodeViewController: WACActionViewController {
     // IBOutlets
     @IBOutlet weak var atmMachineTitleLabel: UILabel!
     @IBOutlet weak var amountToWithdrawTextView: UITextField!
-    @IBOutlet weak var amountToWithdrawErrorMessage: UILabel!
+    @IBOutlet weak var errorMessage: UILabel!
     @IBOutlet weak var infoAboutMachineLabel: UILabel!
     @IBOutlet weak var phoneNumberTextView: UITextField!
     @IBOutlet weak var firstNameTextView: UITextField!
     @IBOutlet weak var lastNameTextView: UITextField!
     @IBOutlet weak var getAtmCodeButton: UIButton!
 
+    var validFields: Bool = false
     var messageText: String = ""
 
     static let defaultMinAmountLimit: Int = 20
@@ -33,12 +34,19 @@ class WACSendVerificationCodeViewController: WACActionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getAtmCodeButton.isEnabled = false
+        self.getAtmCodeButton.isEnabled = true
     }
-    
+
+    override func viewDidAppear(_ animated: Bool) {
+        amountToWithdrawTextView.delegate = self
+        phoneNumberTextView.delegate = self
+    }
+
     @IBAction func getverificationCodeAction(_ sender: Any) {
         self.view.endEditing(true)
         do {
+            validateFields()
+            if !validFields { return }
             try client?.sendVerificationCode(firstNameTextView.text!, self.lastNameTextView.text!, phoneNumber: self.phoneNumberTextView.text!, email: "", completion: { (response: WacSDK.SendVerificationCodeResponse) in
                 self.view.hideAnimated()
                 self.actionCallback?.withdraw(amount: self.amountToWithdrawTextView.text!)
@@ -70,49 +78,56 @@ class WACSendVerificationCodeViewController: WACActionViewController {
     }
 
     public func validateAmount(amountView: UITextField) -> Bool {
-        let amount = Int(amountView.text!)
+        if amountView.text.isNilOrEmpty {
+            addMessage(fieldName:"Amount", message: "is required")
+            return false
+        }
+
+        let amount:Int? = Int(amountView.text!)
         if amount == nil {
-            addMessage(fieldName:"Amount", message: "numeric")
+            addMessage(fieldName:"Amount", message: "should be numeric")
             return false
         }
 
         let validRange = amount! >= minAmountLimit && amount! <= maxAmountLimit
         if !validRange {
-            addMessage(fieldName: "Amount", message: "between \(minAmountLimit) and \(maxAmountLimit)")
+            addMessage(fieldName: "Amount", message: "should be between \(minAmountLimit) and \(maxAmountLimit)")
         }
 
-        let validMultiple = isMultipleOf(field: amountView.text, multipleOf: allowedBills)
+        let validMultiple = isMultipleOf(amount: amount!, multipleOf: allowedBills)
         if !validMultiple {
-            addMessage(fieldName:"Amount", message: "multiple of \(allowedBills)")
+            addMessage(fieldName:"Amount", message: "should be a multiple of \(allowedBills) bills")
         }
 
         return validRange && validMultiple
     }
 
-    private func isMultipleOf(field: String?, multipleOf: Int ) -> Bool {
-        // TODO: hard coded to 20 dollar bills, parse the atm
-
-        if field.isNilOrEmpty {
-            return false
+    private func validateNames(firstNameView: UITextField, lastNameView: UITextField) -> Bool {
+        var firstNameValid:Bool = true
+        var lastNameValid:Bool = true
+        if firstNameTextView.text.isNilOrEmpty {
+            firstNameValid = false
         }
-
-        let fieldInt:Int? = Int(field!)
-        if fieldInt == nil {
-            return false
+        if lastNameView.text.isNilOrEmpty {
+            lastNameValid = false
         }
+        return firstNameValid && lastNameValid
+    }
 
-        return fieldInt! % 20 == 0
+    private func isMultipleOf(amount: Int, multipleOf: Int ) -> Bool {
+        // TODO: support multiple bills
+        return amount % multipleOf == 0
     }
 
     private func addMessage(fieldName:String, message: String) {
         var existingFieldName: String = ""
         if messageText.isEmpty {
-            messageText.append("\(fieldName) must be ")
+            messageText.append("\(fieldName) ")
             existingFieldName = fieldName
         } else if fieldName == existingFieldName {
             messageText.append("; ")
         } else {
-            messageText.append("; \(fieldName) must be ")
+            messageText.append("\n \(fieldName) ")
             existingFieldName = fieldName
         }
         messageText.append(message)
@@ -121,7 +136,7 @@ class WACSendVerificationCodeViewController: WACActionViewController {
     public func setAtmInfo(_ atm: WacSDK.AtmMachine) {
         self.setEditLimits(atm: atm)
         self.atmMachineTitleLabel.text = atm.addressDesc!
-        self.infoAboutMachineLabel.text = "Min $\(minAmountLimit), Max $\(maxAmountLimit). Multiple of $\(allowedBills) bills"
+        self.infoAboutMachineLabel.text = "Min $\(minAmountLimit), Max $\(maxAmountLimit). Multiple of $\(allowedBills)"
         self.listenForKeyboard = true
     }
 
@@ -166,23 +181,40 @@ class WACSendVerificationCodeViewController: WACActionViewController {
     override public func clearViews() {
         super.clearViews()
         self.amountToWithdrawTextView.text = ""
-        self.amountToWithdrawErrorMessage.text = ""
+        self.errorMessage.text = ""
         self.infoAboutMachineLabel.text = ""
         self.phoneNumberTextView.text = ""
         self.firstNameTextView.text = ""
         self.lastNameTextView.text = ""
     }
-    
-    @IBAction override func textDidChange(_ sender: Any) {
+
+    private func validateFields() {
         messageText = ""
         let amountValid = validateAmount(amountView: self.amountToWithdrawTextView)
         let phoneValid = validatePhoneNumber(phoneView: self.phoneNumberTextView)
+        let nameValid = validateNames(firstNameView: self.firstNameTextView, lastNameView: self.lastNameTextView)
         if phoneValid && amountValid {
-            self.getAtmCodeButton.isEnabled = true
-            self.amountToWithdrawErrorMessage.text = ""
+            self.validFields = true
+            self.errorMessage.text = ""
         } else {
-            self.getAtmCodeButton.isEnabled = false
-            self.amountToWithdrawErrorMessage.text = messageText
+            self.validFields = false
+            self.errorMessage.text = messageText
+        }
+        errorMessage.setNeedsDisplay()
+    }
+
+    @IBAction func textFieldEditingDidChange(_ sender: Any) {
+        if errorMessage.text != "" {
+            errorMessage.text = ""
+            errorMessage.setNeedsDisplay()
         }
     }
+}
+
+extension WACSendVerificationCodeViewController : UITextFieldDelegate {
+
+    private func textFieldSholdEndEditing(_ sender: Any) {
+        validateFields()
+    }
+
 }

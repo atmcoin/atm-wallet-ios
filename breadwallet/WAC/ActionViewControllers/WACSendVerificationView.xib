@@ -10,9 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WACSendVerificationCodeViewController" customModule="coinsquare" customModuleProvider="target">
             <connections>
-                <outlet property="amountToWithdrawErrorMessage" destination="YSe-Nc-hgg" id="FgY-Fe-56o"/>
                 <outlet property="amountToWithdrawTextView" destination="afx-Df-vnD" id="1uo-EY-XLF"/>
                 <outlet property="atmMachineTitleLabel" destination="m4T-AD-bX7" id="wHm-0t-Lyi"/>
+                <outlet property="errorMessage" destination="YSe-Nc-hgg" id="FgY-Fe-56o"/>
                 <outlet property="firstNameTextView" destination="D4X-3v-ZXt" id="eia-oY-cHU"/>
                 <outlet property="getAtmCodeButton" destination="ofM-pJ-egC" id="UWF-HT-w1l"/>
                 <outlet property="infoAboutMachineLabel" destination="ueb-T1-b63" id="uL2-44-LaA"/>
@@ -40,7 +40,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                     <connections>
-                        <action selector="textDidChange:" destination="-1" eventType="editingChanged" id="Ka3-L4-yhG"/>
+                        <action selector="textFieldEditingDidChange:" destination="-1" eventType="editingChanged" id="fA9-tX-fcM"/>
                     </connections>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X9r-DF-UH1">
@@ -51,7 +51,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                     <connections>
-                        <action selector="textDidChange:" destination="-1" eventType="editingChanged" id="IAn-ib-6hm"/>
+                        <action selector="textFieldEditingDidChange:" destination="-1" eventType="editingChanged" id="XoM-2g-TlH"/>
                     </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I agree to receive text messages specific to this transaction. Standard messaging rates may apply." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vO2-Yd-yK0">
@@ -87,7 +87,7 @@
                         <action selector="getverificationCodeAction:" destination="-1" eventType="touchUpInside" id="8Ir-RG-6U1"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSe-Nc-hgg">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="YSe-Nc-hgg">
                     <rect key="frame" x="20" y="64" width="374" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="zRb-ny-AAH"/>
