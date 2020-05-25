@@ -33,7 +33,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount to withdraw" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="afx-Df-vnD">
-                    <rect key="frame" x="20" y="92" width="374" height="34"/>
+                    <rect key="frame" x="20" y="118" width="374" height="34"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="GDf-pB-0wC"/>
                     </constraints>
@@ -44,7 +44,7 @@
                     </connections>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X9r-DF-UH1">
-                    <rect key="frame" x="20" y="159" width="374" height="34"/>
+                    <rect key="frame" x="20" y="185" width="374" height="34"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="1po-g4-daF"/>
                     </constraints>
@@ -55,13 +55,13 @@
                     </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I agree to receive text messages specific to this transaction. Standard messaging rates may apply." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vO2-Yd-yK0">
-                    <rect key="frame" x="20" y="201" width="374" height="31.5"/>
+                    <rect key="frame" x="20" y="227" width="374" height="31.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D4X-3v-ZXt">
-                    <rect key="frame" x="20" y="240.5" width="180" height="34"/>
+                    <rect key="frame" x="20" y="266.5" width="180" height="34"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="eQk-Fo-S3M"/>
                     </constraints>
@@ -69,7 +69,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DlL-Ge-lnf">
-                    <rect key="frame" x="214" y="240.5" width="180" height="34"/>
+                    <rect key="frame" x="214" y="266.5" width="180" height="34"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="2Uj-J9-T4q"/>
                     </constraints>
@@ -77,7 +77,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofM-pJ-egC">
-                    <rect key="frame" x="20" y="282.5" width="374" height="34"/>
+                    <rect key="frame" x="20" y="308.5" width="374" height="34"/>
                     <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="1BA-X3-RiB"/>
@@ -88,16 +88,16 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="YSe-Nc-hgg">
-                    <rect key="frame" x="20" y="64" width="374" height="20"/>
+                    <rect key="frame" x="20" y="64" width="374" height="46"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="20" id="zRb-ny-AAH"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="6Mv-Tk-ddg"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min $20.00. Max $400.00. Multiple of $20.00 bills" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueb-T1-b63">
-                    <rect key="frame" x="20" y="134" width="374" height="17"/>
+                    <rect key="frame" x="20" y="160" width="374" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>

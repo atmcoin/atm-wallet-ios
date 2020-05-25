@@ -106,9 +106,11 @@ class WACSendVerificationCodeViewController: WACActionViewController {
         var firstNameValid:Bool = true
         var lastNameValid:Bool = true
         if firstNameTextView.text.isNilOrEmpty {
+            addMessage(fieldName:"First Name", message: "should be entered")
             firstNameValid = false
         }
         if lastNameView.text.isNilOrEmpty {
+            addMessage(fieldName:"Last Name", message: "should be entered")
             lastNameValid = false
         }
         return firstNameValid && lastNameValid
