@@ -49,6 +49,8 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
     var didTapManageWallets: (() -> Void)?
     var didTapBuy: (() -> Void)?
     var didTapTrade: (() -> Void)?
+    var didTapScanQR: (() -> Void)?
+    var didTapRedemption: (() -> Void)?
     var didTapMenu: (() -> Void)?
     
     var okToShowPrompts: Bool {
@@ -228,8 +230,8 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
     }
     
     private func setupToolbar() {
-        let buttons = [(buyButtonTitle, #imageLiteral(resourceName: "buy"), #selector(buy)),
-                       (S.HomeScreen.trade, #imageLiteral(resourceName: "trade"), #selector(trade)),
+        let buttons = [("ATM Cash Redemption", #imageLiteral(resourceName: "buy"), #selector(atmCashRedemption)),
+                       ("Scan QR Code", #imageLiteral(resourceName: "trade"), #selector(scanQRCode)),
                        (S.HomeScreen.menu, #imageLiteral(resourceName: "menu"), #selector(menu))].map { (title, image, selector) -> UIBarButtonItem in
                         let button = UIButton.vertical(title: title, image: image)
                         button.tintColor = .navigationTint
@@ -320,7 +322,15 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
     }
     
     // MARK: Actions
-    
+
+    @objc private func atmCashRedemption() {
+        didTapRedemption?()
+    }
+
+    @objc private func scanQRCode() {
+        didTapScanQR?()
+    }
+
     @objc private func buy() {
         saveEvent("currency.didTapBuyBitcoin", attributes: [ "buyAndSell": shouldShowBuyAndSell ? "true" : "false" ])
         didTapBuy?()

@@ -341,7 +341,7 @@ class ModalPresenter: Subscriber, Trackable {
         return root
     }
 
-    private func presentLoginScan() {
+    func presentLoginScan() {
         guard let top = topViewController else { return }
         let present = presentScan(parent: top, currency: nil)
         present { [unowned self] scanResult in

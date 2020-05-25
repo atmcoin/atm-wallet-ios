@@ -372,7 +372,7 @@ class ApplicationController: Subscriber, Trackable {
         UIBarButtonItem.appearance().setBackButtonBackgroundImage(#imageLiteral(resourceName: "TransparentPixel"), for: .normal, barMetrics: .default)
         UISwitch.appearance().onTintColor = Theme.accent
     }
-    
+
     private func addHomeScreenHandlers(homeScreen: HomeScreenViewController,
                                        navigationController: UINavigationController) {
         
@@ -382,7 +382,16 @@ class ApplicationController: Subscriber, Trackable {
             let accountViewController = AccountViewController(wallet: wallet)
             navigationController.pushViewController(accountViewController, animated: true)
         }
+
+        homeScreen.didTapScanQR = {
+            self.modalPresenter?.presentLoginScan()
+        }
         
+        homeScreen.didTapRedemption = {
+            let vc = WACAtmLocationsViewController(nibName: "WACAtmLocationsView", bundle: nil)
+            navigationController.pushViewController(vc, animated: true)
+        }
+
         homeScreen.didTapBuy = {
             Store.perform(action: RootModalActions.Present(modal: .buy(currency: nil)))
         }
