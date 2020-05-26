@@ -326,6 +326,8 @@
 "HomeScreen.totalAssets" = "Gesamtvermögen";
 /* (Tap here to) trade (your assets for other assets) */
 "HomeScreen.trade" = "Handeln";
+/* Activity button on the home screen toolbar */
+"HomeScreen.activity" = "Activity";
 /* Checking private key balance progress view text */
 "Import.checking" = "Das Privatschlüsselguthaben wird überprüft …";
 /* Sweep private key confirmation message */

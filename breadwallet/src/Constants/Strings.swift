@@ -436,6 +436,7 @@ enum S {
         static let buyAndSell = NSLocalizedString("HomeScreen.buyAndSell", value: "Buy & Sell", comment: "home screen Buy & Sell button")
         static let trade = NSLocalizedString("HomeScreen.trade", value: "Trade", comment: "home screen toolbar button")
         static let menu = NSLocalizedString("Button.menu", value: "Menu", comment: "home screen toolbar button")
+        static let activity = NSLocalizedString("HomeScreen.activity", value: "Activity", comment: "Home Screen History and Pending transactions toolbar button")
     }
 
     enum OnboardingScreen {

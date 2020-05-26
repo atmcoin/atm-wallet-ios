@@ -107,8 +107,14 @@ struct C {
         return "api.blockset.com"
     }
 
-    static var cniWACUrl: String {
-        return "https://secure.just.cash/wac/"
+    static var cniWacUrl: String {
+        #if TESTNET
+            return "https://secure.just.cash"
+        #elseif INTERNAL
+            return "https://api-stg.just.cash"
+        #else
+            return "https://api-prd.just.cash"
+        #endif
     }
     
     static let bdbClientTokenRecordId = "BlockchainDBClientID"

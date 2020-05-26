@@ -1168,6 +1168,11 @@ extension ModalPresenter {
         let sendVC = topVC.childViewController as! SendViewController
         sendVC.disableUI()
     }
+    
+    func presentActivity() {
+        let vc = WACActivityViewController()
+        self.topViewController?.present(vc, animated: true, completion: nil)
+    }
 }
 
 extension SendViewController {

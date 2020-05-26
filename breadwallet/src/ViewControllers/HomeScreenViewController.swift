@@ -52,6 +52,7 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
     var didTapScanQR: (() -> Void)?
     var didTapRedemption: (() -> Void)?
     var didTapMenu: (() -> Void)?
+    var didTapActivity: (() -> Void)?
     
     var okToShowPrompts: Bool {
         // On the initial display we need to load the walletes in the asset list table view first.
@@ -232,6 +233,7 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
     private func setupToolbar() {
         let buttons = [("ATM Cash Redemption", #imageLiteral(resourceName: "buy"), #selector(atmCashRedemption)),
                        ("Scan QR Code", #imageLiteral(resourceName: "trade"), #selector(scanQRCode)),
+                        (S.HomeScreen.activity, #imageLiteral(resourceName: "buy"), #selector(activity)),
                        (S.HomeScreen.menu, #imageLiteral(resourceName: "menu"), #selector(menu))].map { (title, image, selector) -> UIBarButtonItem in
                         let button = UIButton.vertical(title: title, image: image)
                         button.tintColor = .navigationTint
@@ -249,6 +251,8 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
             buttons[1],
             flexibleSpace,
             buttons[2],
+            flexibleSpace,
+            buttons[3],
             flexibleSpace
         ]
         
@@ -342,6 +346,14 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
     }
     
     @objc private func menu() { didTapMenu?() }
+    
+    @objc private func activity() {
+        didTapActivity?()
+    }
+    
+    @objc private func withdrawal() {
+        
+    }
     
     // MARK: - Prompt
     

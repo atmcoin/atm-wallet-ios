@@ -326,6 +326,8 @@
 "HomeScreen.totalAssets" = "samlet antal aktiver";
 /* (Tap here to) trade (your assets for other assets) */
 "HomeScreen.trade" = "Køb og sælg";
+/* Activity button on the home screen toolbar */
+"HomeScreen.activity" = "Activity";
 /* Checking private key balance progress view text */
 "Import.checking" = "Tjekker beløb på privat nøgle...";
 /* Sweep private key confirmation message */

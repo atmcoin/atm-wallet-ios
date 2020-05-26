@@ -326,6 +326,8 @@
 "HomeScreen.totalAssets" = "Totale Prijs:";
 /* (Tap here to) trade (your assets for other assets) */
 "HomeScreen.trade" = "Handel";
+/* Activity button on the home screen toolbar */
+"HomeScreen.activity" = "Activity";
 /* Checking private key balance progress view text */
 "Import.checking" = "Private key balans checken...";
 /* Sweep private key confirmation message */

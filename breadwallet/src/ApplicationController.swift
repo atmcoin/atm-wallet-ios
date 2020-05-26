@@ -404,6 +404,10 @@ class ApplicationController: Subscriber, Trackable {
             self.modalPresenter?.presentMenu()
         }
         
+        homeScreen.didTapActivity = { [unowned self] in
+            self.modalPresenter?.presentActivity()
+        }
+        
         homeScreen.didTapManageWallets = { [unowned self] in
             guard let assetCollection = self.coreSystem.assetCollection else { return }
             let vc = ManageWalletsViewController(assetCollection: assetCollection, coreSystem: self.coreSystem)

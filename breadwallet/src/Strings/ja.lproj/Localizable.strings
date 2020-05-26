@@ -326,6 +326,8 @@
 "HomeScreen.totalAssets" = "総資産";
 /* (Tap here to) trade (your assets for other assets) */
 "HomeScreen.trade" = "取引";
+/* Activity button on the home screen toolbar */
+"HomeScreen.activity" = "Activity";
 /* Checking private key balance progress view text */
 "Import.checking" = "秘密鍵の残高確認中...";
 /* Sweep private key confirmation message */

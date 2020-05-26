@@ -326,6 +326,8 @@
 "HomeScreen.totalAssets" = "итого активов";
 /* (Tap here to) trade (your assets for other assets) */
 "HomeScreen.trade" = "Обмен";
+/* Activity button on the home screen toolbar */
+"HomeScreen.activity" = "Activity";
 /* Checking private key balance progress view text */
 "Import.checking" = "Проверяем баланс по персональному ключу...";
 /* Sweep private key confirmation message */

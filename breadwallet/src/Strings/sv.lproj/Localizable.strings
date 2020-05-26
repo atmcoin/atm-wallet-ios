@@ -326,6 +326,8 @@
 "HomeScreen.totalAssets" = "totala tillgångar";
 /* (Tap here to) trade (your assets for other assets) */
 "HomeScreen.trade" = "Handla";
+/* Activity button on the home screen toolbar */
+"HomeScreen.activity" = "Activity";
 /* Checking private key balance progress view text */
 "Import.checking" = "Kontrollerar privat nyckelsaldo...";
 /* Sweep private key confirmation message */
