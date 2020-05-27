@@ -6,4 +6,4 @@
 	url = https://github.com/breadwallet/swift-protobuf.git
 [submodule "Modules/cash-sdk"]
 	path = Modules/cash-sdk
-	url = git@github.com:atmcoin/cash-sdk-ios.git
+	url = https://github.com/atmcoin/cash-sdk-ios.git
