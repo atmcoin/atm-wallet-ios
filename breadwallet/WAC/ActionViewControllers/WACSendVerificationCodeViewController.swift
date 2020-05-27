@@ -41,20 +41,17 @@ class WACSendVerificationCodeViewController: WACActionViewController {
         amountToWithdrawTextView.delegate = self
         phoneNumberTextView.delegate = self
     }
-
+    
     @IBAction func getverificationCodeAction(_ sender: Any) {
         self.view.endEditing(true)
-        do {
-            validateFields()
-            if !validFields { return }
-            try client?.sendVerificationCode(firstNameTextView.text!, self.lastNameTextView.text!, phoneNumber: self.phoneNumberTextView.text!, email: "", completion: { (response: WacSDK.SendVerificationCodeResponse) in
-                self.view.hideAnimated()
-                self.actionCallback?.withdraw(amount: self.amountToWithdrawTextView.text!)
-                self.actionCallback?.actiondDidComplete(action: .sendVerificationCode)
-                self.clearViews()
-            })
-        }
-        catch {}
+        validateFields()
+        if !validFields { return }
+        client?.sendVerificationCode(first: firstNameTextView.text!, surname: self.lastNameTextView.text!, phoneNumber: self.phoneNumberTextView.text!, email: "", completion: { (response: WacSDK.SendVerificationCodeResponse) in
+            self.view.hideAnimated()
+            self.actionCallback?.withdraw(amount: self.amountToWithdrawTextView.text!)
+            self.actionCallback?.actiondDidComplete(action: .sendVerificationCode)
+            self.clearViews()
+        })
     }
 
     public func validatePhoneNumber(phoneView: UITextField) -> Bool {
