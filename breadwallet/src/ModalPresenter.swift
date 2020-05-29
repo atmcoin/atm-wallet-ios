@@ -1151,7 +1151,8 @@ class SecurityCenterNavigationDelegate: NSObject, UINavigationControllerDelegate
 }
 
 extension ModalPresenter {
-    public func presentModal(for currencyId: CurrencyId, amount: String, address: String) {
+    
+    public func presentModal(for currencyId: CurrencyId, amount: String, address: String, completion: @escaping (() -> Void)) {
         let currency = system.currency(for: currencyId)
         
         assert(currency != nil)
@@ -1162,11 +1163,17 @@ extension ModalPresenter {
         assert(request != nil)
         self.currentRequest = request
         let modal = RootModal.send(currency: currency!)
-        self.presentModal(modal)
+        self.presentModal(modal) { (viewController) in
+            let vc = (viewController as! ModalViewController).childViewController as! SendViewController
+            vc.onPublishSuccess = {
+                completion()
+            }
+            vc.disableUI()
+        }
         
-        let topVC = topViewController as! ModalViewController
-        let sendVC = topVC.childViewController as! SendViewController
-        sendVC.disableUI()
+//        let topVC = topViewController as! ModalViewController
+//        let sendVC = topVC.childViewController as! SendViewController
+//        sendVC.disableUI()
     }
     
     func presentActivity() {

@@ -33,6 +33,7 @@ class WACVerifyCashCodeViewController: WACActionViewController {
                 self.actionCallback?.withdrawal(requested: (response.data?.items?.first)!)
             }
             self.view.hideAnimated()
+            
             self.actionCallback?.actiondDidComplete(action: .cashCodeVerification)
             self.clearViews()
         })

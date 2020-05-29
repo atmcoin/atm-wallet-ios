@@ -55,13 +55,16 @@ class WACSendCoinViewController: WACActionViewController {
         })
     }
     
-    func sendCoin(amount: String, address: String) {
+    func sendCoin(amount: String, address: String, completion: @escaping (() -> Void)) {
         let delegate = UIApplication.shared.delegate as! AppDelegate
         let applicationController = delegate.applicationController
         let modalPresenter = applicationController.modalPresenter
         
         let currencyId = Currencies.btc.uid
-        modalPresenter!.presentModal(for: currencyId, amount: amount, address: address)
+        modalPresenter!.presentModal(for: currencyId, amount: amount, address: address, completion: {
+            completion()
+        })
+        self.actionCallback?.actiondDidComplete(action: .cashCodeVerification)
     }
     
     override func clearViews() {

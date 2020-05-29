@@ -20,6 +20,7 @@ public enum WACAction {
     case sendVerificationCode
     case cashCodeVerification
     case pCodeVerification
+    case sendCoin
 }
 
 protocol WACActionProtocol {
@@ -39,6 +40,8 @@ class WACAtmLocationsViewController: UIViewController {
     var sendVerificationVC: WACSendVerificationCodeViewController?
     var verifyCashCodeVC: WACVerifyCashCodeViewController?
     var pCodeVC: WACSendCoinViewController?
+//    var activityVC: WACActivityViewController?
+    var withdrawalStatusVC: WACWithdrawalStatusViewController?
     
     var currentContainerViewVC: UIViewController?
     
@@ -69,6 +72,7 @@ class WACAtmLocationsViewController: UIViewController {
         addSendVerificationView()
         addVerifyCashCodeView()
         addPCodeView()
+        addWithdrawalStatusView()
     }
     
     func initWAC() {
@@ -117,13 +121,15 @@ class WACAtmLocationsViewController: UIViewController {
         })
     }
     
-    func addSheetView(controller: WACActionViewController) {
+    func addSheetView(controller: UIViewController) {
         self.addChild(controller)
         self.view.addSubview(controller.view)
         controller.didMove(toParent: self)
         
-        controller.client = client
-        controller.actionCallback = self
+        if (controller.isKind(of: WACActionViewController.self)) {
+            (controller as! WACActionViewController).client = client
+            (controller as! WACActionViewController).actionCallback = self
+        }
 
         let height = controller.view.frame.height
         let width  = view.frame.width
@@ -143,6 +149,10 @@ class WACAtmLocationsViewController: UIViewController {
     func addPCodeView() {
         pCodeVC = WACSendCoinViewController.init(nibName: "WACSendCoinView", bundle: nil)
         addSheetView(controller: pCodeVC!)
+    }
+    
+    func addWithdrawalStatusView() {
+        withdrawalStatusVC = WACWithdrawalStatusViewController.init(nibName: "WACWithdrawalStatusView", bundle: nil)
     }
 }
 
@@ -175,7 +185,16 @@ extension WACAtmLocationsViewController: WACActionProtocol {
         self.pCodeVC?.amount = cashCode.btcAmount
         self.pCodeVC?.pCode = cashCode.address
 //        self.pCodeVC?.showView()
-        self.pCodeVC?.sendCoin(amount: cashCode.btcAmount!, address: cashCode.address!)
+        let transaction = WACTransaction(timestamp: Date().timeIntervalSince1970,
+                                         status: .Awaiting,
+                                         atm: self.verifyCashCodeVC!.atm!,
+                                         code: cashCode)
+        self.withdrawalStatusVC?.transaction = transaction
+        self.pCodeVC?.sendCoin(amount: cashCode.btcAmount!, address: cashCode.address!, completion: {
+            [weak self] in
+            guard let `self` = self else { return }
+            self.present(self.withdrawalStatusVC!, animated: true, completion: nil)
+        })
     }
     
     func withdrawal(requested cashCode: CashCode) {
@@ -206,6 +225,9 @@ extension WACAtmLocationsViewController: WACActionProtocol {
             break
         case .pCodeVerification:
             self.pCodeVC!.hideView()
+            break
+        case .sendCoin:
+            self.present(withdrawalStatusVC!, animated: true, completion: nil)
             break
         default:
             break

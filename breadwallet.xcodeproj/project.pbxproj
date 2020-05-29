@@ -1944,9 +1944,9 @@
 				B3648E82246CE6C60002EA21 /* UIView+Animations.swift */,
 				B3648E83246CE6C60002EA21 /* WACVerifyCashCodeViewController.swift */,
 				B3648E84246CE6C60002EA21 /* WACVerifyCashCodeView.xib */,
-				B3648E85246CE6C60002EA21 /* WACSendVerificationView.xib */,
 				B3648E86246CE6C60002EA21 /* WACActionViewController.swift */,
 				B3648E87246CE6C60002EA21 /* WACSendVerificationCodeViewController.swift */,
+				B3648E85246CE6C60002EA21 /* WACSendVerificationView.xib */,
 				B3648E88246CE6C60002EA21 /* WACSendCoinViewController.swift */,
 				B3648EA2246CFA750002EA21 /* WACSendCoinView.xib */,
 			);

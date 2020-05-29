@@ -31,22 +31,22 @@ class WACActivityViewController: UIViewController {
     }
     
     func getAtmList() {
-        client?.getAtmList(completion: { (response: WacSDK.AtmListResponse) in
-            if let items = response.data?.items {
-                var count = 0
-                var amount = 0.000123
-                var time: Double = Date().timeIntervalSince1970
-                for atm in items {
-                    let t = WACTransaction.init(timestamp: time, status: count < 3 ? .Awaiting : count < 5 ? .FundedPending : .FundedClaimed, atm: atm, fundedCode: count < 3 ? "" : count < 5 ? "98765-6789" : count%50 == 0 ? "CANCELLED" : "", amountUSD: 100, amountBTC: amount, address: "khfadbfkasbfkabskfab", color: count < 3 ? "f29500" : count < 5 ? "67C6BB" : count%50 == 0 ? "ff5193" : "5e6fa5")
-                    self.transactions.append(t)
-                    self.cellHeights.append(199)
-                    count += 1
-                    amount += 0.000001
-                    time -= 100000
-                }
-                self.tableView.reloadData()
-            }
-        })
+//        client?.getAtmList(completion: { (response: WacSDK.AtmListResponse) in
+//            if let items = response.data?.items {
+//                var count = 0
+//                var amount = 0.000123
+//                var time: Double = Date().timeIntervalSince1970
+//                for atm in items {
+//                    let t = WACTransaction.init(timestamp: time, status: count < 3 ? .Awaiting : count < 5 ? .FundedPending : .FundedClaimed, atm: atm, fundedCode: count < 3 ? "" : count < 5 ? "98765-6789" : count%50 == 0 ? "CANCELLED" : "", amountUSD: 100, amountBTC: amount, address: "khfadbfkasbfkabskfab", color: count < 3 ? "f29500" : count < 5 ? "67C6BB" : count%50 == 0 ? "ff5193" : "5e6fa5")
+//                    self.transactions.append(t)
+//                    self.cellHeights.append(199)
+//                    count += 1
+//                    amount += 0.000001
+//                    time -= 100000
+//                }
+//                self.tableView.reloadData()
+//            }
+//        })
     }
     
     // MARK: Helpers
