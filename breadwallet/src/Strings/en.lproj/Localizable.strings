@@ -155,7 +155,7 @@
 /* BitID Authentication Request alert view title */
 "BitID.title" = "BitID Authentication Request";
 /* As in "(tap here to) buy (bitcoin)" */
-"Button.buy" = "Buy";
+"Button.buy" = "Continue";
 /* Cancel button label */
 "Button.cancel" = "Cancel";
 /* Confirm button title */

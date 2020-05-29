@@ -15,7 +15,7 @@ class CheckoutConfirmationViewController: UIViewController {
     private let footer = UIStackView()
     private let body = UIStackView()
     private let footerBackground = UIView(color: Theme.secondaryBackground)
-    private let buy = BRDButton(title: S.Button.buy, type: .primary)
+    private let buy = BRDButton(title: S.Button.continuebutton, type: .primary)
     private let cancel = BRDButton(title: S.Button.cancel, type: .secondary)
     private let logo = UIImageView()
     private let coinName = UILabel(font: .customBody(size: 28.0), color: .white)

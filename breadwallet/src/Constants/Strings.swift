@@ -31,7 +31,7 @@ enum S {
         static let no = NSLocalizedString("Button.no", value: "No", comment: "No button")
         static let send = NSLocalizedString("Button.send", value: "Send", comment: "send button")
         static let receive = NSLocalizedString("Button.receive", value: "Receive", comment: "receive button")
-        static let buy = NSLocalizedString("Button.buy", value: "Buy", comment: "buy button")
+        static let continuebutton = NSLocalizedString("Button.continue", value: "Continue", comment: "continue button")
         static let sell = NSLocalizedString("Button.sell", value: "Sell", comment: "sell button")
         static let continueAction = NSLocalizedString("Button.continueAction", value: "Continue", comment: "prompt continue button")
         static let dismiss = NSLocalizedString("Button.dismiss", value: "Dismiss", comment: "prompt dismiss button")
@@ -451,7 +451,7 @@ enum S {
         static let pageTwoSubtitle = NSLocalizedString("OnboardingPageTwo.subtitle", value: "Join the 1.5 million people around the world who trust BRD.", comment: "Subtitle displayed on the second page of the onboarding flow.")  
         static let pageThreeTitle = NSLocalizedString("OnboardingPageThree.title", value: "Buy and trade bitcoin, tokens, and other digital currencies.", comment: "Title displayed on the third page of the onboarding flow.")  
         static let pageThreeSubtitle = NSLocalizedString("OnboardingPageThree.subtitle", value: "Invest and diversify with BRD, easily and securely.", comment: "Subtitle displayed on the third page of the onboarding flow.")   
-        static let pageFourTitle = NSLocalizedString("OnboardingPageFour.title", value: "Start investing today with as little as $50!", comment: "Title displayed on the fourth page of the onboarding flow.")
+  //      static let pageFourTitle = NSLocalizedString("OnboardingPageFour.title", value: "Start investing today with as little as $50!", comment: "Title displayed on the fourth page of the onboarding flow.")
     }
     
     enum AccessibilityLabels {
