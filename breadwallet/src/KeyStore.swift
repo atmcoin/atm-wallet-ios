@@ -138,8 +138,8 @@ class KeyStore {
 
     static private var failedPins = [String]()
 
-    private let maxPinAttemptsBeforeDisable: Int64 = 3
-    private let maxPinAttemptsBeforeWipe: Int64 = 8
+    private let maxPinAttemptsBeforeDisable: Int64 = 5
+    private let maxPinAttemptsBeforeWipe: Int64 = 12
     private let defaultPinLength = 6
 
     private var allBip39WordLists: [[NSString]] = []
