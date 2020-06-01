@@ -63,6 +63,8 @@
 		3AB3EE0F227A23B400414616 /* ASADataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3EE0E227A23B400414616 /* ASADataFormatter.swift */; };
 		3AB3EE11227A27DD00414616 /* ASADataFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3EE10227A27DD00414616 /* ASADataFormatterTests.swift */; };
 		3AEF7B72234A4E3C005BE184 /* RequestUrlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF7B71234A4E3C005BE184 /* RequestUrlTests.swift */; };
+		5F9CC31F24817A3700ADB47B /* WACMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9CC31D24817A3700ADB47B /* WACMenuViewController.swift */; };
+		5F9CC32024817A3700ADB47B /* WACMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F9CC31E24817A3700ADB47B /* WACMenuView.xib */; };
 		5FE4708224629C660061B2E9 /* UIMapView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4708124629C660061B2E9 /* UIMapView+Additions.swift */; };
 		71014F7C2327E49400DA1373 /* fiatcurrencies.json in Resources */ = {isa = PBXBuildFile; fileRef = 71014F7B2327E49400DA1373 /* fiatcurrencies.json */; };
 		710B036221F67888007E8A2A /* MockClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B036121F67888007E8A2A /* MockClasses.swift */; };
@@ -801,6 +803,8 @@
 		3AB3EE10227A27DD00414616 /* ASADataFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASADataFormatterTests.swift; sourceTree = "<group>"; };
 		3AEF7B71234A4E3C005BE184 /* RequestUrlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUrlTests.swift; sourceTree = "<group>"; };
 		5F469DCF246948F20091DA11 /* WacSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WacSDK.framework; sourceTree = "<group>"; };
+		5F9CC31D24817A3700ADB47B /* WACMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACMenuViewController.swift; sourceTree = "<group>"; };
+		5F9CC31E24817A3700ADB47B /* WACMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WACMenuView.xib; sourceTree = "<group>"; };
 		5FE4708124629C660061B2E9 /* UIMapView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIMapView+Additions.swift"; path = "src/Extensions/UIMapView+Additions.swift"; sourceTree = "<group>"; };
 		71014F7B2327E49400DA1373 /* fiatcurrencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fiatcurrencies.json; path = Resources/fiatcurrencies.json; sourceTree = "<group>"; };
 		710B036121F67888007E8A2A /* MockClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockClasses.swift; path = MockClasses/MockClasses.swift; sourceTree = "<group>"; };
@@ -1923,6 +1927,8 @@
 				B3D074252478D58F00D734B7 /* WACActivityTableViewCell.xib */,
 				B389C719247F66A20022FB66 /* WACWithdrawalStatusViewController.swift */,
 				B389C71B247F66E80022FB66 /* WACWithdrawalStatusView.xib */,
+				5F9CC31D24817A3700ADB47B /* WACMenuViewController.swift */,
+				5F9CC31E24817A3700ADB47B /* WACMenuView.xib */,
 			);
 			path = WAC;
 			sourceTree = "<group>";
@@ -2801,6 +2807,7 @@
 				9A926F6A22034B3800CC2263 /* CellHighlight-77.png in Resources */,
 				9A926F8022034B3800CC2263 /* CellHighlight-19.png in Resources */,
 				B389C71C247F66E80022FB66 /* WACWithdrawalStatusView.xib in Resources */,
+				5F9CC32024817A3700ADB47B /* WACMenuView.xib in Resources */,
 				7C54FF9E2165866A007BF3EF /* currencies.json in Resources */,
 				9A926F9522034B3800CC2263 /* CellHighlight-3.png in Resources */,
 				9A926F6822034B3800CC2263 /* CellHighlight-53.png in Resources */,
@@ -3257,6 +3264,7 @@
 				7C787AE221ED89510017EA7E /* KeyStore.swift in Sources */,
 				CEAA9E911DC0FDFE0066731D /* UIViewPropertyAnimator+BRWAdditions.swift in Sources */,
 				7C1931CD2327371A0061DE20 /* CoreDatabase.swift in Sources */,
+				5F9CC31F24817A3700ADB47B /* WACMenuViewController.swift in Sources */,
 				22E773041EE7813000397E0E /* Bonjour.swift in Sources */,
 				7CE940E61FEB8A5F005A2B53 /* TxDetailRowCell.swift in Sources */,
 				3AB3EE0F227A23B400414616 /* ASADataFormatter.swift in Sources */,

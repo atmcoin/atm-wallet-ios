@@ -388,7 +388,7 @@ class ApplicationController: Subscriber, Trackable {
         }
         
         homeScreen.didTapRedemption = {
-            let vc = WACAtmLocationsViewController(nibName: "WACAtmLocationsView", bundle: nil)
+            let vc = WACMenuViewController(nibName: "WACMenuView", bundle: nil)
             navigationController.pushViewController(vc, animated: true)
         }
 

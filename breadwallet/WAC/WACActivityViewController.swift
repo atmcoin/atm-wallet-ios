@@ -25,7 +25,8 @@ class WACActivityViewController: UIViewController {
     }
     
     func initWAC() {
-        client = WAC.init(url: "https://secure.just.cash")
+
+        client = WAC.init(url: C.cniWacUrl)
         let listener = self
         client?.createSession(listener)
     }
