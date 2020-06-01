@@ -23,6 +23,7 @@ class WACWithdrawalStatusViewController: WACActionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.cashCodeStatus(self)
         self.timer = Timer.scheduledTimer(withTimeInterval: 15.0, repeats: true) { timer in
             self.cashCodeStatus(self)
         }
@@ -100,17 +101,4 @@ class WACWithdrawalStatusViewController: WACActionViewController {
     private func setMapLocation(coordinates coord: CLLocationCoordinate2D) {
 //        self.atmMapView.addAnnotation(<#T##annotation: MKAnnotation##MKAnnotation#>)
     }
-}
-
-extension WACWithdrawalStatusViewController {
-    
-}
-
-private extension MKMapView {
-  func centerToLocation(_ location: CLLocation, regionRadius: CLLocationDistance = 1000) {
-    let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
-                                              latitudinalMeters: regionRadius,
-                                              longitudinalMeters: regionRadius)
-    setRegion(coordinateRegion, animated: true)
-  }
 }
