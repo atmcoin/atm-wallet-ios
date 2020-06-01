@@ -49,11 +49,8 @@ class WACActivityTableViewCell: UITableViewCell {
     @objc open func commonInit() {
         
         selectionStyle = .none
-        
         closedView.layer.cornerRadius = 10
-//        openedView.layer.cornerRadius = 10
         closedView.layer.masksToBounds = true
-//        openedView.isHidden = true
     }
     
     override func layoutSubviews() {
@@ -69,10 +66,13 @@ class WACActivityTableViewCell: UITableViewCell {
         }
         self.amountLabel.text = (transaction.code?.btcAmount ?? "0") + " BTC"
         self.fundedLabel.text = transaction.status.rawValue
-//        self.leftView.backgroundColor = UIColor.fromHex(_transaction.color)
         self.colorView.backgroundColor = UIColor.fromHex(transaction.color)
         self.dateLabel.text = Date().dateString(from: transaction.timestamp)
         self.timeLabel.text = Date().timeString(from: transaction.timestamp)
+    }
+    
+    static func heightForTableViewCell() -> CGFloat {
+        return 199
     }
     
 }

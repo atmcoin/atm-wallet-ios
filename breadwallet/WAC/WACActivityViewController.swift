@@ -13,11 +13,9 @@ let kReusableIdentifier = "kTableViewCellReuseIdentifier"
 
 class WACActivityViewController: UIViewController {
     
-    private var cellHeights: [CGFloat] = []
     private var transactions: [WACTransaction] {
         get {
             let trans = WACTransactionManager.shared.getTransactions()
-            createCellHeights(trans.count)
             return trans
         }
     }
@@ -29,21 +27,14 @@ class WACActivityViewController: UIViewController {
         tableView.reloadData()
     }
     
-    private func createCellHeights(_ count: Int) {
-        for _ in 0...count {
-            cellHeights.append(199)
-        }
-    }
-    
     // MARK: Helpers
     private func setup() {
         self.view.backgroundColor = Theme.tertiaryBackground
         let cellNib = UINib(nibName: "WACActivityTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: kReusableIdentifier)
         tableView.backgroundColor = Theme.tertiaryBackground
-        tableView.estimatedRowHeight = 179
+        tableView.estimatedRowHeight = 199
         tableView.rowHeight = UITableView.automaticDimension
-//        tableView.backgroundColor = UIColor.clear
         if #available(iOS 10.0, *) {
             tableView.refreshControl = UIRefreshControl()
             tableView.refreshControl?.addTarget(self, action: #selector(refreshHandler), for: .valueChanged)
@@ -74,7 +65,7 @@ extension WACActivityViewController: UITableViewDataSource, UITableViewDelegate 
     }
 
     func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return cellHeights[indexPath.row]
+        return WACActivityTableViewCell.heightForTableViewCell()
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
