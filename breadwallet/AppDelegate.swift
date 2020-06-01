@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         redirectStdOut()
         UIView.swizzleSetFrame()
         applicationController.launch(application: application, options: launchOptions)
+        
+        WACSessionManager.shared.start()
         return true
     }
 

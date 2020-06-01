@@ -46,7 +46,7 @@ class WACSendVerificationCodeViewController: WACActionViewController {
         self.view.endEditing(true)
         validateFields()
         if !validFields { return }
-        client?.sendVerificationCode(first: firstNameTextView.text!, surname: self.lastNameTextView.text!, phoneNumber: self.phoneNumberTextView.text!, email: "", completion: { (response: WacSDK.SendVerificationCodeResponse) in
+        WACSessionManager.shared.client!.sendVerificationCode(first: firstNameTextView.text!, surname: self.lastNameTextView.text!, phoneNumber: self.phoneNumberTextView.text!, email: "", completion: { (response: WacSDK.SendVerificationCodeResponse) in
             self.view.hideAnimated()
             self.actionCallback?.withdraw(amount: self.amountToWithdrawTextView.text!)
             self.actionCallback?.actiondDidComplete(action: .sendVerificationCode)
@@ -54,6 +54,74 @@ class WACSendVerificationCodeViewController: WACActionViewController {
         })
     }
 
+    private func addMessage(fieldName:String, message: String) {
+        var existingFieldName: String = ""
+        if messageText.isEmpty {
+            messageText.append("\(fieldName) ")
+            existingFieldName = fieldName
+        } else if fieldName == existingFieldName {
+            messageText.append("; ")
+        } else {
+            messageText.append("\n \(fieldName) ")
+            existingFieldName = fieldName
+        }
+        messageText.append(message)
+    }
+
+    public func setAtmInfo(_ atm: WacSDK.AtmMachine) {
+//        let transaction = WACTransaction(status: .VerifyPending,
+//                                         atm: atm)
+//        WACTransactionManager.shared.store(transaction)
+        
+        self.setEditLimits(atm: atm)
+        self.atmMachineTitleLabel.text = atm.addressDesc!
+        self.infoAboutMachineLabel.text = "Min $\(minAmountLimit), Max $\(maxAmountLimit). Multiple of $\(allowedBills)"
+        self.listenForKeyboard = true
+    }
+
+    override public func clearViews() {
+        super.clearViews()
+        self.amountToWithdrawTextView.text = ""
+        self.errorMessage.text = ""
+        self.infoAboutMachineLabel.text = ""
+        self.phoneNumberTextView.text = ""
+        self.firstNameTextView.text = ""
+        self.lastNameTextView.text = ""
+    }
+
+    @IBAction func textFieldEditingDidChange(_ sender: Any) {
+        if errorMessage.text != "" {
+            errorMessage.text = ""
+            errorMessage.setNeedsDisplay()
+        }
+    }
+}
+
+extension WACSendVerificationCodeViewController : UITextFieldDelegate {
+
+    private func textFieldSholdEndEditing(_ sender: Any) {
+        validateFields()
+    }
+
+}
+
+// MARK: validation
+extension WACSendVerificationCodeViewController {
+    private func validateFields() {
+        messageText = ""
+        let amountValid = validateAmount(amountView: self.amountToWithdrawTextView)
+        let phoneValid = validatePhoneNumber(phoneView: self.phoneNumberTextView)
+        let nameValid = validateNames(firstNameView: self.firstNameTextView, lastNameView: self.lastNameTextView)
+        if phoneValid && amountValid {
+            self.validFields = true
+            self.errorMessage.text = ""
+        } else {
+            self.validFields = false
+            self.errorMessage.text = messageText
+        }
+        errorMessage.setNeedsDisplay()
+    }
+    
     public func validatePhoneNumber(phoneView: UITextField) -> Bool {
         let phone:String? = phoneView.text!
         if phone.isNilOrEmpty {
@@ -117,28 +185,7 @@ class WACSendVerificationCodeViewController: WACActionViewController {
         // TODO: support multiple bills
         return amount % multipleOf == 0
     }
-
-    private func addMessage(fieldName:String, message: String) {
-        var existingFieldName: String = ""
-        if messageText.isEmpty {
-            messageText.append("\(fieldName) ")
-            existingFieldName = fieldName
-        } else if fieldName == existingFieldName {
-            messageText.append("; ")
-        } else {
-            messageText.append("\n \(fieldName) ")
-            existingFieldName = fieldName
-        }
-        messageText.append(message)
-    }
-
-    public func setAtmInfo(_ atm: WacSDK.AtmMachine) {
-        self.setEditLimits(atm: atm)
-        self.atmMachineTitleLabel.text = atm.addressDesc!
-        self.infoAboutMachineLabel.text = "Min $\(minAmountLimit), Max $\(maxAmountLimit). Multiple of $\(allowedBills)"
-        self.listenForKeyboard = true
-    }
-
+    
     private func setEditLimits(atm: WacSDK.AtmMachine) {
         var atmMinimum: Int?
         if atm.min.isNilOrEmpty {
@@ -175,45 +222,6 @@ class WACSendVerificationCodeViewController: WACActionViewController {
             if atmBills == nil { atmBills = WACSendVerificationCodeViewController.defaultAllowedBills }
         }
         self.allowedBills = atmBills!
-    }
-
-    override public func clearViews() {
-        super.clearViews()
-        self.amountToWithdrawTextView.text = ""
-        self.errorMessage.text = ""
-        self.infoAboutMachineLabel.text = ""
-        self.phoneNumberTextView.text = ""
-        self.firstNameTextView.text = ""
-        self.lastNameTextView.text = ""
-    }
-
-    private func validateFields() {
-        messageText = ""
-        let amountValid = validateAmount(amountView: self.amountToWithdrawTextView)
-        let phoneValid = validatePhoneNumber(phoneView: self.phoneNumberTextView)
-        let nameValid = validateNames(firstNameView: self.firstNameTextView, lastNameView: self.lastNameTextView)
-        if phoneValid && amountValid {
-            self.validFields = true
-            self.errorMessage.text = ""
-        } else {
-            self.validFields = false
-            self.errorMessage.text = messageText
-        }
-        errorMessage.setNeedsDisplay()
-    }
-
-    @IBAction func textFieldEditingDidChange(_ sender: Any) {
-        if errorMessage.text != "" {
-            errorMessage.text = ""
-            errorMessage.setNeedsDisplay()
-        }
-    }
-}
-
-extension WACSendVerificationCodeViewController : UITextFieldDelegate {
-
-    private func textFieldSholdEndEditing(_ sender: Any) {
-        validateFields()
     }
 
 }

@@ -14,6 +14,7 @@ class WACWithdrawalStatusViewController: WACActionViewController {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var qrCodeImageView: UIImageView!
+    @IBOutlet weak var redeemCodeLabel: UILabel!
     
     private var timer = Timer()
     
@@ -54,10 +55,36 @@ class WACWithdrawalStatusViewController: WACActionViewController {
     }
     
     @IBAction func cashCodeStatus(_ sender: Any) {
-        client?.checkCashCodeStatus((transaction.code?.secureCode)!, completion: { (response: WacSDK.CashCodeStatusResponse) in
+        WACSessionManager.shared.client?.checkCashCodeStatus((transaction.code?.secureCode)!, completion: { (response: WacSDK.CashCodeStatusResponse) in
             let cashCode = (response.data?.items.first)! as CashStatus
-            self.navigationBar.topItem?.title = cashCode.status
+            if let code = cashCode.code {
+                self.redeemCodeLabel.text = code
+            }
+            WACTransactionManager.shared.updateTransaction(status: .Funded, forAddress: cashCode.address!)
+            self.setStatusView(cashCode.getCodeStatus()!)
+//            self.navigationBar.topItem?.title = cashCode.status
         })
+    }
+    
+    func setStatusView(_ status: CodeStatus) {
+        self.qrCodeImageView.isHidden = true
+        self.redeemCodeLabel.isHidden = true
+        switch status {
+        case .AWAITING:
+            self.qrCodeImageView.isHidden = false
+            break
+        case .FUNDED_NOT_CONFIRMED:
+            self.redeemCodeLabel.isHidden = false
+            self.redeemCodeLabel.text = "PROCESSING"
+            break
+        case .FUNDED:
+            self.redeemCodeLabel.isHidden = false
+            break
+        case .USED:
+            break
+        case .CANCELLED:
+            break
+        }
     }
     
     private func setQRCode(from address: String, amount btc: Double) {

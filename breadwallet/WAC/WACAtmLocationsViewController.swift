@@ -19,8 +19,6 @@ enum WACActionStrings: String {
 public enum WACAction {
     case sendVerificationCode
     case cashCodeVerification
-    case pCodeVerification
-    case sendCoin
 }
 
 protocol WACActionProtocol {
@@ -31,8 +29,6 @@ protocol WACActionProtocol {
 }
 
 class WACAtmLocationsViewController: UIViewController {
-
-    private var client: WAC?
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var containerView: UIView!
     private var rightBarbuttonItem: UIBarButtonItem?
@@ -40,8 +36,6 @@ class WACAtmLocationsViewController: UIViewController {
     var sendVerificationVC: WACSendVerificationCodeViewController?
     var verifyCashCodeVC: WACVerifyCashCodeViewController?
     var pCodeVC: WACSendCoinViewController?
-//    var activityVC: WACActivityViewController?
-    var withdrawalStatusVC: WACWithdrawalStatusViewController?
     
     var currentContainerViewVC: UIViewController?
     
@@ -57,13 +51,14 @@ class WACAtmLocationsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initWAC()
         setupSearchBar()
         addToggleNavigationItem()
         add(asChildViewController: mapVC)
         
         self.title = "ATM Cash Locations"
         view.backgroundColor = Theme.primaryBackground
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(sessionDidStart(_:)), name: Notification.Name.WACSessionDidStart, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,14 +66,6 @@ class WACAtmLocationsViewController: UIViewController {
         
         addSendVerificationView()
         addVerifyCashCodeView()
-        addPCodeView()
-        addWithdrawalStatusView()
-    }
-    
-    func initWAC() {
-        client = WAC.init(url: C.cniWacUrl)
-        let listener = self
-        client?.createSession(listener)
     }
     
     @objc func toggleTapped() {
@@ -113,7 +100,7 @@ class WACAtmLocationsViewController: UIViewController {
     }
     
     func getAtmList() {
-        client?.getAtmList(completion: { (response: WacSDK.AtmListResponse) in
+        WACSessionManager.shared.client!.getAtmList(completion: { (response: WacSDK.AtmListResponse) in
             if let items = response.data?.items {
                 self.mapVC.atmList = items
                 self.listVC.atmList = items
@@ -127,7 +114,6 @@ class WACAtmLocationsViewController: UIViewController {
         controller.didMove(toParent: self)
         
         if (controller.isKind(of: WACActionViewController.self)) {
-            (controller as! WACActionViewController).client = client
             (controller as! WACActionViewController).actionCallback = self
         }
 
@@ -145,15 +131,6 @@ class WACAtmLocationsViewController: UIViewController {
         verifyCashCodeVC = WACVerifyCashCodeViewController.init(nibName: "WACVerifyCashCodeView", bundle: nil)
         addSheetView(controller: verifyCashCodeVC!)
     }
-    
-    func addPCodeView() {
-        pCodeVC = WACSendCoinViewController.init(nibName: "WACSendCoinView", bundle: nil)
-        addSheetView(controller: pCodeVC!)
-    }
-    
-    func addWithdrawalStatusView() {
-        withdrawalStatusVC = WACWithdrawalStatusViewController.init(nibName: "WACWithdrawalStatusView", bundle: nil)
-    }
 }
 
 extension WACAtmLocationsViewController: UISearchBarDelegate {
@@ -167,33 +144,38 @@ extension WACAtmLocationsViewController: UISearchBarDelegate {
     }
 }
 
-extension WACAtmLocationsViewController: SessionCallback {
-
-    func onSessionCreated(_ sessionKey: String) {
-        print(sessionKey)
+extension WACAtmLocationsViewController {
+    @objc func sessionDidStart(_ notification: Notification) {
         getAtmList()
     }
-
-    func onError(_ errorMessage: String?) {
-        showAlert(title: "Error", message: errorMessage!)
-    }
-
 }
 
 extension WACAtmLocationsViewController: WACActionProtocol {
+    func sendCoin(amount: String, address: String, completion: @escaping (() -> Void)) {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let applicationController = delegate.applicationController
+        let modalPresenter = applicationController.modalPresenter
+        
+        let currencyId = Currencies.btc.uid
+        modalPresenter!.presentModal(for: currencyId, amount: amount, address: address, completion: {
+            completion()
+        })
+        actiondDidComplete(action: .cashCodeVerification)
+    }
+    
     func sendCashCode(_ cashCode: CashCode) {
-        self.pCodeVC?.amount = cashCode.btcAmount
-        self.pCodeVC?.pCode = cashCode.address
-//        self.pCodeVC?.showView()
-        let transaction = WACTransaction(timestamp: Date().timeIntervalSince1970,
-                                         status: .Awaiting,
-                                         atm: self.verifyCashCodeVC!.atm!,
-                                         code: cashCode)
-        self.withdrawalStatusVC?.transaction = transaction
-        self.pCodeVC?.sendCoin(amount: cashCode.btcAmount!, address: cashCode.address!, completion: {
+        
+        WACTransactionManager.shared.updateTransaction(status: .Awaiting, forAddress: cashCode.address!)
+        
+        sendCoin(amount: cashCode.btcAmount!, address: cashCode.address!, completion: {
             [weak self] in
             guard let `self` = self else { return }
-            self.present(self.withdrawalStatusVC!, animated: true, completion: nil)
+            
+            WACTransactionManager.shared.updateTransaction(status: .FundedNotConfirmed, forAddress: cashCode.address!)
+            
+            let withdrawalStatusVC = WACWithdrawalStatusViewController.init(nibName: "WACWithdrawalStatusView", bundle: nil)
+            withdrawalStatusVC.transaction = WACTransactionManager.shared.getTransaction(forCode: cashCode.secureCode!)
+            self.present(withdrawalStatusVC, animated: true, completion: nil)
         })
     }
     
@@ -222,12 +204,6 @@ extension WACAtmLocationsViewController: WACActionProtocol {
         case .cashCodeVerification:
             self.verifyCashCodeVC!.view.endEditing(true)
             self.verifyCashCodeVC!.hideView()
-            break
-        case .pCodeVerification:
-            self.pCodeVC!.hideView()
-            break
-        case .sendCoin:
-            self.present(withdrawalStatusVC!, animated: true, completion: nil)
             break
         default:
             break

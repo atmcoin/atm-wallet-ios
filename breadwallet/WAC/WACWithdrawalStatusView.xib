@@ -17,6 +17,7 @@
                 <outlet property="atmMapView" destination="JDP-KI-f72" id="3cd-Nz-yxI"/>
                 <outlet property="containerView" destination="vol-Lk-qff" id="bwk-cC-BbA"/>
                 <outlet property="qrCodeImageView" destination="6kt-5w-mis" id="VTd-Gg-4ba"/>
+                <outlet property="redeemCodeLabel" destination="ndO-gd-7RI" id="Prg-Cp-XBA"/>
                 <outlet property="view" destination="iN0-l3-epB" id="eKk-c5-ngU"/>
             </connections>
         </placeholder>
@@ -25,7 +26,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JDP-KI-f72">
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JDP-KI-f72">
                     <rect key="frame" x="0.0" y="44" width="414" height="207"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="JDP-KI-f72" secondAttribute="height" multiplier="2:1" id="AOI-iH-LIw"/>
@@ -78,12 +79,20 @@
                             </constraints>
                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                         </imageView>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345-6789" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndO-gd-7RI">
+                            <rect key="frame" x="108" y="54" width="198.5" height="42"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                            <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="CHo-9r-JxF"/>
+                        <constraint firstItem="ndO-gd-7RI" firstAttribute="centerX" secondItem="vol-Lk-qff" secondAttribute="centerX" id="SGm-zU-oUk"/>
                         <constraint firstItem="6kt-5w-mis" firstAttribute="centerX" secondItem="vol-Lk-qff" secondAttribute="centerX" id="cjp-N5-ZT4"/>
                         <constraint firstItem="6kt-5w-mis" firstAttribute="top" secondItem="vol-Lk-qff" secondAttribute="top" id="it8-qK-P92"/>
+                        <constraint firstItem="ndO-gd-7RI" firstAttribute="centerY" secondItem="vol-Lk-qff" secondAttribute="centerY" id="mvw-at-Imo"/>
                         <constraint firstAttribute="bottom" secondItem="6kt-5w-mis" secondAttribute="bottom" id="or5-th-hfR"/>
                     </constraints>
                 </view>

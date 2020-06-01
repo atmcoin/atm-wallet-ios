@@ -11,7 +11,6 @@ import WacSDK
 
 class WACActionViewController: UIViewController {
     
-    public var client: WAC?
     public var atm: WacSDK.AtmMachine?
     
     public var listenForKeyboard = false

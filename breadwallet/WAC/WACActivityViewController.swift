@@ -13,41 +13,26 @@ let kReusableIdentifier = "kTableViewCellReuseIdentifier"
 
 class WACActivityViewController: UIViewController {
     
-    private var client: WAC?
-    var cellHeights: [CGFloat] = []
-    var transactions: [WACTransaction] = []
+    private var cellHeights: [CGFloat] = []
+    private var transactions: [WACTransaction] {
+        get {
+            let trans = WACTransactionManager.shared.getTransactions()
+            createCellHeights(trans.count)
+            return trans
+        }
+    }
     @IBOutlet open var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-//        initWAC()
+        tableView.reloadData()
     }
     
-    func initWAC() {
-
-        client = WAC.init(url: C.cniWacUrl)
-        let listener = self
-        client?.createSession(listener)
-    }
-    
-    func getAtmList() {
-//        client?.getAtmList(completion: { (response: WacSDK.AtmListResponse) in
-//            if let items = response.data?.items {
-//                var count = 0
-//                var amount = 0.000123
-//                var time: Double = Date().timeIntervalSince1970
-//                for atm in items {
-//                    let t = WACTransaction.init(timestamp: time, status: count < 3 ? .Awaiting : count < 5 ? .FundedPending : .FundedClaimed, atm: atm, fundedCode: count < 3 ? "" : count < 5 ? "98765-6789" : count%50 == 0 ? "CANCELLED" : "", amountUSD: 100, amountBTC: amount, address: "khfadbfkasbfkabskfab", color: count < 3 ? "f29500" : count < 5 ? "67C6BB" : count%50 == 0 ? "ff5193" : "5e6fa5")
-//                    self.transactions.append(t)
-//                    self.cellHeights.append(199)
-//                    count += 1
-//                    amount += 0.000001
-//                    time -= 100000
-//                }
-//                self.tableView.reloadData()
-//            }
-//        })
+    private func createCellHeights(_ count: Int) {
+        for _ in 0...count {
+            cellHeights.append(199)
+        }
     }
     
     // MARK: Helpers
@@ -93,28 +78,10 @@ extension WACActivityViewController: UITableViewDataSource, UITableViewDelegate 
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let transaction = transactions[indexPath.row]
 
-        let _ = tableView.cellForRow(at: indexPath)
-
-        let duration = 0.5
-        cellHeights[indexPath.row] = 489
-
-        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { () -> Void in
-            tableView.beginUpdates()
-            tableView.endUpdates()
-        }, completion: nil)
+        let withdrawalStatusVC = WACWithdrawalStatusViewController.init(nibName: "WACWithdrawalStatusView", bundle: nil)
+        withdrawalStatusVC.transaction = transaction
+        self.present(withdrawalStatusVC, animated: true, completion: nil)
     }
-}
-
-extension WACActivityViewController: SessionCallback {
-
-    func onSessionCreated(_ sessionKey: String) {
-        print(sessionKey)
-        getAtmList()
-    }
-
-    func onError(_ errorMessage: String?) {
-        showAlert(title: "Error", message: errorMessage!)
-    }
-
 }

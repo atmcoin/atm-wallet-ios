@@ -52,7 +52,7 @@ public struct CashStatus: Codable {
         case longitude = "loc_lon"
     }
     
-    func getCodeStatus() -> CodeStatus? {
+    public func getCodeStatus() -> CodeStatus? {
         for code in CodeStatus.allCases {
             if (code.rawValue == status) {
                 return code
@@ -62,7 +62,7 @@ public struct CashStatus: Codable {
     }
 }
 
-enum CodeStatus: String, CaseIterable {
+public enum CodeStatus: String, CaseIterable {
     case AWAITING = "A"
     case FUNDED_NOT_CONFIRMED = "W"
     case FUNDED = "V"

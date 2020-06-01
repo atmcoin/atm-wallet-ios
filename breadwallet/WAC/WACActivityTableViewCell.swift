@@ -62,12 +62,15 @@ class WACActivityTableViewCell: UITableViewCell {
     }
     
     private func populateView(from transaction: WACTransaction) {
-        self.atmMachineNameLabel.text = transaction.atm?.addressDesc
-        self.atmMachineAddressLabel.text = ""
-        self.amountLabel.text = "\(String(describing: transaction.code?.btcAmount)) BTC"
-        self.fundedLabel.text = transaction.code?.secureCode
+        if let atm = transaction.atm {
+            self.atmMachineNameLabel.text = atm.addressDesc
+            let address = [atm.city!, atm.state!, atm.zip!]
+            self.atmMachineAddressLabel.text = address.joined(separator: ", ")
+        }
+        self.amountLabel.text = (transaction.code?.btcAmount ?? "0") + " BTC"
+        self.fundedLabel.text = transaction.status.rawValue
 //        self.leftView.backgroundColor = UIColor.fromHex(_transaction.color)
-        self.colorView.backgroundColor = UIColor.fromHex(transaction.color!)
+        self.colorView.backgroundColor = UIColor.fromHex(transaction.color)
         self.dateLabel.text = Date().dateString(from: transaction.timestamp)
         self.timeLabel.text = Date().timeString(from: transaction.timestamp)
     }

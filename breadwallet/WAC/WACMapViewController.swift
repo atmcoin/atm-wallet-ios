@@ -15,7 +15,6 @@ private let kAtmAnnotationViewReusableIdentifier = "kAtmAnnotationViewReusableId
 // TODO: Localize strings
 class WACMapViewController: UIViewController {
 
-    public var client: WAC?
     private var _atmList: [AtmMachine]?
     public var atmList: [AtmMachine]? {
         get {

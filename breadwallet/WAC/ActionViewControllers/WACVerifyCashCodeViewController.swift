@@ -24,13 +24,19 @@ class WACVerifyCashCodeViewController: WACActionViewController {
     
     @IBAction func sendCashCode(_ sender: Any) {
         self.view.endEditing(true)
-        client?.createCashCode((atm?.atmId)!, amount!, tokenTextView.text!, completion: { (response: CashCodeResponse) in
+        WACSessionManager.shared.client!.createCashCode((atm?.atmId)!, amount!, tokenTextView.text!, completion: { (response: CashCodeResponse) in
             if response.result == "error" {
                 let message = response.error?.message
                 self.showAlert(title: "Error", message: message!)
             }
             else {
-                self.actionCallback?.withdrawal(requested: (response.data?.items?.first)!)
+                let cashCode = (response.data?.items?.first)!
+                self.actionCallback?.withdrawal(requested: cashCode)
+                
+                let transaction = WACTransaction(status: .SendPending,
+                                                 atm: self.atm,
+                                                 code: cashCode)
+                WACTransactionManager.shared.store(transaction)
             }
             self.view.hideAnimated()
             
