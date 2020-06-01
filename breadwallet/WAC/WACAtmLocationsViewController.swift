@@ -58,7 +58,8 @@ class WACAtmLocationsViewController: UIViewController {
         self.title = "ATM Cash Locations"
         view.backgroundColor = Theme.primaryBackground
         
-        NotificationCenter.default.addObserver(self, selector: #selector(sessionDidStart(_:)), name: Notification.Name.WACSessionDidStart, object: nil)
+        // By now, we should already have a session
+        getAtmList()
     }
     
     override func viewDidAppear(_ animated: Bool) {

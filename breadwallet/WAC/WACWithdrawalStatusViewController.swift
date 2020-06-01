@@ -60,8 +60,10 @@ class WACWithdrawalStatusViewController: WACActionViewController {
             if let code = cashCode.code {
                 self.redeemCodeLabel.text = code
             }
-            WACTransactionManager.shared.updateTransaction(status: .Funded, forAddress: cashCode.address!)
-            self.setStatusView(cashCode.getCodeStatus()!)
+            let codeStatus = cashCode.getCodeStatus()!
+            let transactionStatus = WACTransactionStatus.transactionStatus(from: codeStatus)
+            WACTransactionManager.shared.updateTransaction(status: transactionStatus, forAddress: cashCode.address!)
+            self.setStatusView(codeStatus)
 //            self.navigationBar.topItem?.title = cashCode.status
         })
     }
