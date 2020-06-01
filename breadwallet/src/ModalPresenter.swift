@@ -537,7 +537,7 @@ class ModalPresenter: Subscriber, Trackable {
         // MARK: Root Menu
         var rootItems: [MenuItem] = [
             MenuItem(title: S.MenuButton.cashATMWithdrawl, icon: MenuItem.Icon.atmMap) {
-                let vc = WACMenuViewController(nibName: "WACMenuViewController", bundle: nil)
+                let vc = WACMenuViewController(nibName: "WACMenuView", bundle: nil)
                 menuNav.pushViewController(vc, animated: true)
             },
 
