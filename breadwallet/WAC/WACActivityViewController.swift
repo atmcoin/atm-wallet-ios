@@ -13,7 +13,7 @@ let kReusableIdentifier = "kTableViewCellReuseIdentifier"
 
 class WACActivityViewController: UIViewController {
     
-    private var transactions: [WACTransaction] {
+    var transactions: [WACTransaction] {
         get {
             let trans = WACTransactionManager.shared.getTransactions()
             return trans
