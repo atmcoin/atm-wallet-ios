@@ -3,6 +3,8 @@ import UIKit
 import MapKit
 import WacSDK
 
+private let kAtmAnnotationViewReusableIdentifier = "kAtmAnnotationViewReusableIdentifier"
+
 class WACWithdrawalStatusViewController: WACActionViewController {
     
     @IBOutlet weak var navigationBar: UINavigationBar!
@@ -36,6 +38,10 @@ class WACWithdrawalStatusViewController: WACActionViewController {
     }
     
     func initialData() {
+        atmMapView.register(AtmAnnotationView.self,
+                         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        atmMapView.delegate = self
+        
         if let atm = transaction.atm, let latitude = atm.latitude,
             let longitude = atm.longitude {
             let atmLocation = CLLocation(latitude: (latitude as NSString).doubleValue, longitude: (longitude as NSString).doubleValue)
@@ -99,6 +105,30 @@ class WACWithdrawalStatusViewController: WACActionViewController {
     }
     
     private func setMapLocation(coordinates coord: CLLocationCoordinate2D) {
-//        self.atmMapView.addAnnotation(<#T##annotation: MKAnnotation##MKAnnotation#>)
+        let annotation = AtmAnnotation.init(atm: transaction.atm!)
+        self.atmMapView.addAnnotation(annotation)
     }
+    
+    @objc override public func hideView() {
+        super.hideView()
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension WACWithdrawalStatusViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            
+            if annotation is MKUserLocation { return nil }
+            
+            var annotationView = atmMapView.dequeueReusableAnnotationView(withIdentifier: kAtmAnnotationViewReusableIdentifier)
+            
+            if annotationView == nil {
+                annotationView = AtmAnnotationView(annotation: annotation, reuseIdentifier: kAtmAnnotationViewReusableIdentifier)
+            } else {
+                annotationView!.annotation = annotation
+            }
+            
+            return annotationView
+        }
 }

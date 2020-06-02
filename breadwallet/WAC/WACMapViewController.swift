@@ -11,6 +11,8 @@ import MapKit
 import WacSDK
 
 private let kAtmAnnotationViewReusableIdentifier = "kAtmAnnotationViewReusableIdentifier"
+private let kLocationDistance: Double = 50000
+private let kHoustonLocation = CLLocation(latitude: 29.749907, longitude: -95.358421)
 
 // TODO: Localize strings
 class WACMapViewController: UIViewController {
@@ -32,12 +34,7 @@ class WACMapViewController: UIViewController {
         }
     }
 
-    private static let meters: Int = 50000
-
-    private let mapATMs = MKMapView.wrapping(meters: WACMapViewController.meters)
-//    private var parentVC: WACAtmLocationsViewController = {
-//        return self.parent
-//    }()
+    private let mapATMs = MKMapView()
 
     lazy var locationManager: CLLocationManager = {
         var _locationManager = CLLocationManager()
@@ -47,20 +44,15 @@ class WACMapViewController: UIViewController {
         return _locationManager
     }()
 
-    var pointAnnotation: MKPointAnnotation!
-    var pinAnnotationView: MKPinAnnotationView!
     var atmAnnotations: Array<AtmAnnotation> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
-        setInitialData()
+        setupMapView()
         
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        
-//        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(containerViewTapped))
-//        mapATMs.addGestureRecognizer(tapRecognizer)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -91,24 +83,25 @@ class WACMapViewController: UIViewController {
 
     }
     
+    func setupMapView() {
+        mapATMs.isScrollEnabled = true
+        mapATMs.isZoomEnabled = true
+
+        if #available(iOS 13.0, *) {
+            mapATMs.overrideUserInterfaceStyle = .dark
+        }
+        mapATMs.showsScale = true
+        mapATMs.showsCompass = true
+        
+        mapATMs.register(AtmAnnotationView.self,
+                         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        mapATMs.delegate = self
+    }
+    
     @objc func containerViewTapped(_ sender: Any) {
         view.endEditing(true)
         let parent = self.parent as! WACAtmLocationsViewController
         parent.searchBar.resignFirstResponder()
-    }
-
-    func setInitialData() {
-        mapATMs.register(AtmAnnotationView.self,
-                         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        mapATMs.delegate = self
-
-        //Zoom to user location
-        if let userLocation = locationManager.location?.coordinate {
-            let viewRegion = MKCoordinateRegion(center: userLocation,
-                                                latitudinalMeters: CLLocationDistance(WACMapViewController.meters),
-                                                longitudinalMeters: CLLocationDistance(WACMapViewController.meters))
-            mapATMs.setRegion(viewRegion, animated: false)
-        }
     }
 
     func doSearch(search: String) {
@@ -135,11 +128,7 @@ class WACMapViewController: UIViewController {
 extension WACMapViewController: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations.last!
-        let region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude),
-                                                            latitudinalMeters: CLLocationDistance(WACMapViewController.meters),
-                                                            longitudinalMeters: CLLocationDistance(WACMapViewController.meters))
-        mapATMs.setRegion(region, animated: true)
+        mapATMs.centerToLocation(kHoustonLocation, regionRadius: 50000)
         locationManager.stopUpdatingLocation()
     }
     

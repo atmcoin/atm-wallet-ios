@@ -13,11 +13,11 @@ import MapKit
 
 extension MKMapView {
 
-    static func wrapping(meters: Int) -> MKMapView {
+    static func wrapping(meters: Double) -> MKMapView {
         let mapview = MKMapView()
         //Zoom to user location
         let noLocation = CLLocationCoordinate2D()
-        let viewRegion = MKCoordinateRegion(center: noLocation, latitudinalMeters: 50000, longitudinalMeters: 50000)
+        let viewRegion = MKCoordinateRegion(center: noLocation, latitudinalMeters: meters, longitudinalMeters: meters)
         mapview.setRegion(viewRegion, animated: false)
         mapview.isScrollEnabled = true
         mapview.isZoomEnabled = true

@@ -145,12 +145,6 @@ extension WACAtmLocationsViewController: UISearchBarDelegate {
     }
 }
 
-extension WACAtmLocationsViewController {
-    @objc func sessionDidStart(_ notification: Notification) {
-        getAtmList()
-    }
-}
-
 extension WACAtmLocationsViewController: WACActionProtocol {
     func sendCoin(amount: String, address: String, completion: @escaping (() -> Void)) {
         let delegate = UIApplication.shared.delegate as! AppDelegate
