@@ -415,7 +415,7 @@
 /* "Add [a] Wallet [to the home screen]" */
 "MenuButton.addWallet" = "Add Wallet";
 /* Menu button title */
-"MenuButton.cashATMWithdrawl" = "ATM Cash Withdrawal";
+"MenuButton.atmCashRedemption" = "ATM Cash Redemption";
 /* Menu button title */
 "MenuButton.lock" = "Lock Wallet";
 /* (Click here to) manage (your list of) wallets */

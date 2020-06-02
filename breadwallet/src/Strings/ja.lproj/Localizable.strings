@@ -411,7 +411,7 @@
 /* "Add [a] Wallet [to the home screen]" */
 "MenuButton.addWallet" = "ウォレットの追加";
 /* Menu button title */
-"MenuButton.cashATMWithdrawl" = "ATM Cash Withdrawal";
+"MenuButton.atmCashRedemption" = "ATM Cash Redemption";
 /* Menu button title */
 "MenuButton.lock" = "ウォレットにロックを設定する";
 /* (Click here to) manage (your list of) wallets */

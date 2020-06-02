@@ -409,7 +409,7 @@
 /* Manage wallet modal title */
 "ManageWallet.title" = "Administrer pung";
 /* Menu button title */
-"MenuButton.cashATMWithdrawl" = "ATM Cash Withdrawal";
+"MenuButton.atmCashRedemption" = "ATM Cash Redemption";
 /* "Add [a] Wallet [to the home screen]" */
 "MenuButton.addWallet" = "Tilføj pung";
 /* Menu button title */

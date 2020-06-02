@@ -425,7 +425,7 @@ enum S {
         static let addWallet = NSLocalizedString("MenuButton.addWallet", value: "Add Wallet", comment: "Menu button title")
         static let manageWallets = NSLocalizedString("MenuButton.manageWallets", value: "Manage Wallets", comment: "Menu button title")
         static let scan = NSLocalizedString("MenuButton.scan", value: "Scan QR Code", comment: "Menu button title")
-        static let cashATMWithdrawl = NSLocalizedString("MenuButton.cashATMWithdrawl", value:"Cash ATM Withdrawl", comment: "Menu button title")
+        static let atmCashRedemption = NSLocalizedString("MenuButton.atmCashRedemption", value:"ATM Cash Redemption", comment: "Menu button title")
     }
     
     enum HomeScreen {
