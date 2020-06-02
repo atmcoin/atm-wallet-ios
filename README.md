@@ -1,4 +1,4 @@
-[![Coinsquare](/images/top-logo.jpg)](https://itunes.apple.com/app/breadwallet/id885251393)
+![Coinsquare](/images/coinsquareLogo.png) 
 
 ## The easy and secure bitcoin wallet
 
