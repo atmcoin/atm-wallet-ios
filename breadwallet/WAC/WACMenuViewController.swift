@@ -11,22 +11,29 @@
 import UIKit
 import WacSDK
 
-class WACMenuViewController: WACActivityViewController {
+class WACMenuViewController: UIViewController {
 
     @IBOutlet weak var labelMainTitle: UILabel!
     @IBOutlet weak var labelInstructions: UILabel!
     @IBOutlet weak var labelExistingCodes: UILabel!
-    @IBOutlet weak var tableExistingCodes: UITableView!
+    @IBOutlet weak var containerView: UIView!
 
+    private var activityViewController: WACActivityViewController?
     var cellHeights: [CGFloat] = []
 
     override func viewDidLoad() {
-        super.tableView = self.tableExistingCodes
         super.viewDidLoad()
         view.backgroundColor = Theme.primaryBackground
         labelMainTitle.textColor = Theme.primaryText
         labelInstructions.textColor = Theme.primaryText
         labelExistingCodes.textColor = Theme.primaryText
+        
+        setupActivityView()
+    }
+    
+    func setupActivityView() {
+        activityViewController = WACActivityViewController(nibName: "WACActivityView", bundle: nil)
+        containerView.addSubview(activityViewController!.view)
     }
 
     @IBAction func showMap(_ sender: Any) {
@@ -35,7 +42,7 @@ class WACMenuViewController: WACActivityViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        if transactions.count == 0 {
+        if activityViewController!.transactions.count == 0 {
             labelExistingCodes.text = "No existing Cash Codes found"
         } else {
             labelExistingCodes.text = "or check existing Cash Codes"

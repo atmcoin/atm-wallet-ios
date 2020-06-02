@@ -20,11 +20,19 @@ class WACActivityViewController: UIViewController {
         }
     }
     @IBOutlet open var tableView: UITableView!
+    @IBOutlet open var navigationBar: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         tableView.reloadData()
+        setupNavigationBar();
+    }
+    
+    func setupNavigationBar() {
+        navigationBar.layer.cornerRadius = 8
+        navigationBar.clipsToBounds = true
+        navigationBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
     // MARK: Helpers
