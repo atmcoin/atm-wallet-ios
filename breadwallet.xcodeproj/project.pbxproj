@@ -346,6 +346,7 @@
 		B389C71A247F66A20022FB66 /* WACWithdrawalStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389C719247F66A20022FB66 /* WACWithdrawalStatusViewController.swift */; };
 		B389C71C247F66E80022FB66 /* WACWithdrawalStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B389C71B247F66E80022FB66 /* WACWithdrawalStatusView.xib */; };
 		B389C7202483636C0022FB66 /* WACSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389C71F2483636C0022FB66 /* WACSessionManager.swift */; };
+		B38C2B7324874B6500268FCD /* WACTransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C2B7224874B6500268FCD /* WACTransactionManager.swift */; };
 		B3D0741A2478BCB000D734B7 /* WACActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D074192478BCB000D734B7 /* WACActivityViewController.swift */; };
 		B3D074222478D29A00D734B7 /* WACActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D074212478D29A00D734B7 /* WACActivityTableViewCell.swift */; };
 		B3D074242478D44500D734B7 /* WACActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D074232478D44500D734B7 /* WACActivityView.xib */; };
@@ -1097,6 +1098,7 @@
 		B389C719247F66A20022FB66 /* WACWithdrawalStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACWithdrawalStatusViewController.swift; sourceTree = "<group>"; };
 		B389C71B247F66E80022FB66 /* WACWithdrawalStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WACWithdrawalStatusView.xib; sourceTree = "<group>"; };
 		B389C71F2483636C0022FB66 /* WACSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACSessionManager.swift; sourceTree = "<group>"; };
+		B38C2B7224874B6500268FCD /* WACTransactionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACTransactionManager.swift; sourceTree = "<group>"; };
 		B3D074192478BCB000D734B7 /* WACActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACActivityViewController.swift; sourceTree = "<group>"; };
 		B3D074212478D29A00D734B7 /* WACActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACActivityTableViewCell.swift; sourceTree = "<group>"; };
 		B3D074232478D44500D734B7 /* WACActivityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WACActivityView.xib; sourceTree = "<group>"; };
@@ -1927,7 +1929,6 @@
 				B389C71B247F66E80022FB66 /* WACWithdrawalStatusView.xib */,
 				5F9CC31D24817A3700ADB47B /* WACMenuViewController.swift */,
 				5F9CC31E24817A3700ADB47B /* WACMenuView.xib */,
-				B389C71F2483636C0022FB66 /* WACSessionManager.swift */,
 			);
 			path = WAC;
 			sourceTree = "<group>";
@@ -1977,7 +1978,9 @@
 		B3D074272478D67900D734B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B389C71F2483636C0022FB66 /* WACSessionManager.swift */,
 				B3D0742A2478D6E000D734B7 /* WACTransaction.swift */,
+				B38C2B7224874B6500268FCD /* WACTransactionManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3266,6 +3269,7 @@
 				3AB3EE0F227A23B400414616 /* ASADataFormatter.swift in Sources */,
 				B3648E8E246CE6C60002EA21 /* WACMapViewController.swift in Sources */,
 				CEAA9EA01DC2F9F50066731D /* UIFont+BRWAdditions.swift in Sources */,
+				B38C2B7324874B6500268FCD /* WACTransactionManager.swift in Sources */,
 				CEF61B121ECF52C700C7EA6A /* AmountViewController.swift in Sources */,
 				CEBF32F21DDCE10D00348FC6 /* AccountHeaderView.swift in Sources */,
 				CECCE5B21E04B00D00D99448 /* SendCell.swift in Sources */,

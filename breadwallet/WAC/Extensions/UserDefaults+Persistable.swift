@@ -3,6 +3,7 @@ import Foundation
 
 protocol Persistable {
     func setObject<WACTransaction>(_ object: WACTransaction, forKey: String?) throws where WACTransaction: Encodable
+    func setObjects(_ objects: [WACTransaction], forKey: String?) throws
     func getMostRecentObject(for key: String?) throws -> WACTransaction?
     func getAllObjects(forKey: String?) throws -> [WACTransaction]
     func reset()

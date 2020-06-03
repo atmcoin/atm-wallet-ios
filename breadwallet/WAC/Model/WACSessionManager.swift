@@ -16,6 +16,12 @@ class WACSessionManager {
         let listener = WACSessionManager.shared
         WACSessionManager.shared.client!.createSession(listener)
     }
+    
+    public func cashCodeStatus(for code: String, completion: @escaping (() -> Void)) {
+        client?.checkCashCodeStatus(code, completion: { (response: WacSDK.CashCodeStatusResponse) in
+            completion()
+        })
+    }
 }
 
 extension WACSessionManager: SessionCallback {

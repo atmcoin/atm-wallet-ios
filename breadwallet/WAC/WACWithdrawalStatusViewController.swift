@@ -12,29 +12,27 @@ class WACWithdrawalStatusViewController: WACActionViewController {
     @IBOutlet weak var atmLocationDescription: UILabel!
     @IBOutlet weak var amountUSDLabel: UILabel!
     @IBOutlet weak var amountBTCLabel: UILabel!
+    @IBOutlet weak var addressTitleLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var qrCodeImageView: UIImageView!
     @IBOutlet weak var redeemCodeLabel: UILabel!
     
-    private var timer = Timer()
-    
     var transaction: WACTransaction!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.cashCodeStatus(self)
-        self.timer = Timer.scheduledTimer(withTimeInterval: 15.0, repeats: true) { timer in
-            self.cashCodeStatus(self)
-        }
-        
+        update()
         initialData()
+        setMapLocation()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(transactionDidUpdate), name: .WACTransactionDidUpdate, object: nil)
     }
     
     deinit {
-        self.timer.invalidate()
+        NotificationCenter.default.removeObserver(self)
     }
     
     func initialData() {
@@ -61,37 +59,42 @@ class WACWithdrawalStatusViewController: WACActionViewController {
         }
     }
     
-    @IBAction func cashCodeStatus(_ sender: Any) {
-        WACSessionManager.shared.client?.checkCashCodeStatus((transaction.code?.secureCode)!, completion: { (response: WacSDK.CashCodeStatusResponse) in
-            let cashCode = (response.data?.items.first)! as CashStatus
-            if let code = cashCode.code {
-                self.redeemCodeLabel.text = code
-            }
-            let codeStatus = cashCode.getCodeStatus()!
-            let transactionStatus = WACTransactionStatus.transactionStatus(from: codeStatus)
-            WACTransactionManager.shared.updateTransaction(status: transactionStatus, forAddress: cashCode.address!)
-            self.setStatusView(codeStatus)
-//            self.navigationBar.topItem?.title = cashCode.status
-        })
+    private func update() {
+        if let code = transaction.code {
+            self.redeemCodeLabel.text = code.secureCode
+        }
+        self.updateStatus(transaction.status)
     }
     
-    func setStatusView(_ status: CodeStatus) {
+    func updateStatus(_ status: WACTransactionStatus) {
         self.qrCodeImageView.isHidden = true
-        self.redeemCodeLabel.isHidden = true
+        self.redeemCodeLabel.isHidden = false
+        self.addressLabel.isHidden = true
+        self.addressTitleLabel.isHidden = true
         switch status {
-        case .AWAITING:
+        case .Awaiting:
             self.qrCodeImageView.isHidden = false
+            self.redeemCodeLabel.isHidden = true
+            self.addressLabel.isHidden = false
+            self.addressTitleLabel.isHidden = false
             break
-        case .FUNDED_NOT_CONFIRMED:
-            self.redeemCodeLabel.isHidden = false
+        case .FundedNotConfirmed:
+            self.addressLabel.isHidden = false
+            self.addressTitleLabel.isHidden = false
             self.redeemCodeLabel.text = "PROCESSING"
             break
-        case .FUNDED:
-            self.redeemCodeLabel.isHidden = false
+        case .Funded:
+            // Show Code to redeem
             break
-        case .USED:
+        case .Withdrawn:
+            self.redeemCodeLabel.text = "WITHDRAWN"
             break
-        case .CANCELLED:
+        case .Cancelled:
+            self.redeemCodeLabel.text = "CANCELLED"
+            break
+        case .VerifyPending:
+            break
+        case .SendPending:
             break
         }
     }
@@ -104,7 +107,7 @@ class WACWithdrawalStatusViewController: WACActionViewController {
             .resize(self.qrCodeImageView.frame.size)
     }
     
-    private func setMapLocation(coordinates coord: CLLocationCoordinate2D) {
+    private func setMapLocation() {
         let annotation = AtmAnnotation.init(atm: transaction.atm!)
         self.atmMapView.addAnnotation(annotation)
     }
@@ -112,6 +115,13 @@ class WACWithdrawalStatusViewController: WACActionViewController {
     @objc override public func hideView() {
         super.hideView()
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func transactionDidUpdate(_ notification: Notification) {
+        let t = notification.object as! WACTransaction
+        if (t.code?.address == self.transaction.code?.address) {
+            update()
+        }
     }
 }
 

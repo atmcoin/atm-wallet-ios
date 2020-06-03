@@ -27,6 +27,12 @@ class WACActivityViewController: UIViewController {
         setup()
         tableView.reloadData()
         setupNavigationBar();
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(transactionDidUpdate), name: .WACTransactionDidUpdate, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     func setupNavigationBar() {
@@ -57,6 +63,10 @@ class WACActivityViewController: UIViewController {
             }
             self?.tableView.reloadData()
         })
+    }
+    
+    @objc func transactionDidUpdate(_ notification: Notification) {
+        self.tableView.reloadData()
     }
 }
 

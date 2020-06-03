@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WACWithdrawalStatusViewController" customModule="coinsquare" customModuleProvider="target">
             <connections>
                 <outlet property="addressLabel" destination="xWV-4X-Fts" id="Ib8-d8-NJh"/>
+                <outlet property="addressTitleLabel" destination="IuR-5X-nI4" id="1hQ-pk-OKg"/>
                 <outlet property="amountBTCLabel" destination="ADU-PE-Zi0" id="5Fc-Dx-Rnu"/>
                 <outlet property="amountUSDLabel" destination="OpX-mF-lM1" id="BqK-Rv-Cnu"/>
                 <outlet property="atmLocationDescription" destination="vrm-S7-oWT" id="gHC-nB-dq3"/>
