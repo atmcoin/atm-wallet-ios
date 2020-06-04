@@ -14,7 +14,9 @@ class WACSessionManager {
     public func start() {
         client = WAC.init(url: C.cniWacUrl)
         let listener = WACSessionManager.shared
-        WACSessionManager.shared.client!.createSession(listener)
+        WACSessionManager.shared.client!.createSession(listener) {
+            
+        }
     }
     
     public func cashCodeStatus(for code: String, completion: @escaping (() -> Void)) {
@@ -30,7 +32,7 @@ extension WACSessionManager: SessionCallback {
         NotificationCenter.default.post(name: .WACSessionDidStart, object: nil)
     }
 
-    func onError(_ errorMessage: String?) {
+    func onError(_ errorMessage: WacError?) {
         NotificationCenter.default.post(name: .WACSessionDidFail, object: nil)
     }
 

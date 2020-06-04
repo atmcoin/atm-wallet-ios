@@ -4,7 +4,7 @@ import WacSDK
 
 public enum WACTransactionStatus: String, Codable {
     case VerifyPending = "Waiting for user to enter SMS code" // Nice to have.
-    case SendPending = "Waiting for transaction to be sent" // Note: Could be send from other wallet. After X time, this transaction may be cancelled it not sent
+    case SendPending = "Waiting for transaction to be sent" // Note: Could be send from other wallet. After X time, this transaction may be cancelled if not sent
     case Awaiting = "Transaction Sent"
     case FundedNotConfirmed = "Transaction Processing"
     case Funded = "Transaction Funded" // It could take some time to be confirmed
@@ -27,7 +27,8 @@ public enum WACTransactionStatus: String, Codable {
     }
 }
 
-public struct WACTransaction: CustomStringConvertible, Codable {
+public struct WACTransaction: CustomStringConvertible, Codable, Equatable {
+    
     var timestamp: Double
     var status: WACTransactionStatus
     var atm: AtmMachine?
@@ -66,5 +67,9 @@ public struct WACTransaction: CustomStringConvertible, Codable {
         case .Cancelled:
             return "5e6fa5"
         }
+    }
+    
+    public static func == (lhs: WACTransaction, rhs: WACTransaction) -> Bool {
+        return lhs.timestamp == rhs.timestamp
     }
 }

@@ -119,7 +119,7 @@ class WACWithdrawalStatusViewController: WACActionViewController {
     
     @objc func transactionDidUpdate(_ notification: Notification) {
         let t = notification.object as! WACTransaction
-        if (t.code?.address == self.transaction.code?.address) {
+        if (t == self.transaction) {
             update()
         }
     }
