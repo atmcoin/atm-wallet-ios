@@ -342,11 +342,12 @@
 		B3648E95246CE6C60002EA21 /* WACSendCoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E88246CE6C60002EA21 /* WACSendCoinViewController.swift */; };
 		B36648E1247A194900AC9429 /* Date+WACAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36648E0247A194900AC9429 /* Date+WACAdditions.swift */; };
 		B389C6FF247F502C0022FB66 /* UserDefaults+Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389C6FE247F502C0022FB66 /* UserDefaults+Persistable.swift */; };
-		B389C718247F52FA0022FB66 /* WacSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B389C715247F52760022FB66 /* WacSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B389C71A247F66A20022FB66 /* WACWithdrawalStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389C719247F66A20022FB66 /* WACWithdrawalStatusViewController.swift */; };
 		B389C71C247F66E80022FB66 /* WACWithdrawalStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B389C71B247F66E80022FB66 /* WACWithdrawalStatusView.xib */; };
 		B389C7202483636C0022FB66 /* WACSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389C71F2483636C0022FB66 /* WACSessionManager.swift */; };
 		B38C2B7324874B6500268FCD /* WACTransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C2B7224874B6500268FCD /* WACTransactionManager.swift */; };
+		B38C2B9024889E4E00268FCD /* WacSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38C2B8F24889D4C00268FCD /* WacSDK.framework */; };
+		B38C2B9124889E4E00268FCD /* WacSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B38C2B8F24889D4C00268FCD /* WacSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3D0741A2478BCB000D734B7 /* WACActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D074192478BCB000D734B7 /* WACActivityViewController.swift */; };
 		B3D074222478D29A00D734B7 /* WACActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D074212478D29A00D734B7 /* WACActivityTableViewCell.swift */; };
 		B3D074242478D44500D734B7 /* WACActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D074232478D44500D734B7 /* WACActivityView.xib */; };
@@ -681,18 +682,11 @@
 			remoteGlobalIDString = BD12FD351D767BA0001815C7;
 			remoteInfo = SwiftProtobuf_iOS;
 		};
-		B389C714247F52760022FB66 /* PBXContainerItemProxy */ = {
+		B38C2B8E24889D4C00268FCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B389C70F247F52750022FB66 /* WacSDK.xcodeproj */;
+			containerPortal = B38C2B8924889D4C00268FCD /* WacSDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B362079724528B9B00D6A566;
-			remoteInfo = WacSDK;
-		};
-		B389C716247F52E70022FB66 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B389C70F247F52750022FB66 /* WacSDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = B362079624528B9B00D6A566;
 			remoteInfo = WacSDK;
 		};
 		CEA7E6801F09A9D2001F8C27 /* PBXContainerItemProxy */ = {
@@ -711,8 +705,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B389C718247F52FA0022FB66 /* WacSDK.framework in Embed Frameworks */,
 				754AE0B71DFCA870007FD001 /* libbz2.framework in Embed Frameworks */,
+				B38C2B9124889E4E00268FCD /* WacSDK.framework in Embed Frameworks */,
 				7CD03E8623429F580084F00F /* SwiftProtobuf.framework in Embed Frameworks */,
 				7C662B0D222F515F0008814C /* ../$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)/BRCrypto.framework in Embed Frameworks */,
 			);
@@ -1094,11 +1088,11 @@
 		B3648E88246CE6C60002EA21 /* WACSendCoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACSendCoinViewController.swift; sourceTree = "<group>"; };
 		B36648E0247A194900AC9429 /* Date+WACAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+WACAdditions.swift"; sourceTree = "<group>"; };
 		B389C6FE247F502C0022FB66 /* UserDefaults+Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Persistable.swift"; sourceTree = "<group>"; };
-		B389C70F247F52750022FB66 /* WacSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WacSDK.xcodeproj; path = "Modules/cash-sdk/WacSDK/WacSDK.xcodeproj"; sourceTree = "<group>"; };
 		B389C719247F66A20022FB66 /* WACWithdrawalStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACWithdrawalStatusViewController.swift; sourceTree = "<group>"; };
 		B389C71B247F66E80022FB66 /* WACWithdrawalStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WACWithdrawalStatusView.xib; sourceTree = "<group>"; };
 		B389C71F2483636C0022FB66 /* WACSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACSessionManager.swift; sourceTree = "<group>"; };
 		B38C2B7224874B6500268FCD /* WACTransactionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACTransactionManager.swift; sourceTree = "<group>"; };
+		B38C2B8924889D4C00268FCD /* WacSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WacSDK.xcodeproj; path = "Modules/cash-sdk-ios/WacSDK/WacSDK.xcodeproj"; sourceTree = "<group>"; };
 		B3D074192478BCB000D734B7 /* WACActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACActivityViewController.swift; sourceTree = "<group>"; };
 		B3D074212478D29A00D734B7 /* WACActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACActivityTableViewCell.swift; sourceTree = "<group>"; };
 		B3D074232478D44500D734B7 /* WACActivityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WACActivityView.xib; sourceTree = "<group>"; };
@@ -1338,6 +1332,7 @@
 				22A9A9641DF61FE7000F0016 /* Security.framework in Frameworks */,
 				22A9A9621DF61FE0000F0016 /* SystemConfiguration.framework in Frameworks */,
 				22A9A9601DF61FD8000F0016 /* CoreLocation.framework in Frameworks */,
+				B38C2B9024889E4E00268FCD /* WacSDK.framework in Frameworks */,
 				22A9A95E1DF61FD0000F0016 /* PushKit.framework in Frameworks */,
 				7CD03E8523429F580084F00F /* SwiftProtobuf.framework in Frameworks */,
 				22717B062315D3E300F77F4E /* CloudKit.framework in Frameworks */,
@@ -1674,7 +1669,7 @@
 		75B6F52F1DA71DCC0031A93F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				B389C70F247F52750022FB66 /* WacSDK.xcodeproj */,
+				B38C2B8924889D4C00268FCD /* WacSDK.xcodeproj */,
 				7CD03E6B23429EB50084F00F /* SwiftProtobuf.xcodeproj */,
 				22A9A9971DF63426000F0016 /* libbz2 */,
 				75FEFD1F1DAEE7A400203D3A /* sqlite3 */,
@@ -1967,10 +1962,10 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		B389C710247F52750022FB66 /* Products */ = {
+		B38C2B8A24889D4C00268FCD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B389C715247F52760022FB66 /* WacSDK.framework */,
+				B38C2B8F24889D4C00268FCD /* WacSDK.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2485,7 +2480,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				B389C717247F52E70022FB66 /* PBXTargetDependency */,
 				7CD03E8423429F390084F00F /* PBXTargetDependency */,
 				22A9A99C1DF63426000F0016 /* PBXTargetDependency */,
 				7CD03E8823429F580084F00F /* PBXTargetDependency */,
@@ -2647,8 +2641,8 @@
 					ProjectRef = 7CD03E6B23429EB50084F00F /* SwiftProtobuf.xcodeproj */;
 				},
 				{
-					ProductGroup = B389C710247F52750022FB66 /* Products */;
-					ProjectRef = B389C70F247F52750022FB66 /* WacSDK.xcodeproj */;
+					ProductGroup = B38C2B8A24889D4C00268FCD /* Products */;
+					ProjectRef = B38C2B8924889D4C00268FCD /* WacSDK.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -2762,11 +2756,11 @@
 			remoteRef = 7CD03E8123429EB50084F00F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B389C715247F52760022FB66 /* WacSDK.framework */ = {
+		B38C2B8F24889D4C00268FCD /* WacSDK.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = WacSDK.framework;
-			remoteRef = B389C714247F52760022FB66 /* PBXContainerItemProxy */;
+			remoteRef = B38C2B8E24889D4C00268FCD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -3426,11 +3420,6 @@
 			isa = PBXTargetDependency;
 			name = SwiftProtobuf_iOS;
 			targetProxy = 7CD03E8723429F580084F00F /* PBXContainerItemProxy */;
-		};
-		B389C717247F52E70022FB66 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = WacSDK;
-			targetProxy = B389C716247F52E70022FB66 /* PBXContainerItemProxy */;
 		};
 		CEA7E6811F09A9D2001F8C27 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
