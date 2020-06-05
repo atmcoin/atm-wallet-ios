@@ -1,0 +1,13 @@
+phraseapp:
+  access_token: 9abca49e5e1552cb31eb152da45a7ac721a6bdcd57fc0887ff6c1dea601c468c
+  project_id: da2b9478e1e4cd83cce0de8f919ee25e
+  push:
+    sources:
+    - file: ./breadwallet/src/Strings/<locale_code>.lproj/Localizable.strings
+      params:
+        file_format: strings
+  pull:
+    targets:
+    - file: ./breadwallet/src/Strings/<locale_code>.lproj/Localizable.strings
+      params:
+        file_format: strings
