@@ -14,8 +14,6 @@ import WacSDK
 class WACMenuViewController: UIViewController {
 
     @IBOutlet weak var labelMainTitle: UILabel!
-    @IBOutlet weak var labelInstructions: UILabel!
-    @IBOutlet weak var labelExistingCodes: UILabel!
     @IBOutlet weak var containerView: UIView!
 
     private var activityViewController: WACActivityViewController?
@@ -25,9 +23,7 @@ class WACMenuViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = Theme.primaryBackground
         labelMainTitle.textColor = Theme.primaryText
-        labelInstructions.textColor = Theme.primaryText
-        labelExistingCodes.textColor = Theme.primaryText
-        
+
         setupActivityView()
     }
     
@@ -39,14 +35,6 @@ class WACMenuViewController: UIViewController {
     @IBAction func showMap(_ sender: Any) {
         let vc = WACAtmLocationsViewController(nibName: "WACAtmLocationsView", bundle: nil)
         navigationController?.pushViewController(vc, animated: true)
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        if activityViewController!.transactions.count == 0 {
-            labelExistingCodes.text = "No existing Cash Codes found"
-        } else {
-            labelExistingCodes.text = "or check existing Cash Codes"
-        }
     }
 
 }
