@@ -4,7 +4,7 @@ import WacSDK
 
 public enum WACTransactionStatus: String, Codable {
     case VerifyPending = "New" // Nice to have.
-    case SendPending = "New" // Note: Could be send from other wallet. After X time, this transaction may be cancelled if not sent
+    case SendPending = "Pending" // Note: Could be send from other wallet. After X time, this transaction may be cancelled if not sent
     case Awaiting = "Transaction Sent"
     case FundedNotConfirmed = "Unconfirmed"
     case Funded = "Funded" // It could take some time to be confirmed
