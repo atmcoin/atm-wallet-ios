@@ -3,14 +3,14 @@ import Foundation
 import WacSDK
 
 public enum WACTransactionStatus: String, Codable {
-    case VerifyPending = "Waiting for user to enter SMS code" // Nice to have.
-    case SendPending = "Waiting for transaction to be sent" // Note: Could be send from other wallet. After X time, this transaction may be cancelled if not sent
+    case VerifyPending = "New" // Nice to have.
+    case SendPending = "New" // Note: Could be send from other wallet. After X time, this transaction may be cancelled if not sent
     case Awaiting = "Transaction Sent"
-    case FundedNotConfirmed = "Transaction Processing"
-    case Funded = "Transaction Funded" // It could take some time to be confirmed
-    case Withdrawn = "Transaction Withdrawn"
-    case Cancelled = "Transaction Cancelled"
-    
+    case FundedNotConfirmed = "Unconfirmed"
+    case Funded = "Funded" // It could take some time to be confirmed
+    case Withdrawn = "Used"
+    case Cancelled = "Expired"
+
     static func transactionStatus(from status: CodeStatus) -> WACTransactionStatus {
         switch status {
         case .AWAITING:
@@ -49,19 +49,19 @@ public struct WACTransaction: CustomStringConvertible, Codable, Equatable {
     public var description: String {
         return "\(timestamp) = \(status.rawValue)"
     }
-    
+
     private func color(for status:WACTransactionStatus) -> String {
         switch status {
-        case .VerifyPending:
-            return "123456"
-        case .SendPending:
-            return "f29500"
+        case .VerifyPending: // new statuses are bitcoin with 25 percent alpha
+            return "f2a90040"
+        case .SendPending: // new statuses are bitcoin with 25 percent alpha
+            return "f2a90040"
         case .Awaiting:
             return "67C6BB"
         case .FundedNotConfirmed:
-            return "ff5193"
+            return "ff519380"
         case .Funded:
-            return "ff5193"
+            return "85bb65"  // light green money color
         case .Withdrawn:
             return "ff5193"
         case .Cancelled:

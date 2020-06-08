@@ -32,9 +32,7 @@ class WACActivityTableViewCell: UITableViewCell {
     @IBOutlet open var atmMachineAddressLabel: UILabel!
     @IBOutlet open var amountTitleLabel: UILabel!
     @IBOutlet open var amountLabel: UILabel!
-    @IBOutlet open var leftView: UIView!
-    @IBOutlet open var colorView: UIView!
-    
+    @IBOutlet open var leftView: UIView!    
     
     /// UIView whitch display when cell close
     @IBOutlet open var openedView: UIView!
@@ -66,7 +64,7 @@ class WACActivityTableViewCell: UITableViewCell {
         }
         self.amountLabel.text = (transaction.code?.btcAmount ?? "0") + " BTC"
         self.fundedLabel.text = transaction.status.rawValue
-        self.colorView.backgroundColor = UIColor.fromHex(transaction.color)
+        self.leftView.backgroundColor = UIColor.fromHex(transaction.color)
         self.dateLabel.text = Date().dateString(from: transaction.timestamp)
         self.timeLabel.text = Date().timeString(from: transaction.timestamp)
     }

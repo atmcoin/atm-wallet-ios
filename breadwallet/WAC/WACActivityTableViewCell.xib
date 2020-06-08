@@ -17,20 +17,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H4f-If-qdC" userLabel="Opened View">
-                        <rect key="frame" x="0.0" y="189" width="365" height="490"/>
+                        <rect key="frame" x="0.0" y="189" width="375" height="490"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t9f-qR-D6v" userLabel="Closed View">
-                        <rect key="frame" x="0.0" y="10" width="365" height="179"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t9f-qR-D6v" userLabel="Closed View">
+                        <rect key="frame" x="0.0" y="10" width="375" height="179"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1O0-lr-vOB" userLabel="Color View">
-                                <rect key="frame" x="0.0" y="0.0" width="10" height="179"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="10" id="XjJ-SE-CCp"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9d-ry-d0C" userLabel="Right View">
                                 <rect key="frame" x="125" y="0.0" width="240" height="179"/>
                                 <subviews>
@@ -125,11 +118,8 @@
                             <constraint firstAttribute="bottom" secondItem="S90-Np-09i" secondAttribute="bottom" id="FBq-A8-kuq"/>
                             <constraint firstItem="S90-Np-09i" firstAttribute="width" secondItem="t9f-qR-D6v" secondAttribute="width" multiplier="1:3" id="Fuj-IV-dMb"/>
                             <constraint firstItem="T9d-ry-d0C" firstAttribute="width" secondItem="t9f-qR-D6v" secondAttribute="width" multiplier="2:3" constant="-10" id="IUD-WA-vXH"/>
-                            <constraint firstItem="1O0-lr-vOB" firstAttribute="leading" secondItem="t9f-qR-D6v" secondAttribute="leading" id="MVt-f1-M26"/>
                             <constraint firstItem="T9d-ry-d0C" firstAttribute="top" secondItem="t9f-qR-D6v" secondAttribute="top" id="PaX-VC-FDR"/>
-                            <constraint firstItem="1O0-lr-vOB" firstAttribute="top" secondItem="t9f-qR-D6v" secondAttribute="top" id="Sc2-7d-umR"/>
                             <constraint firstAttribute="width" constant="375" id="Zaq-wQ-WIe"/>
-                            <constraint firstAttribute="bottom" secondItem="1O0-lr-vOB" secondAttribute="bottom" id="ijb-tt-9bA"/>
                             <constraint firstItem="S90-Np-09i" firstAttribute="top" secondItem="t9f-qR-D6v" secondAttribute="top" id="oW3-9Y-Fqr"/>
                             <constraint firstItem="S90-Np-09i" firstAttribute="leading" secondItem="t9f-qR-D6v" secondAttribute="leading" id="whO-kb-CqA"/>
                         </constraints>
@@ -160,7 +150,6 @@
                 <outlet property="atmMachineAddressLabel" destination="pYM-Fr-tYb" id="DEG-fR-a0C"/>
                 <outlet property="atmMachineNameLabel" destination="Jkj-wa-qek" id="3XP-lt-p2w"/>
                 <outlet property="closedView" destination="t9f-qR-D6v" id="17N-Zc-QtU"/>
-                <outlet property="colorView" destination="1O0-lr-vOB" id="JV8-ST-YcR"/>
                 <outlet property="dateLabel" destination="Fhu-9H-2VD" id="nH8-WC-BoY"/>
                 <outlet property="fundedLabel" destination="hI5-rQ-r27" id="1mo-B3-AZf"/>
                 <outlet property="leftView" destination="S90-Np-09i" id="tJS-i7-KpQ"/>
