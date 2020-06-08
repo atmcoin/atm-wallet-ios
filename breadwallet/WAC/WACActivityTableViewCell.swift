@@ -59,7 +59,8 @@ class WACActivityTableViewCell: UITableViewCell {
     private func populateView(from transaction: WACTransaction) {
         if let atm = transaction.atm {
             self.atmMachineNameLabel.text = atm.addressDesc
-            let address = [atm.city!, atm.state!, atm.zip!]
+            var address = [atm.city!, atm.state!, atm.zip!]
+            address = address.filter { $0 != ""}
             self.atmMachineAddressLabel.text = address.joined(separator: ", ")
         }
         self.amountLabel.text = (transaction.code?.btcAmount ?? "0") + " BTC"

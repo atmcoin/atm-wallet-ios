@@ -1170,10 +1170,6 @@ extension ModalPresenter {
             }
             vc.disableUI()
         }
-        
-//        let topVC = topViewController as! ModalViewController
-//        let sendVC = topVC.childViewController as! SendViewController
-//        sendVC.disableUI()
     }
     
     func presentActivity() {

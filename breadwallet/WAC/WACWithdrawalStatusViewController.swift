@@ -18,6 +18,7 @@ class WACWithdrawalStatusViewController: WACActionViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var qrCodeImageView: UIImageView!
     @IBOutlet weak var redeemCodeLabel: UILabel!
+    @IBOutlet weak var sendButton: UIButton!
     
     var transaction: WACTransaction!
     
@@ -71,6 +72,7 @@ class WACWithdrawalStatusViewController: WACActionViewController {
         self.redeemCodeLabel.isHidden = false
         self.addressLabel.isHidden = true
         self.addressTitleLabel.isHidden = true
+        self.sendButton.isHidden = true
         switch status {
         case .Awaiting:
             self.qrCodeImageView.isHidden = false
@@ -95,6 +97,7 @@ class WACWithdrawalStatusViewController: WACActionViewController {
         case .VerifyPending:
             break
         case .SendPending:
+            self.sendButton.isHidden = false
             break
         }
     }
@@ -122,6 +125,13 @@ class WACWithdrawalStatusViewController: WACActionViewController {
         if (t == self.transaction) {
             update()
         }
+    }
+    
+    @IBAction func sendCoin(_ sender: Any) {
+        WACAtmLocationsViewController.sendCoin(amount: (transaction.code?.btcAmount)!, address: (transaction.code?.address)!, completion: {
+            WACTransactionManager.shared.updateTransaction(status: .FundedNotConfirmed, address: (self.transaction.code?.address)!)
+            self.update()
+        })
     }
 }
 

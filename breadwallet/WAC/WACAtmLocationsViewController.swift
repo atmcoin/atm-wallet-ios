@@ -143,10 +143,8 @@ extension WACAtmLocationsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.listVC.doSearch(search: searchText)
     }
-}
-
-extension WACAtmLocationsViewController: WACActionProtocol {
-    func sendCoin(amount: String, address: String, completion: @escaping (() -> Void)) {
+    
+    class func sendCoin(amount: String, address: String, completion: @escaping (() -> Void)) {
         let delegate = UIApplication.shared.delegate as! AppDelegate
         let applicationController = delegate.applicationController
         let modalPresenter = applicationController.modalPresenter
@@ -155,23 +153,26 @@ extension WACAtmLocationsViewController: WACActionProtocol {
         modalPresenter!.presentModal(for: currencyId, amount: amount, address: address, completion: {
             completion()
         })
-        actiondDidComplete(action: .cashCodeVerification)
     }
+}
+
+extension WACAtmLocationsViewController: WACActionProtocol {
     
     func sendCashCode(_ cashCode: CashCode) {
         
-        WACTransactionManager.shared.updateTransaction(status: .Awaiting, forAddress: cashCode.address!)
+        WACTransactionManager.shared.updateTransaction(status: .Awaiting, address: cashCode.address!, code: cashCode.secureCode)
         
-        sendCoin(amount: cashCode.btcAmount!, address: cashCode.address!, completion: {
+        WACAtmLocationsViewController.sendCoin(amount: cashCode.btcAmount!, address: cashCode.address!, completion: {
             [weak self] in
             guard let `self` = self else { return }
             
-            WACTransactionManager.shared.updateTransaction(status: .FundedNotConfirmed, forAddress: cashCode.address!)
+            WACTransactionManager.shared.updateTransaction(status: .FundedNotConfirmed, address: cashCode.address!)
             
             let withdrawalStatusVC = WACWithdrawalStatusViewController.init(nibName: "WACWithdrawalStatusView", bundle: nil)
-            withdrawalStatusVC.transaction = WACTransactionManager.shared.getTransaction(forCode: cashCode.secureCode!)
+            withdrawalStatusVC.transaction = WACTransactionManager.shared.getTransaction(forAddress: cashCode.address!)
             self.present(withdrawalStatusVC, animated: true, completion: nil)
         })
+        actiondDidComplete(action: .cashCodeVerification)
     }
     
     func withdrawal(requested cashCode: CashCode) {

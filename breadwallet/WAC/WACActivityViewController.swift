@@ -29,6 +29,7 @@ class WACActivityViewController: UIViewController {
         setupNavigationBar();
         
         NotificationCenter.default.addObserver(self, selector: #selector(transactionDidUpdate), name: .WACTransactionDidUpdate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(transactionDidUpdate), name: .WACTransactionDidRemove, object: nil)
     }
     
     deinit {

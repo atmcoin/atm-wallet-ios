@@ -6,21 +6,7 @@ class WACTransactionManager {
     
     static let shared: WACTransactionManager = {
         let instance = WACTransactionManager()
-        instance.timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: { (timer) in
-            for var t in instance.getTransactions() {
-                if (t.status == .Awaiting ||
-                    t.status == .Funded ||
-                    t.status == .FundedNotConfirmed) {
-                    WACSessionManager.shared.client?.checkCashCodeStatus((t.code?.secureCode)!, completion: { (response: WacSDK.CashCodeStatusResponse) in
-                        let cashCode = (response.data?.items.first)! as CashStatus
-                        let codeStatus = cashCode.getCodeStatus()!
-                        let transactionStatus = WACTransactionStatus.transactionStatus(from: codeStatus)
-                        instance.updateTransaction(status: transactionStatus, forAddress: cashCode.address!)
-                        NotificationCenter.default.post(name: .WACTransactionDidUpdate, object: t)
-                    })
-                }
-            }
-        })
+        instance.pollTransactionUpdates(for: instance)
         return instance
     }()
     
@@ -78,10 +64,20 @@ class WACTransactionManager {
         catch {}
     }
     
+    func removeTransaction(forTimestamp: Double) {
+        do {
+            var allObjects = try UserDefaults.standard.getAllObjects()
+            allObjects = allObjects.filter { $0.timestamp !=  forTimestamp}
+            try UserDefaults.standard.setObjects(allObjects)
+            NotificationCenter.default.post(name: .WACTransactionDidRemove, object: nil)
+        }
+        catch {}
+    }
+    
     func updateTransaction(_ object: WACTransaction) {
         do {
             var allObjects = try UserDefaults.standard.getAllObjects()
-            if let idx = allObjects.firstIndex(where: { $0.code?.secureCode == object.code?.secureCode }) {
+            if let idx = allObjects.firstIndex(where: { $0.code?.address == object.code?.address }) {
                 allObjects[idx] = object
                 try UserDefaults.standard.setObjects(allObjects)
             }
@@ -97,11 +93,51 @@ class WACTransactionManager {
         }
     }
     
-    func updateTransaction(status: WACTransactionStatus, forAddress: String) {
-        if var transaction = getTransaction(forAddress: forAddress) {
+    func updateTransaction(status: WACTransactionStatus, address: String, code: String? = nil, pCode: String? = nil) {
+        if var transaction = getTransaction(forAddress: address) {
             transaction.status = status
+            if let code = code, !code.isEmpty {
+                transaction.code?.secureCode = code
+            }
+            if let pcode = pCode, !pcode.isEmpty {
+                transaction.pCode = pCode
+            }
             updateTransaction(transaction)
         }
+    }
+    
+    private func poll(_ transaction: WACTransaction, instance: WACTransactionManager) {
+        guard let code = transaction.code?.secureCode, !code.isEmpty else { return }
+        
+        WACSessionManager.shared.client?.checkCashCodeStatus(code, completion: { (response: WacSDK.CashCodeStatusResponse) in
+            let cashCode = (response.data?.items.first)! as CashStatus
+            let codeStatus = cashCode.getCodeStatus()!
+            let transactionStatus = WACTransactionStatus.transactionStatus(from: codeStatus)
+            let pCode = transactionStatus == .Funded ? cashCode.code : nil
+            instance.updateTransaction(status: transactionStatus, address: cashCode.address!, pCode: pCode)
+            
+            NotificationCenter.default.post(name: .WACTransactionDidUpdate, object: transaction)
+        })
+    }
+    private func remove(_ transaction: WACTransaction) {
+        if (Date().timeIntervalSince1970 - transaction.timestamp >= 15*60) {
+            removeTransaction(forTimestamp: transaction.timestamp)
+        }
+    }
+    
+    private func pollTransactionUpdates(for instance: WACTransactionManager) {
+        instance.timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: { (timer) in
+            for t in instance.getTransactions() {
+                switch t.status {
+                case .VerifyPending, .SendPending:
+                    instance.remove(t)
+                case .Awaiting, .FundedNotConfirmed, .Funded:
+                    instance.poll(t, instance: instance)
+                case  .Withdrawn, .Cancelled:
+                    print("Don't change")
+                }
+            }
+        })
     }
 }
 
@@ -109,4 +145,5 @@ class WACTransactionManager {
 extension Notification.Name {
 
     static let WACTransactionDidUpdate = Notification.Name(rawValue: "WACTransactionDidUpdate")
+    static let WACTransactionDidRemove = Notification.Name(rawValue: "WACTransactionDidRemove")
 }

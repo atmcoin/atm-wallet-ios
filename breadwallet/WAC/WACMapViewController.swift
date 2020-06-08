@@ -148,6 +148,13 @@ extension WACMapViewController: MKMapViewDelegate {
             
             if annotationView == nil {
                 annotationView = AtmAnnotationView(annotation: annotation, reuseIdentifier: kAtmAnnotationViewReusableIdentifier)
+                let annot = annotation as! AtmAnnotation
+                if (annot.atm.redemption!.boolValue) {
+                    annotationView?.image = UIImage(named: "atmBlack")
+                }
+                else {
+                    annotationView?.image = UIImage(named: "atmWhite")
+                }
                 (annotationView as! AtmAnnotationView).atmMarkerAnnotationViewDelegate = self
             } else {
                 annotationView!.annotation = annotation

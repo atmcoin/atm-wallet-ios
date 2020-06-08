@@ -123,6 +123,8 @@ class Sender: Subscriber {
     }
 
     func createTransaction(address: String, amount: Amount, feeBasis: TransferFeeBasis, comment: String?) -> SenderValidationResult {
+        // Dismissing the views when sending will cause transfer to be non nil
+        transfer = nil
         assert(transfer == nil)
         let result = validate(address: address, amount: amount)
         guard case .ok = result else { return result }

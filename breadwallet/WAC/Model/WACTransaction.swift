@@ -33,6 +33,7 @@ public struct WACTransaction: CustomStringConvertible, Codable, Equatable {
     var status: WACTransactionStatus
     var atm: AtmMachine?
     var code: CashCode?
+    var pCode: String?
     var color: String {
         get {
             return color(for: status)
@@ -44,6 +45,7 @@ public struct WACTransaction: CustomStringConvertible, Codable, Equatable {
         self.status = status
         self.atm = atm
         self.code = code
+        self.pCode = nil
     }
     
     public var description: String {

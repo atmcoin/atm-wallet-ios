@@ -348,6 +348,7 @@
 		B38C2B7324874B6500268FCD /* WACTransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C2B7224874B6500268FCD /* WACTransactionManager.swift */; };
 		B38C2B9024889E4E00268FCD /* WacSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38C2B8F24889D4C00268FCD /* WacSDK.framework */; };
 		B38C2B9124889E4E00268FCD /* WacSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B38C2B8F24889D4C00268FCD /* WacSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B38C2C2B248ACA4A00268FCD /* String+WACAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C2C2A248ACA4A00268FCD /* String+WACAdditions.swift */; };
 		B3D0741A2478BCB000D734B7 /* WACActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D074192478BCB000D734B7 /* WACActivityViewController.swift */; };
 		B3D074222478D29A00D734B7 /* WACActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D074212478D29A00D734B7 /* WACActivityTableViewCell.swift */; };
 		B3D074242478D44500D734B7 /* WACActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D074232478D44500D734B7 /* WACActivityView.xib */; };
@@ -1093,6 +1094,7 @@
 		B389C71F2483636C0022FB66 /* WACSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACSessionManager.swift; sourceTree = "<group>"; };
 		B38C2B7224874B6500268FCD /* WACTransactionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACTransactionManager.swift; sourceTree = "<group>"; };
 		B38C2B8924889D4C00268FCD /* WacSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WacSDK.xcodeproj; path = "Modules/cash-sdk-ios/WacSDK/WacSDK.xcodeproj"; sourceTree = "<group>"; };
+		B38C2C2A248ACA4A00268FCD /* String+WACAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+WACAdditions.swift"; sourceTree = "<group>"; };
 		B3D074192478BCB000D734B7 /* WACActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACActivityViewController.swift; sourceTree = "<group>"; };
 		B3D074212478D29A00D734B7 /* WACActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACActivityTableViewCell.swift; sourceTree = "<group>"; };
 		B3D074232478D44500D734B7 /* WACActivityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WACActivityView.xib; sourceTree = "<group>"; };
@@ -1958,6 +1960,7 @@
 			children = (
 				B36648E0247A194900AC9429 /* Date+WACAdditions.swift */,
 				B389C6FE247F502C0022FB66 /* UserDefaults+Persistable.swift */,
+				B38C2C2A248ACA4A00268FCD /* String+WACAdditions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -3309,6 +3312,7 @@
 				71249916221F466800BEA491 /* Prompt.swift in Sources */,
 				CE6B6B4A1E54C0CB00B31405 /* SecurityCenterCell.swift in Sources */,
 				CE36454C1E7B42850079D0CF /* WhiteDecimalPad.swift in Sources */,
+				B38C2C2B248ACA4A00268FCD /* String+WACAdditions.swift in Sources */,
 				CE5F21D91E4A922700C47B8E /* DismissLoginAnimator.swift in Sources */,
 				7C45481A2187E65B0002E884 /* AnyCodable.swift in Sources */,
 				CECCE5A51E02408300D99448 /* UIView+FrameChangeBlocking.swift in Sources */,

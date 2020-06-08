@@ -6,7 +6,6 @@
 
 import MapKit
 
-private let kAtmPinImage = UIImage(named: "atm")!
 private let kAtmAnimationTime = 0.300
 
 class AtmAnnotationView: MKAnnotationView {
@@ -20,13 +19,11 @@ class AtmAnnotationView: MKAnnotationView {
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         self.canShowCallout = false
-        self.image = kAtmPinImage
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.canShowCallout = false // This is important: Don't show default callout.
-        self.image = kAtmPinImage
     }
     
     // MARK: - callout showing and hiding
