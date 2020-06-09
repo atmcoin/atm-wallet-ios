@@ -11,8 +11,8 @@ import MapKit
 import WacSDK
 
 private let kAtmAnnotationViewReusableIdentifier = "kAtmAnnotationViewReusableIdentifier"
-private let kLocationDistance: Double = 50000
-private let kHoustonLocation = CLLocation(latitude: 29.749907, longitude: -95.358421)
+private let kLocationDistance: Double = 1300000
+private let kHoustonLocation = CLLocation(latitude: 31.3915, longitude: -99.1707)
 
 // TODO: Localize strings
 class WACMapViewController: UIViewController {
@@ -128,7 +128,7 @@ class WACMapViewController: UIViewController {
 extension WACMapViewController: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        mapATMs.centerToLocation(kHoustonLocation, regionRadius: 50000)
+        mapATMs.centerToLocation(kHoustonLocation, regionRadius: kLocationDistance)
         locationManager.stopUpdatingLocation()
     }
     
@@ -153,7 +153,7 @@ extension WACMapViewController: MKMapViewDelegate {
                     annotationView?.image = UIImage(named: "atmBlack")
                 }
                 else {
-                    annotationView?.image = UIImage(named: "atmWhite")
+                    annotationView?.image = UIImage(named: "atmGrey")
                 }
                 (annotationView as! AtmAnnotationView).atmMarkerAnnotationViewDelegate = self
             } else {
