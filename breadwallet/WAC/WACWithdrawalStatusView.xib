@@ -87,27 +87,25 @@
                             <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hY-gB-bVU">
-                            <rect key="frame" x="187" y="104" width="40" height="33"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <state key="normal" title="Send"/>
-                            <connections>
-                                <action selector="sendCoin:" destination="-1" eventType="touchUpInside" id="37O-eT-O2F"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="CHo-9r-JxF"/>
-                        <constraint firstItem="8hY-gB-bVU" firstAttribute="top" secondItem="ndO-gd-7RI" secondAttribute="bottom" constant="8" id="LdD-L1-LjX"/>
                         <constraint firstItem="ndO-gd-7RI" firstAttribute="centerX" secondItem="vol-Lk-qff" secondAttribute="centerX" id="SGm-zU-oUk"/>
                         <constraint firstItem="6kt-5w-mis" firstAttribute="centerX" secondItem="vol-Lk-qff" secondAttribute="centerX" id="cjp-N5-ZT4"/>
                         <constraint firstItem="6kt-5w-mis" firstAttribute="top" secondItem="vol-Lk-qff" secondAttribute="top" id="it8-qK-P92"/>
                         <constraint firstItem="ndO-gd-7RI" firstAttribute="centerY" secondItem="vol-Lk-qff" secondAttribute="centerY" id="mvw-at-Imo"/>
                         <constraint firstAttribute="bottom" secondItem="6kt-5w-mis" secondAttribute="bottom" id="or5-th-hfR"/>
-                        <constraint firstItem="8hY-gB-bVU" firstAttribute="centerX" secondItem="vol-Lk-qff" secondAttribute="centerX" id="yUI-Vb-9G8"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hY-gB-bVU">
+                    <rect key="frame" x="187" y="480.5" width="40" height="33"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Send"/>
+                    <connections>
+                        <action selector="sendCoin:" destination="-1" eventType="touchUpInside" id="37O-eT-O2F"/>
+                    </connections>
+                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADU-PE-Zi0" userLabel="AmountBTC Label">
                     <rect key="frame" x="281.5" y="555.5" width="58.5" height="29"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
@@ -119,6 +117,7 @@
             <constraints>
                 <constraint firstItem="vrm-S7-oWT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="2Ai-M5-2YZ"/>
                 <constraint firstItem="vol-Lk-qff" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2en-CT-EUf"/>
+                <constraint firstItem="8hY-gB-bVU" firstAttribute="top" secondItem="vol-Lk-qff" secondAttribute="bottom" constant="8" id="94n-0f-deR"/>
                 <constraint firstItem="IuR-5X-nI4" firstAttribute="top" secondItem="vol-Lk-qff" secondAttribute="bottom" constant="124" id="AaK-wa-42A"/>
                 <constraint firstItem="OpX-mF-lM1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="BGE-XM-dsA"/>
                 <constraint firstItem="IuR-5X-nI4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="D2C-q2-FxS"/>
@@ -126,6 +125,7 @@
                 <constraint firstItem="JDP-KI-f72" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="FcE-LH-KnQ"/>
                 <constraint firstItem="xWV-4X-Fts" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="I6I-81-4Hr"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4Le-MW-qrS" secondAttribute="trailing" constant="55" id="JJu-KB-e4a"/>
+                <constraint firstItem="8hY-gB-bVU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KnM-rj-poC"/>
                 <constraint firstItem="xWV-4X-Fts" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MIh-7b-W1b"/>
                 <constraint firstItem="ADU-PE-Zi0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OpX-mF-lM1" secondAttribute="trailing" constant="20" id="NKb-2N-UxL"/>
                 <constraint firstItem="vrm-S7-oWT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="OLf-I0-cJd"/>

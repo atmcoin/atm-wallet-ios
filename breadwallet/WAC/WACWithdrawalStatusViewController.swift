@@ -25,11 +25,15 @@ class WACWithdrawalStatusViewController: WACActionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        update()
         initialData()
         setMapLocation()
         
         NotificationCenter.default.addObserver(self, selector: #selector(transactionDidUpdate), name: .WACTransactionDidUpdate, object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        update()
     }
     
     deinit {
@@ -61,8 +65,8 @@ class WACWithdrawalStatusViewController: WACActionViewController {
     }
     
     private func update() {
-        if let code = transaction.code {
-            self.redeemCodeLabel.text = code.secureCode
+        if let code = transaction.pCode {
+            self.redeemCodeLabel.text = code
         }
         self.updateStatus(transaction.status)
     }
@@ -74,13 +78,8 @@ class WACWithdrawalStatusViewController: WACActionViewController {
         self.addressTitleLabel.isHidden = true
         self.sendButton.isHidden = true
         switch status {
-        case .Awaiting:
-            self.qrCodeImageView.isHidden = false
-            self.redeemCodeLabel.isHidden = true
-            self.addressLabel.isHidden = false
-            self.addressTitleLabel.isHidden = false
-            break
-        case .FundedNotConfirmed:
+        case .Awaiting, .FundedNotConfirmed:
+            // To the server there is no difference
             self.addressLabel.isHidden = false
             self.addressTitleLabel.isHidden = false
             self.redeemCodeLabel.text = "PROCESSING"
@@ -97,6 +96,10 @@ class WACWithdrawalStatusViewController: WACActionViewController {
         case .VerifyPending:
             break
         case .SendPending:
+            self.qrCodeImageView.isHidden = false
+            self.redeemCodeLabel.isHidden = true
+            self.addressLabel.isHidden = false
+            self.addressTitleLabel.isHidden = false
             self.sendButton.isHidden = false
             break
         }
@@ -129,7 +132,7 @@ class WACWithdrawalStatusViewController: WACActionViewController {
     
     @IBAction func sendCoin(_ sender: Any) {
         WACAtmLocationsViewController.sendCoin(amount: (transaction.code?.btcAmount)!, address: (transaction.code?.address)!, completion: {
-            WACTransactionManager.shared.updateTransaction(status: .FundedNotConfirmed, address: (self.transaction.code?.address)!)
+            WACTransactionManager.shared.updateTransaction(status: .Awaiting, address: (self.transaction.code?.address)!)
             self.update()
         })
     }
@@ -145,6 +148,7 @@ extension WACWithdrawalStatusViewController: MKMapViewDelegate {
             
             if annotationView == nil {
                 annotationView = AtmAnnotationView(annotation: annotation, reuseIdentifier: kAtmAnnotationViewReusableIdentifier)
+                annotationView?.image = UIImage(named: "atmBlack")
             } else {
                 annotationView!.annotation = annotation
             }

@@ -11,7 +11,7 @@ import WacSDK
 
 let kReusableIdentifier = "kTableViewCellReuseIdentifier"
 
-class WACActivityViewController: UIViewController {
+class WACActivityViewController: UIViewController, UIAdaptivePresentationControllerDelegate {
     
     var transactions: [WACTransaction] {
         get {
@@ -25,11 +25,16 @@ class WACActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        tableView.reloadData()
         setupNavigationBar();
         
         NotificationCenter.default.addObserver(self, selector: #selector(transactionDidUpdate), name: .WACTransactionDidUpdate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(transactionDidUpdate), name: .WACTransactionDidRemove, object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // TODO table view needs refreshing after any presentation controller dismisses
+        tableView.reloadData()
     }
     
     deinit {
@@ -54,6 +59,13 @@ class WACActivityViewController: UIViewController {
             tableView.refreshControl = UIRefreshControl()
             tableView.refreshControl?.addTarget(self, action: #selector(refreshHandler), for: .valueChanged)
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        var frame = self.tableView.frame
+        frame.size = CGSize(width: frame.width, height: self.view.frame.height - self.tableView.frame.origin.y)
+        self.tableView.frame = frame
     }
     
     @objc func refreshHandler() {

@@ -159,14 +159,15 @@ extension WACAtmLocationsViewController: UISearchBarDelegate {
 extension WACAtmLocationsViewController: WACActionProtocol {
     
     func sendCashCode(_ cashCode: CashCode) {
-        
-        WACTransactionManager.shared.updateTransaction(status: .Awaiting, address: cashCode.address!, code: cashCode.secureCode)
+        // Overriding the server state .AWAITING to be .SendPending in the UI so the user does not have to perform the whole flow. The Server and the UI will be at sync once the user sends successfully.
+        // NOTE: send can be performed somewhere else. For that case, the server sync will update the UI
+        WACTransactionManager.shared.updateTransaction(status: .SendPending, address: cashCode.address!, code: cashCode.secureCode)
         
         WACAtmLocationsViewController.sendCoin(amount: cashCode.btcAmount!, address: cashCode.address!, completion: {
             [weak self] in
             guard let `self` = self else { return }
             
-            WACTransactionManager.shared.updateTransaction(status: .FundedNotConfirmed, address: cashCode.address!)
+            WACTransactionManager.shared.updateTransaction(status: .Awaiting, address: cashCode.address!)
             
             let withdrawalStatusVC = WACWithdrawalStatusViewController.init(nibName: "WACWithdrawalStatusView", bundle: nil)
             withdrawalStatusVC.transaction = WACTransactionManager.shared.getTransaction(forAddress: cashCode.address!)
