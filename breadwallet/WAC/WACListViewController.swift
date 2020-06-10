@@ -82,8 +82,22 @@ extension WACListViewController: UITableViewDelegate {
         let cell: UITableViewCell = UITableViewCell(style: .subtitle, reuseIdentifier: "tableViewReuseidentifier")
         let atm = self.filteredList![indexPath.row] as AtmMachine
         cell.textLabel!.text = atm.addressDesc
+        if atm.redemption!.boolValue {
+            cell.textLabel?.textColor = .black
+        } else {
+            cell.textLabel?.textColor = .gray
+        }
         cell.detailTextLabel!.text = atm.city
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        let atm = self.filteredList![indexPath.row] as AtmMachine
+        if atm.redemption!.boolValue {
+            return indexPath
+        } else {
+            return nil
+        }
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
