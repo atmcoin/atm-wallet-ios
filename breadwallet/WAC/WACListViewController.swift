@@ -83,9 +83,9 @@ extension WACListViewController: UITableViewDelegate {
         let atm = self.filteredList![indexPath.row] as AtmMachine
         cell.textLabel!.text = atm.addressDesc
         if atm.redemption!.boolValue {
-            cell.textLabel?.textColor = .black
+            cell.textLabel?.textColor = .black  // black text for atms supporting redemption
         } else {
-            cell.textLabel?.textColor = .gray
+            cell.textLabel?.textColor = .gray   // grey text for atms not supporting redemption
         }
         cell.detailTextLabel!.text = atm.city
         return cell
@@ -96,7 +96,7 @@ extension WACListViewController: UITableViewDelegate {
         if atm.redemption!.boolValue {
             return indexPath
         } else {
-            return nil
+            return nil  // returning nil indicates do not select
         }
     }
 
