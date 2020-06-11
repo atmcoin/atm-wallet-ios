@@ -75,7 +75,9 @@ class WACSendVerificationCodeViewController: WACActionViewController {
         
         self.setEditLimits(atm: atm)
         self.atmMachineTitleLabel.text = atm.addressDesc!
+        self.atmMachineTitleLabel.setNeedsDisplay()
         self.infoAboutMachineLabel.text = "Min $\(minAmountLimit), Max $\(maxAmountLimit). Multiple of $\(allowedBills)"
+        self.infoAboutMachineLabel.setNeedsDisplay()
         self.listenForKeyboard = true
     }
 
@@ -87,6 +89,7 @@ class WACSendVerificationCodeViewController: WACActionViewController {
         self.phoneNumberTextView.text = ""
         self.firstNameTextView.text = ""
         self.lastNameTextView.text = ""
+        self.view.setNeedsDisplay()
     }
 
     @IBAction func textFieldEditingDidChange(_ sender: Any) {
