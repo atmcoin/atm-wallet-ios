@@ -42,6 +42,19 @@ class WACTransactionManager {
         return nil
     }
     
+    func getTransaction(forTimestamp: Double) -> WACTransaction? {
+        do {
+            let allObjects = try UserDefaults.standard.getAllObjects()
+            for transaction in allObjects {
+                if (transaction.timestamp == forTimestamp) {
+                    return transaction
+                }
+            }
+        }
+        catch {}
+        return nil
+    }
+    
     func getTransaction(forAddress: String) -> WACTransaction? {
         do {
             let allObjects = try UserDefaults.standard.getAllObjects()
@@ -80,10 +93,17 @@ class WACTransactionManager {
             if let idx = allObjects.firstIndex(where: { $0.code?.address == object.code?.address }) {
                 allObjects[idx] = object
                 try UserDefaults.standard.setObjects(allObjects)
+                NotificationCenter.default.post(name: .WACTransactionDidUpdate, object: object)
             }
-            
         }
         catch{}
+    }
+    
+    func updateTransaction(status: WACTransactionStatus, withTimestamp: Double) {
+        if var transaction = getTransaction(forTimestamp: withTimestamp) {
+            transaction.status = status
+            updateTransaction(transaction)
+        }
     }
     
     func updateTransaction(status: WACTransactionStatus, forCode: String) {
@@ -119,24 +139,35 @@ class WACTransactionManager {
             NotificationCenter.default.post(name: .WACTransactionDidUpdate, object: transaction)
         })
     }
+    
+    public class func poll(_ instance: WACTransactionManager) {
+        for t in instance.getTransactions() {
+            switch t.status {
+            case .VerifyPending, .SendPending:
+                instance.cancel(t)
+            case .Awaiting, .FundedNotConfirmed, .Funded:
+                instance.poll(t, instance: instance)
+            case  .Withdrawn, .Cancelled:
+                print("Don't change")
+            }
+        }
+    }
+    
     private func remove(_ transaction: WACTransaction) {
         if (Date().timeIntervalSince1970 - transaction.timestamp >= 15*60) {
             removeTransaction(forTimestamp: transaction.timestamp)
         }
     }
     
+    private func cancel(_ transaction: WACTransaction) {
+        if (Date().timeIntervalSince1970 - transaction.timestamp >= 15*60) {
+            updateTransaction(status: .Cancelled, withTimestamp: transaction.timestamp)
+        }
+    }
+    
     private func pollTransactionUpdates(for instance: WACTransactionManager) {
         instance.timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: { (timer) in
-            for t in instance.getTransactions() {
-                switch t.status {
-                case .VerifyPending, .SendPending:
-                    instance.remove(t)
-                case .Awaiting, .FundedNotConfirmed, .Funded:
-                    instance.poll(t, instance: instance)
-                case  .Withdrawn, .Cancelled:
-                    print("Don't change")
-                }
-            }
+            WACTransactionManager.poll(instance)
         })
     }
 }

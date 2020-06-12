@@ -28,6 +28,10 @@ class WACMenuViewController: UIViewController {
         setupActivityView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        activityViewController?.tableView.reloadData()
+    }
+    
     func setupActivityView() {
         activityViewController = WACActivityViewController(nibName: "WACActivityView", bundle: nil)
         containerView.addSubview(activityViewController!.view)

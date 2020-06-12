@@ -16,7 +16,7 @@ class WACActivityViewController: UIViewController, UIAdaptivePresentationControl
     var transactions: [WACTransaction] {
         get {
             let trans = WACTransactionManager.shared.getTransactions()
-            return trans
+            return trans.reversed()
         }
     }
     @IBOutlet open var tableView: UITableView!
@@ -34,6 +34,7 @@ class WACActivityViewController: UIViewController, UIAdaptivePresentationControl
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // TODO table view needs refreshing after any presentation controller dismisses
+        WACTransactionManager.poll(WACTransactionManager.shared)
         tableView.reloadData()
     }
     
