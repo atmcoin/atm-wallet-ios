@@ -64,7 +64,7 @@ class WACActivityViewController: UIViewController, UIAdaptivePresentationControl
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         var frame = self.tableView.frame
-        frame.size = CGSize(width: frame.width, height: self.view.frame.height - self.tableView.frame.origin.y)
+        frame.size = CGSize(width: frame.width, height: (self.view.superview?.frame.height)! - self.tableView.frame.origin.y)
         self.tableView.frame = frame
     }
     

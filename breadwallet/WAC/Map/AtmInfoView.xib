@@ -40,6 +40,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="atmIdLabel" destination="HHS-gb-Ibp" id="8dD-cW-jXd"/>
+                <outlet property="atmPurchaseOnlyLabel" destination="QDa-LL-XX2" id="jK1-IH-lsd"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
         </view>

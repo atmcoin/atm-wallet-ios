@@ -14,6 +14,7 @@ protocol AtmInfoViewDelegate: class {
 class AtmInfoView: UIView {
     
     @IBOutlet weak var atmIdLabel: UILabel!
+    @IBOutlet weak var atmPurchaseOnlyLabel: UILabel!
     
     private var atm: WacSDK.AtmMachine!
     weak var delegate: AtmInfoViewDelegate?
@@ -22,6 +23,7 @@ class AtmInfoView: UIView {
     func configureWithAtm(atm: WacSDK.AtmMachine) {
         self.atm = atm
         
+        self.atmPurchaseOnlyLabel.isHidden = atm.redemption!.boolValue
         atmIdLabel.text = getDetails(atm:atm)
     }
 

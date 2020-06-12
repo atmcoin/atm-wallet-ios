@@ -21,6 +21,7 @@ class WACMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "ATM Cash Redemption"
         view.backgroundColor = Theme.primaryBackground
         labelMainTitle.textColor = Theme.primaryText
 
