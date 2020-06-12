@@ -45,6 +45,10 @@ class WACWithdrawalStatusViewController: WACActionViewController {
                          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         atmMapView.delegate = self
         
+        if #available(iOS 13.0, *) {
+            atmMapView.overrideUserInterfaceStyle = .dark
+        }
+        
         if let atm = transaction.atm, let latitude = atm.latitude,
             let longitude = atm.longitude {
             let atmLocation = CLLocation(latitude: (latitude as NSString).doubleValue, longitude: (longitude as NSString).doubleValue)
@@ -148,7 +152,7 @@ extension WACWithdrawalStatusViewController: MKMapViewDelegate {
             
             if annotationView == nil {
                 annotationView = AtmAnnotationView(annotation: annotation, reuseIdentifier: kAtmAnnotationViewReusableIdentifier)
-                annotationView?.image = UIImage(named: "atmBlack")
+                annotationView?.image = UIImage(named: "atmWhite")
             } else {
                 annotationView!.annotation = annotation
             }

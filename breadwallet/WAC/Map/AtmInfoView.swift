@@ -43,12 +43,13 @@ class AtmInfoView: UIView {
     // MARK: - Hit test. We need to override this to detect hits in our custom callout.
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         // Check if it hit our annotation detail view components.
-        return self
+        if (self.bounds.contains(point) && atm.redemption!.boolValue) {
+            return self
+        }
+        return nil
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("callout touches ended")
-        // TODO: navigate to request code view
         delegate?.detailsRequestedForAtm(atm: self.atm)
     }
 }

@@ -168,6 +168,7 @@ extension WACMapViewController: AtmInfoViewDelegate {
     func detailsRequestedForAtm(atm: AtmMachine) {
         let parent = self.parent as! WACAtmLocationsViewController
         parent.sendVerificationVC?.setAtmInfo(atm)
+        parent.verifyCashCodeVC?.atmMachineTitleLabel.text = atm.addressDesc
         parent.sendVerificationVC?.showView()
         parent.searchBar.resignFirstResponder()
 

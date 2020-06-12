@@ -41,6 +41,7 @@ class AtmAnnotationView: MKAnnotationView {
                 // fix location from top-left to its right place.
                 newCustomCalloutView.frame.origin.x -= newCustomCalloutView.frame.width / 2.0 - (self.frame.width / 2.0)
                 newCustomCalloutView.frame.origin.y -= newCustomCalloutView.frame.height
+                newCustomCalloutView.layer.cornerRadius = 5
                 
                 // set custom callout view
                 self.addSubview(newCustomCalloutView)

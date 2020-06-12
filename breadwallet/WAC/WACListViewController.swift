@@ -104,6 +104,7 @@ extension WACListViewController: UITableViewDelegate {
         let atm = self.filteredList![indexPath.row] as AtmMachine
         let parent = self.parent as! WACAtmLocationsViewController
         parent.sendVerificationVC?.setAtmInfo(atm)
+        parent.verifyCashCodeVC?.atmMachineTitleLabel.text = atm.addressDesc
         parent.sendVerificationVC?.showView()
         parent.searchBar.resignFirstResponder()
 
