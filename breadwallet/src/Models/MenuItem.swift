@@ -11,14 +11,14 @@ import UIKit
 struct MenuItem {
     
     enum Icon {
-        static let scan = UIImage(named: "scan")
+        static let scan = UIImage(named: "qrcode")
         static let wallet = UIImage(named: "wallet")
         static let preferences = UIImage(named: "prefs")
         static let security = UIImage(named: "security")
         static let support = UIImage(named: "support")
         static let rewards = UIImage(named: "Star")
         static let about = UIImage(named: "about")
-        static let atmMap = UIImage(named: "placemark")
+        static let atmMap = UIImage(named: "cash_out")
     }
     
     var title: String

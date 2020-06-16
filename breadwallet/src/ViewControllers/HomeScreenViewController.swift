@@ -22,29 +22,29 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
     private let toolbar = UIToolbar()
     private var toolbarButtons = [UIButton]()
     private let notificationHandler = NotificationHandler()
-    
+
     private var shouldShowBuyAndSell: Bool {
         return (Store.state.experimentWithName(.buyAndSell)?.active ?? false) && (Store.state.defaultCurrencyCode == C.usdCurrencyCode)
     }
-    
+
     private var buyButtonTitle: String {
         return shouldShowBuyAndSell ? S.HomeScreen.buyAndSell : S.HomeScreen.buy
     }
-    
+
     private let buyButtonIndex = 0
     private let tradeButtonIndex = 1
     private let menuButtonIndex = 2
-    
+
     private var buyButton: UIButton? {
         guard toolbarButtons.count == 3 else { return nil }
         return toolbarButtons[buyButtonIndex]
     }
-    
+
     private var tradeButton: UIButton? {
         guard toolbarButtons.count == 3 else { return nil }
         return toolbarButtons[tradeButtonIndex]
     }
-    
+
     var didSelectCurrency: ((Currency) -> Void)?
     var didTapManageWallets: (() -> Void)?
     var didTapBuy: (() -> Void)?
@@ -53,13 +53,13 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
     var didTapRedemption: (() -> Void)?
     var didTapMenu: (() -> Void)?
     var didTapActivity: (() -> Void)?
-    
+
     var okToShowPrompts: Bool {
         // On the initial display we need to load the walletes in the asset list table view first.
         // There's already a lot going on, so don't show the home-screen prompts right away.
         return !Store.state.wallets.isEmpty
     }
-    
+
     private lazy var totalAssetsNumberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.isLenient = true
@@ -70,7 +70,7 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
     }()
 
     // MARK: -
-    
+
     init(walletAuthenticator: WalletAuthenticator) {
         self.walletAuthenticator = walletAuthenticator
         super.init(nibName: nil, bundle: nil)
@@ -79,7 +79,7 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
     deinit {
         Store.unsubscribe(self)
     }
-    
+
     func reload() {
         setInitialData()
         setupSubscriptions()
@@ -95,13 +95,13 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
         setInitialData()
         setupSubscriptions()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + promptDelay) { [unowned self] in
             self.attemptShowPrompt()
-            
+
             if !Store.state.isLoginRequired {
                 NotificationAuthorizer().showNotificationsOptInAlert(from: self, callback: { _ in
                     self.notificationHandler.checkForInAppNotifications()
@@ -111,7 +111,7 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
 
         updateTotalAssets()
     }
-    
+
     // MARK: Setup
 
     private func addSubviews() {
@@ -143,7 +143,7 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
             totalAssetsLabel.trailingAnchor.constraint(equalTo: total.trailingAnchor),
             totalAssetsLabel.bottomAnchor.constraint(equalTo: total.topAnchor)
             ])
-        
+
         logo.constrain([
             logo.leadingAnchor.constraint(equalTo: subHeaderView.leadingAnchor, constant: C.padding[2]),
             logo.centerYAnchor.constraint(equalTo: total.centerYAnchor)
@@ -152,7 +152,7 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
         debugLabel.constrain([
             debugLabel.leadingAnchor.constraint(equalTo: logo.leadingAnchor),
             debugLabel.bottomAnchor.constraint(equalTo: logo.topAnchor, constant: -4.0)])
-        
+
         promptHiddenConstraint = prompt.heightAnchor.constraint(equalToConstant: 0.0)
         prompt.constrain([
             prompt.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -160,7 +160,7 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
             prompt.topAnchor.constraint(equalTo: subHeaderView.bottomAnchor),
             promptHiddenConstraint
             ])
-        
+
         addChildViewController(assetList, layout: {
             assetList.view.constrain([
                 assetList.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -168,7 +168,7 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
                 assetList.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
                 assetList.view.bottomAnchor.constraint(equalTo: toolbar.topAnchor)])
         })
-        
+
         toolbar.constrain([
             toolbar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             toolbar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: -C.padding[1]),
@@ -180,18 +180,18 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
         view.backgroundColor = .black
         subHeaderView.backgroundColor = .black
         subHeaderView.clipsToBounds = false
-        
+
         navigationItem.titleView = UIView()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.shadowImage = #imageLiteral(resourceName: "TransparentPixel")
         navigationController?.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "TransparentPixel"), for: .default)
-        
+
         logo.contentMode = .center
-        
+
         total.textAlignment = .right
         total.text = "0"
         title = ""
-        
+
         if E.isTestnet && !E.isScreenshots {
             debugLabel.text = "(Testnet)"
             debugLabel.isHidden = false
@@ -201,13 +201,13 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
         } else {
             debugLabel.isHidden = true
         }
-        
+
         totalAssetsLabel.text = S.HomeScreen.totalAssets
-        
+
         setupToolbar()
         updateTotalAssets()
     }
-    
+
     //Returns the added image view so that it can be kept track of for removing later
     private func addNotificationIndicatorToButton(button: UIButton) -> UIImageView? {
         guard (button.subviews.last as? UIImageView) == nil else { return nil }    // make sure we didn't already add the bell
@@ -220,30 +220,32 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
 
         let bellWidth = bellImage?.size.width ?? 0
         let bellHeight = bellImage?.size.height ?? 0
-        
+
         let bellXOffset = buyImageFrame.center.x + 4
         let bellYOffset = buyImageFrame.center.y - bellHeight + 2.0
-        
+
         bellImageView.frame = CGRect(x: bellXOffset, y: bellYOffset, width: bellWidth, height: bellHeight)
-        
+
         button.addSubview(bellImageView)
         return bellImageView
     }
-    
+
+
+
     private func setupToolbar() {
-        let buttons = [("ATM Cash Redemption", #imageLiteral(resourceName: "buy"), #selector(atmCashRedemption)),
-                       ("Scan QR Code", #imageLiteral(resourceName: "trade"), #selector(scanQRCode)),
-                        (S.HomeScreen.activity, #imageLiteral(resourceName: "buy"), #selector(activity)),
+        let buttons = [("ATM Cash Redemption", UIImage(imageLiteralResourceName: "cash_out"), #selector(atmCashRedemption)),
+                       ("Scan QR Code", UIImage(imageLiteralResourceName: "qrcode"), #selector(scanQRCode)),
+                        (S.HomeScreen.activity, UIImage(imageLiteralResourceName: "activity"), #selector(activity)),
                        (S.HomeScreen.menu, #imageLiteral(resourceName: "menu"), #selector(menu))].map { (title, image, selector) -> UIBarButtonItem in
                         let button = UIButton.vertical(title: title, image: image)
                         button.tintColor = .navigationTint
                         button.addTarget(self, action: selector, for: .touchUpInside)
                         return UIBarButtonItem(customView: button)
         }
-                
+
         let paddingWidth = C.padding[2]
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        
+
         toolbar.items = [
             flexibleSpace,
             buttons[0],
@@ -255,13 +257,13 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
             buttons[3],
             flexibleSpace
         ]
-        
+
         let buttonWidth = (view.bounds.width - (paddingWidth * CGFloat(buttons.count+1))) / CGFloat(buttons.count)
         let buttonHeight = CGFloat(44.0)
         buttons.forEach {
             $0.customView?.frame = CGRect(x: 0, y: 0, width: buttonWidth, height: buttonHeight)
         }
-        
+
         // Stash the UIButton's wrapped by the toolbar items in case we need add a badge later.
         buttons.forEach { (toolbarButtonItem) in
             if let button = toolbarButtonItem.customView as? UIButton {
@@ -272,10 +274,10 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
         toolbar.isTranslucent = false
         toolbar.barTintColor = Theme.secondaryBackground
     }
-    
+
     private func setupSubscriptions() {
         Store.unsubscribe(self)
-        
+
         Store.subscribe(self, selector: {
             var result = false
             let oldState = $0
@@ -289,7 +291,7 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
                         callback: { _ in
                             self.updateTotalAssets()
         })
-        
+
         // prompts
         Store.subscribe(self, name: .didUpgradePin, callback: { _ in
             if self.currentPromptView?.type == .upgradePin {
@@ -301,7 +303,7 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
                 self.currentPromptView = nil
             }
         })
-        
+
         Store.subscribe(self, selector: {
             return ($0.experiments ?? nil) != ($1.experiments ?? nil)
         }, callback: { _ in
@@ -310,7 +312,7 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
             self.saveEvent("experiment.buySellMenuButton", attributes: ["show": self.shouldShowBuyAndSell ? "true" : "false"])
         })
     }
-    
+
     private func updateTotalAssets() {
         let fiatTotal: Decimal = Store.state.wallets.values.map {
             guard let balance = $0.balance,
@@ -319,12 +321,12 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
                                 rate: rate)
             return amount.fiatValue
         }.reduce(0.0, +)
-        
+
         totalAssetsNumberFormatter.currencySymbol = Store.state.orderedWallets.first?.currentRate?.currencySymbol ?? ""
-        
+
         self.total.text = totalAssetsNumberFormatter.string(from: fiatTotal as NSDecimalNumber)
     }
-    
+
     // MARK: Actions
 
     @objc private func atmCashRedemption() {
@@ -339,27 +341,27 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
         saveEvent("currency.didTapBuyBitcoin", attributes: [ "buyAndSell": shouldShowBuyAndSell ? "true" : "false" ])
         didTapBuy?()
     }
-    
+
     @objc private func trade() {
         saveEvent("currency.didTapTrade", attributes: [:])
         didTapTrade?()
     }
-    
+
     @objc private func menu() { didTapMenu?() }
-    
+
     @objc private func activity() {
         didTapActivity?()
     }
-    
+
     @objc private func withdrawal() {
-        
+
     }
-    
+
     // MARK: - Prompt
-    
+
     private let promptDelay: TimeInterval = 0.6
     private let inAppNotificationDelay: TimeInterval = 3.0
-    
+
     private var currentPromptView: PromptView? {
         didSet {
             if currentPromptView != oldValue {
@@ -372,7 +374,7 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
                         oldPrompt.removeFromSuperview()
                     })
                 }
-                
+
                 if let newPrompt = currentPromptView {
                     newPrompt.alpha = 0.0
                     prompt.addSubview(newPrompt)
@@ -384,11 +386,11 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
                     UIView.animate(withDuration: 0.2, delay: afterFadeOut + 0.15, options: .curveEaseInOut, animations: {
                         newPrompt.alpha = 1.0
                     })
-                    
+
                 } else {
                     promptHiddenConstraint.isActive = true
                 }
-                
+
                 // layout after fade-out
                 UIView.animate(withDuration: 0.2, delay: afterFadeOut, options: .curveEaseInOut, animations: {
                     self.view.layoutIfNeeded()
@@ -396,26 +398,26 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
             }
         }
     }
-    
+
     private func attemptShowPrompt() {
         guard okToShowPrompts else { return }
         guard currentPromptView == nil else { return }
-        
+
         if let nextPrompt = PromptFactory.nextPrompt(walletAuthenticator: walletAuthenticator) {
             self.saveEvent("prompt.\(nextPrompt.name).displayed")
-            
+
             // didSet {} for 'currentPromptView' will display the prompt view
             currentPromptView = PromptFactory.createPromptView(prompt: nextPrompt, presenter: self)
-            
+
             nextPrompt.didPrompt()
-            
+
             guard let prompt = currentPromptView else { return }
-            
+
             prompt.dismissButton.tap = { [unowned self] in
                 self.saveEvent("prompt.\(nextPrompt.name).dismissed")
                 self.currentPromptView = nil
             }
-            
+
             if !prompt.shouldHandleTap {
                 prompt.continueButton.tap = { [unowned self] in
                     if let trigger = nextPrompt.trigger {
@@ -423,14 +425,14 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
                     }
                     self.saveEvent("prompt.\(nextPrompt.name).trigger")
                     self.currentPromptView = nil
-                }                
+                }
             }
-            
+
         } else {
             currentPromptView = nil
         }
     }
-    
+
     // MARK: -
 
     required init?(coder aDecoder: NSCoder) {
