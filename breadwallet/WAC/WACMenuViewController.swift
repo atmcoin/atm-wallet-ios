@@ -42,4 +42,8 @@ class WACMenuViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
 
+    @IBAction func refresh(_ sender: Any) {
+        WACTransactionManager.poll(WACTransactionManager.shared)
+    }
+
 }

@@ -21,6 +21,7 @@ class WACActivityViewController: UIViewController, UIAdaptivePresentationControl
     }
     @IBOutlet open var tableView: UITableView!
     @IBOutlet open var navigationBar: UIView!
+    @IBOutlet weak var refreshButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,10 @@ class WACActivityViewController: UIViewController, UIAdaptivePresentationControl
         navigationBar.layer.cornerRadius = 8
         navigationBar.clipsToBounds = true
         navigationBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+    }
+    
+    @IBAction func refresh(_ sender: Any) {
+        WACTransactionManager.poll(WACTransactionManager.shared)
     }
     
     // MARK: Helpers

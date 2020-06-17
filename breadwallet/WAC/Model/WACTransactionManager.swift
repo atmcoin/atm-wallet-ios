@@ -6,7 +6,6 @@ class WACTransactionManager {
     
     static let shared: WACTransactionManager = {
         let instance = WACTransactionManager()
-        instance.pollTransactionUpdates(for: instance)
         return instance
     }()
     

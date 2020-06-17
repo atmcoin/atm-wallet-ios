@@ -73,6 +73,7 @@ class WACWithdrawalStatusViewController: WACActionViewController {
             self.redeemCodeLabel.text = code
         }
         self.updateStatus(transaction.status)
+        self.view.setNeedsDisplay()
     }
     
     func updateStatus(_ status: WACTransactionStatus) {
@@ -115,6 +116,7 @@ class WACWithdrawalStatusViewController: WACActionViewController {
         self.qrCodeImageView.image = UIImage
             .qrCode(data: data)!
             .resize(self.qrCodeImageView.frame.size)
+        self.qrCodeImageView.setNeedsDisplay()
     }
     
     private func setMapLocation() {
@@ -130,7 +132,7 @@ class WACWithdrawalStatusViewController: WACActionViewController {
     @objc func transactionDidUpdate(_ notification: Notification) {
         let t = notification.object as! WACTransaction
         if (t == self.transaction) {
-            update()
+            self.update()
         }
     }
     
