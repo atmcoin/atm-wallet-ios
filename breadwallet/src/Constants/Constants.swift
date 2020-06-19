@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WacSDK
 
 let π: CGFloat = .pi
 
@@ -107,13 +108,13 @@ struct C {
         return "api.blockset.com"
     }
 
-    static var cniWacUrl: String {
+    static var cniWacUrl: WacUrl {
         #if TESTNET
-            return "https://secure.just.cash"
+        return .Staging
         #elseif INTERNAL
-            return "https://api-stg.just.cash"
+        return .Staging
         #else
-            return "https://api-prd.just.cash"
+        return .Production
         #endif
     }
     

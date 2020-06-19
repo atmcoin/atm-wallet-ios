@@ -339,7 +339,6 @@
 		B3648E92246CE6C60002EA21 /* WACSendVerificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3648E85246CE6C60002EA21 /* WACSendVerificationView.xib */; };
 		B3648E93246CE6C60002EA21 /* WACActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E86246CE6C60002EA21 /* WACActionViewController.swift */; };
 		B3648E94246CE6C60002EA21 /* WACSendVerificationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E87246CE6C60002EA21 /* WACSendVerificationCodeViewController.swift */; };
-		B3648E95246CE6C60002EA21 /* WACSendCoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E88246CE6C60002EA21 /* WACSendCoinViewController.swift */; };
 		B36648E1247A194900AC9429 /* Date+WACAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36648E0247A194900AC9429 /* Date+WACAdditions.swift */; };
 		B389C6FF247F502C0022FB66 /* UserDefaults+Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389C6FE247F502C0022FB66 /* UserDefaults+Persistable.swift */; };
 		B389C71A247F66A20022FB66 /* WACWithdrawalStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389C719247F66A20022FB66 /* WACWithdrawalStatusViewController.swift */; };
@@ -1086,7 +1085,6 @@
 		B3648E85246CE6C60002EA21 /* WACSendVerificationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WACSendVerificationView.xib; sourceTree = "<group>"; };
 		B3648E86246CE6C60002EA21 /* WACActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACActionViewController.swift; sourceTree = "<group>"; };
 		B3648E87246CE6C60002EA21 /* WACSendVerificationCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACSendVerificationCodeViewController.swift; sourceTree = "<group>"; };
-		B3648E88246CE6C60002EA21 /* WACSendCoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACSendCoinViewController.swift; sourceTree = "<group>"; };
 		B36648E0247A194900AC9429 /* Date+WACAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+WACAdditions.swift"; sourceTree = "<group>"; };
 		B389C6FE247F502C0022FB66 /* UserDefaults+Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Persistable.swift"; sourceTree = "<group>"; };
 		B389C719247F66A20022FB66 /* WACWithdrawalStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACWithdrawalStatusViewController.swift; sourceTree = "<group>"; };
@@ -1950,7 +1948,6 @@
 				B3648E85246CE6C60002EA21 /* WACSendVerificationView.xib */,
 				B3648E83246CE6C60002EA21 /* WACVerifyCashCodeViewController.swift */,
 				B3648E84246CE6C60002EA21 /* WACVerifyCashCodeView.xib */,
-				B3648E88246CE6C60002EA21 /* WACSendCoinViewController.swift */,
 			);
 			path = ActionViewControllers;
 			sourceTree = "<group>";
@@ -3065,7 +3062,6 @@
 				CE5393B022D7CC98000303B3 /* HistoryPeriod.swift in Sources */,
 				CE20C8F61DBAF77D00C8397A /* UIViewController+BRWAdditions.swift in Sources */,
 				222319B01F27985A00008F20 /* BRBrowserViewController.swift in Sources */,
-				B3648E95246CE6C60002EA21 /* WACSendCoinViewController.swift in Sources */,
 				CE74F58D1E3BA85600ED5FA9 /* ExchangeUpdater.swift in Sources */,
 				3A611A0F2325738C004B8E36 /* AnimatedBlockSetLogo.swift in Sources */,
 				71C44E92225F95B100EF4459 /* RecoveryKeyCompleteViewController.swift in Sources */,

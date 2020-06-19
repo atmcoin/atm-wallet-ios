@@ -35,7 +35,6 @@ class WACAtmLocationsViewController: UIViewController {
     
     var sendVerificationVC: WACSendVerificationCodeViewController?
     var verifyCashCodeVC: WACVerifyCashCodeViewController?
-    var pCodeVC: WACSendCoinViewController?
     
     var currentContainerViewVC: UIViewController?
     

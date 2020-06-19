@@ -43,11 +43,9 @@ class WACSendVerificationCodeViewController: WACActionViewController {
     }
     
     @IBAction func getverificationCodeAction(_ sender: Any) {
-        self.view.endEditing(true)
         validateFields()
         if !validFields { return }
         WACSessionManager.shared.client!.sendVerificationCode(first: firstNameTextView.text!, surname: self.lastNameTextView.text!, phoneNumber: self.phoneNumberTextView.text!, email: "", completion: { (response: WacSDK.SendVerificationCodeResponse) in
-            self.view.hideAnimated()
             self.actionCallback?.withdraw(amount: self.amountToWithdrawTextView.text!)
             self.actionCallback?.actiondDidComplete(action: .sendVerificationCode)
             self.clearViews()

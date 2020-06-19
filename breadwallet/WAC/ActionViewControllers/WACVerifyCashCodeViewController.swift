@@ -24,10 +24,13 @@ class WACVerifyCashCodeViewController: WACActionViewController {
     
     @IBAction func sendCashCode(_ sender: Any) {
         self.view.endEditing(true)
+        self.hideView()
         WACSessionManager.shared.client!.createCashCode((atm?.atmId)!, amount!, tokenTextView.text!, completion: { (response: CashCodeResponse) in
             if response.result == "error" {
                 let message = response.error?.message
-                self.showAlert(title: "Error", message: message!)
+                self.showAlert(title: "Error", message: message!) {_ in
+                    self.showView()
+                }
             }
             else {
                 let cashCode = (response.data?.items?.first)!
@@ -37,10 +40,9 @@ class WACVerifyCashCodeViewController: WACActionViewController {
                                                  atm: self.atm,
                                                  code: cashCode)
                 WACTransactionManager.shared.store(transaction)
+                self.actionCallback?.actiondDidComplete(action: .cashCodeVerification)
             }
-            self.view.hideAnimated()
             
-            self.actionCallback?.actiondDidComplete(action: .cashCodeVerification)
             self.clearViews()
         })
     }
@@ -52,6 +54,7 @@ class WACVerifyCashCodeViewController: WACActionViewController {
     
     override func showView() {
         super.showView()
+        self.clearViews()
         self.listenForKeyboard = true
     }
     

@@ -8,8 +8,7 @@ import UIKit
 
 extension UIView {
     func showAnimated() {
-        print("GIAN \(self.frame)")
-        print(self.superview?.frame as Any)
+        self.frame.origin.y = (self.superview?.frame.size.height)!
         UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseIn],
                        animations: {
                         self.frame.origin.y = (self.superview?.frame.size.height)! - self.bounds.height
@@ -21,8 +20,8 @@ extension UIView {
     func hideAnimated() {
         UIView.animate(withDuration: 0.3, delay: 0, options: [.curveLinear],
                        animations: {
-                        self.frame.origin.y = self.bounds.height
-//                        self.layoutIfNeeded()
+                        self.frame.origin.y = (self.superview?.frame.size.height)!//self.bounds.height
+                        self.layoutIfNeeded()
                         
         },  completion: {(_ completed: Bool) -> Void in
             self.isHidden = true
