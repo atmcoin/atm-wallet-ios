@@ -62,9 +62,9 @@ class ShareDataViewController: UIViewController {
             toggle.sendActions(for: .valueChanged)
         }
 
-        toggle.valueChanged = strongify(self) { myself in
-            UserDefaults.hasAquiredShareDataPermission = myself.toggle.isOn
-            Backend.apiClient.analytics?.syncDataSharingPermissions()
-        }
+        //toggle.valueChanged = strongify(self) { myself in
+        //    UserDefaults.hasAquiredShareDataPermission = myself.toggle.isOn
+        //    Backend.apiClient.analytics?.syncDataSharingPermissions()
+        //}
     }
 }

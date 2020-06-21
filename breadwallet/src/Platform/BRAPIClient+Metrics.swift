@@ -16,17 +16,18 @@ import AdSupport
 extension BRAPIClient {
     
     func sendLaunchEvent(userAgent: String) {
-        DispatchQueue.global(qos: .background).async { [weak self] in
-            guard let `self` = self else { return }
-            self.getAttributionDetails { attributionInfo in
-                let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
-                let payload = MetricsPayload(data: MetricsPayloadData.launch(LaunchData(bundles: self.bundles,
-                                                                                        userAgent: userAgent,
-                                                                                        idfa: idfa,
-                                                                                        attributionInfo: attributionInfo)))
-                self.sendMetrics(payload: payload)
-            }
-        }
+//        DispatchQueue.global(qos: .background).async { [weak self] in
+//            guard let `self` = self else { return }
+//            self.getAttributionDetails { attributionInfo in
+//                let idfa = UUID().uuidString
+//                let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+//                let payload = MetricsPayload(data: MetricsPayloadData.launch(LaunchData(bundles: self.bundles,
+//                                                                                        userAgent: userAgent,
+//                                                                                        idfa: idfa,
+//                                                                                        attributionInfo: attributionInfo)))
+//                self.sendMetrics(payload: payload)
+//            }
+//        }
     }
 
     func sendCheckoutEvent(status: Int,
@@ -40,41 +41,43 @@ extension BRAPIClient {
                            toAddress: String,
                            txHash: String?,
                            error: Int?) {
-        DispatchQueue.global(qos: .background).async { [weak self] in
-            let payload = MetricsPayload(data:
-                MetricsPayloadData.checkout(CheckoutData(status: status,
-                                                         identifier: identifier,
-                                                         service: service,
-                                                         transactionHash: txHash,
-                                                         fromCurrency: fromCurrency,
-                                                         fromAmount: fromAmount,
-                                                         fromAddress: fromAddress,
-                                                         toCurrency: toCurrency,
-                                                         toAmount: toAmount,
-                                                         toAddress: toAddress,
-                                                         error: error,
-                                                         timestamp: Int(Date().timeIntervalSince1970))))
-            self?.sendMetrics(payload: payload)
-        }
+//        DispatchQueue.global(qos: .background).async { [weak self] in
+//            let payload = MetricsPayload(data:
+//                MetricsPayloadData.checkout(CheckoutData(status: status,
+//                                                         identifier: identifier,
+//                                                         service: service,
+//                                                         transactionHash: txHash,
+//                                                         fromCurrency: fromCurrency,
+//                                                         fromAmount: fromAmount,
+//                                                         fromAddress: fromAddress,
+//                                                         toCurrency: toCurrency,
+//                                                         toAmount: toAmount,
+//                                                         toAddress: toAddress,
+//                                                         error: error,
+//                                                         timestamp: Int(Date().timeIntervalSince1970))))
+//            self?.sendMetrics(payload: payload)
+//        }
     }
     
     func sendEnableSegwit() {
-        sendMetrics(payload: MetricsPayload.enableSegWit)
+//        sendMetrics(payload: MetricsPayload.enableSegWit)
     }
     
     func sendViewLegacyAddress() {
-        sendMetrics(payload: MetricsPayload.viewLegacyAddress)
+//        sendMetrics(payload: MetricsPayload.viewLegacyAddress)
     }
     
     private func sendMetrics(payload: MetricsPayload) {
-        guard let data = try? JSONEncoder().encode(payload) else { return }
-        var req = URLRequest(url: self.url("/me/metrics"))
-        req.httpMethod = "POST"
-        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        req.setValue("application/json", forHTTPHeaderField: "Accept")
-        req.httpBody = data
-        self.dataTaskWithRequest(req, authenticated: true, handler: { _, _, _ in
-        }).resume()
+//     stop sending metrics
+//        guard let data = try? JSONEncoder().encode(payload) else { return }
+//        var req = URLRequest(url: self.url("/me/metrics"))
+//        req.httpMethod = "POST"
+//        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//        req.setValue("application/json", forHTTPHeaderField: "Accept")
+//        req.httpBody = data
+//        self.dataTaskWithRequest(req, authenticated: true, handler: { _, _, _ in
+//        }).resume()
+//
     }
     
     private var bundles: [String: String] {

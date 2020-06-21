@@ -333,9 +333,9 @@ class ApplicationController: Subscriber, Trackable {
             }
         }
 
-        Backend.apiClient.updateExperiments()
+        // Backend.apiClient.updateExperiments()
         Backend.updateExchangeRates()
-        Backend.apiClient.fetchAnnouncements()
+        // Backend.apiClient.fetchAnnouncements()
     }
     
     private func updateAssetBundles() {
