@@ -175,7 +175,7 @@ class KeyStore {
 
         // pre-fetch client token
         if !E.isRunningTests, try keychainItem(key: KeychainKey.bdbClientToken) as String? == nil {
-            KeyStore.fetchClientToken { _ in }
+            KeyStore.fetchClientToken(cachedToken: "") { _ in }
         }
     }
     
@@ -358,10 +358,12 @@ extension KeyStore: WalletAuthenticator {
     /// Fetch new credentials from server and store in keychain if not available.
     private func getAuthCredentials(client: AuthenticationClient, key: Key, completion: @escaping (Result<AuthUserCredentials, APIAuthenticationError>) -> Void) {
         if let authUser = bdbAuthUser {
-            return completion(.success(authUser))
+            print("[KEYSTORE] authuser found")
+            //    return completion(.success(authUser))
         }
+
         // handshake with server
-        KeyStore.fetchClientToken { clientToken in
+       getClientToken { clientToken in
             guard let clientToken = clientToken else { return completion(.failure(.invalidClientToken)) }
             print("[KEYSTORE] fetching user credentials...")
             client.authenticate(apiKey: key,
@@ -416,7 +418,23 @@ extension KeyStore: WalletAuthenticator {
         }
     }
 
-    private static func fetchClientToken(completion: @escaping (String?) -> Void) {
+    private func getClientToken(completion: @escaping (String?) -> Void) {
+        // fetch from keychain
+        do {
+            if let token: String = try keychainItem(key: KeychainKey.bdbClientToken) {
+                print("[KEYSTORE] Found a cached token: \(token)")
+                KeyStore.fetchClientToken(cachedToken: token, completion: completion)
+            } else {
+                print("[KEYSTORE] No cached token found")
+                KeyStore.fetchClientToken(cachedToken: "", completion: completion)
+            }
+        } catch let error {
+            print("[KEYSTORE] keychain error: \(error.localizedDescription)")
+            assertionFailure()
+        }
+    }
+
+    private static func fetchClientToken(cachedToken:String, completion: @escaping (String?) -> Void) {
         // fetch from CloudKit and store in keychain
         CKContainer.default().publicCloudDatabase.fetch(withRecordID: CKRecord.ID(recordName: C.bdbClientTokenRecordId)) { record, error in
             DispatchQueue.global(qos: .userInitiated).async {
@@ -425,22 +443,14 @@ extension KeyStore: WalletAuthenticator {
                     return completion(nil)
                 }
                 print("[KEYSTORE] retreived client token from CloudKit : \(token)")
-                do {
-                    if let keychainToken: String = try keychainItem(key: KeychainKey.bdbClientToken) {
-                        print("[KEYSTORE] Found a cached token: \(keychainToken)")
-                        if token != keychainToken {
-                            print("[KEYSTORE] cached token differs from CloudKit, saving")
-                            try setKeychainItem(key: KeychainKey.bdbClientToken, item: token)
-                        } else {
-                            print("[KEYSTORE] cached token idential to keystore, no action needed")
-                        }
-                    } else {
-                        print("[KEYSTORE] No cached token found")
+                if token != cachedToken {
+                    do {
+                        print("[KEYSTORE] cached token differs from CloudKit, saving")
                         try setKeychainItem(key: KeychainKey.bdbClientToken, item: token)
+                    } catch let error {
+                        print("[KEYSTORE] keychain error: \(error.localizedDescription)")
+                        assertionFailure()
                     }
-                } catch let error {
-                    print("[KEYSTORE] keychain error: \(error.localizedDescription)")
-                    assertionFailure()
                 }
                 completion(token)
             }
