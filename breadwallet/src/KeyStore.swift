@@ -358,8 +358,7 @@ extension KeyStore: WalletAuthenticator {
     /// Fetch new credentials from server and store in keychain if not available.
     private func getAuthCredentials(client: AuthenticationClient, key: Key, completion: @escaping (Result<AuthUserCredentials, APIAuthenticationError>) -> Void) {
         if let authUser = bdbAuthUser {
-            print("[KEYSTORE] authuser found")
-            //    return completion(.success(authUser))
+            return completion(.success(authUser))
         }
 
         // handshake with server
@@ -422,10 +421,8 @@ extension KeyStore: WalletAuthenticator {
         // fetch from keychain
         do {
             if let token: String = try keychainItem(key: KeychainKey.bdbClientToken) {
-                print("[KEYSTORE] Found a cached token: \(token)")
                 KeyStore.fetchClientToken(cachedToken: token, completion: completion)
             } else {
-                print("[KEYSTORE] No cached token found")
                 KeyStore.fetchClientToken(cachedToken: "", completion: completion)
             }
         } catch let error {
@@ -442,10 +439,8 @@ extension KeyStore: WalletAuthenticator {
                     print("[KEYSTORE] CloudKit error: \(error?.localizedDescription ?? "none")")
                     return completion(nil)
                 }
-                print("[KEYSTORE] retreived client token from CloudKit : \(token)")
                 if token != cachedToken {
                     do {
-                        print("[KEYSTORE] cached token differs from CloudKit, saving")
                         try setKeychainItem(key: KeychainKey.bdbClientToken, item: token)
                     } catch let error {
                         print("[KEYSTORE] keychain error: \(error.localizedDescription)")

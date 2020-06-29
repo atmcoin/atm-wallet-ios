@@ -13,7 +13,7 @@ import BRCrypto
 
 /// Handles user authentication and JWT token generation
 struct AuthenticationClient {
-    static let defaultTokenExpiration = TimeInterval(C.secondsInDay * 1)
+    static let defaultTokenExpiration = TimeInterval(C.secondsInDay * 7)
     
     let baseURL: URL
     let urlSession: URLSession
@@ -155,7 +155,7 @@ struct JWT: Codable {
     let expiration: Date
 
     var isExpired: Bool {
-        return true // Date() > expiration
+        return Date() > expiration
     }
 
     private struct Header: Codable {
