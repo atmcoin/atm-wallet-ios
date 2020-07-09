@@ -68,3 +68,8 @@ Screenshots/shots
 
 breadwallet/Icon.xcassets/AppIcon-Internal.appiconset
 breadwallet/Config.plist
+
+# fonts
+breadwallet/Fonts/CircularPro-Medium.otf
+breadwallet/Fonts/CircularPro-Bold.otf
+breadwallet/Fonts/CircularPro-Book.otf
