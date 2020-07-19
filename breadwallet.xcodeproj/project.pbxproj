@@ -648,6 +648,13 @@
 			remoteGlobalIDString = BD12FD351D767BA0001815C7;
 			remoteInfo = SwiftProtobuf_iOS;
 		};
+		B3B72AC024C4FDC5002210EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3B72ABC24C4FDC5002210EA /* CashUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B36B71CB2497C9AE009A7E4A;
+			remoteInfo = CashUI;
+		};
 		CEA7E6801F09A9D2001F8C27 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 75A2A7881DA5934300A983D8 /* Project object */;
@@ -1029,6 +1036,7 @@
 		9AE800CF21FFF81F00D5058C /* rewardsIcon-64.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "rewardsIcon-64.gif"; path = "src/Views/AnimatedIcons/Rewards Icon Frames/rewardsIcon-64.gif"; sourceTree = "<group>"; };
 		9AE8FFF721FE64E200D5058C /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RewardsView.swift; path = src/Views/RewardsView.swift; sourceTree = "<group>"; };
 		9AE8FFF921FE6FE000D5058C /* RewardsIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RewardsIconView.swift; path = src/Views/AnimatedIcons/RewardsIconView.swift; sourceTree = "<group>"; };
+		B3B72ABC24C4FDC5002210EA /* CashUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CashUI.xcodeproj; path = "Modules/cash-ui-ios/CashUI.xcodeproj"; sourceTree = "<group>"; };
 		CE0822631FCD1BD100EF371D /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreenViewController.swift; path = src/ViewControllers/HomeScreenViewController.swift; sourceTree = "<group>"; };
 		CE0822651FCE059A00EF371D /* HomeScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreenCell.swift; path = src/Views/HomeScreenCell.swift; sourceTree = "<group>"; };
 		CE08B2A220F66822009FA568 /* BRAPIClient+Pigeon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BRAPIClient+Pigeon.swift"; path = "src/Pigeon/BRAPIClient+Pigeon.swift"; sourceTree = "<group>"; };
@@ -1590,6 +1598,7 @@
 		75B6F52F1DA71DCC0031A93F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B3B72ABC24C4FDC5002210EA /* CashUI.xcodeproj */,
 				7CD03E6B23429EB50084F00F /* SwiftProtobuf.xcodeproj */,
 				22A9A9971DF63426000F0016 /* libbz2 */,
 				75FEFD1F1DAEE7A400203D3A /* sqlite3 */,
@@ -1822,6 +1831,14 @@
 				9AE800C621FFF81C00D5058C /* rewardsIcon-70.gif */,
 			);
 			name = "Rewards Icon Frames";
+			sourceTree = "<group>";
+		};
+		B3B72ABD24C4FDC5002210EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3B72AC124C4FDC5002210EA /* CashUI.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CE08B2A120F66807009FA568 /* Pigeon */ = {
@@ -2466,6 +2483,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = B3B72ABD24C4FDC5002210EA /* Products */;
+					ProjectRef = B3B72ABC24C4FDC5002210EA /* CashUI.xcodeproj */;
+				},
+				{
 					ProductGroup = 7CD03E5423429EA80084F00F /* Products */;
 					ProjectRef = 7CD03E5323429EA80084F00F /* SwiftProtobuf.xcodeproj */;
 				},
@@ -2583,6 +2604,13 @@
 			fileType = wrapper.framework;
 			path = SwiftProtobuf.framework;
 			remoteRef = 7CD03E8123429EB50084F00F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B3B72AC124C4FDC5002210EA /* CashUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CashUI.framework;
+			remoteRef = B3B72AC024C4FDC5002210EA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
