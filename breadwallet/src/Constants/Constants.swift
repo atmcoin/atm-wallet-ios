@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import WacSDK
 
 let π: CGFloat = .pi
 
@@ -106,16 +105,6 @@ struct C {
 
     static var bdbHost: String {
         return "api.blockset.com"
-    }
-
-    static var cniWacUrl: WacUrl {
-        #if TESTNET
-        return .Staging
-        #elseif INTERNAL
-        return .Staging
-        #else
-        return .Production
-        #endif
     }
     
     static let bdbClientTokenRecordId = "BlockchainDBClientID"

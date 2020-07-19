@@ -98,7 +98,6 @@
 		754AE0B71DFCA870007FD001 /* libbz2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22A9A9961DF63426000F0016 /* libbz2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		754AE0BC1DFE8A46007FD001 /* SecureAllocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754AE0BB1DFE8A46007FD001 /* SecureAllocator.swift */; };
 		75A2A7941DA5934300A983D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2A7931DA5934300A983D8 /* AppDelegate.swift */; };
-		75A2A79B1DA5934300A983D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75A2A79A1DA5934300A983D8 /* Assets.xcassets */; };
 		75A2A79E1DA5934300A983D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75A2A79C1DA5934300A983D8 /* LaunchScreen.storyboard */; };
 		75A2A7B41DA5934300A983D8 /* breadwalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2A7B31DA5934300A983D8 /* breadwalletUITests.swift */; };
 		7C0A3ACE210A0E1D006C2783 /* NotificationAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0A3ACD210A0E1D006C2783 /* NotificationAuthorizer.swift */; };
@@ -326,6 +325,10 @@
 		9AE8011521FFF81F00D5058C /* rewardsIcon-64.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9AE800CF21FFF81F00D5058C /* rewardsIcon-64.gif */; };
 		9AE8FFF821FE64E200D5058C /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8FFF721FE64E200D5058C /* RewardsView.swift */; };
 		9AE8FFFA21FE6FE000D5058C /* RewardsIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8FFF921FE6FE000D5058C /* RewardsIconView.swift */; };
+		B3B72AC224C4FEDA002210EA /* CashUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B72AC124C4FDC5002210EA /* CashUI.framework */; };
+		B3B72AC324C4FEDA002210EA /* CashUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3B72AC124C4FDC5002210EA /* CashUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B3B72AD124C50631002210EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B72ACF24C50631002210EA /* Assets.xcassets */; };
+		B3B72AD424C5096C002210EA /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B72AD324C5096C002210EA /* Icon.xcassets */; };
 		CE0822641FCD1BD100EF371D /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0822631FCD1BD100EF371D /* HomeScreenViewController.swift */; };
 		CE0822661FCE059A00EF371D /* HomeScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0822651FCE059A00EF371D /* HomeScreenCell.swift */; };
 		CE08B2A320F66822009FA568 /* BRAPIClient+Pigeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE08B2A220F66822009FA568 /* BRAPIClient+Pigeon.swift */; };
@@ -379,7 +382,6 @@
 		CE5393B022D7CC98000303B3 /* HistoryPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5393AF22D7CC98000303B3 /* HistoryPeriod.swift */; };
 		CE5E6C941EB7964900A476DB /* WalletDisabledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E6C931EB7964900A476DB /* WalletDisabledView.swift */; };
 		CE5E6C961EB8CCF500A476DB /* SupportCenterContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E6C951EB8CCF500A476DB /* SupportCenterContainer.swift */; };
-		CE5E6C9A1EB9135000A476DB /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5E6C991EB9135000A476DB /* Icon.xcassets */; };
 		CE5F21D91E4A922700C47B8E /* DismissLoginAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F21D81E4A922700C47B8E /* DismissLoginAnimator.swift */; };
 		CE5F21DB1E4A93A500C47B8E /* LoginTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F21DA1E4A93A500C47B8E /* LoginTransitionDelegate.swift */; };
 		CE6314831E08E5BB00D4AFE0 /* UIView+InitAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6314821E08E5BB00D4AFE0 /* UIView+InitAdditions.swift */; };
@@ -655,6 +657,13 @@
 			remoteGlobalIDString = B36B71CB2497C9AE009A7E4A;
 			remoteInfo = CashUI;
 		};
+		B3B72AC924C50113002210EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3B72AC424C50113002210EA /* WacSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B362079724528B9B00D6A566;
+			remoteInfo = WacSDK;
+		};
 		CEA7E6801F09A9D2001F8C27 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 75A2A7881DA5934300A983D8 /* Project object */;
@@ -672,6 +681,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				754AE0B71DFCA870007FD001 /* libbz2.framework in Embed Frameworks */,
+				B3B72AC324C4FEDA002210EA /* CashUI.framework in Embed Frameworks */,
 				7CD03E8623429F580084F00F /* SwiftProtobuf.framework in Embed Frameworks */,
 				7C662B0D222F515F0008814C /* ../$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)/BRCrypto.framework in Embed Frameworks */,
 			);
@@ -799,7 +809,6 @@
 		754AE0BD1DFE8E5A007FD001 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = src/Platform/module.modulemap; sourceTree = "<group>"; };
 		75A2A7901DA5934300A983D8 /* coinsquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coinsquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A2A7931DA5934300A983D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		75A2A79A1DA5934300A983D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75A2A79D1DA5934300A983D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75A2A79F1DA5934300A983D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75A2A7A41DA5934300A983D8 /* breadwalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = breadwalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1037,6 +1046,9 @@
 		9AE8FFF721FE64E200D5058C /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RewardsView.swift; path = src/Views/RewardsView.swift; sourceTree = "<group>"; };
 		9AE8FFF921FE6FE000D5058C /* RewardsIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RewardsIconView.swift; path = src/Views/AnimatedIcons/RewardsIconView.swift; sourceTree = "<group>"; };
 		B3B72ABC24C4FDC5002210EA /* CashUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CashUI.xcodeproj; path = "Modules/cash-ui-ios/CashUI.xcodeproj"; sourceTree = "<group>"; };
+		B3B72AC424C50113002210EA /* WacSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WacSDK.xcodeproj; path = "Modules/cash-sdk-ios/WacSDK/WacSDK.xcodeproj"; sourceTree = "<group>"; };
+		B3B72ACF24C50631002210EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3B72AD324C5096C002210EA /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
 		CE0822631FCD1BD100EF371D /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreenViewController.swift; path = src/ViewControllers/HomeScreenViewController.swift; sourceTree = "<group>"; };
 		CE0822651FCE059A00EF371D /* HomeScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreenCell.swift; path = src/Views/HomeScreenCell.swift; sourceTree = "<group>"; };
 		CE08B2A220F66822009FA568 /* BRAPIClient+Pigeon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BRAPIClient+Pigeon.swift"; path = "src/Pigeon/BRAPIClient+Pigeon.swift"; sourceTree = "<group>"; };
@@ -1105,7 +1117,6 @@
 		CE5393AF22D7CC98000303B3 /* HistoryPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryPeriod.swift; path = src/Models/HistoryPeriod.swift; sourceTree = "<group>"; };
 		CE5E6C931EB7964900A476DB /* WalletDisabledView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalletDisabledView.swift; path = src/Views/WalletDisabledView.swift; sourceTree = "<group>"; };
 		CE5E6C951EB8CCF500A476DB /* SupportCenterContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupportCenterContainer.swift; path = src/ViewControllers/SupportCenterContainer.swift; sourceTree = "<group>"; };
-		CE5E6C991EB9135000A476DB /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
 		CE5F21D81E4A922700C47B8E /* DismissLoginAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DismissLoginAnimator.swift; path = src/ViewControllers/ViewControllerTransitions/DismissLoginAnimator.swift; sourceTree = "<group>"; };
 		CE5F21DA1E4A93A500C47B8E /* LoginTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginTransitionDelegate.swift; path = src/ViewControllers/ViewControllerTransitions/LoginTransitionDelegate.swift; sourceTree = "<group>"; };
 		CE6314821E08E5BB00D4AFE0 /* UIView+InitAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+InitAdditions.swift"; path = "src/Extensions/UIView+InitAdditions.swift"; sourceTree = "<group>"; };
@@ -1263,6 +1274,7 @@
 				22A9A9661DF61FEE000F0016 /* WebKit.framework in Frameworks */,
 				22A9A9641DF61FE7000F0016 /* Security.framework in Frameworks */,
 				22A9A9621DF61FE0000F0016 /* SystemConfiguration.framework in Frameworks */,
+				B3B72AC224C4FEDA002210EA /* CashUI.framework in Frameworks */,
 				22A9A9601DF61FD8000F0016 /* CoreLocation.framework in Frameworks */,
 				22A9A95E1DF61FD0000F0016 /* PushKit.framework in Frameworks */,
 				7CD03E8523429F580084F00F /* SwiftProtobuf.framework in Frameworks */,
@@ -1510,8 +1522,6 @@
 				CEC7E593200D7C830056F410 /* Sentry.swift */,
 				CE4C1CC71ED88B600063E184 /* URLController.swift */,
 				CE916E321EDA800E00D641D6 /* UserDefaultsUpdater.swift */,
-				75A2A79A1DA5934300A983D8 /* Assets.xcassets */,
-				CE5E6C991EB9135000A476DB /* Icon.xcassets */,
 				CEE20C321EA5B2EC0086F724 /* Constants */,
 				CE20C8F01DBAF6E100C8397A /* Extensions */,
 				CE20C90A1DBC59C500C8397A /* FlowControllers */,
@@ -1598,6 +1608,7 @@
 		75B6F52F1DA71DCC0031A93F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B3B72AC424C50113002210EA /* WacSDK.xcodeproj */,
 				B3B72ABC24C4FDC5002210EA /* CashUI.xcodeproj */,
 				7CD03E6B23429EB50084F00F /* SwiftProtobuf.xcodeproj */,
 				22A9A9971DF63426000F0016 /* libbz2 */,
@@ -1620,6 +1631,8 @@
 		7C377EBC20F64C1200E8CF1C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B3B72AD324C5096C002210EA /* Icon.xcassets */,
+				B3B72ACF24C50631002210EA /* Assets.xcassets */,
 				71014F7B2327E49400DA1373 /* fiatcurrencies.json */,
 				E837FCFB219D1BBC00F59D99 /* onboarding-videos */,
 				CE473D7B1F042F1E00C0ACFD /* coinflip.aiff */,
@@ -1837,6 +1850,14 @@
 			isa = PBXGroup;
 			children = (
 				B3B72AC124C4FDC5002210EA /* CashUI.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3B72AC524C50113002210EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3B72ACA24C50113002210EA /* WacSDK.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2494,6 +2515,10 @@
 					ProductGroup = 7CD03E6C23429EB50084F00F /* Products */;
 					ProjectRef = 7CD03E6B23429EB50084F00F /* SwiftProtobuf.xcodeproj */;
 				},
+				{
+					ProductGroup = B3B72AC524C50113002210EA /* Products */;
+					ProjectRef = B3B72AC424C50113002210EA /* WacSDK.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -2611,6 +2636,13 @@
 			fileType = wrapper.framework;
 			path = CashUI.framework;
 			remoteRef = B3B72AC024C4FDC5002210EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B3B72ACA24C50113002210EA /* WacSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WacSDK.framework;
+			remoteRef = B3B72AC924C50113002210EA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -2750,7 +2782,6 @@
 				CE473D7C1F042F1E00C0ACFD /* coinflip.aiff in Resources */,
 				9A926F8E22034B3800CC2263 /* CellHighlight-84.png in Resources */,
 				9AE800EF21FFF81F00D5058C /* rewardsIcon-68.gif in Resources */,
-				CE5E6C9A1EB9135000A476DB /* Icon.xcassets in Resources */,
 				71014F7C2327E49400DA1373 /* fiatcurrencies.json in Resources */,
 				9AE800EC21FFF81F00D5058C /* rewardsIcon-3.gif in Resources */,
 				9AE8011521FFF81F00D5058C /* rewardsIcon-64.gif in Resources */,
@@ -2766,15 +2797,16 @@
 				9AE8011121FFF81F00D5058C /* rewardsIcon-6.gif in Resources */,
 				9A926F8922034B3800CC2263 /* CellHighlight-69.png in Resources */,
 				9A926F8B22034B3800CC2263 /* CellHighlight-38.png in Resources */,
+				B3B72AD424C5096C002210EA /* Icon.xcassets in Resources */,
 				9A926F7C22034B3800CC2263 /* CellHighlight-73.png in Resources */,
 				9AE800EA21FFF81F00D5058C /* rewardsIcon-48.gif in Resources */,
+				B3B72AD124C50631002210EA /* Assets.xcassets in Resources */,
 				9AE800D221FFF81F00D5058C /* rewardsIcon-4.gif in Resources */,
 				9A926F6D22034B3800CC2263 /* CellHighlight-31.png in Resources */,
 				9AE800D521FFF81F00D5058C /* rewardsIcon-27.gif in Resources */,
 				9AE800D821FFF81F00D5058C /* rewardsIcon-43.gif in Resources */,
 				9A926F6222034B3800CC2263 /* CellHighlight-45.png in Resources */,
 				7C98B0A5215A99C8007C85EB /* brd-tokens-staging.tar in Resources */,
-				75A2A79B1DA5934300A983D8 /* Assets.xcassets in Resources */,
 				9A926F8322034B3800CC2263 /* CellHighlight-70.png in Resources */,
 				9A926F5C22034B3800CC2263 /* CellHighlight-16.png in Resources */,
 				9A926F7022034B3800CC2263 /* CellHighlight-1.png in Resources */,
@@ -3506,7 +3538,6 @@
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/breadwallet/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -3545,7 +3576,6 @@
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/breadwallet/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -3741,7 +3771,6 @@
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/breadwallet/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -3948,7 +3977,6 @@
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/breadwallet/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -4155,7 +4183,6 @@
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/breadwallet/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -4434,7 +4461,6 @@
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/breadwallet/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -4642,7 +4668,6 @@
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/breadwallet/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -4849,7 +4874,6 @@
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/breadwallet/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",

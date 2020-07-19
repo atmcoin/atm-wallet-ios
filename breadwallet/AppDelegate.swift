@@ -8,6 +8,8 @@
 
 import UIKit
 import LocalAuthentication
+import CashUI
+import WacSDK
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,13 +17,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return applicationController.window
     }
     let applicationController = ApplicationController()
-
+    
+    static var url: WacUrl {
+        #if TESTNET
+        return .Staging
+        #else
+        return .Production
+        #endif
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         redirectStdOut()
         UIView.swizzleSetFrame()
         applicationController.launch(application: application, options: launchOptions)
         
-        WACSessionManager.shared.start()
+        WACSessionManager.shared.start(url: AppDelegate.url)
+        WACSessionManager.shared.delegate = self
+
         return true
     }
 
@@ -87,4 +99,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             _ = freopen($0, "w+", stdout)
         }
     }
+}
+
+extension AppDelegate: WACSessionManagerDelegate {
+    
+    func sendCoin(amount: String, address: String, completion: @escaping (() -> Void)) {
+        let applicationController = self.applicationController
+        let modalPresenter = applicationController.modalPresenter
+        
+        let currencyId = Currencies.btc.uid
+        modalPresenter!.presentModal(for: currencyId, amount: amount, address: address, completion: {
+            completion()
+        })
+    }
+    
 }
