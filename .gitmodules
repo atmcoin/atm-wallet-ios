@@ -7,3 +7,6 @@
 [submodule "Modules/cash-sdk-ios"]
 	path = Modules/cash-sdk-ios
 	url = https://github.com/atmcoin/cash-sdk-ios.git
+[submodule "Modules/cash-ui-ios"]
+	path = Modules/cash-ui-ios
+	url = git@github.com:atmcoin/cash-ui-ios.git
