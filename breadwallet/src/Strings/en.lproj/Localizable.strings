@@ -86,40 +86,6 @@
 "ApiClient.tokenError" = "Unable to retrieve API token";
 /* ATM Cash Locatios View Title */
 "ATMMapView.title" = "ATM Cash Locations Map";
-/* ATM Cash Locatios View Sub Title */
-"ATMMapView.subTitle" = "";
-/* ATM Cash Locatios View Title */
-"ATMMapView.title" = "ATM Cash Locations Map";
-/* ATM Cash Locatios View Sub Title */
-"ATMMapView.subTitle" = "";
-/* ATM Code Title */
-"ATMCode.title" = "";
-/* Verification Code Title */
-"VerificationCode.title" = "Confirmation Code";
-/* Verification Code Label */
-"VerificationCode.label" = "We Texted You a Confirmation Code";
-/* Verification Code Label */
-"VerificationCode.actionLabel" = "Enter token";
-/* Verification Code Action Instructions */
-"VerificationCode.actionInstructions" = "Check your phone for the confirmation token we sent you. It may take a couple of minutes.";
-/* Verification Code Confirm Button */
-"VerificationCode.buttonConfirm" = "Confirm";
-/* Cash Token Label */
-"CashToken.label" = "Withdrawl Status";
-/* Cash Token Label */
-"CashToken.awaitingFunds" = "Awaiting Funds";
-/* Cash Token Action Instructions */
-"CashToken.actionInstructions" = "Please send bitcoin to this address to withdraw at the ATM. Scan QR code or copy and paste to send bitcoin. Note that it may take a few minutes for the transfer to be confirmed.";
-/* Cash Token Please Verify */
-"CashToken.pleaseVerify" = "Please Verify";
-/* Cash Token Amount */
-"CashToken.amountUSD" = "Amount (USD)";
-/* Cash Token Location */
-"CashToken.location" = "Location";
-/* Cash Token Location */
-"CashToken.amountBTC" = "Amount (BTC)";
-/* Cash Token Location */
-"CashToken.amountBTC" = "Send To Address";
 /* Send BCH view body. */
 "BCH.body" = "Enter a destination BCH address below. All BCH in your wallet at the time of the fork (%1$@) will be sent.";
 /* Confirm sending <$5.00> to <address>? */
@@ -158,6 +124,8 @@
 "Button.buy" = "Continue";
 /* Cancel button label */
 "Button.cancel" = "Cancel";
+/* Close button */
+"Button.close" = "Close";
 /* Confirm button title */
 "Button.confirm" = "Confirm";
 /* Button label to open a email compose window with our support email in the to field. */
@@ -172,6 +140,8 @@
 "Button.Home" = "Home";
 /* Ignore button label */
 "Button.ignore" = "Ignore";
+/* Map button */
+"Button.map" = "Map";
 /* Maybe Later button label */
 "Button.maybeLater" = "Maybe Later";
 /* menu button */
@@ -186,6 +156,8 @@
 "Button.openSettings" = "Open Settings";
 /* receive button */
 "Button.receive" = "Receive";
+/* Search button */
+"Button.search" = "Search";
 /* Button label to open Security Settings. */
 "Button.securitySettings.android" = "Security Settings";
 /* Click this button to sell an asset */
@@ -206,14 +178,22 @@
 "Button.wipe.android" = "Wipe";
 /* Yes button */
 "Button.yes" = "Yes";
-/* Map button */
-"Button.map" = "Map";
-/* Search button */
-"Button.search" = "Search";
-/* Close button */
-"Button.close" = "Close";
 /* Camera plugin instruction */
 "CameraPlugin.centerInstruction" = "Center your ID in the box";
+/* Cash Token Action Instructions */
+"CashToken.actionInstructions" = "Please send bitcoin to this address to withdraw at the ATM. Scan QR code or copy and paste to send bitcoin. Note that it may take a few minutes for the transfer to be confirmed.";
+/* Cash Token Location */
+"CashToken.amountBTC" = "Amount (BTC)";
+/* Cash Token Amount */
+"CashToken.amountUSD" = "Amount (USD)";
+/* Cash Token Label */
+"CashToken.awaitingFunds" = "Awaiting Funds";
+/* Cash Token Label */
+"CashToken.label" = "Withdrawl Status";
+/* Cash Token Location */
+"CashToken.location" = "Location";
+/* Cash Token Please Verify */
+"CashToken.pleaseVerify" = "Please Verify";
 /* Amount to Send: ($1.00) */
 "Confirmation.amountLabel" = "Amount to Send:";
 /* Network Fee: ($1.00) */
@@ -253,7 +233,7 @@
 /* The wallet is disabled. */
 "Disabled.title" = "Wallet disabled";
 /* Share address by e-mail subject */
-"Email.address_subject" = "%1$s Address";
+"Email.address_subject" = "%1$@ Address";
 /* Service capabilities description */
 "EME.permissions.accountRequest" = "Request %1$@ account information";
 /* Service capabilities description */
@@ -316,6 +296,8 @@
 "FeeSelector.title" = "Processing Speed";
 /* Label for the Android file chooser when we need to prompt the user to select an image file. */
 "FileChooser.selectImageSource.android" = "Select Image Source";
+/* Activity button on the home screen toolbar */
+"HomeScreen.activity" = "Activity";
 /* This is the section that allows administration of the user's wallet */
 "HomeScreen.admin" = "Admin";
 /* Home screen menu button to buy some bitcoin */
@@ -330,8 +312,6 @@
 "HomeScreen.totalAssets" = "Total Assets";
 /* (Tap here to) trade (your assets for other assets) */
 "HomeScreen.trade" = "Trade";
-/* Activity button on the home screen toolbar */
-"HomeScreen.activity" = "Activity";
 /* Checking private key balance progress view text */
 "Import.checking" = "Checking private key balance...";
 /* Sweep private key confirmation message */
@@ -501,7 +481,7 @@
 /* Payment too small alert title */
 "PaymentProtocol.Errors.smallOutputError" = "Couldn't make payment";
 /* Amount too small error message */
-"PaymentProtocol.Errors.smallPayment" = "Payment can’t be less than %1$@. Bitcoin transaction fees are more than the amount of this transaction. Please increase the amount and try again. ";
+"PaymentProtocol.Errors.smallPayment" = "Payment can’t be less than %1$@. Bitcoin transaction fees are more than the amount of this transaction. Please increase the amount and try again.";
 /* Output too small error message. */
 "PaymentProtocol.Errors.smallTransaction" = "Bitcoin transaction outputs can't be less than %1$@.";
 /* Unsupported signature type payment protocol error message */
@@ -738,8 +718,7 @@
 "SecurityCenter.faceIdTitle" = "Face ID";
 /* Paper Key button description */
 "SecurityCenter.paperKeyDescription" = "The only way to access your assets if you lose or upgrade your phone.";
-/* Recovery Key button title. This used to be called 'paper key', so leaving the string key as `paperKeyTitle` in order
- * to not break existing client code. */
+/* Recovery Key button title. This used to be called 'paper key', so leaving the string key as `paperKeyTitle` in order,  * to not break existing client code. */
 "SecurityCenter.paperKeyTitle" = "Recovery Key";
 /* Paper Key button title */
 "SecurityCenter.paperKeyTitle.android" = "Paper Key";
@@ -758,7 +737,7 @@
 /* Segwit enabled confirmation description */
 "Segwit.ConfirmationInstructionsDescription" = "Thank you for helping move bitcoin forward.";
 /* Segwit instructions */
-"Segwit.ConfirmationInstructionsInstructions" = "SegWit support is still a beta feature.\n\nOnce SegWit is enabled, it will not be possible\nto disable it. You will be able to find the legacy address under Settings. \n\nSome third-party services, including crypto trading, may be unavailable to users who have enabled SegWit. In case of emergency, you will be able to generate a legacy address from Preferences > Bitcoin Settings. \n\nSegWit will automatically be enabled for all\nusers in a future update. ";
+"Segwit.ConfirmationInstructionsInstructions" = "SegWit support is still a beta feature.\n\nOnce SegWit is enabled, it will not be possible\nto disable it. You will be able to find the legacy address under Settings. \n\nSome third-party services, including crypto trading, may be unavailable to users who have enabled SegWit. In case of emergency, you will be able to generate a legacy address from Preferences > Bitcoin Settings. \n\nSegWit will automatically be enabled for all\nusers in a future update.";
 /* Segwit extra confirmation title. */
 "Segwit.ConfirmChoiceLayout" = "Enabling SegWit is an irreversible feature. Are you sure you want to continue?";
 /* Segwit enableButton */
@@ -839,6 +818,8 @@
 "Send.UsedAddress.secondLIne" = "Re-use reduces privacy for both you and the recipient and can result in loss if the recipient doesn't directly control the address.";
 /* Adress already used alert title */
 "Send.UsedAddress.title" = "Address Already Used";
+/* Section header for "other settings". */
+"Settings.other" = "Other";
 /* About label */
 "Settings.about" = "About";
 /* Advanced settings header */
@@ -869,8 +850,6 @@
 "Settings.manage" = "Manage";
 /* Notifications label */
 "Settings.notifications" = "Notifications";
-/* Section header for "other settings". */
-"Settings.other" = "Other";
 /* Preferences settings section header */
 "Settings.preferences" = "Preferences";
 /* Tap here to reset the list of currencies to the default settings. */
@@ -1053,8 +1032,7 @@
 "TransactionDetails.commentsPlaceholder" = "Add memo...";
 /* Timestamp section header for complete tx */
 "TransactionDetails.completeTimestampHeader" = "Complete";
-/* Block height and confirmations label
-eg. 182930 (45061 confirmations) */
+/* Block height and confirmations label, eg. 182930 (45061 confirmations) */
 "TransactionDetails.confirmationsLabel" = "Confirmations";
 /* Empty transaction list message. */
 "TransactionDetails.emptyMessage" = "Your transactions will appear here.";
@@ -1174,6 +1152,16 @@ eg. 182930 (45061 confirmations) */
 "URLHandling.addressListAlertTitle" = "Copy Wallet Addresses";
 /* Copy wallet addresses alert button label */
 "URLHandling.copy" = "Copy";
+/* Verification Code Action Instructions */
+"VerificationCode.actionInstructions" = "Check your phone for the confirmation token we sent you. It may take a couple of minutes.";
+/* Verification Code Label */
+"VerificationCode.actionLabel" = "Enter token";
+/* Verification Code Confirm Button */
+"VerificationCode.buttonConfirm" = "Confirm";
+/* Verification Code Label */
+"VerificationCode.label" = "We Texted You a Confirmation Code";
+/* Verification Code Title */
+"VerificationCode.title" = "Confirmation Code";
 /* Verify PIN for transaction view body */
 "VerifyPin.authorize" = "Please enter your PIN to authorize this transaction.";
 /* Verify PIN view body */
