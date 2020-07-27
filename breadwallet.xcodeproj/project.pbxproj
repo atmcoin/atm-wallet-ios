@@ -657,13 +657,6 @@
 			remoteGlobalIDString = B36B71CB2497C9AE009A7E4A;
 			remoteInfo = CashUI;
 		};
-		B3B72AC924C50113002210EA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B3B72AC424C50113002210EA /* WacSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B362079724528B9B00D6A566;
-			remoteInfo = WacSDK;
-		};
 		CEA7E6801F09A9D2001F8C27 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 75A2A7881DA5934300A983D8 /* Project object */;
@@ -1046,7 +1039,6 @@
 		9AE8FFF721FE64E200D5058C /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RewardsView.swift; path = src/Views/RewardsView.swift; sourceTree = "<group>"; };
 		9AE8FFF921FE6FE000D5058C /* RewardsIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RewardsIconView.swift; path = src/Views/AnimatedIcons/RewardsIconView.swift; sourceTree = "<group>"; };
 		B3B72ABC24C4FDC5002210EA /* CashUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CashUI.xcodeproj; path = "Modules/cash-ui-ios/CashUI.xcodeproj"; sourceTree = "<group>"; };
-		B3B72AC424C50113002210EA /* WacSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WacSDK.xcodeproj; path = "Modules/cash-sdk-ios/WacSDK/WacSDK.xcodeproj"; sourceTree = "<group>"; };
 		B3B72ACF24C50631002210EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3B72AD324C5096C002210EA /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
 		CE0822631FCD1BD100EF371D /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreenViewController.swift; path = src/ViewControllers/HomeScreenViewController.swift; sourceTree = "<group>"; };
@@ -1608,7 +1600,6 @@
 		75B6F52F1DA71DCC0031A93F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				B3B72AC424C50113002210EA /* WacSDK.xcodeproj */,
 				B3B72ABC24C4FDC5002210EA /* CashUI.xcodeproj */,
 				7CD03E6B23429EB50084F00F /* SwiftProtobuf.xcodeproj */,
 				22A9A9971DF63426000F0016 /* libbz2 */,
@@ -1850,14 +1841,6 @@
 			isa = PBXGroup;
 			children = (
 				B3B72AC124C4FDC5002210EA /* CashUI.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B3B72AC524C50113002210EA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B3B72ACA24C50113002210EA /* WacSDK.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2515,10 +2498,6 @@
 					ProductGroup = 7CD03E6C23429EB50084F00F /* Products */;
 					ProjectRef = 7CD03E6B23429EB50084F00F /* SwiftProtobuf.xcodeproj */;
 				},
-				{
-					ProductGroup = B3B72AC524C50113002210EA /* Products */;
-					ProjectRef = B3B72AC424C50113002210EA /* WacSDK.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -2636,13 +2615,6 @@
 			fileType = wrapper.framework;
 			path = CashUI.framework;
 			remoteRef = B3B72AC024C4FDC5002210EA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B3B72ACA24C50113002210EA /* WacSDK.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = WacSDK.framework;
-			remoteRef = B3B72AC924C50113002210EA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
