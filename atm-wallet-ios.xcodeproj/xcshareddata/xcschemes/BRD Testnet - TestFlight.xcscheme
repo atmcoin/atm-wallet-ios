@@ -17,13 +17,41 @@
                BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
                BuildableName = "coinsquare.app"
                BlueprintName = "breadwallet"
-               ReferencedContainer = "container:breadwallet.xcodeproj">
+               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "75A2A7A31DA5934300A983D8"
+               BuildableName = "breadwalletTests.xctest"
+               BlueprintName = "breadwalletTests"
+               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "75A2A7AE1DA5934300A983D8"
+               BuildableName = "breadwalletUITests.xctest"
+               BlueprintName = "breadwalletUITests"
+               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Screenshots"
+      buildConfiguration = "Debug-Testnet"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
@@ -33,7 +61,7 @@
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
             BuildableName = "coinsquare.app"
             BlueprintName = "breadwallet"
-            ReferencedContainer = "container:breadwallet.xcodeproj">
+            ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -41,20 +69,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CEA7E67A1F09A9D2001F8C27"
-               BuildableName = "Screenshots.xctest"
-               BlueprintName = "Screenshots"
-               ReferencedContainer = "container:breadwallet.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "75A2A7A31DA5934300A983D8"
                BuildableName = "breadwalletTests.xctest"
                BlueprintName = "breadwalletTests"
-               ReferencedContainer = "container:breadwallet.xcodeproj">
+               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -64,15 +82,26 @@
                BlueprintIdentifier = "75A2A7AE1DA5934300A983D8"
                BuildableName = "breadwalletUITests.xctest"
                BlueprintName = "breadwalletUITests"
-               ReferencedContainer = "container:breadwallet.xcodeproj">
+               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CEA7E67A1F09A9D2001F8C27"
+               BuildableName = "Screenshots.xctest"
+               BlueprintName = "Screenshots"
+               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Screenshots"
+      buildConfiguration = "Debug-Testnet"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = "en"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -86,12 +115,19 @@
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
             BuildableName = "coinsquare.app"
             BlueprintName = "breadwallet"
-            ReferencedContainer = "container:breadwallet.xcodeproj">
+            ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "OS_ACTIVITY_MODE"
+            value = "disable"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Release-Testnet"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -103,15 +139,15 @@
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
             BuildableName = "coinsquare.app"
             BlueprintName = "breadwallet"
-            ReferencedContainer = "container:breadwallet.xcodeproj">
+            ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug">
+      buildConfiguration = "Debug-Testnet">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Release-Testnet"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

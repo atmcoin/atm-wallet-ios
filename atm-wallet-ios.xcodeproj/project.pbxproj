@@ -837,9 +837,9 @@
 		75A2A79A1DA5934300A983D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75A2A79D1DA5934300A983D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75A2A79F1DA5934300A983D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75A2A7A41DA5934300A983D8 /* breadwalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = breadwalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A2A7A41DA5934300A983D8 /* atm-wallet-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "atm-wallet-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A2A7AA1DA5934300A983D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75A2A7AF1DA5934300A983D8 /* breadwalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = breadwalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A2A7AF1DA5934300A983D8 /* atm-wallet-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "atm-wallet-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A2A7B31DA5934300A983D8 /* breadwalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = breadwalletUITests.swift; sourceTree = "<group>"; };
 		75A2A7B51DA5934300A983D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75A2A7F21DA5935F00A983D8 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
@@ -1541,8 +1541,8 @@
 			isa = PBXGroup;
 			children = (
 				75A2A7901DA5934300A983D8 /* coinsquare.app */,
-				75A2A7A41DA5934300A983D8 /* breadwalletTests.xctest */,
-				75A2A7AF1DA5934300A983D8 /* breadwalletUITests.xctest */,
+				75A2A7A41DA5934300A983D8 /* atm-wallet-iosTests.xctest */,
+				75A2A7AF1DA5934300A983D8 /* atm-wallet-iosUITests.xctest */,
 				22A9A9961DF63426000F0016 /* libbz2.framework */,
 				CEA7E67B1F09A9D2001F8C27 /* Screenshots.xctest */,
 			);
@@ -2447,9 +2447,9 @@
 			productReference = 22A9A9961DF63426000F0016 /* libbz2.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		75A2A78F1DA5934300A983D8 /* breadwallet */ = {
+		75A2A78F1DA5934300A983D8 /* atm-wallet-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75A2A7E31DA5934400A983D8 /* Build configuration list for PBXNativeTarget "breadwallet" */;
+			buildConfigurationList = 75A2A7E31DA5934400A983D8 /* Build configuration list for PBXNativeTarget "atm-wallet-ios" */;
 			buildPhases = (
 				75A2A78C1DA5934300A983D8 /* Sources */,
 				75A2A78D1DA5934300A983D8 /* Frameworks */,
@@ -2467,14 +2467,14 @@
 				22A9A99C1DF63426000F0016 /* PBXTargetDependency */,
 				7CD03E8823429F580084F00F /* PBXTargetDependency */,
 			);
-			name = breadwallet;
+			name = "atm-wallet-ios";
 			productName = breadwallet;
 			productReference = 75A2A7901DA5934300A983D8 /* coinsquare.app */;
 			productType = "com.apple.product-type.application";
 		};
-		75A2A7A31DA5934300A983D8 /* breadwalletTests */ = {
+		75A2A7A31DA5934300A983D8 /* atm-wallet-iosTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75A2A7E61DA5934400A983D8 /* Build configuration list for PBXNativeTarget "breadwalletTests" */;
+			buildConfigurationList = 75A2A7E61DA5934400A983D8 /* Build configuration list for PBXNativeTarget "atm-wallet-iosTests" */;
 			buildPhases = (
 				75A2A7A01DA5934300A983D8 /* Sources */,
 				75A2A7A11DA5934300A983D8 /* Frameworks */,
@@ -2485,14 +2485,14 @@
 			dependencies = (
 				75A2A7A61DA5934300A983D8 /* PBXTargetDependency */,
 			);
-			name = breadwalletTests;
+			name = "atm-wallet-iosTests";
 			productName = breadwalletTests;
-			productReference = 75A2A7A41DA5934300A983D8 /* breadwalletTests.xctest */;
+			productReference = 75A2A7A41DA5934300A983D8 /* atm-wallet-iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		75A2A7AE1DA5934300A983D8 /* breadwalletUITests */ = {
+		75A2A7AE1DA5934300A983D8 /* atm-wallet-iosUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75A2A7E91DA5934400A983D8 /* Build configuration list for PBXNativeTarget "breadwalletUITests" */;
+			buildConfigurationList = 75A2A7E91DA5934400A983D8 /* Build configuration list for PBXNativeTarget "atm-wallet-iosUITests" */;
 			buildPhases = (
 				75A2A7AB1DA5934300A983D8 /* Sources */,
 				75A2A7AC1DA5934300A983D8 /* Frameworks */,
@@ -2503,9 +2503,9 @@
 			dependencies = (
 				75A2A7B11DA5934300A983D8 /* PBXTargetDependency */,
 			);
-			name = breadwalletUITests;
+			name = "atm-wallet-iosUITests";
 			productName = breadwalletUITests;
-			productReference = 75A2A7AF1DA5934300A983D8 /* breadwalletUITests.xctest */;
+			productReference = 75A2A7AF1DA5934300A983D8 /* atm-wallet-iosUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		CEA7E67A1F09A9D2001F8C27 /* Screenshots */ = {
@@ -2590,7 +2590,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 75A2A78B1DA5934300A983D8 /* Build configuration list for PBXProject "breadwallet" */;
+			buildConfigurationList = 75A2A78B1DA5934300A983D8 /* Build configuration list for PBXProject "atm-wallet-ios" */;
 			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -2630,9 +2630,9 @@
 			);
 			projectRoot = "";
 			targets = (
-				75A2A78F1DA5934300A983D8 /* breadwallet */,
-				75A2A7A31DA5934300A983D8 /* breadwalletTests */,
-				75A2A7AE1DA5934300A983D8 /* breadwalletUITests */,
+				75A2A78F1DA5934300A983D8 /* atm-wallet-ios */,
+				75A2A7A31DA5934300A983D8 /* atm-wallet-iosTests */,
+				75A2A7AE1DA5934300A983D8 /* atm-wallet-iosUITests */,
 				759DA0D71DAC8668008CC49B /* submodules */,
 				22A9A9951DF63426000F0016 /* libbz2 */,
 				CEA7E67A1F09A9D2001F8C27 /* Screenshots */,
@@ -2989,7 +2989,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n#    swiftlint\n     exit 0\nelse\n    if [ \"${CONFIGURATION}\" == \"Release\" ]; then\n        exit 0;\n    else\n        echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint or install via homebrew\"\n        exit 1\n    fi\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n     swiftlint\n     exit 0\nelse\n    if [ \"${CONFIGURATION}\" == \"Release\" ]; then\n        exit 0;\n    else\n        echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint or install via homebrew\"\n        exit 1\n    fi\nfi\n";
 		};
 		7CDC6A5521125C14004AE68E /* Thin Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3383,12 +3383,12 @@
 		};
 		75A2A7A61DA5934300A983D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 75A2A78F1DA5934300A983D8 /* breadwallet */;
+			target = 75A2A78F1DA5934300A983D8 /* atm-wallet-ios */;
 			targetProxy = 75A2A7A51DA5934300A983D8 /* PBXContainerItemProxy */;
 		};
 		75A2A7B11DA5934300A983D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 75A2A78F1DA5934300A983D8 /* breadwallet */;
+			target = 75A2A78F1DA5934300A983D8 /* atm-wallet-ios */;
 			targetProxy = 75A2A7B01DA5934300A983D8 /* PBXContainerItemProxy */;
 		};
 		7CD03E8423429F390084F00F /* PBXTargetDependency */ = {
@@ -3403,7 +3403,7 @@
 		};
 		CEA7E6811F09A9D2001F8C27 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 75A2A78F1DA5934300A983D8 /* breadwallet */;
+			target = 75A2A78F1DA5934300A983D8 /* atm-wallet-ios */;
 			targetProxy = CEA7E6801F09A9D2001F8C27 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -3749,7 +3749,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cash.just.breadwalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/atm-wallet-ios.app/atm-wallet-ios";
 			};
 			name = Debug;
 		};
@@ -3774,7 +3774,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cash.just.breadwalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/atm-wallet-ios.app/atm-wallet-ios";
 			};
 			name = Release;
 		};
@@ -3946,7 +3946,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cash.just.internalQA.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/atm-wallet-ios.app/atm-wallet-ios";
 			};
 			name = "Debug-Internal";
 		};
@@ -4152,7 +4152,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cash.just.internalQA.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/atm-wallet-ios.app/atm-wallet-ios";
 			};
 			name = "Release-Internal";
 		};
@@ -4359,7 +4359,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cash.just.internalQA.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/atm-wallet-ios.app/atm-wallet-ios";
 			};
 			name = "Release-Testnet";
 		};
@@ -4639,7 +4639,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cash.just.breadwalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/atm-wallet-ios.app/atm-wallet-ios";
 			};
 			name = Screenshots;
 		};
@@ -4847,7 +4847,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cash.just.breadwalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/atm-wallet-ios.app/atm-wallet-ios";
 			};
 			name = "Debug-Testnet";
 		};
@@ -5053,7 +5053,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cash.just.breadwalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/atm-wallet-ios.app/atm-wallet-ios";
 			};
 			name = "Release-Testflight";
 		};
@@ -5148,7 +5148,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75A2A78B1DA5934300A983D8 /* Build configuration list for PBXProject "breadwallet" */ = {
+		75A2A78B1DA5934300A983D8 /* Build configuration list for PBXProject "atm-wallet-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75A2A7D91DA5934400A983D8 /* Debug */,
@@ -5163,7 +5163,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75A2A7E31DA5934400A983D8 /* Build configuration list for PBXNativeTarget "breadwallet" */ = {
+		75A2A7E31DA5934400A983D8 /* Build configuration list for PBXNativeTarget "atm-wallet-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75A2A7E41DA5934400A983D8 /* Debug */,
@@ -5178,7 +5178,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75A2A7E61DA5934400A983D8 /* Build configuration list for PBXNativeTarget "breadwalletTests" */ = {
+		75A2A7E61DA5934400A983D8 /* Build configuration list for PBXNativeTarget "atm-wallet-iosTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75A2A7E71DA5934400A983D8 /* Debug */,
@@ -5193,7 +5193,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75A2A7E91DA5934400A983D8 /* Build configuration list for PBXNativeTarget "breadwalletUITests" */ = {
+		75A2A7E91DA5934400A983D8 /* Build configuration list for PBXNativeTarget "atm-wallet-iosUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75A2A7EA1DA5934400A983D8 /* Debug */,

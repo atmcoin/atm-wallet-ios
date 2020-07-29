@@ -17,41 +17,13 @@
                BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
                BuildableName = "coinsquare.app"
                BlueprintName = "breadwallet"
-               ReferencedContainer = "container:breadwallet.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "75A2A7A31DA5934300A983D8"
-               BuildableName = "breadwalletTests.xctest"
-               BlueprintName = "breadwalletTests"
-               ReferencedContainer = "container:breadwallet.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "75A2A7AE1DA5934300A983D8"
-               BuildableName = "breadwalletUITests.xctest"
-               BlueprintName = "breadwalletUITests"
-               ReferencedContainer = "container:breadwallet.xcodeproj">
+               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Debug-Testnet"
+      buildConfiguration = "Debug-Internal"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
@@ -61,7 +33,7 @@
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
             BuildableName = "coinsquare.app"
             BlueprintName = "breadwallet"
-            ReferencedContainer = "container:breadwallet.xcodeproj">
+            ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -72,7 +44,7 @@
                BlueprintIdentifier = "75A2A7A31DA5934300A983D8"
                BuildableName = "breadwalletTests.xctest"
                BlueprintName = "breadwalletTests"
-               ReferencedContainer = "container:breadwallet.xcodeproj">
+               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -82,7 +54,7 @@
                BlueprintIdentifier = "75A2A7AE1DA5934300A983D8"
                BuildableName = "breadwalletUITests.xctest"
                BlueprintName = "breadwalletUITests"
-               ReferencedContainer = "container:breadwallet.xcodeproj">
+               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -92,13 +64,13 @@
                BlueprintIdentifier = "CEA7E67A1F09A9D2001F8C27"
                BuildableName = "Screenshots.xctest"
                BlueprintName = "Screenshots"
-               ReferencedContainer = "container:breadwallet.xcodeproj">
+               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug-Testnet"
+      buildConfiguration = "Debug-Internal"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       language = "en"
@@ -115,7 +87,7 @@
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
             BuildableName = "coinsquare.app"
             BlueprintName = "breadwallet"
-            ReferencedContainer = "container:breadwallet.xcodeproj">
+            ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -127,7 +99,7 @@
       </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Release-Testnet"
+      buildConfiguration = "Release-Internal"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -139,15 +111,15 @@
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
             BuildableName = "coinsquare.app"
             BlueprintName = "breadwallet"
-            ReferencedContainer = "container:breadwallet.xcodeproj">
+            ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug-Testnet">
+      buildConfiguration = "Debug-Internal">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release-Testnet"
+      buildConfiguration = "Release-Internal"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

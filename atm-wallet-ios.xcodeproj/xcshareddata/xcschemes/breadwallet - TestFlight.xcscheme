@@ -17,7 +17,7 @@
                BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
                BuildableName = "coinsquare.app"
                BlueprintName = "breadwallet"
-               ReferencedContainer = "container:breadwallet.xcodeproj">
+               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,7 +33,7 @@
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
             BuildableName = "coinsquare.app"
             BlueprintName = "breadwallet"
-            ReferencedContainer = "container:breadwallet.xcodeproj">
+            ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -44,7 +44,7 @@
                BlueprintIdentifier = "75A2A7A31DA5934300A983D8"
                BuildableName = "breadwalletTests.xctest"
                BlueprintName = "breadwalletTests"
-               ReferencedContainer = "container:breadwallet.xcodeproj">
+               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -54,7 +54,7 @@
                BlueprintIdentifier = "75A2A7AE1DA5934300A983D8"
                BuildableName = "breadwalletUITests.xctest"
                BlueprintName = "breadwalletUITests"
-               ReferencedContainer = "container:breadwallet.xcodeproj">
+               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -64,7 +64,7 @@
                BlueprintIdentifier = "CEA7E67A1F09A9D2001F8C27"
                BuildableName = "Screenshots.xctest"
                BlueprintName = "Screenshots"
-               ReferencedContainer = "container:breadwallet.xcodeproj">
+               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -87,7 +87,7 @@
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
             BuildableName = "coinsquare.app"
             BlueprintName = "breadwallet"
-            ReferencedContainer = "container:breadwallet.xcodeproj">
+            ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -111,7 +111,7 @@
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
             BuildableName = "coinsquare.app"
             BlueprintName = "breadwallet"
-            ReferencedContainer = "container:breadwallet.xcodeproj">
+            ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
