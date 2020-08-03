@@ -1,4 +1,3 @@
-
 import Foundation
 import WacSDK
 
@@ -9,7 +8,7 @@ class WACSessionManager {
         return instance
     }()
     
-    public var client: WAC? = nil
+    public var client: WAC?
     
     public func start() {
         client = WAC.init(url: C.cniWacUrl)
@@ -18,7 +17,7 @@ class WACSessionManager {
     }
     
     public func cashCodeStatus(for code: String, completion: @escaping (() -> Void)) {
-        client?.checkCashCodeStatus(code, completion: { (response: WacSDK.CashCodeStatusResponse) in
+        client?.checkCashCodeStatus(code, completion: { (_ /* response */: WacSDK.CashCodeStatusResponse) in
             completion()
         })
     }

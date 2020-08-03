@@ -52,7 +52,7 @@ public struct WACTransaction: CustomStringConvertible, Codable, Equatable {
         return "\(timestamp) = \(status.rawValue)"
     }
 
-    private func color(for status:WACTransactionStatus) -> String {
+    private func color(for status: WACTransactionStatus) -> String {
         switch status {
         case .VerifyPending: // new statuses are bitcoin with 25 percent alpha
             return "f2a90040"
