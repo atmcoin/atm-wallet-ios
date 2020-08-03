@@ -17,44 +17,44 @@
                BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
                BuildableName = "coinsquare.app"
                BlueprintName = "breadwallet"
-               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
+               ReferencedContainer = "container:breadwallet.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Screenshots"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "NO">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
             BuildableName = "coinsquare.app"
             BlueprintName = "breadwallet"
-            ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
+            ReferencedContainer = "container:breadwallet.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-AppleLocale en_US"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-AppleLocale fr_FR"
+            isEnabled = "NO">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CEA7E67A1F09A9D2001F8C27"
-               BuildableName = "Screenshots.xctest"
-               BlueprintName = "Screenshots"
-               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "75A2A7A31DA5934300A983D8"
                BuildableName = "breadwalletTests.xctest"
                BlueprintName = "breadwalletTests"
-               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
+               ReferencedContainer = "container:breadwallet.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -64,13 +64,23 @@
                BlueprintIdentifier = "75A2A7AE1DA5934300A983D8"
                BuildableName = "breadwalletUITests.xctest"
                BlueprintName = "breadwalletUITests"
-               ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
+               ReferencedContainer = "container:breadwallet.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CEA7E67A1F09A9D2001F8C27"
+               BuildableName = "Screenshots.xctest"
+               BlueprintName = "Screenshots"
+               ReferencedContainer = "container:breadwallet.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Screenshots"
+      buildConfiguration = "Debug-Testnet"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -86,9 +96,16 @@
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
             BuildableName = "coinsquare.app"
             BlueprintName = "breadwallet"
-            ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
+            ReferencedContainer = "container:breadwallet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "OS_ACTIVITY_MODE"
+            value = "disable"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -103,7 +120,7 @@
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
             BuildableName = "coinsquare.app"
             BlueprintName = "breadwallet"
-            ReferencedContainer = "container:atm-wallet-ios.xcodeproj">
+            ReferencedContainer = "container:breadwallet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

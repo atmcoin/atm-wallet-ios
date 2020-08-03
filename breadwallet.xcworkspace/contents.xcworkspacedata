@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/gardner/code/repos_justcash/atm-wallet-ios/atm-wallet-ios.xcodeproj">
+      location = "group:breadwallet.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Modules/breadwallet-core/Swift/BRCore.xcodeproj">
