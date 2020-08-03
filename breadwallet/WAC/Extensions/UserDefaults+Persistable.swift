@@ -1,4 +1,3 @@
-
 import Foundation
 
 protocol Persistable {
@@ -33,8 +32,7 @@ extension UserDefaults: Persistable {
         do {
             let data = try JSONEncoder().encode(objects)
             set(data, forKey: forKey!)
-        }
-        catch {
+        } catch {
             throw PersistableError.unableToEncode
         }
     }
@@ -54,10 +52,9 @@ extension UserDefaults: Persistable {
     func getMostRecentObject(for key: String? = Keys.Hello.rawValue) throws -> WACTransaction? {
         do {
             let allObjects: [WACTransaction] = try getAllObjects(forKey: key!) as Any as! [WACTransaction]
-            if allObjects.count == 0 { return nil }
+            if allObjects.isEmpty { return nil }
             return allObjects.first! as WACTransaction
-        }
-        catch {
+        } catch {
             throw PersistableError.unableToDecode
         }
     }

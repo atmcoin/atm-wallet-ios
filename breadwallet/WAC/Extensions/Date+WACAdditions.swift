@@ -11,14 +11,14 @@ import Foundation
 extension Date {
     func dateString(from timestamp: Double) -> String? {
         let date = Date.init(timeIntervalSince1970: timestamp)
-        if (date > self.startOfDay) {
+        if date > self.startOfDay {
             return "TODAY"
         }
-        if (date > self.yesterday) {
+        if date > self.yesterday {
             return "YESTERDAY"
         }
         let dateFormatter = DateFormatter()
-        if (date > self.thisWeek) {
+        if date > self.thisWeek {
             dateFormatter.dateFormat = "EEEE"
             return dateFormatter.string(from: date).uppercased()
         }
