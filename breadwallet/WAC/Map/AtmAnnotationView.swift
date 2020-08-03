@@ -60,7 +60,7 @@ class AtmAnnotationView: MKAnnotationView {
                 if animated { // fade out animation, then remove it.
                     UIView.animate(withDuration: kAtmAnimationTime, animations: {
                         self.customCalloutView!.alpha = 0.0
-                    }, completion: { (success) in
+                    }, completion: { ( _ /*success*/ ) in
                         self.customCalloutView?.removeFromSuperview()
                     })
                 } else { self.customCalloutView!.removeFromSuperview() } // just remove it.
@@ -69,7 +69,7 @@ class AtmAnnotationView: MKAnnotationView {
     }
     
     func loadAtmInfoView() -> AtmInfoView? {
-        if let views = Bundle.main.loadNibNamed("AtmInfoView", owner: self, options: nil) as? [AtmInfoView], views.count > 0 {
+        if let views = Bundle.main.loadNibNamed("AtmInfoView", owner: self, options: nil) as? [AtmInfoView], !views.isEmpty {
             let atmInfoView = views.first!
             atmInfoView.delegate = self.atmMarkerAnnotationViewDelegate
             if let atmAnnotation = annotation as? AtmAnnotation {
@@ -90,11 +90,15 @@ class AtmAnnotationView: MKAnnotationView {
     
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         // if super passed hit test, return the result
-        if let parentHitView = super.hitTest(point, with: event) { return parentHitView }
-        else { // test in our custom callout.
+        if let parentHitView = super.hitTest(point, with: event) {
+            return parentHitView
+
+        } else { // test in our custom callout.
             if customCalloutView != nil {
                 return customCalloutView!.hitTest(convert(point, to: customCalloutView!), with: event)
-            } else {  return nil }
+            } else {
+                return nil
+            }
         }
     }
 }

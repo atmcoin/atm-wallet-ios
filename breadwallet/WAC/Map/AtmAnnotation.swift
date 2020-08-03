@@ -7,7 +7,7 @@
 import MapKit
 import WacSDK
 
-class AtmAnnotation : NSObject, MKAnnotation {
+class AtmAnnotation: NSObject, MKAnnotation {
     
     var atm: WacSDK.AtmMachine
     var coordinate: CLLocationCoordinate2D {

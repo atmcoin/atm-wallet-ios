@@ -18,16 +18,15 @@ class AtmInfoView: UIView {
     
     private var atm: WacSDK.AtmMachine!
     weak var delegate: AtmInfoViewDelegate?
-    
-    
+
     func configureWithAtm(atm: WacSDK.AtmMachine) {
         self.atm = atm
         
         self.atmPurchaseOnlyLabel.isHidden = atm.redemption!.boolValue
-        atmIdLabel.text = getDetails(atm:atm)
+        atmIdLabel.text = getDetails(atm: atm)
     }
 
-    private func getDetails(atm : AtmMachine) -> String {
+    private func getDetails(atm: AtmMachine) -> String {
 
         //        TODO: show additional data possibly labelled
 
@@ -45,7 +44,7 @@ class AtmInfoView: UIView {
     // MARK: - Hit test. We need to override this to detect hits in our custom callout.
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         // Check if it hit our annotation detail view components.
-        if (self.bounds.contains(point) && atm.redemption!.boolValue) {
+        if self.bounds.contains(point) && atm.redemption!.boolValue {
             return self
         }
         return nil
