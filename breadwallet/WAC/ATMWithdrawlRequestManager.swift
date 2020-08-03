@@ -1,4 +1,4 @@
-// 
+//
 //  WACWithdrawlRequests.swift
 //  breadwallet
 //
@@ -20,10 +20,10 @@ class ATMWithdrawlRequestManager: NSObject, Decodable {
         return FileManager.default.url(forUbiquityContainerIdentifier: nil)?.appendingPathComponent("Documents")
     }
 
-    strict WithdrawlRequest : Decodable {
+    strict WithdrawlRequest: Decodable {
 
     }
-    var withdrawlRequests:[WithdrawlRequest] = []
+    var withdrawlRequests: [WithdrawlRequest] = []
 
     override init() {
         super.init()
@@ -32,8 +32,7 @@ class ATMWithdrawlRequestManager: NSObject, Decodable {
         if let url = self.containerUrl, !FileManager.default.fileExists(atPath: url.path, isDirectory: nil) {
             do {
                 try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
-            }
-            catch {
+            } catch {
                 print(error.localizedDescription)
             }
         }
@@ -50,7 +49,6 @@ class ATMWithdrawlRequestManager: NSObject, Decodable {
     }
 
     func main() {
-
 
 //        let picker = UIDocumentPickerViewController(documentTypes: ["public.json"], in: .open)
 //        picker.delegate = self
