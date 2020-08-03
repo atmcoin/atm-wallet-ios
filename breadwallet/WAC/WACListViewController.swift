@@ -64,7 +64,7 @@ class WACListViewController: UIViewController {
         filteredList = atmList?.filter { (atm: AtmMachine) -> Bool in
             return (atm.addressDesc?.lowercased().contains(search.lowercased()))!
         }
-        if (search.isEmpty) {
+        if search.isEmpty {
             filteredList = atmList
         }
         

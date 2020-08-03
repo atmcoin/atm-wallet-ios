@@ -1,4 +1,3 @@
-
 import UIKit
 import MapKit
 import WacSDK
@@ -60,7 +59,7 @@ class WACWithdrawalStatusViewController: WACActionViewController {
             let btcAmount = (code.btcAmount! as NSString).doubleValue
             let usdAmount = (code.usdAmount! as NSString).doubleValue
             
-            setQRCode(from:code.address!, amount:btcAmount)
+            setQRCode(from: code.address!, amount: btcAmount)
         
             self.amountUSDLabel.text = "$\(usdAmount)"
             self.amountBTCLabel.text = "\(btcAmount) BTC"
@@ -88,25 +87,26 @@ class WACWithdrawalStatusViewController: WACActionViewController {
             self.addressLabel.isHidden = false
             self.addressTitleLabel.isHidden = false
             self.redeemCodeLabel.text = "PROCESSING"
-            break
+
         case .Funded:
             // Show Code to redeem
             break
+
         case .Withdrawn:
             self.redeemCodeLabel.text = "WITHDRAWN"
-            break
+
         case .Cancelled:
             self.redeemCodeLabel.text = "CANCELLED"
-            break
+
         case .VerifyPending:
             break
+
         case .SendPending:
             self.qrCodeImageView.isHidden = false
             self.redeemCodeLabel.isHidden = true
             self.addressLabel.isHidden = false
             self.addressTitleLabel.isHidden = false
             self.sendButton.isHidden = false
-            break
         }
     }
     
@@ -131,7 +131,7 @@ class WACWithdrawalStatusViewController: WACActionViewController {
     
     @objc func transactionDidUpdate(_ notification: Notification) {
         let t = notification.object as! WACTransaction
-        if (t == self.transaction) {
+        if t == self.transaction {
             self.update()
         }
     }

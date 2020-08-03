@@ -26,7 +26,7 @@ class WACActivityViewController: UIViewController, UIAdaptivePresentationControl
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        setupNavigationBar();
+        setupNavigationBar()
         
         NotificationCenter.default.addObserver(self, selector: #selector(transactionDidUpdate), name: .WACTransactionDidUpdate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(transactionDidUpdate), name: .WACTransactionDidRemove, object: nil)

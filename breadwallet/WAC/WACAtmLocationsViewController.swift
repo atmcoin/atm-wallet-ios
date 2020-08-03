@@ -69,13 +69,12 @@ class WACAtmLocationsViewController: UIViewController {
     }
     
     @objc func toggleTapped() {
-        if (rightBarbuttonItem?.title == WACActionStrings.list.rawValue) {
+        if rightBarbuttonItem?.title == WACActionStrings.list.rawValue {
             // Show tableview
             rightBarbuttonItem?.title = WACActionStrings.map.rawValue
             remove(asChildViewController: mapVC)
             add(asChildViewController: listVC)
-        }
-        else {
+        } else {
             // Show Map
             rightBarbuttonItem?.title = WACActionStrings.list.rawValue
             remove(asChildViewController: listVC)
@@ -113,7 +112,7 @@ class WACAtmLocationsViewController: UIViewController {
         self.view.addSubview(controller.view)
         controller.didMove(toParent: self)
         
-        if (controller.isKind(of: WACActionViewController.self)) {
+        if controller.isKind(of: WACActionViewController.self) {
             (controller as! WACActionViewController).actionCallback = self
         }
 
@@ -176,14 +175,16 @@ extension WACAtmLocationsViewController: WACActionProtocol {
     }
     
     func withdrawal(requested cashCode: CashCode) {
-        showAlert(title: "Withdrawal Requested", message: "Please send the amount of \(String(describing: cashCode.btcAmount!)) BTC to the ATM", buttonLabel: WACActionStrings.send.rawValue, /*cancelButtonLabel: WACActionStrings.details.rawValue,*/ completion: { (action) in
-            if (action.title == WACActionStrings.send.rawValue) {
-                self.sendCashCode(cashCode)
+        showAlert(title: "Withdrawal Requested", message: "Please send the amount of \(String(describing: cashCode.btcAmount!)) BTC to the ATM",
+            buttonLabel: WACActionStrings.send.rawValue, /*cancelButtonLabel: WACActionStrings.details.rawValue,*/
+            completion: { (action) in
+                if action.title == WACActionStrings.send.rawValue {
+                    self.sendCashCode(cashCode)
+                } else {
+                    print("Show Details view")
+                }
             }
-            else {
-                print("Show Details view")
-            }
-        })
+        )
     }
     
     func withdraw(amount: String) {
@@ -196,11 +197,11 @@ extension WACAtmLocationsViewController: WACActionProtocol {
             self.sendVerificationVC!.view.endEditing(true)
             self.sendVerificationVC!.hideView()
             self.verifyCashCodeVC!.showView()
-            break
+
         case .cashCodeVerification:
             self.verifyCashCodeVC!.view.endEditing(true)
             self.verifyCashCodeVC!.hideView()
-            break
+            
         default:
             break
         }
