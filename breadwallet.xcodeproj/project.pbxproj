@@ -3525,7 +3525,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
-				CURRENT_PROJECT_VERSION = 70;
+				CURRENT_PROJECT_VERSION = 73;
 				DEVELOPMENT_TEAM = J8785B8QGT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules",
@@ -3543,7 +3543,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				MARKETING_VERSION = 3.17.2;
+				MARKETING_VERSION = 4.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;
 				PRODUCT_NAME = coinsquare;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -3559,7 +3559,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
-				CURRENT_PROJECT_VERSION = 70;
+				CURRENT_PROJECT_VERSION = 73;
 				DEVELOPMENT_TEAM = J8785B8QGT;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"brd-web-3-staging.tar",
@@ -3581,7 +3581,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				MARKETING_VERSION = 3.17.2;
+				MARKETING_VERSION = 4.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;
 				PRODUCT_NAME = coinsquare;
 				SWIFT_VERSION = 5.0;
@@ -3758,7 +3758,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
-				CURRENT_PROJECT_VERSION = 70;
+				CURRENT_PROJECT_VERSION = 73;
 				DEVELOPMENT_TEAM = J8785B8QGT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules",
@@ -3776,7 +3776,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				MARKETING_VERSION = 3.17.2;
+				MARKETING_VERSION = 4.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;
 				PRODUCT_NAME = coinsquare;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -3960,7 +3960,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
-				CURRENT_PROJECT_VERSION = 70;
+				CURRENT_PROJECT_VERSION = 73;
 				DEVELOPMENT_TEAM = J8785B8QGT;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"brd-web-3.tar",
@@ -3982,7 +3982,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				MARKETING_VERSION = 3.17.2;
+				MARKETING_VERSION = 4.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;
 				PRODUCT_NAME = coinsquare;
 				SWIFT_VERSION = 5.0;
@@ -4166,7 +4166,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
-				CURRENT_PROJECT_VERSION = 70;
+				CURRENT_PROJECT_VERSION = 73;
 				DEVELOPMENT_TEAM = J8785B8QGT;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"brd-web-3.tar",
@@ -4188,7 +4188,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				MARKETING_VERSION = 3.17.2;
+				MARKETING_VERSION = 4.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;
 				PRODUCT_NAME = coinsquare;
 				SWIFT_VERSION = 5.0;
@@ -4448,7 +4448,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
-				CURRENT_PROJECT_VERSION = 70;
+				CURRENT_PROJECT_VERSION = 73;
 				DEVELOPMENT_TEAM = J8785B8QGT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules",
@@ -4466,7 +4466,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				MARKETING_VERSION = 3.17.2;
+				MARKETING_VERSION = 4.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;
 				PRODUCT_NAME = coinsquare;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -4655,7 +4655,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
-				CURRENT_PROJECT_VERSION = 70;
+				CURRENT_PROJECT_VERSION = 73;
 				DEVELOPMENT_TEAM = J8785B8QGT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules",
@@ -4673,7 +4673,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				MARKETING_VERSION = 3.17.2;
+				MARKETING_VERSION = 4.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;
 				PRODUCT_NAME = coinsquare;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -4857,7 +4857,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
-				CURRENT_PROJECT_VERSION = 70;
+				CURRENT_PROJECT_VERSION = 73;
 				DEVELOPMENT_TEAM = J8785B8QGT;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"brd-web-3.tar",
@@ -4879,7 +4879,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
-				MARKETING_VERSION = 3.17.2;
+				MARKETING_VERSION = 4.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = cash.just.wallet;
 				PRODUCT_NAME = coinsquare;
 				SWIFT_VERSION = 5.0;

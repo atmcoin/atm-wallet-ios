@@ -64,7 +64,7 @@ public enum Event: String {
     case pushNotificationsToggleOn
     case pushNotificationsToggleOff
     
-    // open notification system settings for BRD
+    // open notification system settings for Coinsquare
     case openNotificationSystemSettings
     
     // user opened a push notification

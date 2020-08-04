@@ -15,7 +15,7 @@
 /* About screen twitter label */
 "About.twitter" = "Twitter";
 /* About screen wallet ID label */
-"About.walletID" = "Coinsquare Wallet ID";
+"About.walletID" = "ID de Recompensas de Coinsquare";
 /* Close modal button accessibility label */
 "AccessibilityLabels.close" = "Cerrar";
 /* Support center accessibiliy label */
@@ -86,36 +86,6 @@
 "ApiClient.tokenError" = "No se puede recuperar el token de API";
 /* ATM Cash Locatios View Title */
 "ATMMapView.title" = "ATM Cash Locations Map";
-/* ATM Cash Locatios View Sub Title */
-"ATMMapView.subTitle" = "";
-/* ATM Code Title */
-"ATMCode.title" = "";
-/* Verification Code Title */
-"VerificationCode.title" = "Confirmation Code";
-/* Verification Code Label */
-"VerificationCode.label" = "We Texted You a Confirmation Code";
-/* Verification Code Label */
-"VerificationCode.actionLabel" = "Enter token";
-/* Verification Code Action Instructions */
-"VerificationCode.actionInstructions" = "Check your phone for the confirmation token we sent you. It may take a couple of minutes.";
-/* Verification Code Confirm Button */
-"VerificationCode.buttonConfirm" = "Confirm";
-/* Cash Token Label */
-"CashToken.label" = "Withdrawl Status";
-/* Cash Token Label */
-"CashToken.awaitingFunds" = "Awaiting Funds";
-/* Cash Token Action Instructions */
-"CashToken.actionInstructions" = "Please send bitcoin to this address to withdraw at the ATM. Scan QR code or copy and paste to send bitcoin. Note that it may take a few minutes for the transfer to be confirmed.";
-/* Cash Token Please Verify */
-"CashToken.pleaseVerify" = "Please Verify";
-/* Cash Token Amount */
-"CashToken.amountUSD" = "Amount (USD)";
-/* Cash Token Location */
-"CashToken.location" = "Location";
-/* Cash Token Location */
-"CashToken.amountBTC" = "Amount (BTC)";
-/* Cash Token Location */
-"CashToken.amountBTC" = "Send To Address";
 /* Send BCH view body. */
 "BCH.body" = "Introduce una dirección de destino BCH a continuación. Se enviarán todos los BCH de tu cartera en el momento del fork (%1$@).";
 /* Confirm sending <$5.00> to <address>? */
@@ -151,9 +121,11 @@
 /* BitID Authentication Request alert view title */
 "BitID.title" = "Solicitud de autenticación de BitID";
 /* As in "(tap here to) buy (bitcoin)" */
-"Button.buy" = "Continue";
+"Button.buy" = "Comprar";
 /* Cancel button label */
 "Button.cancel" = "Cancelar";
+/* Close button */
+"Button.close" = "Cerrar ";
 /* Confirm button title */
 "Button.confirm" = "Confirmar";
 /* Button label to open a email compose window with our support email in the to field. */
@@ -168,6 +140,8 @@
 "Button.Home" = "Inicio";
 /* Ignore button label */
 "Button.ignore" = "Ignorar";
+/* Map button */
+"Button.map" = "Mapa";
 /* Maybe Later button label */
 "Button.maybeLater" = "Quizás más tarde";
 /* menu button */
@@ -182,6 +156,8 @@
 "Button.openSettings" = "Abra Ajustes";
 /* receive button */
 "Button.receive" = "Recibir";
+/* Search button */
+"Button.search" = "Buscar";
 /* Button label to open Security Settings. */
 "Button.securitySettings.android" = "Centro de seguridad";
 /* Click this button to sell an asset */
@@ -202,14 +178,22 @@
 "Button.wipe.android" = "Borrar";
 /* Yes button */
 "Button.yes" = "Sí";
-/* Map button */
-"Button.map" = "Map";
-/* Search button */
-"Button.search" = "Search";
-/* Close button */
-"Button.close" = "Close";
 /* Camera plugin instruction */
 "CameraPlugin.centerInstruction" = "Centra tu ID en el recuadro";
+/* Cash Token Action Instructions */
+"CashToken.actionInstructions" = "Envíe bitcoin a esta dirección para retirar en el cajero automático. Escanee el código QR o copie y pegue para enviar bitcoins. Tenga en cuenta que la transferencia puede tardar unos minutos en confirmarse.";
+/* Cash Token Location */
+"CashToken.amountBTC" = "Cantidad (BTC)";
+/* Cash Token Amount */
+"CashToken.amountUSD" = "Cantidad (USD) ";
+/* Cash Token Label */
+"CashToken.awaitingFunds" = "En espera de fondos\n";
+/* Cash Token Label */
+"CashToken.label" = " estado de retirada";
+/* Cash Token Location */
+"CashToken.location" = "Ubicación";
+/* Cash Token Please Verify */
+"CashToken.pleaseVerify" = "Por favor verificar";
 /* Amount to Send: ($1.00) */
 "Confirmation.amountLabel" = "Cantidad a enviar:";
 /* Network Fee: ($1.00) */
@@ -249,7 +233,7 @@
 /* The wallet is disabled. */
 "Disabled.title" = "Monedero bloqueado";
 /* Share address by e-mail subject */
-"Email.address_subject" = "%1$s Address";
+"Email.address_subject" = "%1$@ Address";
 /* Service capabilities description */
 "EME.permissions.accountRequest" = "Solicitar %1$@ información de la cuenta";
 /* Service capabilities description */
@@ -312,6 +296,8 @@
 "FeeSelector.title" = "Velocidad de procesamiento";
 /* Label for the Android file chooser when we need to prompt the user to select an image file. */
 "FileChooser.selectImageSource.android" = "Seleccionar fuente de imagen";
+/* Activity button on the home screen toolbar */
+"HomeScreen.activity" = "Actividad";
 /* This is the section that allows administration of the user's wallet */
 "HomeScreen.admin" = "Administrador";
 /* Home screen menu button to buy some bitcoin */
@@ -326,8 +312,6 @@
 "HomeScreen.totalAssets" = "activos totales";
 /* (Tap here to) trade (your assets for other assets) */
 "HomeScreen.trade" = "Comercio";
-/* Activity button on the home screen toolbar */
-"HomeScreen.activity" = "Activity";
 /* Checking private key balance progress view text */
 "Import.checking" = "Averiguando el saldo de la clave privada...";
 /* Sweep private key confirmation message */
@@ -411,7 +395,7 @@
 /* "Add [a] Wallet [to the home screen]" */
 "MenuButton.addWallet" = "Añadir billetera";
 /* Menu button title */
-"MenuButton.atmCashRedemption" = "ATM Cash Redemption";
+"MenuButton.atmCashRedemption" = "Canje de efectivo en cajero automático";
 /* Menu button title */
 "MenuButton.lock" = "Bloquear cartera";
 /* (Click here to) manage (your list of) wallets */
@@ -459,7 +443,7 @@
 /* Node Selector view title */
 "NodeSelector.title" = "Nodos Bitcoin";
 /* Onboarding screen 'I'll browse first' button */
-"Onboarding.browseFirst" = "Setup Wallet";
+"Onboarding.browseFirst" = "Voy a explorar un poco antes";
 /* Onboarding screen 'Buy some coin' button */
 "Onboarding.buyCoin" = "Comprar monedas";
 /* Onboarding screen 'Get started' (create new wallet) button */
@@ -473,11 +457,11 @@
 /* Onboarding screen Page 4 title */
 "OnboardingPageFour.title" = "¡Comienza a invertir hoy mismo desde solo 50 $!";
 /* Onboarding screen Page 1 title */
-"OnboardingPageOne.title" = "Welcome to your ATM enabled virtual currency wallet.";
+"OnboardingPageOne.title" = "¡Bienvenido a tu nuevo monedero global!";
 /* Onboarding screen Page 3 subtitle */
 "OnboardingPageThree.subtitle" = "Invierte y diversifica con Coinsquare de forma segura y sencilla.";
 /* Onboarding screen Page 3 title */
-"OnboardingPageThree.title" = "Send and receive bitcoin, tokens, and other digital currencies.";
+"OnboardingPageThree.title" = "Compra y negocia con bitcoins, vales y otras divisas digitales.";
 /* Onboarding screen Page 2 subtitle */
 "OnboardingPageTwo.subtitle" = "Tenemos activos protegidos por valor de más de 6 billones de $.";
 /* Onboarding screen Page 2 title */
@@ -734,8 +718,7 @@
 "SecurityCenter.faceIdTitle" = "Face ID";
 /* Paper Key button description */
 "SecurityCenter.paperKeyDescription" = "La única manera de acceder a tu bitcoin si pierdes o actualizas tu teléfono.";
-/* Recovery Key button title. This used to be called 'paper key', so leaving the string key as `paperKeyTitle` in order
- * to not break existing client code. */
+/* Recovery Key button title. This used to be called 'paper key', so leaving the string key as `paperKeyTitle` in order,  * to not break existing client code. */
 "SecurityCenter.paperKeyTitle" = "Clave en papel";
 /* Paper Key button title */
 "SecurityCenter.paperKeyTitle.android" = "Clave en papel";
@@ -835,6 +818,8 @@
 "Send.UsedAddress.secondLIne" = "La reutilización reduce la privacidad tanto para ti como para el destinatario y puede resultar en pérdida si el destinatario no controla la dirección directamente.";
 /* Adress already used alert title */
 "Send.UsedAddress.title" = "Ya se ha utilizado la dirección";
+/* Section header for "other settings". */
+"Settings.other" = "Otro";
 /* About label */
 "Settings.about" = "Acerca de nosotros";
 /* Advanced settings header */
@@ -865,8 +850,6 @@
 "Settings.manage" = "Gestionar";
 /* Notifications label */
 "Settings.notifications" = "Notificaciones";
-/* Section header for "other settings". */
-"Settings.other" = "Otro";
 /* Preferences settings section header */
 "Settings.preferences" = "Preferencias";
 /* Tap here to reset the list of currencies to the default settings. */
@@ -1049,8 +1032,7 @@
 "TransactionDetails.commentsPlaceholder" = "Añadir informe...";
 /* Timestamp section header for complete tx */
 "TransactionDetails.completeTimestampHeader" = "Completada";
-/* Block height and confirmations label
-eg. 182930 (45061 confirmations) */
+/* Block height and confirmations label, eg. 182930 (45061 confirmations) */
 "TransactionDetails.confirmationsLabel" = "Сonfirmaciones";
 /* Empty transaction list message. */
 "TransactionDetails.emptyMessage" = "Tus transacciones aparecerán aquí.";
@@ -1100,7 +1082,7 @@ eg. 182930 (45061 confirmations) */
 "TransactionDetails.statusHeader" = "Estado";
 /* Transaction Details Title */
 "TransactionDetails.title" = "Detalles de la transacción";
-/* Hide Details button */
+/* Transaction Details Title - Failed */
 "TransactionDetails.titleFailed" = "Ocultar detalles";
 /* Transaction Details Title - Internal */
 "TransactionDetails.titleInternal" = "Interna";
@@ -1170,6 +1152,16 @@ eg. 182930 (45061 confirmations) */
 "URLHandling.addressListAlertTitle" = "Copiar direcciones de la cartera";
 /* Copy wallet addresses alert button label */
 "URLHandling.copy" = "Copiar";
+/* Verification Code Action Instructions */
+"VerificationCode.actionInstructions" = "Verifique en su teléfono el token de confirmación que le enviamos. Puede tomar un par de minutos.";
+/* Verification Code Label */
+"VerificationCode.actionLabel" = "Escribir token";
+/* Verification Code Confirm Button */
+"VerificationCode.buttonConfirm" = "Confirmar";
+/* Verification Code Label */
+"VerificationCode.label" = "Le enviamos un mensaje de texto con un código de confirmación";
+/* Verification Code Title */
+"VerificationCode.title" = "Código de confirmación";
 /* Verify PIN for transaction view body */
 "VerifyPin.authorize" = "Introduce tu PIN para autorizar esta transacción.";
 /* Verify PIN view body */
