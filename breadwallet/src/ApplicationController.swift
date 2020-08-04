@@ -389,8 +389,7 @@ class ApplicationController: Subscriber, Trackable {
         }
         
         homeScreen.didTapRedemption = {
-            let bundle = Bundle.init(for: WACMenuViewController.self)
-            let vc = WACMenuViewController(nibName: "WACMenuView", bundle: bundle)
+            let vc = CashUI.MenuViewController()
             navigationController.pushViewController(vc, animated: true)
         }
 

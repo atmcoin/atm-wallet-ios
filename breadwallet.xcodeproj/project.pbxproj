@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -325,8 +325,16 @@
 		9AE8011521FFF81F00D5058C /* rewardsIcon-64.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9AE800CF21FFF81F00D5058C /* rewardsIcon-64.gif */; };
 		9AE8FFF821FE64E200D5058C /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8FFF721FE64E200D5058C /* RewardsView.swift */; };
 		9AE8FFFA21FE6FE000D5058C /* RewardsIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8FFF921FE6FE000D5058C /* RewardsIconView.swift */; };
-		B3B72AC224C4FEDA002210EA /* CashUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B72AC124C4FDC5002210EA /* CashUI.framework */; };
-		B3B72AC324C4FEDA002210EA /* CashUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3B72AC124C4FDC5002210EA /* CashUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B3131C2724D90BCD00F5F138 /* CashUI in Frameworks */ = {isa = PBXBuildFile; productRef = B3131C2624D90BCD00F5F138 /* CashUI */; };
+		B3131C3224D90C5400F5F138 /* SendVerificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C2924D90C5300F5F138 /* SendVerificationView.xib */; };
+		B3131C3324D90C5400F5F138 /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C2A24D90C5300F5F138 /* ActivityView.xib */; };
+		B3131C3424D90C5400F5F138 /* AtmLocationsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C2B24D90C5300F5F138 /* AtmLocationsView.xib */; };
+		B3131C3524D90C5400F5F138 /* VerifyCashCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C2C24D90C5300F5F138 /* VerifyCashCodeView.xib */; };
+		B3131C3624D90C5400F5F138 /* WithdrawalStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C2D24D90C5300F5F138 /* WithdrawalStatusView.xib */; };
+		B3131C3724D90C5400F5F138 /* ListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C2E24D90C5300F5F138 /* ListView.xib */; };
+		B3131C3824D90C5400F5F138 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C2F24D90C5300F5F138 /* ActivityTableViewCell.xib */; };
+		B3131C3924D90C5400F5F138 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C3024D90C5300F5F138 /* MenuView.xib */; };
+		B3131C3A24D90C5400F5F138 /* AtmInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C3124D90C5300F5F138 /* AtmInfoView.xib */; };
 		B3B72AD124C50631002210EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B72ACF24C50631002210EA /* Assets.xcassets */; };
 		B3B72AD424C5096C002210EA /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B72AD324C5096C002210EA /* Icon.xcassets */; };
 		CE0822641FCD1BD100EF371D /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0822631FCD1BD100EF371D /* HomeScreenViewController.swift */; };
@@ -650,13 +658,6 @@
 			remoteGlobalIDString = BD12FD351D767BA0001815C7;
 			remoteInfo = SwiftProtobuf_iOS;
 		};
-		B3B72AC024C4FDC5002210EA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B3B72ABC24C4FDC5002210EA /* CashUI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B36B71CB2497C9AE009A7E4A;
-			remoteInfo = CashUI;
-		};
 		CEA7E6801F09A9D2001F8C27 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 75A2A7881DA5934300A983D8 /* Project object */;
@@ -674,7 +675,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				754AE0B71DFCA870007FD001 /* libbz2.framework in Embed Frameworks */,
-				B3B72AC324C4FEDA002210EA /* CashUI.framework in Embed Frameworks */,
 				7CD03E8623429F580084F00F /* SwiftProtobuf.framework in Embed Frameworks */,
 				7C662B0D222F515F0008814C /* ../$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)/BRCrypto.framework in Embed Frameworks */,
 			);
@@ -1038,7 +1038,15 @@
 		9AE800CF21FFF81F00D5058C /* rewardsIcon-64.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "rewardsIcon-64.gif"; path = "src/Views/AnimatedIcons/Rewards Icon Frames/rewardsIcon-64.gif"; sourceTree = "<group>"; };
 		9AE8FFF721FE64E200D5058C /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RewardsView.swift; path = src/Views/RewardsView.swift; sourceTree = "<group>"; };
 		9AE8FFF921FE6FE000D5058C /* RewardsIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RewardsIconView.swift; path = src/Views/AnimatedIcons/RewardsIconView.swift; sourceTree = "<group>"; };
-		B3B72ABC24C4FDC5002210EA /* CashUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CashUI.xcodeproj; path = "Modules/cash-ui-ios/CashUI.xcodeproj"; sourceTree = "<group>"; };
+		B3131C2924D90C5300F5F138 /* SendVerificationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendVerificationView.xib; sourceTree = "<group>"; };
+		B3131C2A24D90C5300F5F138 /* ActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
+		B3131C2B24D90C5300F5F138 /* AtmLocationsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AtmLocationsView.xib; sourceTree = "<group>"; };
+		B3131C2C24D90C5300F5F138 /* VerifyCashCodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerifyCashCodeView.xib; sourceTree = "<group>"; };
+		B3131C2D24D90C5300F5F138 /* WithdrawalStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithdrawalStatusView.xib; sourceTree = "<group>"; };
+		B3131C2E24D90C5300F5F138 /* ListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListView.xib; sourceTree = "<group>"; };
+		B3131C2F24D90C5300F5F138 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
+		B3131C3024D90C5300F5F138 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		B3131C3124D90C5300F5F138 /* AtmInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AtmInfoView.xib; sourceTree = "<group>"; };
 		B3B72ACF24C50631002210EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3B72AD324C5096C002210EA /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
 		CE0822631FCD1BD100EF371D /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreenViewController.swift; path = src/ViewControllers/HomeScreenViewController.swift; sourceTree = "<group>"; };
@@ -1264,9 +1272,9 @@
 				7CBC6B2E21751ECA00899AFB /* iAd.framework in Frameworks */,
 				7C662B0C222F515F0008814C /* ../$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)/BRCrypto.framework in Frameworks */,
 				22A9A9661DF61FEE000F0016 /* WebKit.framework in Frameworks */,
+				B3131C2724D90BCD00F5F138 /* CashUI in Frameworks */,
 				22A9A9641DF61FE7000F0016 /* Security.framework in Frameworks */,
 				22A9A9621DF61FE0000F0016 /* SystemConfiguration.framework in Frameworks */,
-				B3B72AC224C4FEDA002210EA /* CashUI.framework in Frameworks */,
 				22A9A9601DF61FD8000F0016 /* CoreLocation.framework in Frameworks */,
 				22A9A95E1DF61FD0000F0016 /* PushKit.framework in Frameworks */,
 				7CD03E8523429F580084F00F /* SwiftProtobuf.framework in Frameworks */,
@@ -1468,6 +1476,7 @@
 		75A2A7871DA5934300A983D8 = {
 			isa = PBXGroup;
 			children = (
+				B3131C2824D90C5300F5F138 /* JustCash */,
 				75A2A7921DA5934300A983D8 /* breadwallet */,
 				75A2A7A71DA5934300A983D8 /* breadwalletTests */,
 				75A2A7B21DA5934300A983D8 /* breadwalletUITests */,
@@ -1600,7 +1609,6 @@
 		75B6F52F1DA71DCC0031A93F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				B3B72ABC24C4FDC5002210EA /* CashUI.xcodeproj */,
 				7CD03E6B23429EB50084F00F /* SwiftProtobuf.xcodeproj */,
 				22A9A9971DF63426000F0016 /* libbz2 */,
 				75FEFD1F1DAEE7A400203D3A /* sqlite3 */,
@@ -1837,12 +1845,21 @@
 			name = "Rewards Icon Frames";
 			sourceTree = "<group>";
 		};
-		B3B72ABD24C4FDC5002210EA /* Products */ = {
+		B3131C2824D90C5300F5F138 /* JustCash */ = {
 			isa = PBXGroup;
 			children = (
-				B3B72AC124C4FDC5002210EA /* CashUI.framework */,
+				B3131C2924D90C5300F5F138 /* SendVerificationView.xib */,
+				B3131C2A24D90C5300F5F138 /* ActivityView.xib */,
+				B3131C2B24D90C5300F5F138 /* AtmLocationsView.xib */,
+				B3131C2C24D90C5300F5F138 /* VerifyCashCodeView.xib */,
+				B3131C2D24D90C5300F5F138 /* WithdrawalStatusView.xib */,
+				B3131C2E24D90C5300F5F138 /* ListView.xib */,
+				B3131C2F24D90C5300F5F138 /* ActivityTableViewCell.xib */,
+				B3131C3024D90C5300F5F138 /* MenuView.xib */,
+				B3131C3124D90C5300F5F138 /* AtmInfoView.xib */,
 			);
-			name = Products;
+			name = JustCash;
+			path = breadwallet/JustCash;
 			sourceTree = "<group>";
 		};
 		CE08B2A120F66807009FA568 /* Pigeon */ = {
@@ -2339,6 +2356,9 @@
 				7CD03E8823429F580084F00F /* PBXTargetDependency */,
 			);
 			name = breadwallet;
+			packageProductDependencies = (
+				B3131C2624D90BCD00F5F138 /* CashUI */,
+			);
 			productName = breadwallet;
 			productReference = 75A2A7901DA5934300A983D8 /* coinsquare.app */;
 			productType = "com.apple.product-type.application";
@@ -2483,13 +2503,12 @@
 				sv,
 			);
 			mainGroup = 75A2A7871DA5934300A983D8;
+			packageReferences = (
+				B3131C2524D90BCD00F5F138 /* XCRemoteSwiftPackageReference "cash-ui-ios" */,
+			);
 			productRefGroup = 75A2A7911DA5934300A983D8 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
-				{
-					ProductGroup = B3B72ABD24C4FDC5002210EA /* Products */;
-					ProjectRef = B3B72ABC24C4FDC5002210EA /* CashUI.xcodeproj */;
-				},
 				{
 					ProductGroup = 7CD03E5423429EA80084F00F /* Products */;
 					ProjectRef = 7CD03E5323429EA80084F00F /* SwiftProtobuf.xcodeproj */;
@@ -2610,13 +2629,6 @@
 			remoteRef = 7CD03E8123429EB50084F00F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B3B72AC124C4FDC5002210EA /* CashUI.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CashUI.framework;
-			remoteRef = B3B72AC024C4FDC5002210EA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -2636,6 +2648,7 @@
 				E837FD02219D1C0600F59D99 /* onboarding-video-coins-in.mp4 in Resources */,
 				9AE8010E21FFF81F00D5058C /* rewardsIcon-41.gif in Resources */,
 				9A926F9822034B3800CC2263 /* CellHighlight-24.png in Resources */,
+				B3131C3524D90C5400F5F138 /* VerifyCashCodeView.xib in Resources */,
 				9AE8010321FFF81F00D5058C /* rewardsIcon-50.gif in Resources */,
 				7CC7D8DA21581C41007E1B9A /* brd-web-3.tar in Resources */,
 				9A926F7222034B3800CC2263 /* CellHighlight-74.png in Resources */,
@@ -2737,7 +2750,9 @@
 				9AE800E021FFF81F00D5058C /* rewardsIcon-25.gif in Resources */,
 				9A926F9622034B3800CC2263 /* CellHighlight-12.png in Resources */,
 				9A926F7422034B3800CC2263 /* CellHighlight-30.png in Resources */,
+				B3131C3924D90C5400F5F138 /* MenuView.xib in Resources */,
 				9A926F5D22034B3800CC2263 /* CellHighlight-15.png in Resources */,
+				B3131C3824D90C5400F5F138 /* ActivityTableViewCell.xib in Resources */,
 				9A926F4522034B3700CC2263 /* CellHighlight-62.png in Resources */,
 				9A926F9222034B3800CC2263 /* CellHighlight-21.png in Resources */,
 				9A926F8122034B3800CC2263 /* CellHighlight-28.png in Resources */,
@@ -2766,6 +2781,8 @@
 				9AE800E821FFF81F00D5058C /* rewardsIcon-20.gif in Resources */,
 				9AE8010021FFF81F00D5058C /* rewardsIcon-10.gif in Resources */,
 				9A926F9022034B3800CC2263 /* CellHighlight-18.png in Resources */,
+				B3131C3224D90C5400F5F138 /* SendVerificationView.xib in Resources */,
+				B3131C3424D90C5400F5F138 /* AtmLocationsView.xib in Resources */,
 				9AE8011121FFF81F00D5058C /* rewardsIcon-6.gif in Resources */,
 				9A926F8922034B3800CC2263 /* CellHighlight-69.png in Resources */,
 				9A926F8B22034B3800CC2263 /* CellHighlight-38.png in Resources */,
@@ -2787,11 +2804,13 @@
 				9A926F5022034B3800CC2263 /* CellHighlight-80.png in Resources */,
 				9A926F5722034B3800CC2263 /* CellHighlight-40.png in Resources */,
 				9A926F5422034B3800CC2263 /* CellHighlight-37.png in Resources */,
+				B3131C3A24D90C5400F5F138 /* AtmInfoView.xib in Resources */,
 				9AE800FA21FFF81F00D5058C /* rewardsIcon-23.gif in Resources */,
 				9AE800D421FFF81F00D5058C /* rewardsIcon-58.gif in Resources */,
 				9A926F5E22034B3800CC2263 /* CellHighlight-66.png in Resources */,
 				9AE8010F21FFF81F00D5058C /* rewardsIcon-14.gif in Resources */,
 				9AE800F421FFF81F00D5058C /* rewardsIcon-19.gif in Resources */,
+				B3131C3724D90C5400F5F138 /* ListView.xib in Resources */,
 				9AE8010821FFF81F00D5058C /* rewardsIcon-42.gif in Resources */,
 				9A926F6522034B3800CC2263 /* CellHighlight-63.png in Resources */,
 				9AE800F121FFF81F00D5058C /* rewardsIcon-53.gif in Resources */,
@@ -2799,10 +2818,12 @@
 				9A926F7D22034B3800CC2263 /* CellHighlight-57.png in Resources */,
 				9AE8010721FFF81F00D5058C /* rewardsIcon-16.gif in Resources */,
 				9A926F4D22034B3800CC2263 /* CellHighlight-68.png in Resources */,
+				B3131C3324D90C5400F5F138 /* ActivityView.xib in Resources */,
 				9AE8010B21FFF81F00D5058C /* rewardsIcon-56.gif in Resources */,
 				9A926F6B22034B3800CC2263 /* CellHighlight-39.png in Resources */,
 				9A926F5B22034B3800CC2263 /* CellHighlight-32.png in Resources */,
 				9A926F7522034B3800CC2263 /* CellHighlight-33.png in Resources */,
+				B3131C3624D90C5400F5F138 /* WithdrawalStatusView.xib in Resources */,
 				9A926F6C22034B3800CC2263 /* CellHighlight-61.png in Resources */,
 				9A926F9422034B3800CC2263 /* CellHighlight-56.png in Resources */,
 			);
@@ -5058,6 +5079,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B3131C2524D90BCD00F5F138 /* XCRemoteSwiftPackageReference "cash-ui-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:atmcoin/cash-ui-ios.git";
+			requirement = {
+				branch = feature/swiftPackage;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B3131C2624D90BCD00F5F138 /* CashUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B3131C2524D90BCD00F5F138 /* XCRemoteSwiftPackageReference "cash-ui-ios" */;
+			productName = CashUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75A2A7881DA5934300A983D8 /* Project object */;
 }

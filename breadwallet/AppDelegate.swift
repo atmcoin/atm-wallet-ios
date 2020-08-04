@@ -9,7 +9,7 @@
 import UIKit
 import LocalAuthentication
 import CashUI
-import WacSDK
+import CashCore
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     let applicationController = ApplicationController()
     
-    static var url: WacUrl {
+    static var url: EnvironmentUrl {
         #if TESTNET
         return .Staging
         #else
@@ -31,8 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIView.swizzleSetFrame()
         applicationController.launch(application: application, options: launchOptions)
         
-        WACSessionManager.shared.start(url: AppDelegate.url)
-        WACSessionManager.shared.delegate = self
+        CoreSessionManager.shared.start(url: AppDelegate.url)
+        CoreSessionManager.shared.delegate = self
 
         return true
     }
@@ -101,7 +101,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-extension AppDelegate: WACSessionManagerDelegate {
+extension AppDelegate: CoreSessionManagerDelegate {
     
     func sendCoin(amount: String, address: String, completion: @escaping (() -> Void)) {
         let applicationController = self.applicationController

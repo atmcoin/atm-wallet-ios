@@ -538,9 +538,7 @@ class ModalPresenter: Subscriber, Trackable {
         // MARK: Root Menu
         var rootItems: [MenuItem] = [
             MenuItem(title: S.MenuButton.atmCashRedemption, icon: MenuItem.Icon.atmMap) {
-                let bundle = Bundle.init(for: WACMenuViewController.self)
-                let vc = WACMenuViewController(nibName: "WACMenuView", bundle: bundle)
-
+                let vc = CashUI.MenuViewController()
                 menuNav.pushViewController(vc, animated: true)
             },
 
@@ -1176,9 +1174,7 @@ extension ModalPresenter {
     }
     
     func presentActivity() {
-        let bundle = Bundle.init(for: WACActivityViewController.self)
-        let vc = WACActivityViewController(nibName: "WACActivityView", bundle: bundle)
-
+        let vc = ActivityViewController()
         self.topViewController?.present(vc, animated: true, completion: nil)
     }
 }
