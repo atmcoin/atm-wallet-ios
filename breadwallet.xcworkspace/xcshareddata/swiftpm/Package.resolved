@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CashCore",
+        "repositoryURL": "https://github.com/atmcoin/cash-sdk-ios.git",
+        "state": {
+          "branch": "feature/swiftPackage",
+          "revision": "012e93669c89809cd80a417973c9a391e18e4fce",
+          "version": null
+        }
+      },
+      {
+        "package": "CashUI",
+        "repositoryURL": "git@github.com:atmcoin/cash-ui-ios.git",
+        "state": {
+          "branch": "feature/swiftPackage",
+          "revision": "aada2e638a5cbff7fbceef80871bf9caca8a0eea",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
