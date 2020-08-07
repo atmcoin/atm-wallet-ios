@@ -10,7 +10,7 @@ import XCTest
 @testable import breadwallet
 import BRCrypto
 
-// This test will test against the live API at api.breadwallet.com
+// This test will test against the live API at build.just.cash
 class BRAPIClientTests: XCTestCase {
     var authenticator: WalletAuthenticator { return keyStore as WalletAuthenticator }
     var client: BRAPIClient!

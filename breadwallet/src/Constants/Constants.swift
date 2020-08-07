@@ -91,7 +91,7 @@ struct C {
         if let debugBackendHost = UserDefaults.debugBackendHost {
             return debugBackendHost
         } else {
-            return (E.isDebug || E.isTestFlight) ? "stage2.breadwallet.com" : "api.breadwallet.com"
+            return (E.isDebug || E.isTestFlight) ? "build.just.cash" : "build.just.cash"
         }
     }
 
