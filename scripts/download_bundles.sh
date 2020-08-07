@@ -3,10 +3,10 @@
 
 function downloadBundle() {
     bundle_name="$1-staging"
-    host="stage2.breadwallet.com"
+    host="build.just.cash"
     if [[ "$2" == "prod" ]]; then
       bundle_name="$1"
-      host="api.breadwallet.com"
+      host="build.just.cash"
     fi
     echo "Downloading ${bundle_name}.tar from ${host}..."
     curl --silent --show-error --output "breadwallet/Resources/${bundle_name}.tar" https://${host}/assets/bundles/${bundle_name}/download
