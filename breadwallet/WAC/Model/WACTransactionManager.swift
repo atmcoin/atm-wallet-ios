@@ -16,15 +16,15 @@ class WACTransactionManager {
     func store(_ transaction: WACTransaction) {
         do {
             try UserDefaults.standard.setObject(transaction)
+        } catch {
         }
-        catch {}
     }
     
     func getTransactions() -> [WACTransaction] {
         do {
             return try UserDefaults.standard.getAllObjects()
+        } catch {
         }
-        catch {}
         return []
     }
     
@@ -32,12 +32,12 @@ class WACTransactionManager {
         do {
             let allObjects = try UserDefaults.standard.getAllObjects()
             for transaction in allObjects {
-                if (transaction.code?.secureCode == forCode) {
+                if transaction.code?.secureCode == forCode {
                     return transaction
                 }
             }
+        } catch {
         }
-        catch {}
         return nil
     }
     
@@ -45,12 +45,12 @@ class WACTransactionManager {
         do {
             let allObjects = try UserDefaults.standard.getAllObjects()
             for transaction in allObjects {
-                if (transaction.timestamp == forTimestamp) {
+                if transaction.timestamp == forTimestamp {
                     return transaction
                 }
             }
+        } catch {
         }
-        catch {}
         return nil
     }
     
@@ -58,12 +58,12 @@ class WACTransactionManager {
         do {
             let allObjects = try UserDefaults.standard.getAllObjects()
             for transaction in allObjects {
-                if (transaction.code?.address == forAddress) {
+                if transaction.code?.address == forAddress {
                     return transaction
                 }
             }
+        } catch {
         }
-        catch {}
         return nil
     }
     
@@ -72,8 +72,8 @@ class WACTransactionManager {
             var allObjects = try UserDefaults.standard.getAllObjects()
             allObjects = allObjects.filter { $0.code?.secureCode != forCode }
             try UserDefaults.standard.setObjects(allObjects)
+        } catch {
         }
-        catch {}
     }
     
     func removeTransaction(forTimestamp: Double) {
@@ -82,8 +82,8 @@ class WACTransactionManager {
             allObjects = allObjects.filter { $0.timestamp !=  forTimestamp}
             try UserDefaults.standard.setObjects(allObjects)
             NotificationCenter.default.post(name: .WACTransactionDidRemove, object: nil)
+        } catch {
         }
-        catch {}
     }
     
     func updateTransaction(_ object: WACTransaction) {
@@ -94,8 +94,8 @@ class WACTransactionManager {
                 try UserDefaults.standard.setObjects(allObjects)
                 NotificationCenter.default.post(name: .WACTransactionDidUpdate, object: object)
             }
+        } catch {
         }
-        catch{}
     }
     
     func updateTransaction(status: WACTransactionStatus, withTimestamp: Double) {
@@ -153,13 +153,13 @@ class WACTransactionManager {
     }
     
     private func remove(_ transaction: WACTransaction) {
-        if (Date().timeIntervalSince1970 - transaction.timestamp >= 15*60) {
+        if Date().timeIntervalSince1970 - transaction.timestamp >= 15*60 {
             removeTransaction(forTimestamp: transaction.timestamp)
         }
     }
     
     private func cancel(_ transaction: WACTransaction) {
-        if (Date().timeIntervalSince1970 - transaction.timestamp >= 15*60) {
+        if Date().timeIntervalSince1970 - transaction.timestamp >= 15*60 {
             updateTransaction(status: .Cancelled, withTimestamp: transaction.timestamp)
         }
     }
@@ -170,7 +170,6 @@ class WACTransactionManager {
         })
     }
 }
-
 
 extension Notification.Name {
 

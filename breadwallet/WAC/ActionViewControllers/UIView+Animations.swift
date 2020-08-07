@@ -23,7 +23,7 @@ extension UIView {
                         self.frame.origin.y = (self.superview?.frame.size.height)!//self.bounds.height
                         self.layoutIfNeeded()
                         
-        },  completion: {(_ completed: Bool) -> Void in
+        }, completion: {(_ completed: Bool) -> Void in
             self.isHidden = true
         })
     }
@@ -35,4 +35,3 @@ extension UIView {
         })
     }
 }
-

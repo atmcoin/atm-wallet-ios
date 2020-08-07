@@ -29,7 +29,11 @@ class WACSendVerificationCodeViewController: WACActionViewController {
     @IBAction func getverificationCodeAction(_ sender: Any) {
         self.view.endEditing(true)
         do {
-            try client?.sendVerificationCode(firstNameTextView.text!, self.lastNameTextView.text!, phoneNumber: self.phoneNumberTextView.text!, email: "", completion: { (response: WacSDK.SendVerificationCodeResponse) in
+            try client?.sendVerificationCode(firstNameTextView.text!,
+                                             self.lastNameTextView.text!,
+                                             phoneNumber: self.phoneNumberTextView.text!,
+                                             email: "",
+                                             completion: { (response: WacSDK.SendVerificationCodeResponse) in
                 self.view.hideAnimated()
                 self.actionCallback?.withdraw(amount: self.amountToWithdrawTextView.text!)
                 self.actionCallback?.actiondDidComplete(action: .sendVerificationCode)

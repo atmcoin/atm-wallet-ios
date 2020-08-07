@@ -63,7 +63,7 @@ class WACActionViewController: UIViewController {
     }
     
     public func addInfoButton() {
-        infoButton = UIButton.icon(image:#imageLiteral(resourceName: "Faq"), accessibilityLabel: "Info")
+        infoButton = UIButton.icon(image: #imageLiteral(resourceName: "Faq"), accessibilityLabel: "Info")
         self.view.addSubview(infoButton)
         infoButton.constrain([
             infoButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0),
@@ -87,17 +87,16 @@ class WACActionViewController: UIViewController {
         if notification.name == UIResponder.keyboardWillHideNotification {
             yOrigin = -yOrigin
             keyboardShown = false
-        }
-        else {
+        } else {
             if keyboardShown {return}
             keyboardShown = true
         }
         
         let userInfo = notification.userInfo
-        let duration:TimeInterval = (userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
+        let duration: TimeInterval = (userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
         let animationCurveRawNSN = userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
         let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
-        let animationCurve:UIView.KeyframeAnimationOptions = UIView.KeyframeAnimationOptions(rawValue: animationCurveRaw)
+        let animationCurve: UIView.KeyframeAnimationOptions = UIView.KeyframeAnimationOptions(rawValue: animationCurveRaw)
         
         UIView.animateKeyframes(withDuration: duration, delay: 0, options: animationCurve, animations: {
             var f = self.view.frame
@@ -113,7 +112,9 @@ class WACActionViewController: UIViewController {
 
 extension UIViewController {
     
-    func showAlert(title: String, message: String, buttonLabel: String = S.Button.ok, cancelButtonLabel: String = S.Button.cancel, completion: @escaping (UIAlertAction) -> Void) {
+    func showAlert(title: String, message: String, buttonLabel: String = S.Button.ok,
+                   cancelButtonLabel: String = S.Button.cancel,
+                   completion: @escaping (UIAlertAction) -> Void) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: buttonLabel, style: .default) { (action) in
             completion(action)

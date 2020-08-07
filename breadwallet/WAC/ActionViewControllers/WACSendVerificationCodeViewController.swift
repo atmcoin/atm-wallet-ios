@@ -45,14 +45,18 @@ class WACSendVerificationCodeViewController: WACActionViewController {
     @IBAction func getverificationCodeAction(_ sender: Any) {
         validateFields()
         if !validFields { return }
-        WACSessionManager.shared.client!.sendVerificationCode(first: firstNameTextView.text!, surname: self.lastNameTextView.text!, phoneNumber: self.phoneNumberTextView.text!, email: "", completion: { (response: WacSDK.SendVerificationCodeResponse) in
+        WACSessionManager.shared.client!.sendVerificationCode(first: firstNameTextView.text!,
+                                                              surname: self.lastNameTextView.text!,
+                                                              phoneNumber: self.phoneNumberTextView.text!,
+                                                              email: "",
+                            completion: { (response: WacSDK.SendVerificationCodeResponse) in
             self.actionCallback?.withdraw(amount: self.amountToWithdrawTextView.text!)
             self.actionCallback?.actiondDidComplete(action: .sendVerificationCode)
             self.clearViews()
         })
     }
 
-    private func addMessage(fieldName:String, message: String) {
+    private func addMessage(fieldName: String, message: String) {
         var existingFieldName: String = ""
         if messageText.isEmpty {
             messageText.append("\(fieldName) ")
@@ -98,7 +102,7 @@ class WACSendVerificationCodeViewController: WACActionViewController {
     }
 }
 
-extension WACSendVerificationCodeViewController : UITextFieldDelegate {
+extension WACSendVerificationCodeViewController: UITextFieldDelegate {
 
     private func textFieldSholdEndEditing(_ sender: Any) {
         validateFields()
@@ -124,7 +128,7 @@ extension WACSendVerificationCodeViewController {
     }
     
     public func validatePhoneNumber(phoneView: UITextField) -> Bool {
-        let phone:String? = phoneView.text!
+        let phone: String? = phoneView.text!
         if phone.isNilOrEmpty {
             addMessage(fieldName: "Phone", message: "is required")
             return false
@@ -145,11 +149,11 @@ extension WACSendVerificationCodeViewController {
 
     public func validateAmount(amountView: UITextField) -> Bool {
         if amountView.text.isNilOrEmpty {
-            addMessage(fieldName:"Amount", message: "is required")
+            addMessage(fieldName: "Amount", message: "is required")
             return false
         }
 
-        let amount:Int? = Int(amountView.text!)
+        let amount: Int? = Int(amountView.text!)
         if amount == nil {
             addMessage(fieldName:"Amount", message: "should be numeric")
             return false
