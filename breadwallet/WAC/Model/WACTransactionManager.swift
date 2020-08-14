@@ -1,4 +1,3 @@
-
 import Foundation
 import WacSDK
 
@@ -165,7 +164,7 @@ class WACTransactionManager {
     }
     
     private func pollTransactionUpdates(for instance: WACTransactionManager) {
-        instance.timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: { (timer) in
+        instance.timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: { (_) in
             WACTransactionManager.poll(instance)
         })
     }

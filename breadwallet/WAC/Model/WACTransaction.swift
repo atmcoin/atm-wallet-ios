@@ -1,4 +1,3 @@
-
 import Foundation
 import WacSDK
 
@@ -35,9 +34,7 @@ public struct WACTransaction: CustomStringConvertible, Codable, Equatable {
     var code: CashCode?
     var pCode: String?
     var color: String {
-        get {
-            return color(for: status)
-        }
+        return color(for: status)
     }
     
     init(status: WACTransactionStatus, atm: AtmMachine? = nil, code: CashCode? = nil) {
