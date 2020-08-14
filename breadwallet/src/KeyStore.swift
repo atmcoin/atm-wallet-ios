@@ -431,7 +431,7 @@ extension KeyStore: WalletAuthenticator {
         }
     }
 
-    private static func fetchClientToken(cachedToken:String, completion: @escaping (String?) -> Void) {
+    private static func fetchClientToken(cachedToken: String, completion: @escaping (String?) -> Void) {
         // fetch from CloudKit and store in keychain
         CKContainer.default().publicCloudDatabase.fetch(withRecordID: CKRecord.ID(recordName: C.bdbClientTokenRecordId)) { record, error in
             DispatchQueue.global(qos: .userInitiated).async {
