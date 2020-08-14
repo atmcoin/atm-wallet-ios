@@ -44,7 +44,7 @@ class WACMapViewController: UIViewController {
         return _locationManager
     }()
 
-    var atmAnnotations: Array<AtmAnnotation> = []
+    var atmAnnotations: [AtmAnnotation] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()

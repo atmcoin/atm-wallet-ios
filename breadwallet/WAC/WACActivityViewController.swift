@@ -14,10 +14,8 @@ let kReusableIdentifier = "kTableViewCellReuseIdentifier"
 class WACActivityViewController: UIViewController, UIAdaptivePresentationControllerDelegate {
     
     var transactions: [WACTransaction] {
-        get {
-            let trans = WACTransactionManager.shared.getTransactions()
-            return trans.reversed()
-        }
+        let trans = WACTransactionManager.shared.getTransactions()
+        return trans.reversed()
     }
     @IBOutlet open var tableView: UITableView!
     @IBOutlet open var navigationBar: UIView!
