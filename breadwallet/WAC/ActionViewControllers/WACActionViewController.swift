@@ -112,7 +112,9 @@ class WACActionViewController: UIViewController {
 
 extension UIViewController {
     
-    func showAlert(title: String, message: String, buttonLabel: String = S.Button.ok,
+    func showAlert(title: String,
+                   message: String,
+                   buttonLabel: String = S.Button.ok,
                    cancelButtonLabel: String = S.Button.cancel,
                    completion: @escaping (UIAlertAction) -> Void) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)

@@ -95,7 +95,7 @@ class WACSendVerificationCodeViewController: WACActionViewController {
     }
 
     @IBAction func textFieldEditingDidChange(_ sender: Any) {
-        if errorMessage.text != "" {
+        if !errorMessage.text!.isEmpty {
             errorMessage.text = ""
             errorMessage.setNeedsDisplay()
         }
@@ -155,7 +155,7 @@ extension WACSendVerificationCodeViewController {
 
         let amount: Int? = Int(amountView.text!)
         if amount == nil {
-            addMessage(fieldName:"Amount", message: "should be numeric")
+            addMessage(fieldName: "Amount", message: "should be numeric")
             return false
         }
 
@@ -166,21 +166,21 @@ extension WACSendVerificationCodeViewController {
 
         let validMultiple = isMultipleOf(amount: amount!, multipleOf: allowedBills)
         if !validMultiple {
-            addMessage(fieldName:"Amount", message: "should be a multiple of \(allowedBills) bills")
+            addMessage(fieldName: "Amount", message: "should be a multiple of \(allowedBills) bills")
         }
 
         return validRange && validMultiple
     }
 
     private func validateNames(firstNameView: UITextField, lastNameView: UITextField) -> Bool {
-        var firstNameValid:Bool = true
-        var lastNameValid:Bool = true
+        var firstNameValid: Bool = true
+        var lastNameValid: Bool = true
         if firstNameTextView.text.isNilOrEmpty {
             addMessage(fieldName:"First Name", message: "should be entered")
             firstNameValid = false
         }
         if lastNameView.text.isNilOrEmpty {
-            addMessage(fieldName:"Last Name", message: "should be entered")
+            addMessage(fieldName: "Last Name", message: "should be entered")
             lastNameValid = false
         }
         return firstNameValid && lastNameValid
@@ -196,7 +196,7 @@ extension WACSendVerificationCodeViewController {
         if atm.min.isNilOrEmpty {
             atmMinimum = WACSendVerificationCodeViewController.defaultMinAmountLimit
         } else {
-            let atmMinimumDouble:Double? = Double(atm.min!)
+            let atmMinimumDouble: Double? = Double(atm.min!)
             if atmMinimumDouble != nil {
                 atmMinimum = Int(atmMinimumDouble!)
             }
@@ -208,7 +208,7 @@ extension WACSendVerificationCodeViewController {
         if atm.max.isNilOrEmpty {
             atmMaximum = WACSendVerificationCodeViewController.defaultMaxAmountLimit
         } else {
-            let atmMaximumDouble:Double? = Double(atm.max!)
+            let atmMaximumDouble: Double? = Double(atm.max!)
             if atmMaximumDouble != nil {
                 atmMaximum = Int(atmMaximumDouble!)
             }
@@ -220,7 +220,7 @@ extension WACSendVerificationCodeViewController {
         if atm.bills.isNilOrEmpty {
             atmBills = WACSendVerificationCodeViewController.defaultAllowedBills
         } else {
-            let atmBillsDouble:Double? = Double(atm.bills!)
+            let atmBillsDouble: Double? = Double(atm.bills!)
             if atmBillsDouble != nil {
                 atmBills = Int(atmBillsDouble!)
             }
