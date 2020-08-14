@@ -39,8 +39,7 @@ class WACSendVerificationCodeViewController: WACActionViewController {
                 self.actionCallback?.actiondDidComplete(action: .sendVerificationCode)
                 self.clearViews()
             })
-        }
-        catch {}
+        } catch {}
     }
     
     public func setAtmInfo(_ atm: WacSDK.AtmMachine) {
@@ -61,10 +60,9 @@ class WACSendVerificationCodeViewController: WACActionViewController {
     @IBAction override func textDidChange(_ sender: Any) {
         let phone = self.phoneNumberTextView.text
         let amount = self.amountToWithdrawTextView.text
-        if (phone != "" && amount != "") {
+        if phone != "" && amount != "" {
             self.getAtmCodeButton.isEnabled = true
-        }
-        else {
+        } else {
             self.getAtmCodeButton.isEnabled = false
         }
     }

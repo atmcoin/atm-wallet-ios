@@ -40,8 +40,8 @@ class WACActionViewController: UIViewController {
     public func showView() {
         self.view.showAnimated()
         // Observe keyboard change
-        NotificationCenter.default.addObserver(self, selector:#selector(adjustForKeyboard), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector:#selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     public func hideView() {
@@ -64,17 +64,16 @@ class WACActionViewController: UIViewController {
         if notification.name == UIResponder.keyboardWillHideNotification {
             yOrigin = -yOrigin
             keyboardShown = false
-        }
-        else {
+        } else {
             if keyboardShown {return}
             keyboardShown = true
         }
         
         let userInfo = notification.userInfo
-        let duration:TimeInterval = (userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
+        let duration: TimeInterval = (userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
         let animationCurveRawNSN = userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
         let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
-        let animationCurve:UIView.KeyframeAnimationOptions = UIView.KeyframeAnimationOptions(rawValue: animationCurveRaw)
+        let animationCurve: UIView.KeyframeAnimationOptions = UIView.KeyframeAnimationOptions(rawValue: animationCurveRaw)
         
         UIView.animateKeyframes(withDuration: duration, delay: 0, options: animationCurve, animations: {
             var f = self.view.frame

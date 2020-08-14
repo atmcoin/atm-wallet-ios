@@ -48,10 +48,9 @@ class WACVerifyCashCodeViewController: WACActionViewController {
     
     @IBAction override func textDidChange(_ sender: Any) {
         let code = self.tokenTextView.text
-        if (code != "") {
+        if code != "" {
             self.confirmButton.isEnabled = true
-        }
-        else {
+        } else {
             self.confirmButton.isEnabled = false
         }
     }

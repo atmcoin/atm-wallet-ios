@@ -22,7 +22,7 @@ extension UIView {
                         self.center.y += self.bounds.height
                         self.layoutIfNeeded()
                         
-        },  completion: {(_ completed: Bool) -> Void in
+        }, completion: {(_ completed: Bool) -> Void in
             self.isHidden = true
         })
     }
