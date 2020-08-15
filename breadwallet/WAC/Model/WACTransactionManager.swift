@@ -30,10 +30,8 @@ class WACTransactionManager {
     func getTransaction(forCode: String) -> WACTransaction? {
         do {
             let allObjects = try UserDefaults.standard.getAllObjects()
-            for transaction in allObjects {
-                if transaction.code?.secureCode == forCode {
-                    return transaction
-                }
+            for transaction in allObjects where transaction.code?.secureCode == forCode {
+                return transaction
             }
         } catch {
         }
@@ -43,10 +41,8 @@ class WACTransactionManager {
     func getTransaction(forTimestamp: Double) -> WACTransaction? {
         do {
             let allObjects = try UserDefaults.standard.getAllObjects()
-            for transaction in allObjects {
-                if transaction.timestamp == forTimestamp {
-                    return transaction
-                }
+            for transaction in allObjects where transaction.timestamp == forTimestamp {
+                return transaction
             }
         } catch {
         }
@@ -56,10 +52,8 @@ class WACTransactionManager {
     func getTransaction(forAddress: String) -> WACTransaction? {
         do {
             let allObjects = try UserDefaults.standard.getAllObjects()
-            for transaction in allObjects {
-                if transaction.code?.address == forAddress {
-                    return transaction
-                }
+            for transaction in allObjects where transaction.code?.address == forAddress {
+                return transaction
             }
         } catch {
         }

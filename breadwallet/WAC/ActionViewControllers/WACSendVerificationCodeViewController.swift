@@ -176,7 +176,7 @@ extension WACSendVerificationCodeViewController {
         var firstNameValid: Bool = true
         var lastNameValid: Bool = true
         if firstNameTextView.text.isNilOrEmpty {
-            addMessage(fieldName:"First Name", message: "should be entered")
+            addMessage(fieldName: "First Name", message: "should be entered")
             firstNameValid = false
         }
         if lastNameView.text.isNilOrEmpty {
