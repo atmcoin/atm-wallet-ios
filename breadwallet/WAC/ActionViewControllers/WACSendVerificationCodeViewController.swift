@@ -34,7 +34,7 @@ class WACSendVerificationCodeViewController: WACActionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getAtmCodeButton.isEnabled = true
+        self.getAtmCodeButton.isEnabled = false
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -98,6 +98,17 @@ class WACSendVerificationCodeViewController: WACActionViewController {
         if !errorMessage.text!.isEmpty {
             errorMessage.text = ""
             errorMessage.setNeedsDisplay()
+        }
+        
+        let amount = amountToWithdrawTextView.text!
+        let phone = phoneNumberTextView.text!
+        let firstName = firstNameTextView.text!
+        let lastName = lastNameTextView.text!
+        if (!amount.isEmpty && !phone.isEmpty && !firstName.isEmpty && !lastName.isEmpty) {
+            getAtmCodeButton.isEnabled = true
+        }
+        else {
+            getAtmCodeButton.isEnabled = false
         }
     }
 }

@@ -30,16 +30,15 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hux-b9-lXo">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hux-b9-lXo" customClass="LoadingButton" customModule="coinsquare" customModuleProvider="target">
                             <rect key="frame" x="354" y="8" width="40" height="40"/>
-                            <color key="backgroundColor" red="0.94901960780000005" green="0.66274509800000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="Ohd-Tm-i8z"/>
                                 <constraint firstAttribute="height" constant="40" id="rGc-gQ-pM2"/>
                             </constraints>
                             <state key="normal" image="refresh"/>
                             <connections>
-                                <action selector="refresh:" destination="-1" eventType="touchUpInside" id="7Yt-dj-DV1"/>
+                                <action selector="refreshHandler:" destination="-1" eventType="touchUpInside" id="e49-vz-hAf"/>
                             </connections>
                         </button>
                     </subviews>

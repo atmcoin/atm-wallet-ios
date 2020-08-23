@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -41,6 +41,7 @@
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                     <connections>
                         <action selector="textFieldEditingDidChange:" destination="-1" eventType="editingChanged" id="fA9-tX-fcM"/>
+                        <outlet property="delegate" destination="-1" id="reS-Mb-WBZ"/>
                     </connections>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X9r-DF-UH1">
@@ -52,6 +53,7 @@
                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                     <connections>
                         <action selector="textFieldEditingDidChange:" destination="-1" eventType="editingChanged" id="XoM-2g-TlH"/>
+                        <outlet property="delegate" destination="-1" id="rJO-Ld-RRh"/>
                     </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I agree to receive text messages specific to this transaction. Standard messaging rates may apply." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vO2-Yd-yK0">
@@ -67,6 +69,11 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="textFieldDidChange:" destination="-1" eventType="valueChanged" id="QFK-Gg-2Nu"/>
+                        <action selector="textFieldEditingDidChange:" destination="-1" eventType="editingChanged" id="pTf-09-Q8z"/>
+                        <outlet property="delegate" destination="-1" id="Gtn-55-jMR"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DlL-Ge-lnf">
                     <rect key="frame" x="214" y="266.5" width="180" height="34"/>
@@ -75,10 +82,13 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="textFieldEditingDidChange:" destination="-1" eventType="editingChanged" id="zoM-Jg-Dh7"/>
+                        <outlet property="delegate" destination="-1" id="xGW-rC-Mw9"/>
+                    </connections>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofM-pJ-egC">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofM-pJ-egC" customClass="WACButton" customModule="coinsquare" customModuleProvider="target">
                     <rect key="frame" x="20" y="308.5" width="374" height="34"/>
-                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="1BA-X3-RiB"/>
                     </constraints>
