@@ -1,6 +1,10 @@
+//
+//  Created by Giancarlo Pacheco on 8/25/20.
+//
+
 import UIKit
 
-class LoadingButton: UIButton {
+class WACLoadingButton: UIButton {
 
     @IBInspectable var indicatorColor: UIColor = .black
 
@@ -11,7 +15,7 @@ class LoadingButton: UIButton {
         originalButtonImage = self.image(for: .normal)
         self.setImage(nil, for: .normal)
 
-        if (activityIndicator == nil) {
+        if activityIndicator == nil {
             activityIndicator = createActivityIndicator()
         }
 
@@ -40,10 +44,22 @@ class LoadingButton: UIButton {
     }
 
     private func centerActivityIndicatorInButton() {
-        let xCenterConstraint = NSLayoutConstraint(item: self, attribute: .centerX, relatedBy: .equal, toItem: activityIndicator, attribute: .centerX, multiplier: 1, constant: 0)
+        let xCenterConstraint = NSLayoutConstraint(item: self,
+                                                   attribute: .centerX,
+                                                   relatedBy: .equal,
+                                                   toItem: activityIndicator,
+                                                   attribute: .centerX,
+                                                   multiplier: 1,
+                                                   constant: 0)
         self.addConstraint(xCenterConstraint)
 
-        let yCenterConstraint = NSLayoutConstraint(item: self, attribute: .centerY, relatedBy: .equal, toItem: activityIndicator, attribute: .centerY, multiplier: 1, constant: 0)
+        let yCenterConstraint = NSLayoutConstraint(item: self,
+                                                   attribute: .centerY,
+                                                   relatedBy: .equal,
+                                                   toItem: activityIndicator,
+                                                   attribute: .centerY,
+                                                   multiplier: 1,
+                                                   constant: 0)
         self.addConstraint(yCenterConstraint)
     }
 

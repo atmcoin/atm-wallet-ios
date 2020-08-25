@@ -19,7 +19,7 @@ class WACActivityViewController: UIViewController, UIAdaptivePresentationControl
     }
     @IBOutlet open var tableView: UITableView!
     @IBOutlet open var navigationBar: UIView!
-    @IBOutlet weak var refreshButton: LoadingButton!
+    @IBOutlet weak var refreshButton: WACLoadingButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
