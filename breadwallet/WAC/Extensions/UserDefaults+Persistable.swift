@@ -22,6 +22,7 @@ extension UserDefaults: Persistable {
     
     enum Keys: String, CaseIterable {
         case Hello
+        case User
     }
     
     func reset() {
@@ -34,6 +35,27 @@ extension UserDefaults: Persistable {
             set(data, forKey: forKey!)
         } catch {
             throw PersistableError.unableToEncode
+        }
+    }
+    
+    func setUser<WACUser>(_ user: WACUser, forKey: String? = Keys.User.rawValue) throws where WACUser: Encodable {
+        let encoder = JSONEncoder()
+        do {
+            let data = try encoder.encode(user)
+            set(data, forKey: forKey!)
+        } catch {
+            throw PersistableError.unableToEncode
+        }
+    }
+    
+    func getUser<WACUser>(forKey: String? = Keys.User.rawValue) throws -> WACUser where WACUser: Decodable {
+        guard let data = data(forKey: forKey!) else { throw PersistableError.noValue }
+        let decoder = JSONDecoder()
+        do {
+            let object = try decoder.decode(WACUser.self, from: data)
+            return object
+        } catch {
+            throw PersistableError.unableToDecode
         }
     }
     
