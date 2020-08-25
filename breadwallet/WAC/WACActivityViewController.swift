@@ -19,7 +19,7 @@ class WACActivityViewController: UIViewController, UIAdaptivePresentationControl
     }
     @IBOutlet open var tableView: UITableView!
     @IBOutlet open var navigationBar: UIView!
-    @IBOutlet weak var refreshButton: UIButton!
+    @IBOutlet weak var refreshButton: WACLoadingButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class WACActivityViewController: UIViewController, UIAdaptivePresentationControl
         navigationBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
-    @IBAction func refresh(_ sender: Any) {
+    private func refresh(_ sender: Any) {
         WACTransactionManager.poll(WACTransactionManager.shared)
     }
     
@@ -72,10 +72,13 @@ class WACActivityViewController: UIViewController, UIAdaptivePresentationControl
         self.tableView.frame = frame
     }
     
-    @objc func refreshHandler() {
+    @IBAction func refreshHandler(_ sender: Any) {
+        self.refreshButton.showLoading()
         let deadlineTime = DispatchTime.now() + .seconds(1)
         DispatchQueue.main.asyncAfter(deadline: deadlineTime, execute: { [weak self] in
             if #available(iOS 10.0, *) {
+                self?.refresh(sender)
+                self?.refreshButton.hideLoading()
                 self?.tableView.refreshControl?.endRefreshing()
             }
             self?.tableView.reloadData()
