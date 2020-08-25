@@ -46,11 +46,6 @@ class WACSendVerificationCodeViewController: WACActionViewController {
             self.actionCallback?.actiondDidComplete(action: .sendVerificationCode)
             self.clearViews()
         })
-        
-        let user = WACUser(firstName: firstName, lastName: lastName, phone: phoneNumber)
-        do {
-            try UserDefaults.standard.setUser(user)
-        } catch {}
     }
 
     public func setAtmInfo(_ atm: WacSDK.AtmMachine) {
