@@ -52,17 +52,6 @@ class WACSendVerificationCodeViewController: WACActionViewController {
             try UserDefaults.standard.setUser(user)
         } catch {}
     }
-    
-    private func populateUserInfo() {
-        do {
-            let storedUser: WACUser? = try UserDefaults.standard.getUser()
-            if let user = storedUser {
-                firstNameTextField.text = user.firstName
-                lastNameTextField.text = user.lastName
-                phoneNumberTextField.text = user.phoneNumber
-            }
-        } catch {}
-    }
 
     public func setAtmInfo(_ atm: WacSDK.AtmMachine) {
 //        let transaction = WACTransaction(status: .VerifyPending,
@@ -81,8 +70,6 @@ class WACSendVerificationCodeViewController: WACActionViewController {
         self.infoAboutMachineLabel.text = "Min $\(String(describing: minAmountLimit)), Max $\(String(describing: maxAmountLimit)). Multiple of $\(String(describing: allowedBills))"
         self.infoAboutMachineLabel.setNeedsDisplay()
         self.listenForKeyboard = true
-        
-        populateUserInfo()
     }
 
     override public func clearViews() {

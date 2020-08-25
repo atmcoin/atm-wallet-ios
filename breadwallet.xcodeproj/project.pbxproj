@@ -342,8 +342,11 @@
 		B36648E1247A194900AC9429 /* Date+WACAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36648E0247A194900AC9429 /* Date+WACAdditions.swift */; };
 		B36E720A24F3154300708A2E /* WacSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36E720924F3153700708A2E /* WacSDK.framework */; };
 		B36E720B24F3154300708A2E /* WacSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B36E720924F3153700708A2E /* WacSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B36E720D24F3173A00708A2E /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E720C24F3173900708A2E /* LoadingButton.swift */; };
+		B36E720D24F3173A00708A2E /* WACLoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E720C24F3173900708A2E /* WACLoadingButton.swift */; };
 		B36E721024F32DC900708A2E /* WACButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E720F24F32DC900708A2E /* WACButton.swift */; };
+		B36E721224F3F8BF00708A2E /* WACTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E721124F3F8BF00708A2E /* WACTextField.swift */; };
+		B36E721424F45D1A00708A2E /* WACUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E721324F45D1A00708A2E /* WACUser.swift */; };
+		B36E721624F49BD000708A2E /* String+Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E721524F49BD000708A2E /* String+Validations.swift */; };
 		B389C6FF247F502C0022FB66 /* UserDefaults+Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389C6FE247F502C0022FB66 /* UserDefaults+Persistable.swift */; };
 		B389C71A247F66A20022FB66 /* WACWithdrawalStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389C719247F66A20022FB66 /* WACWithdrawalStatusViewController.swift */; };
 		B389C71C247F66E80022FB66 /* WACWithdrawalStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B389C71B247F66E80022FB66 /* WACWithdrawalStatusView.xib */; };
@@ -1086,8 +1089,11 @@
 		B3648E87246CE6C60002EA21 /* WACSendVerificationCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACSendVerificationCodeViewController.swift; sourceTree = "<group>"; };
 		B36648E0247A194900AC9429 /* Date+WACAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+WACAdditions.swift"; sourceTree = "<group>"; };
 		B36E720324F3153700708A2E /* WacSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WacSDK.xcodeproj; path = "Modules/cash-sdk-ios/WacSDK/WacSDK.xcodeproj"; sourceTree = "<group>"; };
-		B36E720C24F3173900708A2E /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
+		B36E720C24F3173900708A2E /* WACLoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACLoadingButton.swift; sourceTree = "<group>"; };
 		B36E720F24F32DC900708A2E /* WACButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACButton.swift; sourceTree = "<group>"; };
+		B36E721124F3F8BF00708A2E /* WACTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACTextField.swift; sourceTree = "<group>"; };
+		B36E721324F45D1A00708A2E /* WACUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACUser.swift; sourceTree = "<group>"; };
+		B36E721524F49BD000708A2E /* String+Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validations.swift"; sourceTree = "<group>"; };
 		B389C6FE247F502C0022FB66 /* UserDefaults+Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Persistable.swift"; sourceTree = "<group>"; };
 		B389C719247F66A20022FB66 /* WACWithdrawalStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACWithdrawalStatusViewController.swift; sourceTree = "<group>"; };
 		B389C71B247F66E80022FB66 /* WACWithdrawalStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WACWithdrawalStatusView.xib; sourceTree = "<group>"; };
@@ -1956,6 +1962,7 @@
 				B36648E0247A194900AC9429 /* Date+WACAdditions.swift */,
 				B389C6FE247F502C0022FB66 /* UserDefaults+Persistable.swift */,
 				B38C2C2A248ACA4A00268FCD /* String+WACAdditions.swift */,
+				B36E721524F49BD000708A2E /* String+Validations.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1971,7 +1978,8 @@
 		B36E720E24F32DA100708A2E /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
-				B36E720C24F3173900708A2E /* LoadingButton.swift */,
+				B36E721124F3F8BF00708A2E /* WACTextField.swift */,
+				B36E720C24F3173900708A2E /* WACLoadingButton.swift */,
 				B36E720F24F32DC900708A2E /* WACButton.swift */,
 			);
 			path = CustomUI;
@@ -1983,6 +1991,7 @@
 				B389C71F2483636C0022FB66 /* WACSessionManager.swift */,
 				B3D0742A2478D6E000D734B7 /* WACTransaction.swift */,
 				B38C2B7224874B6500268FCD /* WACTransactionManager.swift */,
+				B36E721324F45D1A00708A2E /* WACUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3149,6 +3158,7 @@
 				CEF3D2DD1E8CBA790070178E /* LAContext+Extensions.swift in Sources */,
 				CECCE5AE1E04AD6300D99448 /* AddressCell.swift in Sources */,
 				9A39B1232202AA3400E5018B /* HomeScreenCellHighlightView.swift in Sources */,
+				B36E721624F49BD000708A2E /* String+Validations.swift in Sources */,
 				CE83DE2A1E9EB7F600D07636 /* SendAmountCell.swift in Sources */,
 				7C377EC220F6C29E00E8CF1C /* UIAlertController+Additions.swift in Sources */,
 				22A9A9521DF61945000F0016 /* BRKVStorePlugin.swift in Sources */,
@@ -3171,7 +3181,7 @@
 				75A2A7941DA5934300A983D8 /* AppDelegate.swift in Sources */,
 				B3648E94246CE6C60002EA21 /* WACSendVerificationCodeViewController.swift in Sources */,
 				711730572204FDFB001931B3 /* HomeScreenHiglightableCell.swift in Sources */,
-				B36E720D24F3173A00708A2E /* LoadingButton.swift in Sources */,
+				B36E720D24F3173A00708A2E /* WACLoadingButton.swift in Sources */,
 				CEEC70901E95D5C100EF788E /* PushNotificationsViewController.swift in Sources */,
 				222C42501E90492800078EB5 /* BRAPIClient+KV.swift in Sources */,
 				CE5E6C941EB7964900A476DB /* WalletDisabledView.swift in Sources */,
@@ -3273,7 +3283,9 @@
 				CE20C9191DBE7B8200C8397A /* State.swift in Sources */,
 				CEEC70811E90C04700EF788E /* SeparatorCell.swift in Sources */,
 				CE97710D216FF20F00B9F621 /* SegwitEnabledView.swift in Sources */,
+				B36E721224F3F8BF00708A2E /* WACTextField.swift in Sources */,
 				7C230E752037AD52002F0FF1 /* SyncingIndicator.swift in Sources */,
+				B36E721424F45D1A00708A2E /* WACUser.swift in Sources */,
 				22122B721F0B8996000E9AB9 /* BRAPIClient+Events.swift in Sources */,
 				CE4B6C201E233C2C00CF935B /* UITableView+Additions.swift in Sources */,
 				CEEC70861E94397D00EF788E /* UserDefaults+Additions.swift in Sources */,

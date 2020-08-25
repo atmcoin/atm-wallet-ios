@@ -1,9 +1,5 @@
-// 
-//  Date+WACAdittions.swift
 //
 //  Created by Giancarlo Pacheco on 5/23/20.
-//
-//  See the LICENSE file at the project root for license information.
 //
 
 import Foundation
