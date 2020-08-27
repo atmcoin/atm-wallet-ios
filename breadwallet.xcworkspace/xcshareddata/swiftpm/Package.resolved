@@ -12,10 +12,10 @@
       },
       {
         "package": "CashUI",
-        "repositoryURL": "git@github.com:atmcoin/cash-ui-ios.git",
+        "repositoryURL": "https://github.com/atmcoin/cash-ui-ios.git",
         "state": {
           "branch": "feature/swiftPackage",
-          "revision": "b171ad8e77b418c516b49c1af5bf1df182242fd0",
+          "revision": "ea8a57dd4c99e69bf9032ad599d0ed07f2d78762",
           "version": null
         }
       }
