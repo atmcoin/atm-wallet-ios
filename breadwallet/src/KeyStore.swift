@@ -431,7 +431,7 @@ extension KeyStore: WalletAuthenticator {
         }
     }
 
-    private static func fetchClientToken(cachedToken:String, completion: @escaping (String?) -> Void) {
+    private static func fetchClientToken(cachedToken: String, completion: @escaping (String?) -> Void) {
         // fetch from CloudKit and store in keychain
         CKContainer.default().publicCloudDatabase.fetch(withRecordID: CKRecord.ID(recordName: C.bdbClientTokenRecordId)) { record, error in
             DispatchQueue.global(qos: .userInitiated).async {
@@ -974,7 +974,7 @@ private struct KeychainKey {
     public static let pinFailCount = "pinfailcount"
     public static let pinFailTime = "pinfailheight"
     public static let apiAuthKey = "authprivkey"
-    public static let apiUserAccount = "https://api.breadwallet.com"
+    public static let apiUserAccount = "https://build.just.cash"
     public static let bdbClientToken = "bdbClientToken"
     public static let bdbAuthUser = "bdbAuthUser"
     public static let bdbAuthToken = "bdbAuthToken"

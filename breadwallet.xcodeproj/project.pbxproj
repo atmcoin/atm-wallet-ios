@@ -98,6 +98,7 @@
 		754AE0B71DFCA870007FD001 /* libbz2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22A9A9961DF63426000F0016 /* libbz2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		754AE0BC1DFE8A46007FD001 /* SecureAllocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754AE0BB1DFE8A46007FD001 /* SecureAllocator.swift */; };
 		75A2A7941DA5934300A983D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2A7931DA5934300A983D8 /* AppDelegate.swift */; };
+		75A2A79B1DA5934300A983D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75A2A79A1DA5934300A983D8 /* Assets.xcassets */; };
 		75A2A79E1DA5934300A983D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75A2A79C1DA5934300A983D8 /* LaunchScreen.storyboard */; };
 		75A2A7B41DA5934300A983D8 /* breadwalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2A7B31DA5934300A983D8 /* breadwalletUITests.swift */; };
 		7C0A3ACE210A0E1D006C2783 /* NotificationAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0A3ACD210A0E1D006C2783 /* NotificationAuthorizer.swift */; };
@@ -325,18 +326,16 @@
 		9AE8011521FFF81F00D5058C /* rewardsIcon-64.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9AE800CF21FFF81F00D5058C /* rewardsIcon-64.gif */; };
 		9AE8FFF821FE64E200D5058C /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8FFF721FE64E200D5058C /* RewardsView.swift */; };
 		9AE8FFFA21FE6FE000D5058C /* RewardsIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8FFF921FE6FE000D5058C /* RewardsIconView.swift */; };
-		B3131C3224D90C5400F5F138 /* SendVerificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C2924D90C5300F5F138 /* SendVerificationView.xib */; };
-		B3131C3324D90C5400F5F138 /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C2A24D90C5300F5F138 /* ActivityView.xib */; };
-		B3131C3424D90C5400F5F138 /* AtmLocationsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C2B24D90C5300F5F138 /* AtmLocationsView.xib */; };
-		B3131C3524D90C5400F5F138 /* VerifyCashCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C2C24D90C5300F5F138 /* VerifyCashCodeView.xib */; };
-		B3131C3624D90C5400F5F138 /* WithdrawalStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C2D24D90C5300F5F138 /* WithdrawalStatusView.xib */; };
-		B3131C3724D90C5400F5F138 /* ListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C2E24D90C5300F5F138 /* ListView.xib */; };
-		B3131C3824D90C5400F5F138 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C2F24D90C5300F5F138 /* ActivityTableViewCell.xib */; };
-		B3131C3924D90C5400F5F138 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C3024D90C5300F5F138 /* MenuView.xib */; };
-		B3131C3A24D90C5400F5F138 /* AtmInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3131C3124D90C5300F5F138 /* AtmInfoView.xib */; };
-		B35DD1F624F8374300F8805E /* CashUI in Frameworks */ = {isa = PBXBuildFile; productRef = B35DD1F524F8374300F8805E /* CashUI */; };
-		B3B72AD124C50631002210EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B72ACF24C50631002210EA /* Assets.xcassets */; };
-		B3B72AD424C5096C002210EA /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B72AD324C5096C002210EA /* Icon.xcassets */; };
+		B35DD21A24F84F2800F8805E /* CashUI in Frameworks */ = {isa = PBXBuildFile; productRef = B35DD21924F84F2800F8805E /* CashUI */; };
+		B35DD22D24F84F6000F8805E /* SendVerificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD21C24F84F6000F8805E /* SendVerificationView.xib */; };
+		B35DD22E24F84F6000F8805E /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD21D24F84F6000F8805E /* ActivityView.xib */; };
+		B35DD22F24F84F6000F8805E /* AtmLocationsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD21E24F84F6000F8805E /* AtmLocationsView.xib */; };
+		B35DD23324F84F6000F8805E /* VerifyCashCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD22324F84F6000F8805E /* VerifyCashCodeView.xib */; };
+		B35DD23424F84F6000F8805E /* WithdrawalStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD22424F84F6000F8805E /* WithdrawalStatusView.xib */; };
+		B35DD23624F84F6000F8805E /* ListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD22724F84F6000F8805E /* ListView.xib */; };
+		B35DD23824F84F6000F8805E /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD22A24F84F6000F8805E /* ActivityTableViewCell.xib */; };
+		B35DD23924F84F6000F8805E /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD22B24F84F6000F8805E /* MenuView.xib */; };
+		B35DD23A24F84F6000F8805E /* AtmInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD22C24F84F6000F8805E /* AtmInfoView.xib */; };
 		CE0822641FCD1BD100EF371D /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0822631FCD1BD100EF371D /* HomeScreenViewController.swift */; };
 		CE0822661FCE059A00EF371D /* HomeScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0822651FCE059A00EF371D /* HomeScreenCell.swift */; };
 		CE08B2A320F66822009FA568 /* BRAPIClient+Pigeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE08B2A220F66822009FA568 /* BRAPIClient+Pigeon.swift */; };
@@ -390,6 +389,7 @@
 		CE5393B022D7CC98000303B3 /* HistoryPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5393AF22D7CC98000303B3 /* HistoryPeriod.swift */; };
 		CE5E6C941EB7964900A476DB /* WalletDisabledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E6C931EB7964900A476DB /* WalletDisabledView.swift */; };
 		CE5E6C961EB8CCF500A476DB /* SupportCenterContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E6C951EB8CCF500A476DB /* SupportCenterContainer.swift */; };
+		CE5E6C9A1EB9135000A476DB /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5E6C991EB9135000A476DB /* Icon.xcassets */; };
 		CE5F21D91E4A922700C47B8E /* DismissLoginAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F21D81E4A922700C47B8E /* DismissLoginAnimator.swift */; };
 		CE5F21DB1E4A93A500C47B8E /* LoginTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F21DA1E4A93A500C47B8E /* LoginTransitionDelegate.swift */; };
 		CE6314831E08E5BB00D4AFE0 /* UIView+InitAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6314821E08E5BB00D4AFE0 /* UIView+InitAdditions.swift */; };
@@ -764,6 +764,7 @@
 		3AB3EE0E227A23B400414616 /* ASADataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ASADataFormatter.swift; path = src/Utilities/ASADataFormatter.swift; sourceTree = "<group>"; };
 		3AB3EE10227A27DD00414616 /* ASADataFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASADataFormatterTests.swift; sourceTree = "<group>"; };
 		3AEF7B71234A4E3C005BE184 /* RequestUrlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUrlTests.swift; sourceTree = "<group>"; };
+		5F469DCF246948F20091DA11 /* WacSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WacSDK.framework; sourceTree = "<group>"; };
 		5FE4708124629C660061B2E9 /* MKMapView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MKMapView+Additions.swift"; path = "src/Extensions/MKMapView+Additions.swift"; sourceTree = "<group>"; };
 		71014F7B2327E49400DA1373 /* fiatcurrencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fiatcurrencies.json; path = Resources/fiatcurrencies.json; sourceTree = "<group>"; };
 		710B036121F67888007E8A2A /* MockClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockClasses.swift; path = MockClasses/MockClasses.swift; sourceTree = "<group>"; };
@@ -802,6 +803,7 @@
 		754AE0BD1DFE8E5A007FD001 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = src/Platform/module.modulemap; sourceTree = "<group>"; };
 		75A2A7901DA5934300A983D8 /* coinsquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coinsquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A2A7931DA5934300A983D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		75A2A79A1DA5934300A983D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75A2A79D1DA5934300A983D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75A2A79F1DA5934300A983D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75A2A7A41DA5934300A983D8 /* breadwalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = breadwalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1038,17 +1040,15 @@
 		9AE800CF21FFF81F00D5058C /* rewardsIcon-64.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "rewardsIcon-64.gif"; path = "src/Views/AnimatedIcons/Rewards Icon Frames/rewardsIcon-64.gif"; sourceTree = "<group>"; };
 		9AE8FFF721FE64E200D5058C /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RewardsView.swift; path = src/Views/RewardsView.swift; sourceTree = "<group>"; };
 		9AE8FFF921FE6FE000D5058C /* RewardsIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RewardsIconView.swift; path = src/Views/AnimatedIcons/RewardsIconView.swift; sourceTree = "<group>"; };
-		B3131C2924D90C5300F5F138 /* SendVerificationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendVerificationView.xib; sourceTree = "<group>"; };
-		B3131C2A24D90C5300F5F138 /* ActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
-		B3131C2B24D90C5300F5F138 /* AtmLocationsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AtmLocationsView.xib; sourceTree = "<group>"; };
-		B3131C2C24D90C5300F5F138 /* VerifyCashCodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerifyCashCodeView.xib; sourceTree = "<group>"; };
-		B3131C2D24D90C5300F5F138 /* WithdrawalStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithdrawalStatusView.xib; sourceTree = "<group>"; };
-		B3131C2E24D90C5300F5F138 /* ListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListView.xib; sourceTree = "<group>"; };
-		B3131C2F24D90C5300F5F138 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
-		B3131C3024D90C5300F5F138 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
-		B3131C3124D90C5300F5F138 /* AtmInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AtmInfoView.xib; sourceTree = "<group>"; };
-		B3B72ACF24C50631002210EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B3B72AD324C5096C002210EA /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
+		B35DD21C24F84F6000F8805E /* SendVerificationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendVerificationView.xib; sourceTree = "<group>"; };
+		B35DD21D24F84F6000F8805E /* ActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
+		B35DD21E24F84F6000F8805E /* AtmLocationsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AtmLocationsView.xib; sourceTree = "<group>"; };
+		B35DD22324F84F6000F8805E /* VerifyCashCodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerifyCashCodeView.xib; sourceTree = "<group>"; };
+		B35DD22424F84F6000F8805E /* WithdrawalStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithdrawalStatusView.xib; sourceTree = "<group>"; };
+		B35DD22724F84F6000F8805E /* ListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListView.xib; sourceTree = "<group>"; };
+		B35DD22A24F84F6000F8805E /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
+		B35DD22B24F84F6000F8805E /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		B35DD22C24F84F6000F8805E /* AtmInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AtmInfoView.xib; sourceTree = "<group>"; };
 		CE0822631FCD1BD100EF371D /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreenViewController.swift; path = src/ViewControllers/HomeScreenViewController.swift; sourceTree = "<group>"; };
 		CE0822651FCE059A00EF371D /* HomeScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreenCell.swift; path = src/Views/HomeScreenCell.swift; sourceTree = "<group>"; };
 		CE08B2A220F66822009FA568 /* BRAPIClient+Pigeon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BRAPIClient+Pigeon.swift"; path = "src/Pigeon/BRAPIClient+Pigeon.swift"; sourceTree = "<group>"; };
@@ -1117,6 +1117,7 @@
 		CE5393AF22D7CC98000303B3 /* HistoryPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryPeriod.swift; path = src/Models/HistoryPeriod.swift; sourceTree = "<group>"; };
 		CE5E6C931EB7964900A476DB /* WalletDisabledView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalletDisabledView.swift; path = src/Views/WalletDisabledView.swift; sourceTree = "<group>"; };
 		CE5E6C951EB8CCF500A476DB /* SupportCenterContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupportCenterContainer.swift; path = src/ViewControllers/SupportCenterContainer.swift; sourceTree = "<group>"; };
+		CE5E6C991EB9135000A476DB /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
 		CE5F21D81E4A922700C47B8E /* DismissLoginAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DismissLoginAnimator.swift; path = src/ViewControllers/ViewControllerTransitions/DismissLoginAnimator.swift; sourceTree = "<group>"; };
 		CE5F21DA1E4A93A500C47B8E /* LoginTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginTransitionDelegate.swift; path = src/ViewControllers/ViewControllerTransitions/LoginTransitionDelegate.swift; sourceTree = "<group>"; };
 		CE6314821E08E5BB00D4AFE0 /* UIView+InitAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+InitAdditions.swift"; path = "src/Extensions/UIView+InitAdditions.swift"; sourceTree = "<group>"; };
@@ -1272,7 +1273,7 @@
 				7CBC6B2E21751ECA00899AFB /* iAd.framework in Frameworks */,
 				7C662B0C222F515F0008814C /* ../$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)/BRCrypto.framework in Frameworks */,
 				22A9A9661DF61FEE000F0016 /* WebKit.framework in Frameworks */,
-				B35DD1F624F8374300F8805E /* CashUI in Frameworks */,
+				B35DD21A24F84F2800F8805E /* CashUI in Frameworks */,
 				22A9A9641DF61FE7000F0016 /* Security.framework in Frameworks */,
 				22A9A9621DF61FE0000F0016 /* SystemConfiguration.framework in Frameworks */,
 				22A9A9601DF61FD8000F0016 /* CoreLocation.framework in Frameworks */,
@@ -1476,7 +1477,7 @@
 		75A2A7871DA5934300A983D8 = {
 			isa = PBXGroup;
 			children = (
-				B3131C2824D90C5300F5F138 /* JustCash */,
+				B35DD21B24F84F6000F8805E /* JustCash */,
 				75A2A7921DA5934300A983D8 /* breadwallet */,
 				75A2A7A71DA5934300A983D8 /* breadwalletTests */,
 				75A2A7B21DA5934300A983D8 /* breadwalletUITests */,
@@ -1523,6 +1524,8 @@
 				CEC7E593200D7C830056F410 /* Sentry.swift */,
 				CE4C1CC71ED88B600063E184 /* URLController.swift */,
 				CE916E321EDA800E00D641D6 /* UserDefaultsUpdater.swift */,
+				75A2A79A1DA5934300A983D8 /* Assets.xcassets */,
+				CE5E6C991EB9135000A476DB /* Icon.xcassets */,
 				CEE20C321EA5B2EC0086F724 /* Constants */,
 				CE20C8F01DBAF6E100C8397A /* Extensions */,
 				CE20C90A1DBC59C500C8397A /* FlowControllers */,
@@ -1587,6 +1590,7 @@
 		75A2A7F11DA5935F00A983D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5F469DCF246948F20091DA11 /* WacSDK.framework */,
 				22717B052315D3E300F77F4E /* CloudKit.framework */,
 				7C4D64CA222C511900DE2C2B /* libresolv.tbd */,
 				7C4D64B7222B5F3B00DE2C2B /* ../$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)/BRCrypto.framework */,
@@ -1630,8 +1634,6 @@
 		7C377EBC20F64C1200E8CF1C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B3B72AD324C5096C002210EA /* Icon.xcassets */,
-				B3B72ACF24C50631002210EA /* Assets.xcassets */,
 				71014F7B2327E49400DA1373 /* fiatcurrencies.json */,
 				E837FCFB219D1BBC00F59D99 /* onboarding-videos */,
 				CE473D7B1F042F1E00C0ACFD /* coinflip.aiff */,
@@ -1845,18 +1847,18 @@
 			name = "Rewards Icon Frames";
 			sourceTree = "<group>";
 		};
-		B3131C2824D90C5300F5F138 /* JustCash */ = {
+		B35DD21B24F84F6000F8805E /* JustCash */ = {
 			isa = PBXGroup;
 			children = (
-				B3131C2924D90C5300F5F138 /* SendVerificationView.xib */,
-				B3131C2A24D90C5300F5F138 /* ActivityView.xib */,
-				B3131C2B24D90C5300F5F138 /* AtmLocationsView.xib */,
-				B3131C2C24D90C5300F5F138 /* VerifyCashCodeView.xib */,
-				B3131C2D24D90C5300F5F138 /* WithdrawalStatusView.xib */,
-				B3131C2E24D90C5300F5F138 /* ListView.xib */,
-				B3131C2F24D90C5300F5F138 /* ActivityTableViewCell.xib */,
-				B3131C3024D90C5300F5F138 /* MenuView.xib */,
-				B3131C3124D90C5300F5F138 /* AtmInfoView.xib */,
+				B35DD21C24F84F6000F8805E /* SendVerificationView.xib */,
+				B35DD21D24F84F6000F8805E /* ActivityView.xib */,
+				B35DD21E24F84F6000F8805E /* AtmLocationsView.xib */,
+				B35DD22324F84F6000F8805E /* VerifyCashCodeView.xib */,
+				B35DD22424F84F6000F8805E /* WithdrawalStatusView.xib */,
+				B35DD22724F84F6000F8805E /* ListView.xib */,
+				B35DD22A24F84F6000F8805E /* ActivityTableViewCell.xib */,
+				B35DD22B24F84F6000F8805E /* MenuView.xib */,
+				B35DD22C24F84F6000F8805E /* AtmInfoView.xib */,
 			);
 			name = JustCash;
 			path = breadwallet/JustCash;
@@ -2357,7 +2359,7 @@
 			);
 			name = breadwallet;
 			packageProductDependencies = (
-				B35DD1F524F8374300F8805E /* CashUI */,
+				B35DD21924F84F2800F8805E /* CashUI */,
 			);
 			productName = breadwallet;
 			productReference = 75A2A7901DA5934300A983D8 /* coinsquare.app */;
@@ -2504,7 +2506,7 @@
 			);
 			mainGroup = 75A2A7871DA5934300A983D8;
 			packageReferences = (
-				B35DD1F424F8374300F8805E /* XCRemoteSwiftPackageReference "cash-ui-ios" */,
+				B35DD21824F84F2800F8805E /* XCRemoteSwiftPackageReference "cash-ui-ios" */,
 			);
 			productRefGroup = 75A2A7911DA5934300A983D8 /* Products */;
 			projectDirPath = "";
@@ -2648,7 +2650,7 @@
 				E837FD02219D1C0600F59D99 /* onboarding-video-coins-in.mp4 in Resources */,
 				9AE8010E21FFF81F00D5058C /* rewardsIcon-41.gif in Resources */,
 				9A926F9822034B3800CC2263 /* CellHighlight-24.png in Resources */,
-				B3131C3524D90C5400F5F138 /* VerifyCashCodeView.xib in Resources */,
+				B35DD23324F84F6000F8805E /* VerifyCashCodeView.xib in Resources */,
 				9AE8010321FFF81F00D5058C /* rewardsIcon-50.gif in Resources */,
 				7CC7D8DA21581C41007E1B9A /* brd-web-3.tar in Resources */,
 				9A926F7222034B3800CC2263 /* CellHighlight-74.png in Resources */,
@@ -2750,9 +2752,9 @@
 				9AE800E021FFF81F00D5058C /* rewardsIcon-25.gif in Resources */,
 				9A926F9622034B3800CC2263 /* CellHighlight-12.png in Resources */,
 				9A926F7422034B3800CC2263 /* CellHighlight-30.png in Resources */,
-				B3131C3924D90C5400F5F138 /* MenuView.xib in Resources */,
+				B35DD23924F84F6000F8805E /* MenuView.xib in Resources */,
 				9A926F5D22034B3800CC2263 /* CellHighlight-15.png in Resources */,
-				B3131C3824D90C5400F5F138 /* ActivityTableViewCell.xib in Resources */,
+				B35DD23824F84F6000F8805E /* ActivityTableViewCell.xib in Resources */,
 				9A926F4522034B3700CC2263 /* CellHighlight-62.png in Resources */,
 				9A926F9222034B3800CC2263 /* CellHighlight-21.png in Resources */,
 				9A926F8122034B3800CC2263 /* CellHighlight-28.png in Resources */,
@@ -2769,6 +2771,7 @@
 				CE473D7C1F042F1E00C0ACFD /* coinflip.aiff in Resources */,
 				9A926F8E22034B3800CC2263 /* CellHighlight-84.png in Resources */,
 				9AE800EF21FFF81F00D5058C /* rewardsIcon-68.gif in Resources */,
+				CE5E6C9A1EB9135000A476DB /* Icon.xcassets in Resources */,
 				71014F7C2327E49400DA1373 /* fiatcurrencies.json in Resources */,
 				9AE800EC21FFF81F00D5058C /* rewardsIcon-3.gif in Resources */,
 				9AE8011521FFF81F00D5058C /* rewardsIcon-64.gif in Resources */,
@@ -2780,22 +2783,21 @@
 				2218BD791E8F6CBA0091D5E8 /* AssetBundles.plist in Resources */,
 				9AE800E821FFF81F00D5058C /* rewardsIcon-20.gif in Resources */,
 				9AE8010021FFF81F00D5058C /* rewardsIcon-10.gif in Resources */,
+				B35DD22D24F84F6000F8805E /* SendVerificationView.xib in Resources */,
+				B35DD22F24F84F6000F8805E /* AtmLocationsView.xib in Resources */,
 				9A926F9022034B3800CC2263 /* CellHighlight-18.png in Resources */,
-				B3131C3224D90C5400F5F138 /* SendVerificationView.xib in Resources */,
-				B3131C3424D90C5400F5F138 /* AtmLocationsView.xib in Resources */,
 				9AE8011121FFF81F00D5058C /* rewardsIcon-6.gif in Resources */,
 				9A926F8922034B3800CC2263 /* CellHighlight-69.png in Resources */,
 				9A926F8B22034B3800CC2263 /* CellHighlight-38.png in Resources */,
-				B3B72AD424C5096C002210EA /* Icon.xcassets in Resources */,
 				9A926F7C22034B3800CC2263 /* CellHighlight-73.png in Resources */,
 				9AE800EA21FFF81F00D5058C /* rewardsIcon-48.gif in Resources */,
-				B3B72AD124C50631002210EA /* Assets.xcassets in Resources */,
 				9AE800D221FFF81F00D5058C /* rewardsIcon-4.gif in Resources */,
 				9A926F6D22034B3800CC2263 /* CellHighlight-31.png in Resources */,
 				9AE800D521FFF81F00D5058C /* rewardsIcon-27.gif in Resources */,
 				9AE800D821FFF81F00D5058C /* rewardsIcon-43.gif in Resources */,
 				9A926F6222034B3800CC2263 /* CellHighlight-45.png in Resources */,
 				7C98B0A5215A99C8007C85EB /* brd-tokens-staging.tar in Resources */,
+				75A2A79B1DA5934300A983D8 /* Assets.xcassets in Resources */,
 				9A926F8322034B3800CC2263 /* CellHighlight-70.png in Resources */,
 				9A926F5C22034B3800CC2263 /* CellHighlight-16.png in Resources */,
 				9A926F7022034B3800CC2263 /* CellHighlight-1.png in Resources */,
@@ -2804,13 +2806,13 @@
 				9A926F5022034B3800CC2263 /* CellHighlight-80.png in Resources */,
 				9A926F5722034B3800CC2263 /* CellHighlight-40.png in Resources */,
 				9A926F5422034B3800CC2263 /* CellHighlight-37.png in Resources */,
-				B3131C3A24D90C5400F5F138 /* AtmInfoView.xib in Resources */,
+				B35DD23A24F84F6000F8805E /* AtmInfoView.xib in Resources */,
 				9AE800FA21FFF81F00D5058C /* rewardsIcon-23.gif in Resources */,
 				9AE800D421FFF81F00D5058C /* rewardsIcon-58.gif in Resources */,
 				9A926F5E22034B3800CC2263 /* CellHighlight-66.png in Resources */,
 				9AE8010F21FFF81F00D5058C /* rewardsIcon-14.gif in Resources */,
 				9AE800F421FFF81F00D5058C /* rewardsIcon-19.gif in Resources */,
-				B3131C3724D90C5400F5F138 /* ListView.xib in Resources */,
+				B35DD23624F84F6000F8805E /* ListView.xib in Resources */,
 				9AE8010821FFF81F00D5058C /* rewardsIcon-42.gif in Resources */,
 				9A926F6522034B3800CC2263 /* CellHighlight-63.png in Resources */,
 				9AE800F121FFF81F00D5058C /* rewardsIcon-53.gif in Resources */,
@@ -2818,12 +2820,12 @@
 				9A926F7D22034B3800CC2263 /* CellHighlight-57.png in Resources */,
 				9AE8010721FFF81F00D5058C /* rewardsIcon-16.gif in Resources */,
 				9A926F4D22034B3800CC2263 /* CellHighlight-68.png in Resources */,
-				B3131C3324D90C5400F5F138 /* ActivityView.xib in Resources */,
+				B35DD22E24F84F6000F8805E /* ActivityView.xib in Resources */,
 				9AE8010B21FFF81F00D5058C /* rewardsIcon-56.gif in Resources */,
 				9A926F6B22034B3800CC2263 /* CellHighlight-39.png in Resources */,
 				9A926F5B22034B3800CC2263 /* CellHighlight-32.png in Resources */,
 				9A926F7522034B3800CC2263 /* CellHighlight-33.png in Resources */,
-				B3131C3624D90C5400F5F138 /* WithdrawalStatusView.xib in Resources */,
+				B35DD23424F84F6000F8805E /* WithdrawalStatusView.xib in Resources */,
 				9A926F6C22034B3800CC2263 /* CellHighlight-61.png in Resources */,
 				9A926F9422034B3800CC2263 /* CellHighlight-56.png in Resources */,
 			);
@@ -2872,7 +2874,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n#    swiftlint\n     exit 0\nelse\n    if [ \"${CONFIGURATION}\" == \"Release\" ]; then\n        exit 0;\n    else\n        echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint or install via homebrew\"\n        exit 1\n    fi\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\n     exit 0\nelse\n    if [ \"${CONFIGURATION}\" == \"Release\" ]; then\n        exit 0;\n    else\n        echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint or install via homebrew\"\n        exit 1\n    fi\nfi\n";
 		};
 		7CDC6A5521125C14004AE68E /* Thin Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3525,12 +3527,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
-				CURRENT_PROJECT_VERSION = 73;
+				CURRENT_PROJECT_VERSION = 76;
 				DEVELOPMENT_TEAM = J8785B8QGT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/breadwallet/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -3559,7 +3562,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
-				CURRENT_PROJECT_VERSION = 73;
+				CURRENT_PROJECT_VERSION = 76;
 				DEVELOPMENT_TEAM = J8785B8QGT;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"brd-web-3-staging.tar",
@@ -3569,6 +3572,7 @@
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/breadwallet/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -3758,12 +3762,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
-				CURRENT_PROJECT_VERSION = 73;
+				CURRENT_PROJECT_VERSION = 76;
 				DEVELOPMENT_TEAM = J8785B8QGT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/breadwallet/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -3960,7 +3965,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
-				CURRENT_PROJECT_VERSION = 73;
+				CURRENT_PROJECT_VERSION = 76;
 				DEVELOPMENT_TEAM = J8785B8QGT;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"brd-web-3.tar",
@@ -3970,6 +3975,7 @@
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/breadwallet/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -4166,7 +4172,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
-				CURRENT_PROJECT_VERSION = 73;
+				CURRENT_PROJECT_VERSION = 76;
 				DEVELOPMENT_TEAM = J8785B8QGT;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"brd-web-3.tar",
@@ -4176,6 +4182,7 @@
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/breadwallet/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -4448,12 +4455,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
-				CURRENT_PROJECT_VERSION = 73;
+				CURRENT_PROJECT_VERSION = 76;
 				DEVELOPMENT_TEAM = J8785B8QGT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/breadwallet/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -4655,12 +4663,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
-				CURRENT_PROJECT_VERSION = 73;
+				CURRENT_PROJECT_VERSION = 76;
 				DEVELOPMENT_TEAM = J8785B8QGT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/breadwallet/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -4857,7 +4866,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = breadwallet/breadwallet.entitlements;
-				CURRENT_PROJECT_VERSION = 73;
+				CURRENT_PROJECT_VERSION = 76;
 				DEVELOPMENT_TEAM = J8785B8QGT;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"brd-web-3.tar",
@@ -4867,6 +4876,7 @@
 					"$(SRCROOT)/Modules",
 					"$(BUILD_DIR)/$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/breadwallet/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Modules/breadwallet-core/bitcoin",
@@ -5081,7 +5091,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B35DD1F424F8374300F8805E /* XCRemoteSwiftPackageReference "cash-ui-ios" */ = {
+		B35DD21824F84F2800F8805E /* XCRemoteSwiftPackageReference "cash-ui-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/atmcoin/cash-ui-ios.git";
 			requirement = {
@@ -5092,9 +5102,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B35DD1F524F8374300F8805E /* CashUI */ = {
+		B35DD21924F84F2800F8805E /* CashUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B35DD1F424F8374300F8805E /* XCRemoteSwiftPackageReference "cash-ui-ios" */;
+			package = B35DD21824F84F2800F8805E /* XCRemoteSwiftPackageReference "cash-ui-ios" */;
 			productName = CashUI;
 		};
 /* End XCSwiftPackageProductDependency section */
