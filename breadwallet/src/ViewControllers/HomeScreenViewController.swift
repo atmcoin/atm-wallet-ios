@@ -230,6 +230,8 @@ class HomeScreenViewController: UIViewController, Subscriber, Trackable {
         return bellImageView
     }
 
+
+
     private func setupToolbar() {
         let buttons = [("ATM Cash Redemption", UIImage(imageLiteralResourceName: "cash_out"), #selector(atmCashRedemption)),
                        ("Scan QR Code", UIImage(imageLiteralResourceName: "qrcode"), #selector(scanQRCode)),

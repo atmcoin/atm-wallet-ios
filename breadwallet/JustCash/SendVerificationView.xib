@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WACSendVerificationCodeViewController" customModule="coinsquare" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SendVerificationCodeViewController" customModule="CashUI">
             <connections>
                 <outlet property="amountToWithdrawTextField" destination="afx-Df-vnD" id="afa-qa-Ws6"/>
                 <outlet property="atmMachineTitleLabel" destination="m4T-AD-bX7" id="wHm-0t-Lyi"/>
@@ -31,7 +31,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount to withdraw" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="afx-Df-vnD" customClass="WACTextField" customModule="coinsquare" customModuleProvider="target">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount to withdraw" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="afx-Df-vnD" customClass="CustomTextField" customModule="CashUI">
                     <rect key="frame" x="20" y="81" width="374" height="34"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -40,8 +40,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                     <connections>
-                        <action selector="textFieldEditingDidChange:" destination="-1" eventType="editingChanged" id="fA9-tX-fcM"/>
-                        <outlet property="delegate" destination="-1" id="reS-Mb-WBZ"/>
+                        <action selector="textFieldEditingDidChange:" destination="-1" eventType="editingChanged" id="RXb-cd-rYe"/>
                     </connections>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ram-c2-dlw" userLabel="Horizontal Separator 1">
@@ -52,7 +51,7 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="lGm-ai-a56"/>
                 </view>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X9r-DF-UH1" customClass="WACTextField" customModule="coinsquare" customModuleProvider="target">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X9r-DF-UH1" customClass="CustomTextField" customModule="CashUI">
                     <rect key="frame" x="20" y="151.5" width="374" height="34"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="1po-g4-daF"/>
@@ -60,8 +59,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                     <connections>
-                        <action selector="textFieldEditingDidChange:" destination="-1" eventType="editingChanged" id="XoM-2g-TlH"/>
-                        <outlet property="delegate" destination="-1" id="rJO-Ld-RRh"/>
+                        <action selector="textFieldEditingDidChange:" destination="-1" eventType="editingChanged" id="tvg-G5-doo"/>
                     </connections>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGD-0l-7Nt" userLabel="Horizontal Separator 2">
@@ -78,7 +76,7 @@
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D4X-3v-ZXt" customClass="WACTextField" customModule="coinsquare" customModuleProvider="target">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D4X-3v-ZXt" customClass="CustomTextField" customModule="CashUI">
                     <rect key="frame" x="20" y="235" width="180" height="34"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="eQk-Fo-S3M"/>
@@ -86,11 +84,10 @@
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
-                        <action selector="textFieldEditingDidChange:" destination="-1" eventType="editingChanged" id="pTf-09-Q8z"/>
-                        <outlet property="delegate" destination="-1" id="Gtn-55-jMR"/>
+                        <action selector="textFieldEditingDidChange:" destination="-1" eventType="editingChanged" id="Cz1-wg-p2X"/>
                     </connections>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DlL-Ge-lnf" customClass="WACTextField" customModule="coinsquare" customModuleProvider="target">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DlL-Ge-lnf" customClass="CustomTextField" customModule="CashUI">
                     <rect key="frame" x="214" y="235" width="180" height="34"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="2Uj-J9-T4q"/>
@@ -98,11 +95,10 @@
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
-                        <action selector="textFieldEditingDidChange:" destination="-1" eventType="editingChanged" id="zoM-Jg-Dh7"/>
-                        <outlet property="delegate" destination="-1" id="xGW-rC-Mw9"/>
+                        <action selector="textFieldEditingDidChange:" destination="-1" eventType="editingChanged" id="oVw-rc-y6C"/>
                     </connections>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofM-pJ-egC" customClass="WACButton" customModule="coinsquare" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofM-pJ-egC" customClass="CustomButton" customModule="CashUI">
                     <rect key="frame" x="20" y="277" width="374" height="34"/>
                     <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -110,7 +106,7 @@
                     </constraints>
                     <state key="normal" title="Get ATM Code"/>
                     <connections>
-                        <action selector="getVerificationCodeAction:" destination="-1" eventType="touchUpInside" id="u0r-Ny-1Bc"/>
+                        <action selector="getverificationCodeAction:" destination="-1" eventType="touchUpInside" id="tA5-AM-EFl"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min $20.00. Max $400.00. Multiple of $20.00 bills" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueb-T1-b63">

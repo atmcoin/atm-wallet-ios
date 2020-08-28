@@ -9,6 +9,7 @@
 import UIKit
 import BRCrypto
 import UserNotifications
+import CashUI
 
 private let timeSinceLastExitKey = "TimeSinceLastExit"
 private let shouldRequireLoginTimeoutKey = "ShouldRequireLoginTimeoutKey"
@@ -388,7 +389,7 @@ class ApplicationController: Subscriber, Trackable {
         }
         
         homeScreen.didTapRedemption = {
-            let vc = WACMenuViewController(nibName: "WACMenuView", bundle: nil)
+            let vc = CashUI.MenuViewController()
             navigationController.pushViewController(vc, animated: true)
         }
 

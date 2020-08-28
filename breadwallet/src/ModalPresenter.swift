@@ -8,6 +8,7 @@
 
 import UIKit
 import LocalAuthentication
+import CashUI
 
 // swiftlint:disable type_body_length
 // swiftlint:disable cyclomatic_complexity
@@ -537,7 +538,7 @@ class ModalPresenter: Subscriber, Trackable {
         // MARK: Root Menu
         var rootItems: [MenuItem] = [
             MenuItem(title: S.MenuButton.atmCashRedemption, icon: MenuItem.Icon.atmMap) {
-                let vc = WACMenuViewController(nibName: "WACMenuView", bundle: nil)
+                let vc = CashUI.MenuViewController()
                 menuNav.pushViewController(vc, animated: true)
             },
 
@@ -1173,7 +1174,7 @@ extension ModalPresenter {
     }
     
     func presentActivity() {
-        let vc = WACActivityViewController()
+        let vc = ActivityViewController()
         self.topViewController?.present(vc, animated: true, completion: nil)
     }
 }

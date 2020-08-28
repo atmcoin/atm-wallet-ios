@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -63,8 +63,6 @@
 		3AB3EE0F227A23B400414616 /* ASADataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3EE0E227A23B400414616 /* ASADataFormatter.swift */; };
 		3AB3EE11227A27DD00414616 /* ASADataFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3EE10227A27DD00414616 /* ASADataFormatterTests.swift */; };
 		3AEF7B72234A4E3C005BE184 /* RequestUrlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF7B71234A4E3C005BE184 /* RequestUrlTests.swift */; };
-		5F9CC31F24817A3700ADB47B /* WACMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9CC31D24817A3700ADB47B /* WACMenuViewController.swift */; };
-		5F9CC32024817A3700ADB47B /* WACMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F9CC31E24817A3700ADB47B /* WACMenuView.xib */; };
 		5FE4708224629C660061B2E9 /* MKMapView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4708124629C660061B2E9 /* MKMapView+Additions.swift */; };
 		71014F7C2327E49400DA1373 /* fiatcurrencies.json in Resources */ = {isa = PBXBuildFile; fileRef = 71014F7B2327E49400DA1373 /* fiatcurrencies.json */; };
 		710B036221F67888007E8A2A /* MockClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B036121F67888007E8A2A /* MockClasses.swift */; };
@@ -328,40 +326,16 @@
 		9AE8011521FFF81F00D5058C /* rewardsIcon-64.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9AE800CF21FFF81F00D5058C /* rewardsIcon-64.gif */; };
 		9AE8FFF821FE64E200D5058C /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8FFF721FE64E200D5058C /* RewardsView.swift */; };
 		9AE8FFFA21FE6FE000D5058C /* RewardsIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8FFF921FE6FE000D5058C /* RewardsIconView.swift */; };
-		B3648E8A246CE6C60002EA21 /* AtmInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E7C246CE6C60002EA21 /* AtmInfoView.swift */; };
-		B3648E8B246CE6C60002EA21 /* AtmAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E7D246CE6C60002EA21 /* AtmAnnotation.swift */; };
-		B3648E8C246CE6C60002EA21 /* AtmAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E7E246CE6C60002EA21 /* AtmAnnotationView.swift */; };
-		B3648E8D246CE6C60002EA21 /* AtmInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3648E7F246CE6C60002EA21 /* AtmInfoView.xib */; };
-		B3648E8E246CE6C60002EA21 /* WACMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E80246CE6C60002EA21 /* WACMapViewController.swift */; };
-		B3648E8F246CE6C60002EA21 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E82246CE6C60002EA21 /* UIView+Animations.swift */; };
-		B3648E90246CE6C60002EA21 /* WACVerifyCashCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E83246CE6C60002EA21 /* WACVerifyCashCodeViewController.swift */; };
-		B3648E91246CE6C60002EA21 /* WACVerifyCashCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3648E84246CE6C60002EA21 /* WACVerifyCashCodeView.xib */; };
-		B3648E92246CE6C60002EA21 /* WACSendVerificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3648E85246CE6C60002EA21 /* WACSendVerificationView.xib */; };
-		B3648E93246CE6C60002EA21 /* WACActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E86246CE6C60002EA21 /* WACActionViewController.swift */; };
-		B3648E94246CE6C60002EA21 /* WACSendVerificationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3648E87246CE6C60002EA21 /* WACSendVerificationCodeViewController.swift */; };
-		B36648E1247A194900AC9429 /* Date+WACAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36648E0247A194900AC9429 /* Date+WACAdditions.swift */; };
-		B36E720A24F3154300708A2E /* WacSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36E720924F3153700708A2E /* WacSDK.framework */; };
-		B36E720B24F3154300708A2E /* WacSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B36E720924F3153700708A2E /* WacSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B36E720D24F3173A00708A2E /* WACLoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E720C24F3173900708A2E /* WACLoadingButton.swift */; };
-		B36E721024F32DC900708A2E /* WACButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E720F24F32DC900708A2E /* WACButton.swift */; };
-		B36E721224F3F8BF00708A2E /* WACTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E721124F3F8BF00708A2E /* WACTextField.swift */; };
-		B36E721424F45D1A00708A2E /* WACUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E721324F45D1A00708A2E /* WACUser.swift */; };
-		B36E721624F49BD000708A2E /* String+Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E721524F49BD000708A2E /* String+Validations.swift */; };
-		B389C6FF247F502C0022FB66 /* UserDefaults+Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389C6FE247F502C0022FB66 /* UserDefaults+Persistable.swift */; };
-		B389C71A247F66A20022FB66 /* WACWithdrawalStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389C719247F66A20022FB66 /* WACWithdrawalStatusViewController.swift */; };
-		B389C71C247F66E80022FB66 /* WACWithdrawalStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B389C71B247F66E80022FB66 /* WACWithdrawalStatusView.xib */; };
-		B389C7202483636C0022FB66 /* WACSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389C71F2483636C0022FB66 /* WACSessionManager.swift */; };
-		B38C2B7324874B6500268FCD /* WACTransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C2B7224874B6500268FCD /* WACTransactionManager.swift */; };
-		B38C2C2B248ACA4A00268FCD /* String+WACAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C2C2A248ACA4A00268FCD /* String+WACAdditions.swift */; };
-		B3D0741A2478BCB000D734B7 /* WACActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D074192478BCB000D734B7 /* WACActivityViewController.swift */; };
-		B3D074222478D29A00D734B7 /* WACActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D074212478D29A00D734B7 /* WACActivityTableViewCell.swift */; };
-		B3D074242478D44500D734B7 /* WACActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D074232478D44500D734B7 /* WACActivityView.xib */; };
-		B3D074262478D58F00D734B7 /* WACActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D074252478D58F00D734B7 /* WACActivityTableViewCell.xib */; };
-		B3D0742B2478D6E000D734B7 /* WACTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D0742A2478D6E000D734B7 /* WACTransaction.swift */; };
-		B3E57D6E246D121B005A5879 /* WACAtmLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E57D6D246D121B005A5879 /* WACAtmLocationsViewController.swift */; };
-		B3E57D7D246D15F9005A5879 /* WACAtmLocationsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E57D7C246D15F9005A5879 /* WACAtmLocationsView.xib */; };
-		B3E57D7F246D201D005A5879 /* WACListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E57D7E246D201D005A5879 /* WACListView.xib */; };
-		B3E57D81246D20FC005A5879 /* WACListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E57D80246D20FC005A5879 /* WACListViewController.swift */; };
+		B35DD21A24F84F2800F8805E /* CashUI in Frameworks */ = {isa = PBXBuildFile; productRef = B35DD21924F84F2800F8805E /* CashUI */; };
+		B35DD22D24F84F6000F8805E /* SendVerificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD21C24F84F6000F8805E /* SendVerificationView.xib */; };
+		B35DD22E24F84F6000F8805E /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD21D24F84F6000F8805E /* ActivityView.xib */; };
+		B35DD22F24F84F6000F8805E /* AtmLocationsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD21E24F84F6000F8805E /* AtmLocationsView.xib */; };
+		B35DD23324F84F6000F8805E /* VerifyCashCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD22324F84F6000F8805E /* VerifyCashCodeView.xib */; };
+		B35DD23424F84F6000F8805E /* WithdrawalStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD22424F84F6000F8805E /* WithdrawalStatusView.xib */; };
+		B35DD23624F84F6000F8805E /* ListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD22724F84F6000F8805E /* ListView.xib */; };
+		B35DD23824F84F6000F8805E /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD22A24F84F6000F8805E /* ActivityTableViewCell.xib */; };
+		B35DD23924F84F6000F8805E /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD22B24F84F6000F8805E /* MenuView.xib */; };
+		B35DD23A24F84F6000F8805E /* AtmInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35DD22C24F84F6000F8805E /* AtmInfoView.xib */; };
 		CE0822641FCD1BD100EF371D /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0822631FCD1BD100EF371D /* HomeScreenViewController.swift */; };
 		CE0822661FCE059A00EF371D /* HomeScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0822651FCE059A00EF371D /* HomeScreenCell.swift */; };
 		CE08B2A320F66822009FA568 /* BRAPIClient+Pigeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE08B2A220F66822009FA568 /* BRAPIClient+Pigeon.swift */; };
@@ -684,13 +658,6 @@
 			remoteGlobalIDString = BD12FD351D767BA0001815C7;
 			remoteInfo = SwiftProtobuf_iOS;
 		};
-		B36E720824F3153700708A2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B36E720324F3153700708A2E /* WacSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B362079724528B9B00D6A566;
-			remoteInfo = WacSDK;
-		};
 		CEA7E6801F09A9D2001F8C27 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 75A2A7881DA5934300A983D8 /* Project object */;
@@ -708,7 +675,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				754AE0B71DFCA870007FD001 /* libbz2.framework in Embed Frameworks */,
-				B36E720B24F3154300708A2E /* WacSDK.framework in Embed Frameworks */,
 				7CD03E8623429F580084F00F /* SwiftProtobuf.framework in Embed Frameworks */,
 				7C662B0D222F515F0008814C /* ../$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)/BRCrypto.framework in Embed Frameworks */,
 			);
@@ -799,8 +765,6 @@
 		3AB3EE10227A27DD00414616 /* ASADataFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASADataFormatterTests.swift; sourceTree = "<group>"; };
 		3AEF7B71234A4E3C005BE184 /* RequestUrlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUrlTests.swift; sourceTree = "<group>"; };
 		5F469DCF246948F20091DA11 /* WacSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WacSDK.framework; sourceTree = "<group>"; };
-		5F9CC31D24817A3700ADB47B /* WACMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACMenuViewController.swift; sourceTree = "<group>"; };
-		5F9CC31E24817A3700ADB47B /* WACMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WACMenuView.xib; sourceTree = "<group>"; };
 		5FE4708124629C660061B2E9 /* MKMapView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MKMapView+Additions.swift"; path = "src/Extensions/MKMapView+Additions.swift"; sourceTree = "<group>"; };
 		71014F7B2327E49400DA1373 /* fiatcurrencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fiatcurrencies.json; path = Resources/fiatcurrencies.json; sourceTree = "<group>"; };
 		710B036121F67888007E8A2A /* MockClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockClasses.swift; path = MockClasses/MockClasses.swift; sourceTree = "<group>"; };
@@ -1076,39 +1040,15 @@
 		9AE800CF21FFF81F00D5058C /* rewardsIcon-64.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "rewardsIcon-64.gif"; path = "src/Views/AnimatedIcons/Rewards Icon Frames/rewardsIcon-64.gif"; sourceTree = "<group>"; };
 		9AE8FFF721FE64E200D5058C /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RewardsView.swift; path = src/Views/RewardsView.swift; sourceTree = "<group>"; };
 		9AE8FFF921FE6FE000D5058C /* RewardsIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RewardsIconView.swift; path = src/Views/AnimatedIcons/RewardsIconView.swift; sourceTree = "<group>"; };
-		B3648E7C246CE6C60002EA21 /* AtmInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtmInfoView.swift; sourceTree = "<group>"; };
-		B3648E7D246CE6C60002EA21 /* AtmAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtmAnnotation.swift; sourceTree = "<group>"; };
-		B3648E7E246CE6C60002EA21 /* AtmAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtmAnnotationView.swift; sourceTree = "<group>"; };
-		B3648E7F246CE6C60002EA21 /* AtmInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AtmInfoView.xib; sourceTree = "<group>"; };
-		B3648E80246CE6C60002EA21 /* WACMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACMapViewController.swift; sourceTree = "<group>"; };
-		B3648E82246CE6C60002EA21 /* UIView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
-		B3648E83246CE6C60002EA21 /* WACVerifyCashCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACVerifyCashCodeViewController.swift; sourceTree = "<group>"; };
-		B3648E84246CE6C60002EA21 /* WACVerifyCashCodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WACVerifyCashCodeView.xib; sourceTree = "<group>"; };
-		B3648E85246CE6C60002EA21 /* WACSendVerificationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WACSendVerificationView.xib; sourceTree = "<group>"; };
-		B3648E86246CE6C60002EA21 /* WACActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACActionViewController.swift; sourceTree = "<group>"; };
-		B3648E87246CE6C60002EA21 /* WACSendVerificationCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACSendVerificationCodeViewController.swift; sourceTree = "<group>"; };
-		B36648E0247A194900AC9429 /* Date+WACAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+WACAdditions.swift"; sourceTree = "<group>"; };
-		B36E720324F3153700708A2E /* WacSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WacSDK.xcodeproj; path = "Modules/cash-sdk-ios/WacSDK/WacSDK.xcodeproj"; sourceTree = "<group>"; };
-		B36E720C24F3173900708A2E /* WACLoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACLoadingButton.swift; sourceTree = "<group>"; };
-		B36E720F24F32DC900708A2E /* WACButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACButton.swift; sourceTree = "<group>"; };
-		B36E721124F3F8BF00708A2E /* WACTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACTextField.swift; sourceTree = "<group>"; };
-		B36E721324F45D1A00708A2E /* WACUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACUser.swift; sourceTree = "<group>"; };
-		B36E721524F49BD000708A2E /* String+Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validations.swift"; sourceTree = "<group>"; };
-		B389C6FE247F502C0022FB66 /* UserDefaults+Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Persistable.swift"; sourceTree = "<group>"; };
-		B389C719247F66A20022FB66 /* WACWithdrawalStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACWithdrawalStatusViewController.swift; sourceTree = "<group>"; };
-		B389C71B247F66E80022FB66 /* WACWithdrawalStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WACWithdrawalStatusView.xib; sourceTree = "<group>"; };
-		B389C71F2483636C0022FB66 /* WACSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACSessionManager.swift; sourceTree = "<group>"; };
-		B38C2B7224874B6500268FCD /* WACTransactionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACTransactionManager.swift; sourceTree = "<group>"; };
-		B38C2C2A248ACA4A00268FCD /* String+WACAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+WACAdditions.swift"; sourceTree = "<group>"; };
-		B3D074192478BCB000D734B7 /* WACActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACActivityViewController.swift; sourceTree = "<group>"; };
-		B3D074212478D29A00D734B7 /* WACActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACActivityTableViewCell.swift; sourceTree = "<group>"; };
-		B3D074232478D44500D734B7 /* WACActivityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WACActivityView.xib; sourceTree = "<group>"; };
-		B3D074252478D58F00D734B7 /* WACActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WACActivityTableViewCell.xib; sourceTree = "<group>"; };
-		B3D0742A2478D6E000D734B7 /* WACTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACTransaction.swift; sourceTree = "<group>"; };
-		B3E57D6D246D121B005A5879 /* WACAtmLocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACAtmLocationsViewController.swift; sourceTree = "<group>"; };
-		B3E57D7C246D15F9005A5879 /* WACAtmLocationsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WACAtmLocationsView.xib; sourceTree = "<group>"; };
-		B3E57D7E246D201D005A5879 /* WACListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WACListView.xib; sourceTree = "<group>"; };
-		B3E57D80246D20FC005A5879 /* WACListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACListViewController.swift; sourceTree = "<group>"; };
+		B35DD21C24F84F6000F8805E /* SendVerificationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendVerificationView.xib; sourceTree = "<group>"; };
+		B35DD21D24F84F6000F8805E /* ActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
+		B35DD21E24F84F6000F8805E /* AtmLocationsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AtmLocationsView.xib; sourceTree = "<group>"; };
+		B35DD22324F84F6000F8805E /* VerifyCashCodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerifyCashCodeView.xib; sourceTree = "<group>"; };
+		B35DD22424F84F6000F8805E /* WithdrawalStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithdrawalStatusView.xib; sourceTree = "<group>"; };
+		B35DD22724F84F6000F8805E /* ListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListView.xib; sourceTree = "<group>"; };
+		B35DD22A24F84F6000F8805E /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
+		B35DD22B24F84F6000F8805E /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		B35DD22C24F84F6000F8805E /* AtmInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AtmInfoView.xib; sourceTree = "<group>"; };
 		CE0822631FCD1BD100EF371D /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreenViewController.swift; path = src/ViewControllers/HomeScreenViewController.swift; sourceTree = "<group>"; };
 		CE0822651FCE059A00EF371D /* HomeScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreenCell.swift; path = src/Views/HomeScreenCell.swift; sourceTree = "<group>"; };
 		CE08B2A220F66822009FA568 /* BRAPIClient+Pigeon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BRAPIClient+Pigeon.swift"; path = "src/Pigeon/BRAPIClient+Pigeon.swift"; sourceTree = "<group>"; };
@@ -1333,10 +1273,10 @@
 				7CBC6B2E21751ECA00899AFB /* iAd.framework in Frameworks */,
 				7C662B0C222F515F0008814C /* ../$(BRCORE_CONFIGURATION)-$(PLATFORM_NAME)/BRCrypto.framework in Frameworks */,
 				22A9A9661DF61FEE000F0016 /* WebKit.framework in Frameworks */,
+				B35DD21A24F84F2800F8805E /* CashUI in Frameworks */,
 				22A9A9641DF61FE7000F0016 /* Security.framework in Frameworks */,
 				22A9A9621DF61FE0000F0016 /* SystemConfiguration.framework in Frameworks */,
 				22A9A9601DF61FD8000F0016 /* CoreLocation.framework in Frameworks */,
-				B36E720A24F3154300708A2E /* WacSDK.framework in Frameworks */,
 				22A9A95E1DF61FD0000F0016 /* PushKit.framework in Frameworks */,
 				7CD03E8523429F580084F00F /* SwiftProtobuf.framework in Frameworks */,
 				22717B062315D3E300F77F4E /* CloudKit.framework in Frameworks */,
@@ -1537,6 +1477,7 @@
 		75A2A7871DA5934300A983D8 = {
 			isa = PBXGroup;
 			children = (
+				B35DD21B24F84F6000F8805E /* JustCash */,
 				75A2A7921DA5934300A983D8 /* breadwallet */,
 				75A2A7A71DA5934300A983D8 /* breadwalletTests */,
 				75A2A7B21DA5934300A983D8 /* breadwalletUITests */,
@@ -1672,7 +1613,6 @@
 		75B6F52F1DA71DCC0031A93F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				B36E720324F3153700708A2E /* WacSDK.xcodeproj */,
 				7CD03E6B23429EB50084F00F /* SwiftProtobuf.xcodeproj */,
 				22A9A9971DF63426000F0016 /* libbz2 */,
 				75FEFD1F1DAEE7A400203D3A /* sqlite3 */,
@@ -1907,93 +1847,21 @@
 			name = "Rewards Icon Frames";
 			sourceTree = "<group>";
 		};
-		B3648E79246CE6C60002EA21 /* WAC */ = {
+		B35DD21B24F84F6000F8805E /* JustCash */ = {
 			isa = PBXGroup;
 			children = (
-				B36E720E24F32DA100708A2E /* CustomUI */,
-				B36648D2247A192C00AC9429 /* Extensions */,
-				B3D074272478D67900D734B7 /* Model */,
-				B3E57D6D246D121B005A5879 /* WACAtmLocationsViewController.swift */,
-				B3E57D7C246D15F9005A5879 /* WACAtmLocationsView.xib */,
-				B3648E80246CE6C60002EA21 /* WACMapViewController.swift */,
-				B3E57D80246D20FC005A5879 /* WACListViewController.swift */,
-				B3E57D7E246D201D005A5879 /* WACListView.xib */,
-				B3648E7B246CE6C60002EA21 /* Map */,
-				B3648E81246CE6C60002EA21 /* ActionViewControllers */,
-				B3D074192478BCB000D734B7 /* WACActivityViewController.swift */,
-				B3D074232478D44500D734B7 /* WACActivityView.xib */,
-				B3D074212478D29A00D734B7 /* WACActivityTableViewCell.swift */,
-				B3D074252478D58F00D734B7 /* WACActivityTableViewCell.xib */,
-				B389C719247F66A20022FB66 /* WACWithdrawalStatusViewController.swift */,
-				B389C71B247F66E80022FB66 /* WACWithdrawalStatusView.xib */,
-				5F9CC31D24817A3700ADB47B /* WACMenuViewController.swift */,
-				5F9CC31E24817A3700ADB47B /* WACMenuView.xib */,
+				B35DD21C24F84F6000F8805E /* SendVerificationView.xib */,
+				B35DD21D24F84F6000F8805E /* ActivityView.xib */,
+				B35DD21E24F84F6000F8805E /* AtmLocationsView.xib */,
+				B35DD22324F84F6000F8805E /* VerifyCashCodeView.xib */,
+				B35DD22424F84F6000F8805E /* WithdrawalStatusView.xib */,
+				B35DD22724F84F6000F8805E /* ListView.xib */,
+				B35DD22A24F84F6000F8805E /* ActivityTableViewCell.xib */,
+				B35DD22B24F84F6000F8805E /* MenuView.xib */,
+				B35DD22C24F84F6000F8805E /* AtmInfoView.xib */,
 			);
-			path = WAC;
-			sourceTree = "<group>";
-		};
-		B3648E7B246CE6C60002EA21 /* Map */ = {
-			isa = PBXGroup;
-			children = (
-				B3648E7C246CE6C60002EA21 /* AtmInfoView.swift */,
-				B3648E7D246CE6C60002EA21 /* AtmAnnotation.swift */,
-				B3648E7E246CE6C60002EA21 /* AtmAnnotationView.swift */,
-				B3648E7F246CE6C60002EA21 /* AtmInfoView.xib */,
-			);
-			path = Map;
-			sourceTree = "<group>";
-		};
-		B3648E81246CE6C60002EA21 /* ActionViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				B3648E82246CE6C60002EA21 /* UIView+Animations.swift */,
-				B3648E86246CE6C60002EA21 /* WACActionViewController.swift */,
-				B3648E87246CE6C60002EA21 /* WACSendVerificationCodeViewController.swift */,
-				B3648E85246CE6C60002EA21 /* WACSendVerificationView.xib */,
-				B3648E83246CE6C60002EA21 /* WACVerifyCashCodeViewController.swift */,
-				B3648E84246CE6C60002EA21 /* WACVerifyCashCodeView.xib */,
-			);
-			path = ActionViewControllers;
-			sourceTree = "<group>";
-		};
-		B36648D2247A192C00AC9429 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				B36648E0247A194900AC9429 /* Date+WACAdditions.swift */,
-				B389C6FE247F502C0022FB66 /* UserDefaults+Persistable.swift */,
-				B38C2C2A248ACA4A00268FCD /* String+WACAdditions.swift */,
-				B36E721524F49BD000708A2E /* String+Validations.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		B36E720424F3153700708A2E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B36E720924F3153700708A2E /* WacSDK.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B36E720E24F32DA100708A2E /* CustomUI */ = {
-			isa = PBXGroup;
-			children = (
-				B36E721124F3F8BF00708A2E /* WACTextField.swift */,
-				B36E720C24F3173900708A2E /* WACLoadingButton.swift */,
-				B36E720F24F32DC900708A2E /* WACButton.swift */,
-			);
-			path = CustomUI;
-			sourceTree = "<group>";
-		};
-		B3D074272478D67900D734B7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B389C71F2483636C0022FB66 /* WACSessionManager.swift */,
-				B3D0742A2478D6E000D734B7 /* WACTransaction.swift */,
-				B38C2B7224874B6500268FCD /* WACTransactionManager.swift */,
-				B36E721324F45D1A00708A2E /* WACUser.swift */,
-			);
-			path = Model;
+			name = JustCash;
+			path = breadwallet/JustCash;
 			sourceTree = "<group>";
 		};
 		CE08B2A120F66807009FA568 /* Pigeon */ = {
@@ -2021,7 +1889,6 @@
 		CE20C8EF1DBAF6D300C8397A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B3648E79246CE6C60002EA21 /* WAC */,
 				713CD88822401946004657D4 /* RecoverKey */,
 				CE1E5F241EF081F300BD0F72 /* Import */,
 				E843C10F2188CBDA00F46672 /* Onboarding */,
@@ -2491,6 +2358,9 @@
 				7CD03E8823429F580084F00F /* PBXTargetDependency */,
 			);
 			name = breadwallet;
+			packageProductDependencies = (
+				B35DD21924F84F2800F8805E /* CashUI */,
+			);
 			productName = breadwallet;
 			productReference = 75A2A7901DA5934300A983D8 /* coinsquare.app */;
 			productType = "com.apple.product-type.application";
@@ -2635,6 +2505,9 @@
 				sv,
 			);
 			mainGroup = 75A2A7871DA5934300A983D8;
+			packageReferences = (
+				B35DD21824F84F2800F8805E /* XCRemoteSwiftPackageReference "cash-ui-ios" */,
+			);
 			productRefGroup = 75A2A7911DA5934300A983D8 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -2645,10 +2518,6 @@
 				{
 					ProductGroup = 7CD03E6C23429EB50084F00F /* Products */;
 					ProjectRef = 7CD03E6B23429EB50084F00F /* SwiftProtobuf.xcodeproj */;
-				},
-				{
-					ProductGroup = B36E720424F3153700708A2E /* Products */;
-					ProjectRef = B36E720324F3153700708A2E /* WacSDK.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -2762,13 +2631,6 @@
 			remoteRef = 7CD03E8123429EB50084F00F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B36E720924F3153700708A2E /* WacSDK.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = WacSDK.framework;
-			remoteRef = B36E720824F3153700708A2E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -2788,6 +2650,7 @@
 				E837FD02219D1C0600F59D99 /* onboarding-video-coins-in.mp4 in Resources */,
 				9AE8010E21FFF81F00D5058C /* rewardsIcon-41.gif in Resources */,
 				9A926F9822034B3800CC2263 /* CellHighlight-24.png in Resources */,
+				B35DD23324F84F6000F8805E /* VerifyCashCodeView.xib in Resources */,
 				9AE8010321FFF81F00D5058C /* rewardsIcon-50.gif in Resources */,
 				7CC7D8DA21581C41007E1B9A /* brd-web-3.tar in Resources */,
 				9A926F7222034B3800CC2263 /* CellHighlight-74.png in Resources */,
@@ -2806,12 +2669,9 @@
 				9AE800FB21FFF81F00D5058C /* rewardsIcon-32.gif in Resources */,
 				9A926F6A22034B3800CC2263 /* CellHighlight-77.png in Resources */,
 				9A926F8022034B3800CC2263 /* CellHighlight-19.png in Resources */,
-				B389C71C247F66E80022FB66 /* WACWithdrawalStatusView.xib in Resources */,
-				5F9CC32024817A3700ADB47B /* WACMenuView.xib in Resources */,
 				7C54FF9E2165866A007BF3EF /* currencies.json in Resources */,
 				9A926F9522034B3800CC2263 /* CellHighlight-3.png in Resources */,
 				9A926F6822034B3800CC2263 /* CellHighlight-53.png in Resources */,
-				B3E57D7D246D15F9005A5879 /* WACAtmLocationsView.xib in Resources */,
 				9A926F6622034B3800CC2263 /* CellHighlight-78.png in Resources */,
 				9A926F7E22034B3800CC2263 /* CellHighlight-4.png in Resources */,
 				9A926F5222034B3800CC2263 /* CellHighlight-5.png in Resources */,
@@ -2820,11 +2680,9 @@
 				9A926F8A22034B3800CC2263 /* CellHighlight-7.png in Resources */,
 				9AE8011321FFF81F00D5058C /* rewardsIcon-57.gif in Resources */,
 				9AE800D621FFF81F00D5058C /* rewardsIcon-36.gif in Resources */,
-				B3648E91246CE6C60002EA21 /* WACVerifyCashCodeView.xib in Resources */,
 				9A926F4822034B3700CC2263 /* CellHighlight-41.png in Resources */,
 				9A926F6122034B3800CC2263 /* CellHighlight-47.png in Resources */,
 				9AE800D021FFF81F00D5058C /* rewardsIcon-17.gif in Resources */,
-				B3D074242478D44500D734B7 /* WACActivityView.xib in Resources */,
 				9A926F7322034B3800CC2263 /* CellHighlight-81.png in Resources */,
 				9AE800DD21FFF81F00D5058C /* rewardsIcon-24.gif in Resources */,
 				9AE800E921FFF81F00D5058C /* rewardsIcon-33.gif in Resources */,
@@ -2838,7 +2696,6 @@
 				9A926F7822034B3800CC2263 /* CellHighlight-42.png in Resources */,
 				9A926F5322034B3800CC2263 /* CellHighlight-2.png in Resources */,
 				CE4C1CD01ED8BCC70063E184 /* BIP39Words.plist in Resources */,
-				B3648E92246CE6C60002EA21 /* WACSendVerificationView.xib in Resources */,
 				9A926F6E22034B3800CC2263 /* CellHighlight-17.png in Resources */,
 				9AE8010521FFF81F00D5058C /* rewardsIcon-65.gif in Resources */,
 				9A926F8822034B3800CC2263 /* CellHighlight-27.png in Resources */,
@@ -2868,7 +2725,6 @@
 				E837FD00219D1C0600F59D99 /* onboarding-video-globe.mp4 in Resources */,
 				9A926F4C22034B3800CC2263 /* CellHighlight-51.png in Resources */,
 				9AE8010921FFF81F00D5058C /* rewardsIcon-26.gif in Resources */,
-				B3648E8D246CE6C60002EA21 /* AtmInfoView.xib in Resources */,
 				9AE800F921FFF81F00D5058C /* rewardsIcon-22.gif in Resources */,
 				9A926F4F22034B3800CC2263 /* CellHighlight-34.png in Resources */,
 				9A926F5822034B3800CC2263 /* CellHighlight-64.png in Resources */,
@@ -2896,7 +2752,9 @@
 				9AE800E021FFF81F00D5058C /* rewardsIcon-25.gif in Resources */,
 				9A926F9622034B3800CC2263 /* CellHighlight-12.png in Resources */,
 				9A926F7422034B3800CC2263 /* CellHighlight-30.png in Resources */,
+				B35DD23924F84F6000F8805E /* MenuView.xib in Resources */,
 				9A926F5D22034B3800CC2263 /* CellHighlight-15.png in Resources */,
+				B35DD23824F84F6000F8805E /* ActivityTableViewCell.xib in Resources */,
 				9A926F4522034B3700CC2263 /* CellHighlight-62.png in Resources */,
 				9A926F9222034B3800CC2263 /* CellHighlight-21.png in Resources */,
 				9A926F8122034B3800CC2263 /* CellHighlight-28.png in Resources */,
@@ -2925,6 +2783,8 @@
 				2218BD791E8F6CBA0091D5E8 /* AssetBundles.plist in Resources */,
 				9AE800E821FFF81F00D5058C /* rewardsIcon-20.gif in Resources */,
 				9AE8010021FFF81F00D5058C /* rewardsIcon-10.gif in Resources */,
+				B35DD22D24F84F6000F8805E /* SendVerificationView.xib in Resources */,
+				B35DD22F24F84F6000F8805E /* AtmLocationsView.xib in Resources */,
 				9A926F9022034B3800CC2263 /* CellHighlight-18.png in Resources */,
 				9AE8011121FFF81F00D5058C /* rewardsIcon-6.gif in Resources */,
 				9A926F8922034B3800CC2263 /* CellHighlight-69.png in Resources */,
@@ -2940,18 +2800,19 @@
 				75A2A79B1DA5934300A983D8 /* Assets.xcassets in Resources */,
 				9A926F8322034B3800CC2263 /* CellHighlight-70.png in Resources */,
 				9A926F5C22034B3800CC2263 /* CellHighlight-16.png in Resources */,
-				B3D074262478D58F00D734B7 /* WACActivityTableViewCell.xib in Resources */,
 				9A926F7022034B3800CC2263 /* CellHighlight-1.png in Resources */,
 				9A926F4E22034B3800CC2263 /* CellHighlight-71.png in Resources */,
 				9AE800E621FFF81F00D5058C /* rewardsIcon-21.gif in Resources */,
 				9A926F5022034B3800CC2263 /* CellHighlight-80.png in Resources */,
 				9A926F5722034B3800CC2263 /* CellHighlight-40.png in Resources */,
 				9A926F5422034B3800CC2263 /* CellHighlight-37.png in Resources */,
+				B35DD23A24F84F6000F8805E /* AtmInfoView.xib in Resources */,
 				9AE800FA21FFF81F00D5058C /* rewardsIcon-23.gif in Resources */,
 				9AE800D421FFF81F00D5058C /* rewardsIcon-58.gif in Resources */,
 				9A926F5E22034B3800CC2263 /* CellHighlight-66.png in Resources */,
 				9AE8010F21FFF81F00D5058C /* rewardsIcon-14.gif in Resources */,
 				9AE800F421FFF81F00D5058C /* rewardsIcon-19.gif in Resources */,
+				B35DD23624F84F6000F8805E /* ListView.xib in Resources */,
 				9AE8010821FFF81F00D5058C /* rewardsIcon-42.gif in Resources */,
 				9A926F6522034B3800CC2263 /* CellHighlight-63.png in Resources */,
 				9AE800F121FFF81F00D5058C /* rewardsIcon-53.gif in Resources */,
@@ -2959,11 +2820,12 @@
 				9A926F7D22034B3800CC2263 /* CellHighlight-57.png in Resources */,
 				9AE8010721FFF81F00D5058C /* rewardsIcon-16.gif in Resources */,
 				9A926F4D22034B3800CC2263 /* CellHighlight-68.png in Resources */,
+				B35DD22E24F84F6000F8805E /* ActivityView.xib in Resources */,
 				9AE8010B21FFF81F00D5058C /* rewardsIcon-56.gif in Resources */,
-				B3E57D7F246D201D005A5879 /* WACListView.xib in Resources */,
 				9A926F6B22034B3800CC2263 /* CellHighlight-39.png in Resources */,
 				9A926F5B22034B3800CC2263 /* CellHighlight-32.png in Resources */,
 				9A926F7522034B3800CC2263 /* CellHighlight-33.png in Resources */,
+				B35DD23424F84F6000F8805E /* WithdrawalStatusView.xib in Resources */,
 				9A926F6C22034B3800CC2263 /* CellHighlight-61.png in Resources */,
 				9A926F9422034B3800CC2263 /* CellHighlight-56.png in Resources */,
 			);
@@ -3072,7 +2934,6 @@
 				71904FB92225AB3900A6D027 /* AnnouncementPromptView.swift in Sources */,
 				71999FDD22147CD90024271F /* Events.swift in Sources */,
 				CE0822641FCD1BD100EF371D /* HomeScreenViewController.swift in Sources */,
-				B3E57D81246D20FC005A5879 /* WACListViewController.swift in Sources */,
 				223DB2191DF691260076A151 /* BRSocketHelpers.c in Sources */,
 				CEF3E82D1DE528BF007C0A9E /* AlertView.swift in Sources */,
 				CE0F58A52111670E00ACF5F8 /* CheckoutConfirmationViewController.swift in Sources */,
@@ -3084,7 +2945,6 @@
 				CE8644251F2C160200033129 /* ConfirmationViewController.swift in Sources */,
 				7CBA74E820227D1300FBBFA9 /* MenuCell.swift in Sources */,
 				CEE9A2E920AB4F9A00C5CF2F /* BRAPIClient+Metrics.swift in Sources */,
-				B3648E8A246CE6C60002EA21 /* AtmInfoView.swift in Sources */,
 				CE77F202210E4C010092CC8F /* LinkStatusCircle.swift in Sources */,
 				CEBF32F01DDCD30600348FC6 /* AccountViewController.swift in Sources */,
 				CEE1F5631DF13E5A00D733AD /* ModalHeaderView.swift in Sources */,
@@ -3093,14 +2953,12 @@
 				71C44E942264BE2C00EF4459 /* BaseRecoveryKeyViewController.swift in Sources */,
 				CEAA9EA81DC3342E0066731D /* PinView.swift in Sources */,
 				7117305B220CE7B8001931B3 /* BRAPIClient+Announcements.swift in Sources */,
-				B3648E8C246CE6C60002EA21 /* AtmAnnotationView.swift in Sources */,
 				CE1D84B61EAEB2F4002A5D7B /* UIBarButtonItem+Additions.swift in Sources */,
 				CE5E6C961EB8CCF500A476DB /* SupportCenterContainer.swift in Sources */,
 				CE4B6C1A1E219CA600CF935B /* RescanCoordinator.swift in Sources */,
 				CE6D0E5C1E14BFA700137DF1 /* KeyboardNotificationInfo.swift in Sources */,
 				CEA05CC31F21B53C00D850F0 /* FeeSelector.swift in Sources */,
 				E89C0611216A8BE70012CE0D /* GetUserEmailPromptView.swift in Sources */,
-				B3648E8F246CE6C60002EA21 /* UIView+Animations.swift in Sources */,
 				CE20C8F21DBAF71500C8397A /* ApplicationController.swift in Sources */,
 				22A9A9491DF61945000F0016 /* BRBSPatch.swift in Sources */,
 				CE92F9F61DEDF6890046B516 /* UIViewControllerContextTransitioning+BRAdditions.swift in Sources */,
@@ -3131,7 +2989,6 @@
 				CE4C1CC81ED88B600063E184 /* URLController.swift in Sources */,
 				CE20C9171DBE6F2A00C8397A /* UIButton+BRWAdditions.swift in Sources */,
 				CE3CDB9720D443CE007059F6 /* CutoutLabel.swift in Sources */,
-				B36E721024F32DC900708A2E /* WACButton.swift in Sources */,
 				3A611A0C2322139D004B8E36 /* Dot.swift in Sources */,
 				CE92F9F41DED59E80046B516 /* UIView+AnimationAdditions.swift in Sources */,
 				CEDB0B0522D4354C00331FFC /* LineLoadingView.swift in Sources */,
@@ -3158,7 +3015,6 @@
 				CEF3D2DD1E8CBA790070178E /* LAContext+Extensions.swift in Sources */,
 				CECCE5AE1E04AD6300D99448 /* AddressCell.swift in Sources */,
 				9A39B1232202AA3400E5018B /* HomeScreenCellHighlightView.swift in Sources */,
-				B36E721624F49BD000708A2E /* String+Validations.swift in Sources */,
 				CE83DE2A1E9EB7F600D07636 /* SendAmountCell.swift in Sources */,
 				7C377EC220F6C29E00E8CF1C /* UIAlertController+Additions.swift in Sources */,
 				22A9A9521DF61945000F0016 /* BRKVStorePlugin.swift in Sources */,
@@ -3173,15 +3029,12 @@
 				CED82D4E1E575A5500507A9B /* main.swift in Sources */,
 				CEEC708E1E954AAB00EF788E /* AboutCell.swift in Sources */,
 				22A9A9461DF61945000F0016 /* BRAPIClient.swift in Sources */,
-				B36648E1247A194900AC9429 /* Date+WACAdditions.swift in Sources */,
 				5FE4708224629C660061B2E9 /* MKMapView+Additions.swift in Sources */,
 				7C6628392107B8D600ABCD10 /* PigeonExchange.swift in Sources */,
 				CEAA9E9B1DC2B9320066731D /* ConfirmPhraseView.swift in Sources */,
 				CEA0471120FD1B9B00F2694A /* PigeonCrypto.swift in Sources */,
 				75A2A7941DA5934300A983D8 /* AppDelegate.swift in Sources */,
-				B3648E94246CE6C60002EA21 /* WACSendVerificationCodeViewController.swift in Sources */,
 				711730572204FDFB001931B3 /* HomeScreenHiglightableCell.swift in Sources */,
-				B36E720D24F3173A00708A2E /* WACLoadingButton.swift in Sources */,
 				CEEC70901E95D5C100EF788E /* PushNotificationsViewController.swift in Sources */,
 				222C42501E90492800078EB5 /* BRAPIClient+KV.swift in Sources */,
 				CE5E6C941EB7964900A476DB /* WalletDisabledView.swift in Sources */,
@@ -3189,7 +3042,6 @@
 				CE97710B216FB50B00B9F621 /* EnableSegwitView.swift in Sources */,
 				CEB7A98420FE76D600368AF9 /* PigeonMessages.swift in Sources */,
 				CEF3E8321DE55540007C0A9E /* CheckView.swift in Sources */,
-				B3D0742B2478D6E000D734B7 /* WACTransaction.swift in Sources */,
 				CECCE5A91E0378FB00D99448 /* PinPadViewController.swift in Sources */,
 				CEF3D2DB1E8B55C80070178E /* UISlider+Gradient.swift in Sources */,
 				CE65C66A207D41BB000C99C4 /* AssetIndex.swift in Sources */,
@@ -3199,13 +3051,11 @@
 				3A36328F2253E53E0043EBA4 /* BRAPIClient+History.swift in Sources */,
 				CEC6AA421DEFC88F00EE5AFD /* ReceiveViewController.swift in Sources */,
 				7C9BC58F231765190011732F /* WalletConnectionSettings.swift in Sources */,
-				B3D0741A2478BCB000D734B7 /* WACActivityViewController.swift in Sources */,
 				CEE20C2D1EA288FA0086F724 /* UpdatingLabel.swift in Sources */,
 				714F5D6E22037F2400F7CA70 /* EventMonitor.swift in Sources */,
 				CE3D4C591EF743EF0016B1C8 /* Functions.swift in Sources */,
 				CEE20C341EA5B4550086F724 /* ArticleIds.swift in Sources */,
 				3A93890A22A303800081FCF9 /* CubicCurveAlgorithm.swift in Sources */,
-				B3D074222478D29A00D734B7 /* WACActivityTableViewCell.swift in Sources */,
 				7141BB5B2245271800F7ECF2 /* WriteRecoveryKeyViewController.swift in Sources */,
 				CEE65DF01E39056F0002994D /* Rate.swift in Sources */,
 				CEDB09331FEAA21C001AF56A /* TxDetailViewModel.swift in Sources */,
@@ -3226,7 +3076,6 @@
 				22A9A94E1DF61945000F0016 /* BRHTTPIndexMiddleware.swift in Sources */,
 				71173059220CCC91001931B3 /* PromptView.swift in Sources */,
 				CE8CD8DD1E2D9EF200785E02 /* Sender.swift in Sources */,
-				B389C71A247F66A20022FB66 /* WACWithdrawalStatusViewController.swift in Sources */,
 				CE4DFB2C1E9BE5880014009E /* ReScanViewController.swift in Sources */,
 				7C9724661FF07B9A004248C4 /* StatusPip.swift in Sources */,
 				CE08B2A320F66822009FA568 /* BRAPIClient+Pigeon.swift in Sources */,
@@ -3237,13 +3086,11 @@
 				22A9A9551DF61945000F0016 /* BRTar.swift in Sources */,
 				CEAA9E971DC18E1F0066731D /* PhraseView.swift in Sources */,
 				CEF3E82F1DE534C5007C0A9E /* GradientView.swift in Sources */,
-				B3648E8B246CE6C60002EA21 /* AtmAnnotation.swift in Sources */,
 				CE6D0F991DE8B75900BD4BCF /* DismissModalAnimator.swift in Sources */,
 				CE4C1CC61ED65D830063E184 /* DrawableCircle.swift in Sources */,
 				7CBD57912107FAFA0042C388 /* PairedWalletIndex.swift in Sources */,
 				CEEC708C1E95461A00EF788E /* AboutViewController.swift in Sources */,
 				CEEC708A1E945E3B00EF788E /* UnEditableTextView.swift in Sources */,
-				B3648E90246CE6C60002EA21 /* WACVerifyCashCodeViewController.swift in Sources */,
 				CE3645481E7B424D0079D0CF /* WhiteNumberPad.swift in Sources */,
 				CE3840E81FD590BD00437C31 /* AssetListTableView.swift in Sources */,
 				71A3171022A6D55A0088F97C /* InAppNotificationViewController.swift in Sources */,
@@ -3262,30 +3109,23 @@
 				7C787AE221ED89510017EA7E /* KeyStore.swift in Sources */,
 				CEAA9E911DC0FDFE0066731D /* UIViewPropertyAnimator+BRWAdditions.swift in Sources */,
 				7C1931CD2327371A0061DE20 /* CoreDatabase.swift in Sources */,
-				5F9CC31F24817A3700ADB47B /* WACMenuViewController.swift in Sources */,
 				22E773041EE7813000397E0E /* Bonjour.swift in Sources */,
 				7CE940E61FEB8A5F005A2B53 /* TxDetailRowCell.swift in Sources */,
 				3AB3EE0F227A23B400414616 /* ASADataFormatter.swift in Sources */,
-				B3648E8E246CE6C60002EA21 /* WACMapViewController.swift in Sources */,
 				CEAA9EA01DC2F9F50066731D /* UIFont+BRWAdditions.swift in Sources */,
-				B38C2B7324874B6500268FCD /* WACTransactionManager.swift in Sources */,
 				CEF61B121ECF52C700C7EA6A /* AmountViewController.swift in Sources */,
 				CEBF32F21DDCE10D00348FC6 /* AccountHeaderView.swift in Sources */,
 				CECCE5B21E04B00D00D99448 /* SendCell.swift in Sources */,
 				CE6DCC301E6666470044257B /* NonScrollingCollectionView.swift in Sources */,
 				71C44E90225D135E00EF4459 /* ConfirmRecoveryKeyViewController.swift in Sources */,
-				B389C7202483636C0022FB66 /* WACSessionManager.swift in Sources */,
 				7CF913BE1FFC7DC30085CB70 /* TxMemoCell.swift in Sources */,
-				B3E57D6E246D121B005A5879 /* WACAtmLocationsViewController.swift in Sources */,
 				3A3D63DE22F10B58000DE920 /* ManageWalletsViewController.swift in Sources */,
 				22A9A9471DF61945000F0016 /* BRAPIProxy.swift in Sources */,
 				CE20C9011DBBFFF800C8397A /* Actions.swift in Sources */,
 				CE20C9191DBE7B8200C8397A /* State.swift in Sources */,
 				CEEC70811E90C04700EF788E /* SeparatorCell.swift in Sources */,
 				CE97710D216FF20F00B9F621 /* SegwitEnabledView.swift in Sources */,
-				B36E721224F3F8BF00708A2E /* WACTextField.swift in Sources */,
 				7C230E752037AD52002F0FF1 /* SyncingIndicator.swift in Sources */,
-				B36E721424F45D1A00708A2E /* WACUser.swift in Sources */,
 				22122B721F0B8996000E9AB9 /* BRAPIClient+Events.swift in Sources */,
 				CE4B6C201E233C2C00CF935B /* UITableView+Additions.swift in Sources */,
 				CEEC70861E94397D00EF788E /* UserDefaults+Additions.swift in Sources */,
@@ -3316,7 +3156,6 @@
 				71249916221F466800BEA491 /* Prompt.swift in Sources */,
 				CE6B6B4A1E54C0CB00B31405 /* SecurityCenterCell.swift in Sources */,
 				CE36454C1E7B42850079D0CF /* WhiteDecimalPad.swift in Sources */,
-				B38C2C2B248ACA4A00268FCD /* String+WACAdditions.swift in Sources */,
 				CE5F21D91E4A922700C47B8E /* DismissLoginAnimator.swift in Sources */,
 				7C45481A2187E65B0002E884 /* AnyCodable.swift in Sources */,
 				CECCE5A51E02408300D99448 /* UIView+FrameChangeBlocking.swift in Sources */,
@@ -3330,10 +3169,8 @@
 				CEBF32F41DDCE12900348FC6 /* AccountFooterView.swift in Sources */,
 				710B036421F8C208007E8A2A /* AppRatingManager.swift in Sources */,
 				CE9057181DFF0FA8006BA848 /* String+Additions.swift in Sources */,
-				B389C6FF247F502C0022FB66 /* UserDefaults+Persistable.swift in Sources */,
 				713CD8872240117A004657D4 /* RecoveryKeyFlowController.swift in Sources */,
 				CED341331EF5A5C00014912A /* InAppAlert.swift in Sources */,
-				B3648E93246CE6C60002EA21 /* WACActionViewController.swift in Sources */,
 				CE47A8E01F7DA54000FF35BA /* UIScreen+Additions.swift in Sources */,
 				7C9BC58D231764030011732F /* WalletConnectionSettingsViewController.swift in Sources */,
 				CE2A1C4E210B7BB7003E9B69 /* PigeonRequest.swift in Sources */,
@@ -5252,6 +5089,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B35DD21824F84F2800F8805E /* XCRemoteSwiftPackageReference "cash-ui-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/atmcoin/cash-ui-ios.git";
+			requirement = {
+				branch = feature/swiftPackage;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B35DD21924F84F2800F8805E /* CashUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B35DD21824F84F2800F8805E /* XCRemoteSwiftPackageReference "cash-ui-ios" */;
+			productName = CashUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75A2A7881DA5934300A983D8 /* Project object */;
 }

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WACActivityViewController" customModule="coinsquare" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActivityViewController" customModule="CashUI">
             <connections>
                 <outlet property="navigationBar" destination="flB-E4-8ih" id="XE4-VJ-Yss"/>
                 <outlet property="refreshButton" destination="Hux-b9-lXo" id="bL1-lX-9OY"/>
@@ -30,7 +30,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hux-b9-lXo" customClass="WACLoadingButton" customModule="coinsquare" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hux-b9-lXo" customClass="LoadingButton" customModule="CashUI">
                             <rect key="frame" x="354" y="8" width="40" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="Ohd-Tm-i8z"/>
@@ -38,7 +38,7 @@
                             </constraints>
                             <state key="normal" image="refresh"/>
                             <connections>
-                                <action selector="refreshHandler:" destination="-1" eventType="touchUpInside" id="e49-vz-hAf"/>
+                                <action selector="refreshHandler:" destination="-1" eventType="touchUpInside" id="CK6-4r-br5"/>
                             </connections>
                         </button>
                     </subviews>
