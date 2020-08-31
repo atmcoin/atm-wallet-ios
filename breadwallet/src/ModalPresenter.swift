@@ -538,8 +538,8 @@ class ModalPresenter: Subscriber, Trackable {
         // MARK: Root Menu
         var rootItems: [MenuItem] = [
             MenuItem(title: S.MenuButton.atmCashRedemption, icon: MenuItem.Icon.atmMap) {
-                let vc = CashUI.MenuViewController()
-                menuNav.pushViewController(vc, animated: true)
+//                let vc = CashUI.AtmMenuViewController()
+//                menuNav.pushViewController(vc, animated: true)
             },
 
             // Scan QR Code

@@ -106,7 +106,7 @@
                     </constraints>
                     <state key="normal" title="Get ATM Code"/>
                     <connections>
-                        <action selector="getverificationCodeAction:" destination="-1" eventType="touchUpInside" id="tA5-AM-EFl"/>
+                        <action selector="getVerificationCodeAction:" destination="-1" eventType="touchUpInside" id="pTW-Ka-7Ax"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min $20.00. Max $400.00. Multiple of $20.00 bills" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueb-T1-b63">

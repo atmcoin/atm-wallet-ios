@@ -389,7 +389,7 @@ class ApplicationController: Subscriber, Trackable {
         }
         
         homeScreen.didTapRedemption = {
-            let vc = CashUI.MenuViewController()
+            let vc = CashUI.AtmMenuViewController()
             navigationController.pushViewController(vc, animated: true)
         }
 
