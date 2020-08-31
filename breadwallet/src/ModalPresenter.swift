@@ -537,10 +537,6 @@ class ModalPresenter: Subscriber, Trackable {
         
         // MARK: Root Menu
         var rootItems: [MenuItem] = [
-            MenuItem(title: S.MenuButton.atmCashRedemption, icon: MenuItem.Icon.atmMap) {
-//                let vc = CashUI.AtmMenuViewController()
-//                menuNav.pushViewController(vc, animated: true)
-            },
 
             // Scan QR Code
             MenuItem(title: S.MenuButton.scan, icon: MenuItem.Icon.scan) { [weak self] in
@@ -601,14 +597,14 @@ class ModalPresenter: Subscriber, Trackable {
                                                accessoryText: { UserDefaults.debugShouldAutoEnterPIN ? "ON" : "OFF" },
                                                callback: {
                                                 _ = UserDefaults.toggleAutoEnterPIN()
-                                                (menuNav.topViewController as? MenuViewController)?.reloadMenu()
+                                                (menuNav.topViewController as? BRDMenuViewController)?.reloadMenu()
                 }))
                 
                 developerItems.append(MenuItem(title: "Connection Settings Override",
                                                accessoryText: { UserDefaults.debugConnectionModeOverride.description },
                                                callback: {
                                                 UserDefaults.cycleConnectionModeOverride()
-                                                (menuNav.topViewController as? MenuViewController)?.reloadMenu()
+                                                (menuNav.topViewController as? BRDMenuViewController)?.reloadMenu()
                 }))
             }
             
@@ -617,7 +613,7 @@ class ModalPresenter: Subscriber, Trackable {
                                            accessoryText: { UserDefaults.debugShouldSuppressPaperKeyPrompt ? "ON" : "OFF" },
                                            callback: {
                                             _ = UserDefaults.toggleSuppressPaperKeyPrompt()
-                                            (menuNav.topViewController as? MenuViewController)?.reloadMenu()
+                                            (menuNav.topViewController as? BRDMenuViewController)?.reloadMenu()
             }))
             
             // always show the app rating when viewing transactions if 'ON' AND Suppress is 'OFF' (see below)
@@ -625,14 +621,14 @@ class ModalPresenter: Subscriber, Trackable {
                                            accessoryText: { UserDefaults.debugShowAppRatingOnEnterWallet ? "ON" : "OFF" },
                                            callback: {
                                             _ = UserDefaults.toggleShowAppRatingPromptOnEnterWallet()
-                                            (menuNav.topViewController as? MenuViewController)?.reloadMenu()
+                                            (menuNav.topViewController as? BRDMenuViewController)?.reloadMenu()
             }))
 
             developerItems.append(MenuItem(title: "Suppress app rating prompt",
                                            accessoryText: { UserDefaults.debugSuppressAppRatingPrompt ? "ON" : "OFF" },
                                            callback: {
                                             _ = UserDefaults.toggleSuppressAppRatingPrompt()
-                                            (menuNav.topViewController as? MenuViewController)?.reloadMenu()
+                                            (menuNav.topViewController as? BRDMenuViewController)?.reloadMenu()
             }))
 
             // Shows a preview of the paper key.
@@ -644,7 +640,7 @@ class ModalPresenter: Subscriber, Trackable {
                                                accessoryText: { UserDefaults.debugShouldShowPaperKeyPreview ? preview : "" },
                                                callback: {
                                                 _ = UserDefaults.togglePaperKeyPreview()
-                                                (menuNav.topViewController as? MenuViewController)?.reloadMenu()
+                                                (menuNav.topViewController as? BRDMenuViewController)?.reloadMenu()
                 }))
             }
                         
@@ -652,7 +648,7 @@ class ModalPresenter: Subscriber, Trackable {
                                            callback: {
                                             UserDefaults.resetAll()
                                             menuNav.showAlert(title: "", message: "User defaults reset")
-                                            (menuNav.topViewController as? MenuViewController)?.reloadMenu()
+                                            (menuNav.topViewController as? BRDMenuViewController)?.reloadMenu()
             }))
 
             developerItems.append(MenuItem(title: "Reset EME Paired Wallets",
@@ -684,7 +680,7 @@ class ModalPresenter: Subscriber, Trackable {
                                 guard let newHost = alert.textFields?.first?.text, !newHost.isEmpty else {
                                     UserDefaults.debugBackendHost = nil
                                     Backend.apiClient.host = C.backendHost
-                                    (menuNav.topViewController as? MenuViewController)?.reloadMenu()
+                                    (menuNav.topViewController as? BRDMenuViewController)?.reloadMenu()
                                     return
                                 }
                                 let originalHost = Backend.apiClient.host
@@ -692,7 +688,7 @@ class ModalPresenter: Subscriber, Trackable {
                                 Backend.apiClient.me { (success, _, _) in
                                     if success {
                                         UserDefaults.debugBackendHost = newHost
-                                        (menuNav.topViewController as? MenuViewController)?.reloadMenu()
+                                        (menuNav.topViewController as? BRDMenuViewController)?.reloadMenu()
                                     } else {
                                         Backend.apiClient.host = originalHost
                                     }
@@ -717,7 +713,7 @@ class ModalPresenter: Subscriber, Trackable {
                             alert.addAction(UIAlertAction(title: "Save", style: .default) { (_) in
                                 guard let newBundleName = alert.textFields?.first?.text, !newBundleName.isEmpty else {
                                     UserDefaults.debugWebBundleName = nil
-                                    (menuNav.topViewController as? MenuViewController)?.reloadMenu()
+                                    (menuNav.topViewController as? BRDMenuViewController)?.reloadMenu()
                                     return
                                 }
 
@@ -733,7 +729,7 @@ class ModalPresenter: Subscriber, Trackable {
                                             return
                                         }
                                         UserDefaults.debugWebBundleName = newBundleName
-                                        (menuNav.topViewController as? MenuViewController)?.reloadMenu()
+                                        (menuNav.topViewController as? BRDMenuViewController)?.reloadMenu()
                                     }
                                 }
                             })
@@ -758,11 +754,11 @@ class ModalPresenter: Subscriber, Trackable {
                                     !input.isEmpty,
                                     let debugURL = URL(string: input) else {
                                     UserDefaults.platformDebugURL = nil
-                                    (menuNav.topViewController as? MenuViewController)?.reloadMenu()
+                                    (menuNav.topViewController as? BRDMenuViewController)?.reloadMenu()
                                     return
                                 }
                                 UserDefaults.platformDebugURL = debugURL
-                                (menuNav.topViewController as? MenuViewController)?.reloadMenu()
+                                (menuNav.topViewController as? BRDMenuViewController)?.reloadMenu()
                             })
 
                             alert.addAction(UIAlertAction(title: S.Button.cancel, style: .cancel, handler: nil))
@@ -773,7 +769,7 @@ class ModalPresenter: Subscriber, Trackable {
             rootItems.append(MenuItem(title: "Developer Options", icon: nil, subMenu: developerItems, rootNav: menuNav, faqButton: nil))
         }
                 
-        let rootMenu = MenuViewController(items: rootItems,
+        let rootMenu = BRDMenuViewController(items: rootItems,
                                           title: S.Settings.title)
         rootMenu.addCloseNavigationItem(side: .right)
         menuNav.viewControllers = [rootMenu]
@@ -796,7 +792,7 @@ class ModalPresenter: Subscriber, Trackable {
                                                           kvStore: kv,
                                                           walletInfo: walletInfo)
         let connectionSettingsVC = WalletConnectionSettingsViewController(walletConnectionSettings: connectionSettings) { _ in
-            (menuNav.viewControllers.compactMap { $0 as? MenuViewController }).last?.reloadMenu()
+            (menuNav.viewControllers.compactMap { $0 as? BRDMenuViewController }).last?.reloadMenu()
         }
         menuNav.pushViewController(connectionSettingsVC, animated: true)
     }
