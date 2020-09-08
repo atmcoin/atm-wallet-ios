@@ -111,13 +111,13 @@ jobs:
           command: |
             xcodebuild clean -workspace breadwallet.xcworkspace -scheme breadwallet | xcpretty
 
-      - run:
-          name: xcodebuild  build submodules
-          command: |
-            security default-keychain
-            security set-keychain-settings -lut 9999
-            security unlock-keychain -p test ~/Library/Keychains/default.keychain
-            xcodebuild  build  -verbose   -workspace breadwallet.xcworkspace   -scheme submodules | xcpretty
+#      - run:
+#          name: xcodebuild  build submodules
+#          command: |
+#            security default-keychain
+#            security set-keychain-settings -lut 9999
+#            security unlock-keychain -p test ~/Library/Keychains/default.keychain
+#            xcodebuild  build  -verbose   -workspace breadwallet.xcworkspace   -scheme submodules | xcpretty
 
       - run:
           name: makebuild
@@ -131,7 +131,7 @@ jobs:
             git commit -m "circleci build"
             mkdir build
             cp .circleci/config/exportOptions.plist build
-            ./scripts/makebuild.sh 4.0 44 ci
+            ./scripts/makebuild.sh 4.0.1 99 ci
 
 
       - run:
