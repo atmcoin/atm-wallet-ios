@@ -9,6 +9,7 @@
 import UIKit
 import WalletKit
 import UserNotifications
+import CashUI
 
 private let timeSinceLastExitKey = "TimeSinceLastExit"
 private let shouldRequireLoginTimeoutKey = "ShouldRequireLoginTimeoutKey"
@@ -21,7 +22,7 @@ class ApplicationController: Subscriber, Trackable {
     
     let window = UIWindow()
     private var startFlowController: StartFlowPresenter?
-    private var modalPresenter: ModalPresenter?
+    public var modalPresenter: ModalPresenter?
     private var alertPresenter: AlertPresenter?
     private let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
 
@@ -399,6 +400,11 @@ class ApplicationController: Subscriber, Trackable {
         
         homeScreen.didTapTrade = {
             Store.perform(action: RootModalActions.Present(modal: .trade))
+        }
+        
+        homeScreen.didTapRedemption = {
+            let vc = CashUI.AtmMenuViewController()
+            navigationController.pushViewController(vc, animated: true)
         }
         
         homeScreen.didTapMenu = { [unowned self] in
