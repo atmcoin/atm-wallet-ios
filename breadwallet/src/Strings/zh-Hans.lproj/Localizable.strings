@@ -45,7 +45,7 @@
 /* Default wallet name */
 "AccountHeader.defaultWalletName" = "我的 BRD";
 /* Third party keyboard warning */
-"Alert.customKeyboard.android" = "看起来您正在使用第三方键盘，它可以记录您键入的内容并窃取您的密钥（Paper Key）。请切换到默认的安卓键盘以便获得额外保护。";
+"Alert.customKeyboard.android" = "看起来您正在使用第三方键盘，它可以记录您键入的内容并窃取您的密钥（Recovery Key）。请切换到默认的安卓键盘以便获得额外保护。";
 /* Error alert title */
 "Alert.error" = "错误";
 /* Keystore error */
@@ -70,7 +70,7 @@
 "Alerts.copiedAddressesHeader" = "地址已复制";
 /* Addresses Copied Alert sub header */
 "Alerts.copiedAddressesSubheader" = "所有的钱包地址已被成功复制。";
-/* Alert Header Label (the paper key was set) */
+/* Alert Header Label (the recovery key was set) */
 "Alerts.paperKeySet" = "纸上密钥已设置";
 /* Alert Subheader label (playfully positive) */
 "Alerts.paperKeySetSubheader" = "太棒了！";
@@ -203,7 +203,7 @@
 /* Total Cost: ($5.00) */
 "Confirmation.totalLabel" = "费用总计：";
 /* Confirm paper phrase error message */
-"ConfirmPaperPhrase.error" = "您输入的单词与纸密钥 (Paper Key) 不匹配。请重试。";
+"ConfirmPaperPhrase.error" = "您输入的单词与纸密钥 (Recovery Key) 不匹配。请重试。";
 /* Confirm paper phrase view label. */
 "ConfirmPaperPhrase.label" = "为确保一切均被正确地书写，请在您的纸键输入以下文字。";
 /* Word label eg. Word #1, Word #2 */
@@ -410,13 +410,13 @@
 "MenuViewController.modalTitle" = "菜单";
 /* button label */
 "MenuViewController.recoverButton" = "恢复钱包";
-/* Paper Key Skip modal body (Android-version) */
+/* Recovery Key Skip modal body (Android-version) */
 "Modal.PaperKeySkip.Body.Android" = "更改手机安全设置后,打开钱包需要输入纸钥。\n\n您希望稍后再设置纸钥吗？";
-/* Paper Key Skip modal Continue Set Up button */
+/* Recovery Key Skip modal Continue Set Up button */
 "Modal.PaperKeySkip.Button.ContinueSetUp" = "继续设置";
-/* Paper Key Skip modal I'll do it later button */
+/* Recovery Key Skip modal I'll do it later button */
 "Modal.PaperKeySkip.Button.IllDoItLater" = "稍后进行";
-/* Paper Key Skip modal title */
+/* Recovery Key Skip modal title */
 "Modal.PaperKeySkip.Title" = "注意";
 /* Node selection mode is automatic */
 "NodeSelector.automatic" = "自动";
@@ -512,9 +512,9 @@
 "Prompts.NoScreenLock.body.android" = "需要设备屏幕锁定才能保护您的钱包。在“设置”>“安全”>“屏幕锁定”中启用它以便继续。";
 /* Device encryption prompt title */
 "Prompts.NoScreenLock.title.android" = "屏幕锁定已禁用";
-/* Warning about recovery key (formerly paper key). */
+/* Warning about recovery key (formerly recovery key). */
 "Prompts.PaperKey.body" = "为了应对手机丢失或者更换， 请您务必写下你的纸键。";
-/* Warning about paper key (Android-version) */
+/* Warning about recovery key (Android-version) */
 "Prompts.PaperKey.Body.Android" = "设置纸钥,避免手机丢失或更换带来的不便。您需要提供密钥以更改手机安全设置。";
 /* An action is required (You must do this action). */
 "Prompts.PaperKey.title" = "需要采取的行动";
@@ -584,25 +584,25 @@
 "RecoverWallet.done" = "完成";
 /* Recover wallet header */
 "RecoverWallet.header" = "恢复钱包";
-/* Reset PIN with paper key: header */
+/* Reset PIN with recovery key: header */
 "RecoverWallet.header_reset_pin" = "复位 PIN";
-/* Enter paper key instruction */
+/* Enter recovery key instruction */
 "RecoverWallet.instruction" = "输入纸键";
 /* Recover wallet intro */
 "RecoverWallet.intro" = "用您的纸键恢复您的 BRD。";
-/* Invalid paper key message */
+/* Invalid recovery key message */
 "RecoverWallet.invalid" = "您输入的纸键无效。请仔细检查每个单词并重试。";
 /* Previous button accessibility label */
 "RecoverWallet.leftArrow" = "左箭头键";
 /* Next button label */
 "RecoverWallet.next" = "下一个";
-/* Reset PIN with paper key: more information button. */
+/* Reset PIN with recovery key: more information button. */
 "RecoverWallet.reset_pin_more_info" = "点击此处以获取更多信息。";
 /* Next button accessibility label */
 "RecoverWallet.rightArrow" = "右箭头键";
 /* Recover wallet sub-header */
 "RecoverWallet.subheader" = "输入您想恢复的钱包的纸键。";
-/* Reset PIN with paper key: sub-header */
+/* Reset PIN with recovery key: sub-header */
 "RecoverWallet.subheader_reset_pin" = "要重置 PIN 码，请在下面的框中输入纸上密钥中的单词。";
 /* Instructs the user to enter words from the set of recovery key words. */
 "RecoveryKeyFlow.confirmRecoveryInputError" = "您输入的字词不正确。请再试一次。";
@@ -636,7 +636,7 @@
 "RecoveryKeyFlow.keyUseHint" = "您的密钥仅用于恢复时,日常访问钱包时无需此密钥。";
 /* Reminds the user not to take screenshots or email the recovery key words */
 "RecoveryKeyFlow.noScreenshotsOrEmailWarning" = "出于安全考虑,请勿截图或通过电子邮件发送这些字词";
-/* Recommends that the user avoids capturing the paper key with a screenshot */
+/* Recommends that the user avoids capturing the recovery key with a screenshot */
 "RecoveryKeyFlow.noScreenshotsRecommendation" = "请将您的密钥记录在纸上并确认无误。为安全起见,不建议使用屏幕截图。";
 /* Title displayed when the user starts the process of recovering a wallet */
 "RecoveryKeyFlow.recoveryYourWallet" = "恢复您的钱包";
@@ -726,12 +726,12 @@
 "Search.sent" = "已发送";
 /* Face ID button title */
 "SecurityCenter.faceIdTitle" = "面部识别";
-/* Paper Key button description */
+/* Recovery Key button description */
 "SecurityCenter.paperKeyDescription" = "若您丢失或升级您的手机，访问您的比特币的唯一方法。";
-/* Recovery Key button title. This used to be called 'paper key', so leaving the string key as `paperKeyTitle` in order
+/* Recovery Key button title. This used to be called 'recovery key', so leaving the string key as `paperKeyTitle` in order
  * to not break existing client code. */
 "SecurityCenter.paperKeyTitle" = "纸键";
-/* Paper Key button title */
+/* Recovery Key button title */
 "SecurityCenter.paperKeyTitle.android" = "纸键";
 /* PIN button description */
 "SecurityCenter.pinDescription" = "保护您的 BRD 免遭未授权用户盗用。";
@@ -905,9 +905,9 @@
 "ShareData.toggleLabel" = "共享匿名数据？";
 /* button label */
 "StartPaperPhrase.againButtonTitle" = "再次书写纸键";
-/* Paper key explanation text. */
+/* Recovery key explanation text. */
 "StartPaperPhrase.body" = "如果您的手机丢失、被盗、损坏或升级，纸上密钥是恢复 BRD 的唯一方法。\n\n\n我们将向您显示一张单词表，请将其写在纸上并保存在安全的地方。";
-/* Paper key explanation text (Android-version) */
+/* Recovery key explanation text (Android-version) */
 "StartPaperPhrase.Body.Android" = "在手机丢失,被盗,损坏或升级情况下,纸钥是您恢复 BRD 的唯一方法。\n\n您需要提供纸钥以更改手机安全设置。\n\n我们将向您展示一份单词列表,请您记录在纸上并妥善保管。";
 /* button label */
 "StartPaperPhrase.buttonTitle" = "写下纸键";
@@ -1132,7 +1132,7 @@ eg. 182930 (45061 confirmations) */
 "UnlockScreen.faceIdText" = "用面部识别解锁";
 /* My Address button title */
 "UnlockScreen.myAddress" = "我的地址";
-/* Reset PIN with Paper Key button label. */
+/* Reset PIN with Recovery Key button label. */
 "UnlockScreen.resetPin" = "复位 PIN";
 /* Scan button title */
 "UnlockScreen.scan" = "扫描";
@@ -1219,8 +1219,8 @@ Wallet connection settings menu item title. */
 "WipeWallet.failedMessage" = "擦除钱包失败。";
 /* Failed wipe wallet alert title */
 "WipeWallet.failedTitle" = "失败";
-/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] paper key that needs to be entered). */
-"WipeWallet.instruction" = "若想启用新钱包或恢复已有钱包，首先需要取消现钱包的链接。如要继续，输入现钱包的纸钥匙（Paper Key）。";
+/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] recovery key that needs to be entered). */
+"WipeWallet.instruction" = "若想启用新钱包或恢复已有钱包，首先需要取消现钱包的链接。如要继续，输入现钱包的纸钥匙（Recovery Key）。";
 /* Instructions for unlinking the wallet */
 "WipeWallet.startMessage" = "取消钱包链接可将其从本设备移除。一旦钱包链接被取消，您可以启用新钱包，或恢复本设备的其他钱包。";
 /* Start wipe wallet view warning */
@@ -1231,7 +1231,7 @@ Wallet connection settings menu item title. */
 "WipeWallet.wipe" = "擦除";
 /* Wiping activity message */
 "WipeWallet.wiping" = "正在擦除...";
-/* Paper key instructions. */
+/* Recovery key instructions. */
 "WritePaperPhrase.instruction" = "按顺序写下每个词并保存到安全位置。";
 /* button label */
 "WritePaperPhrase.next" = "下一个";

@@ -29,7 +29,7 @@ enum ExitRecoveryKeyAction {
 }
 
 //
-// Manages entry points for generating or writing down the paper key:
+// Manages entry points for generating or writing down the recovery key:
 //
 //  - new-user onboarding
 //  - home screen prompt or security settings menu

@@ -70,7 +70,7 @@
 "Alerts.copiedAddressesHeader" = "Adresses copiées";
 /* Addresses Copied Alert sub header */
 "Alerts.copiedAddressesSubheader" = "Toutes les adresses du portefeuille ont été copiées avec succès.";
-/* Alert Header Label (the paper key was set) */
+/* Alert Header Label (the recovery key was set) */
 "Alerts.paperKeySet" = "Ensemble des clés papier";
 /* Alert Subheader label (playfully positive) */
 "Alerts.paperKeySetSubheader" = "Impressionnant !";
@@ -410,13 +410,13 @@
 "MenuViewController.modalTitle" = "Menu";
 /* button label */
 "MenuViewController.recoverButton" = "Récupérer le portefeuille";
-/* Paper Key Skip modal body (Android-version) */
+/* Recovery Key Skip modal body (Android-version) */
 "Modal.PaperKeySkip.Body.Android" = "Votre clé papier est nécessaire pour ouvrir votre portefeuille si vous modifier les paramètres de sécurité de votre téléphone. \n\nÊtes-vous certain de vouloir paramétrer votre clé papier plus tard ?";
-/* Paper Key Skip modal Continue Set Up button */
+/* Recovery Key Skip modal Continue Set Up button */
 "Modal.PaperKeySkip.Button.ContinueSetUp" = "Continuer le paramétrage";
-/* Paper Key Skip modal I'll do it later button */
+/* Recovery Key Skip modal I'll do it later button */
 "Modal.PaperKeySkip.Button.IllDoItLater" = "Je le ferai plus tard";
-/* Paper Key Skip modal title */
+/* Recovery Key Skip modal title */
 "Modal.PaperKeySkip.Title" = "Attention";
 /* Node selection mode is automatic */
 "NodeSelector.automatic" = "Automatique";
@@ -512,9 +512,9 @@
 "Prompts.NoScreenLock.body.android" = "Il est nécessaire de configurer un verrouillage d'écran pour protéger votre portefeuille. Allez dans « Paramètres » > « Sécurité » > « Verrouillage d'écran », puis activez-le pour continuer.";
 /* Device encryption prompt title */
 "Prompts.NoScreenLock.title.android" = "Verrouillage d'écran désactivé";
-/* Warning about recovery key (formerly paper key). */
+/* Warning about recovery key (formerly recovery key). */
 "Prompts.PaperKey.body" = "Votre paperkey doit être sauvegardé au cas où vous perdiez ou changiez votre téléphone.";
-/* Warning about paper key (Android-version) */
+/* Warning about recovery key (Android-version) */
 "Prompts.PaperKey.Body.Android" = "Paramétrez votre clé papier au cas où vous perdriez ou remplaceriez votre téléphone. Votre clé sera également requise si vous modifiez les paramètres de sécurité de votre téléphone.";
 /* An action is required (You must do this action). */
 "Prompts.PaperKey.title" = "Une action est requise";
@@ -584,25 +584,25 @@
 "RecoverWallet.done" = "Terminé";
 /* Recover wallet header */
 "RecoverWallet.header" = "Récupérer le portefeuille";
-/* Reset PIN with paper key: header */
+/* Reset PIN with recovery key: header */
 "RecoverWallet.header_reset_pin" = "Réinitialiser PIN";
-/* Enter paper key instruction */
+/* Enter recovery key instruction */
 "RecoverWallet.instruction" = "Entrez la clé papier";
 /* Recover wallet intro */
 "RecoverWallet.intro" = "Récupérez votre BRD avec votre clé papier.";
-/* Invalid paper key message */
+/* Invalid recovery key message */
 "RecoverWallet.invalid" = "La clé papier saisie n'est pas valide. Revérifiez chaque mot et réessayez.";
 /* Previous button accessibility label */
 "RecoverWallet.leftArrow" = "Flèche gauche";
 /* Next button label */
 "RecoverWallet.next" = "Suivant";
-/* Reset PIN with paper key: more information button. */
+/* Reset PIN with recovery key: more information button. */
 "RecoverWallet.reset_pin_more_info" = "Cliquez ici pour plus d'informations.";
 /* Next button accessibility label */
 "RecoverWallet.rightArrow" = "Flèche droite";
 /* Recover wallet sub-header */
 "RecoverWallet.subheader" = "Entrez la clé papier pour le portefeuille que vous souhaitez récupérer.";
-/* Reset PIN with paper key: sub-header */
+/* Reset PIN with recovery key: sub-header */
 "RecoverWallet.subheader_reset_pin" = "Pour réinitialiser votre PIN, entrez les mots de votre clé papier dans les cases ci-dessous.";
 /* Instructs the user to enter words from the set of recovery key words. */
 "RecoveryKeyFlow.confirmRecoveryInputError" = "Le mot que vous avez entré est incorrect. Veuillez réessayer.";
@@ -636,7 +636,7 @@
 "RecoveryKeyFlow.keyUseHint" = "Votre clé n'est nécessaire que pour la récupération et non pour l'accès quotidien à votre portefeuille.";
 /* Reminds the user not to take screenshots or email the recovery key words */
 "RecoveryKeyFlow.noScreenshotsOrEmailWarning" = "Pour des raisons de sécurité, ne faites pas de capture d'écran de ces mots et ne les envoyez pas par courriel.";
-/* Recommends that the user avoids capturing the paper key with a screenshot */
+/* Recommends that the user avoids capturing the recovery key with a screenshot */
 "RecoveryKeyFlow.noScreenshotsRecommendation" = "Notez votre clé sur papier et confirmez-la. Les captures d'écran ne sont pas conseillées pour des raisons de sécurité.";
 /* Title displayed when the user starts the process of recovering a wallet */
 "RecoveryKeyFlow.recoveryYourWallet" = "Récupérer votre portefeuille";
@@ -726,12 +726,12 @@
 "Search.sent" = "envoyé";
 /* Face ID button title */
 "SecurityCenter.faceIdTitle" = "Face ID";
-/* Paper Key button description */
+/* Recovery Key button description */
 "SecurityCenter.paperKeyDescription" = "La seule façon d'accéder à votre bitcoin si vous perdez ou mettez à niveau votre téléphone.";
-/* Recovery Key button title. This used to be called 'paper key', so leaving the string key as `paperKeyTitle` in order
+/* Recovery Key button title. This used to be called 'recovery key', so leaving the string key as `paperKeyTitle` in order
  * to not break existing client code. */
 "SecurityCenter.paperKeyTitle" = "Clé papier";
-/* Paper Key button title */
+/* Recovery Key button title */
 "SecurityCenter.paperKeyTitle.android" = "Clé papier";
 /* PIN button description */
 "SecurityCenter.pinDescription" = "Protège vos BRD contre les utilisateurs non autorisés.";
@@ -905,9 +905,9 @@
 "ShareData.toggleLabel" = "Partager des données anonymes ?";
 /* button label */
 "StartPaperPhrase.againButtonTitle" = "Enregistrez la clé papier à nouveau";
-/* Paper key explanation text. */
+/* Recovery key explanation text. */
 "StartPaperPhrase.body" = "Votre clé papier est la seule façon de restaurer votre BRD si votre téléphone est perdu, volé, cassé ou mis à niveau.\n\nNous allons vous montrer une liste de mots à écrire sur un morceau de papier et à garder en sécurité.";
-/* Paper key explanation text (Android-version) */
+/* Recovery key explanation text (Android-version) */
 "StartPaperPhrase.Body.Android" = "Votre clé papier est la seule façon de restaurer votre BRD si votre téléphone est perdu, volé, cassé ou changé. \n\nVotre clé papier est également nécessaire si vous modifiez les paramètres de sécurité de votre appareil.\n\nNous afficherons une liste de mots que vous devrez noter sur un papier et conserver en sécurité.";
 /* button label */
 "StartPaperPhrase.buttonTitle" = "Écrire la clé papier";
@@ -1132,7 +1132,7 @@ eg. 182930 (45061 confirmations) */
 "UnlockScreen.faceIdText" = "Déverrouiller avec Face ID";
 /* My Address button title */
 "UnlockScreen.myAddress" = "Mon adresse";
-/* Reset PIN with Paper Key button label. */
+/* Reset PIN with Recovery Key button label. */
 "UnlockScreen.resetPin" = "Réinitialiser le PIN";
 /* Scan button title */
 "UnlockScreen.scan" = "Scanner";
@@ -1219,7 +1219,7 @@ Wallet connection settings menu item title. */
 "WipeWallet.failedMessage" = "Échec de la suppression du portefeuille.";
 /* Failed wipe wallet alert title */
 "WipeWallet.failedTitle" = "Échec";
-/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] paper key that needs to be entered). */
+/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] recovery key that needs to be entered). */
 "WipeWallet.instruction" = "Pour commencer un nouveau portefeuille ou rétablir un portefeuille existant, vous devez d'abord supprimer le portefeuille actuellement installé. Pour continuer, saisissez la Clé Papier du portefeuille actuel.";
 /* Instructions for unlinking the wallet */
 "WipeWallet.startMessage" = "Démarrer ou récupérer un autre portefeuille vous permet d'accéder et de gérer un portefeuille BRD différent sur cet appareil.";
@@ -1231,7 +1231,7 @@ Wallet connection settings menu item title. */
 "WipeWallet.wipe" = "Effacer";
 /* Wiping activity message */
 "WipeWallet.wiping" = "Effacement...";
-/* Paper key instructions. */
+/* Recovery key instructions. */
 "WritePaperPhrase.instruction" = "Écrivez chaque mot en ordre et conserver dans un lieu sûr.";
 /* button label */
 "WritePaperPhrase.next" = "Suivant";

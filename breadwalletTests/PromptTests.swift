@@ -155,10 +155,10 @@ class PromptTests: XCTestCase {
         
         let sorted = unsortedPrompts
         
-        // upgrade PIN beats paper key
+        // upgrade PIN beats recovery key
         XCTAssertTrue(upgradePinPrompt.order < paperKeyPrompt.order)
 
-        // make sure paper key appears first (if upgrade PIN not present)
+        // make sure recovery key appears first (if upgrade PIN not present)
         XCTAssertTrue(sorted.first?.order == PromptType.paperKey.rawValue)
         
         // no passcode beats biometrics

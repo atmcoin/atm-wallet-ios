@@ -45,7 +45,7 @@
 /* Default wallet name */
 "AccountHeader.defaultWalletName" = "Minha BRD";
 /* Third party keyboard warning */
-"Alert.customKeyboard.android" = "Ao que parece, está a utilizar um teclado de terceiros, o qual pode gravar aquilo que digita e furtar a sua Paper Key. Por favor, mude para o teclado predefinido do Android, a fim de ficar mais protegido.";
+"Alert.customKeyboard.android" = "Ao que parece, está a utilizar um teclado de terceiros, o qual pode gravar aquilo que digita e furtar a sua Recovery Key. Por favor, mude para o teclado predefinido do Android, a fim de ficar mais protegido.";
 /* Error alert title */
 "Alert.error" = "Erro";
 /* Keystore error */
@@ -70,7 +70,7 @@
 "Alerts.copiedAddressesHeader" = "Endereços Copiados";
 /* Addresses Copied Alert sub header */
 "Alerts.copiedAddressesSubheader" = "Todos os endereços de carteiras foram copiados com sucesso.";
-/* Alert Header Label (the paper key was set) */
+/* Alert Header Label (the recovery key was set) */
 "Alerts.paperKeySet" = "Chave de Papel Definida";
 /* Alert Subheader label (playfully positive) */
 "Alerts.paperKeySetSubheader" = "Incrível!";
@@ -203,7 +203,7 @@
 /* Total Cost: ($5.00) */
 "Confirmation.totalLabel" = "Custo total";
 /* Confirm paper phrase error message */
-"ConfirmPaperPhrase.error" = "As palavras introduzidas não correspondem à sua paper key. Agradecemos que tente de novo.";
+"ConfirmPaperPhrase.error" = "As palavras introduzidas não correspondem à sua recovery key. Agradecemos que tente de novo.";
 /* Confirm paper phrase view label. */
 "ConfirmPaperPhrase.label" = "Para ter certeza que tudo foi escrito corretamente, por favor introduza as seguintes palavras da sua chave de papel.";
 /* Word label eg. Word #1, Word #2 */
@@ -410,13 +410,13 @@
 "MenuViewController.modalTitle" = "Menu";
 /* button label */
 "MenuViewController.recoverButton" = "Recuperar Carteira";
-/* Paper Key Skip modal body (Android-version) */
+/* Recovery Key Skip modal body (Android-version) */
 "Modal.PaperKeySkip.Body.Android" = "A sua chave de papel é necessária para abrir a sua carteira se alterar as definições de segurança do seu telefone. \n\nTem a certeza de que quer definir a sua chave de papel mais tarde?";
-/* Paper Key Skip modal Continue Set Up button */
+/* Recovery Key Skip modal Continue Set Up button */
 "Modal.PaperKeySkip.Button.ContinueSetUp" = "Continuar Definição";
-/* Paper Key Skip modal I'll do it later button */
+/* Recovery Key Skip modal I'll do it later button */
 "Modal.PaperKeySkip.Button.IllDoItLater" = "Mais tarde";
-/* Paper Key Skip modal title */
+/* Recovery Key Skip modal title */
 "Modal.PaperKeySkip.Title" = "Atenção";
 /* Node selection mode is automatic */
 "NodeSelector.automatic" = "Automático";
@@ -512,9 +512,9 @@
 "Prompts.NoScreenLock.body.android" = "É necessário um bloqueio de ecrã no dispositivo para salvaguardar a sua carteira. Vá a \"Definições\" > \"Segurança\" > \"Bloqueio de ecrã\" e ative para continuar.";
 /* Device encryption prompt title */
 "Prompts.NoScreenLock.title.android" = "Bloqueio de ecrã desativado";
-/* Warning about recovery key (formerly paper key). */
-"Prompts.PaperKey.body" = "O seu Paper Key deve ser guardado para o caso de perder ou alterar o seu telemóvel.";
-/* Warning about paper key (Android-version) */
+/* Warning about recovery key (formerly recovery key). */
+"Prompts.PaperKey.body" = "O seu Recovery Key deve ser guardado para o caso de perder ou alterar o seu telemóvel.";
+/* Warning about recovery key (Android-version) */
 "Prompts.PaperKey.Body.Android" = "Defina a sua chave de papel para o caso de perder ou substituir o seu telefone. A sua chave também é necessária se alterar as definições de segurança do seu telefone.";
 /* An action is required (You must do this action). */
 "Prompts.PaperKey.title" = "Ação Necessária";
@@ -584,25 +584,25 @@
 "RecoverWallet.done" = "Feito";
 /* Recover wallet header */
 "RecoverWallet.header" = "Recuperar Carteira";
-/* Reset PIN with paper key: header */
+/* Reset PIN with recovery key: header */
 "RecoverWallet.header_reset_pin" = "Redefinir PIN";
-/* Enter paper key instruction */
+/* Enter recovery key instruction */
 "RecoverWallet.instruction" = "Introduzir Chave de Papel";
 /* Recover wallet intro */
 "RecoverWallet.intro" = "Recupere a sua BRD com a sua chave de papel.";
-/* Invalid paper key message */
+/* Invalid recovery key message */
 "RecoverWallet.invalid" = "A chave de papel que introduziu é inválida. Por favor verifique cada palavra e tente novamente.";
 /* Previous button accessibility label */
 "RecoverWallet.leftArrow" = "Seta para a Esquerda";
 /* Next button label */
 "RecoverWallet.next" = "Seguinte";
-/* Reset PIN with paper key: more information button. */
+/* Reset PIN with recovery key: more information button. */
 "RecoverWallet.reset_pin_more_info" = "Toque aqui para mais informações.";
 /* Next button accessibility label */
 "RecoverWallet.rightArrow" = "Seta para a Direita";
 /* Recover wallet sub-header */
 "RecoverWallet.subheader" = "Introduza a chave de papel para a carteira que quer recuperar.";
-/* Reset PIN with paper key: sub-header */
+/* Reset PIN with recovery key: sub-header */
 "RecoverWallet.subheader_reset_pin" = "Para redefinir o seu PIN, introduza as palavras da sua chave de papel nas caixas abaixo.";
 /* Instructs the user to enter words from the set of recovery key words. */
 "RecoveryKeyFlow.confirmRecoveryInputError" = "A palavra que introduziu está incorrecta. Por favor, tente outra vez.";
@@ -636,7 +636,7 @@
 "RecoveryKeyFlow.keyUseHint" = "A sua chave é apenas necessária para recuperação, não para o acesso normal à sua carteira.";
 /* Reminds the user not to take screenshots or email the recovery key words */
 "RecoveryKeyFlow.noScreenshotsOrEmailWarning" = "Por motivos de segurança, não faça capturas de ecrã ou envie por email estas palavras.";
-/* Recommends that the user avoids capturing the paper key with a screenshot */
+/* Recommends that the user avoids capturing the recovery key with a screenshot */
 "RecoveryKeyFlow.noScreenshotsRecommendation" = "Tome nota num papel da sua chave de recuperação e confirme. Capturas de ecrã não são recomendadas por questões de segurança.";
 /* Title displayed when the user starts the process of recovering a wallet */
 "RecoveryKeyFlow.recoveryYourWallet" = "Recuperar a Sua Carteira";
@@ -726,12 +726,12 @@
 "Search.sent" = "enviado";
 /* Face ID button title */
 "SecurityCenter.faceIdTitle" = "Face ID";
-/* Paper Key button description */
+/* Recovery Key button description */
 "SecurityCenter.paperKeyDescription" = "A única forma de aceder às suas bitcoins se perder ou atualizar o seu telefone.";
-/* Recovery Key button title. This used to be called 'paper key', so leaving the string key as `paperKeyTitle` in order
+/* Recovery Key button title. This used to be called 'recovery key', so leaving the string key as `paperKeyTitle` in order
  * to not break existing client code. */
 "SecurityCenter.paperKeyTitle" = "Chave de Papel";
-/* Paper Key button title */
+/* Recovery Key button title */
 "SecurityCenter.paperKeyTitle.android" = "Chave de Papel";
 /* PIN button description */
 "SecurityCenter.pinDescription" = "Protege a sua BRD de utilizadores não autorizados.";
@@ -905,9 +905,9 @@
 "ShareData.toggleLabel" = "Partilhar Dados Anónimos?";
 /* button label */
 "StartPaperPhrase.againButtonTitle" = "Escrever Novamente Chave de Papel";
-/* Paper key explanation text. */
+/* Recovery key explanation text. */
 "StartPaperPhrase.body" = "A chave de papel é a única forma de restaurar a sua BRD se o seu telefone for perdido, roubado, partido ou atualizado.\n\nVamos mostrar-lhe uma lista de palavras para escrever numa folha de papel e manter em segurança.";
-/* Paper key explanation text (Android-version) */
+/* Recovery key explanation text (Android-version) */
 "StartPaperPhrase.Body.Android" = "A sua chave de papel é a única forma de restaurar a sua BRD se o seu telefone se perder, partir, for roubado ou atualizado.\n\nA sua chave de papel também é necessária se alterar as definições de segurança do seu dispositivo.\n\nVamos mostrar-lhe uma lista de palavras para escrever numa folha de papel e manter em segurança.";
 /* button label */
 "StartPaperPhrase.buttonTitle" = "Escrever Chave de Papel";
@@ -1132,7 +1132,7 @@ eg. 182930 (45061 confirmations) */
 "UnlockScreen.faceIdText" = "Desbloquear com o Face ID";
 /* My Address button title */
 "UnlockScreen.myAddress" = "Meu Endereço";
-/* Reset PIN with Paper Key button label. */
+/* Reset PIN with Recovery Key button label. */
 "UnlockScreen.resetPin" = "Redefinir PIN";
 /* Scan button title */
 "UnlockScreen.scan" = "Digitalizar";
@@ -1219,7 +1219,7 @@ Wallet connection settings menu item title. */
 "WipeWallet.failedMessage" = "Falha ao limpar a carteira.";
 /* Failed wipe wallet alert title */
 "WipeWallet.failedTitle" = "Falhou";
-/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] paper key that needs to be entered). */
+/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] recovery key that needs to be entered). */
 "WipeWallet.instruction" = "Para iniciar uma nova carteira ou restaurar uma carteira já existente, tem de começar por eliminar a ligação à carteira que está instalada neste momento. Para continuar, introduza a Chave em Papel que se encontra atualmente associada à carteira.";
 /* Instructions for unlinking the wallet */
 "WipeWallet.startMessage" = "Elimine a ligação à sua carteira, a fim de a remover deste dispositivo. Assim que a ligação à carteira tiver sido eliminada, pode iniciar uma nova carteira ou recuperar outra carteira neste dispositivo.";
@@ -1231,7 +1231,7 @@ Wallet connection settings menu item title. */
 "WipeWallet.wipe" = "Limpar";
 /* Wiping activity message */
 "WipeWallet.wiping" = "A limpar...";
-/* Paper key instructions. */
+/* Recovery key instructions. */
 "WritePaperPhrase.instruction" = "Escreva cada palavra por ordem e guarde-as num lugar seguro.";
 /* button label */
 "WritePaperPhrase.next" = "Seguinte";

@@ -525,7 +525,7 @@ class ModalPresenter: Subscriber, Trackable {
                 self.presentBiometricsMenuItem()
             },
             
-            // Paper key
+            // Recovery key
             MenuItem(title: S.SecurityCenter.Cells.paperKeyTitle) { [weak self] in
                 guard let `self` = self else { return }
                 self.presentWritePaperKey(fromViewController: menuNav)
@@ -639,8 +639,8 @@ class ModalPresenter: Subscriber, Trackable {
                 }))
             }
             
-            // For test wallets, suppresses the paper key prompt on the home screen.
-            developerItems.append(MenuItem(title: "Suppress paper key prompt",
+            // For test wallets, suppresses the recovery key prompt on the home screen.
+            developerItems.append(MenuItem(title: "Suppress recovery key prompt",
                                            accessoryText: { UserDefaults.debugShouldSuppressPaperKeyPrompt ? "ON" : "OFF" },
                                            callback: {
                                             _ = UserDefaults.toggleSuppressPaperKeyPrompt()
@@ -662,12 +662,12 @@ class ModalPresenter: Subscriber, Trackable {
                                             (menuNav.topViewController as? BRDMenuViewController)?.reloadMenu()
             }))
 
-            // Shows a preview of the paper key.
+            // Shows a preview of the recovery key.
             if UserDefaults.debugShouldAutoEnterPIN, let paperKey = keyStore.seedPhrase(pin: "111111") {
                 let words = paperKey.components(separatedBy: " ")
                 let timestamp = (try? keyStore.loadAccount().map { $0.timestamp }.get()) ?? Date.zeroValue()
                 let preview = "\(words[0]) \(words[1])... (\(DateFormatter.mediumDateFormatter.string(from: timestamp))"
-                developerItems.append(MenuItem(title: "Paper key preview",
+                developerItems.append(MenuItem(title: "Recovery key preview",
                                                accessoryText: { UserDefaults.debugShouldShowPaperKeyPreview ? preview : "" },
                                                callback: {
                                                 _ = UserDefaults.togglePaperKeyPreview()

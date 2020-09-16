@@ -85,7 +85,7 @@ class StartFlowPresenter: Subscriber, Trackable {
                 self.enterCreateWalletFlow()
             case .createWalletBuyCoin:
                 // This will be checked in dismissStartFlow(), which is called after the PIN
-                // and paper key flows are finished.
+                // and recovery key flows are finished.
                 self.shouldBuyCoinAfterOnboarding = true
                 self.enterCreateWalletFlow()
             }

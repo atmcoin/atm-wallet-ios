@@ -149,7 +149,7 @@ enum S {
         static let touchIdText = NSLocalizedString("UnlockScreen.touchIdText", value:"Unlock with TouchID", comment: "Unlock with TouchID accessibility label")
         static let touchIdPrompt = NSLocalizedString("UnlockScreen.touchIdPrompt", value:"Unlock your BRD.", comment: "TouchID/FaceID prompt text")
         static let disabled = NSLocalizedString("UnlockScreen.disabled", value:"Disabled until: %1$@", comment: "Disabled until date")
-        static let resetPin = NSLocalizedString("UnlockScreen.resetPin", value:"Reset PIN", comment: "Reset PIN with Paper Key button label.")
+        static let resetPin = NSLocalizedString("UnlockScreen.resetPin", value:"Reset PIN", comment: "Reset PIN with Recovery Key button label.")
         static let faceIdText = NSLocalizedString("UnlockScreen.faceIdText", value:"Unlock with FaceID", comment: "Unlock with FaceID accessibility label")
         static let wipePrompt = NSLocalizedString("UnlockScreen.wipePrompt", value:"Are you sure you would like to wipe this wallet?", comment: "Wipe wallet prompt")
     }
@@ -222,7 +222,7 @@ enum S {
             static let touchIdTitle = NSLocalizedString("SecurityCenter.touchIdTitle", value:"Touch ID", comment: "Touch ID button title")
             static let touchIdDescription = NSLocalizedString("SecurityCenter.touchIdDescription", value:"Conveniently unlock your BRD and send money up to a set limit.", comment: "Touch ID/FaceID button description")
             static let paperKeyTitle = NSLocalizedString("SecurityCenter.paperKeyTitle", value:"Recovery Key", comment: "Recovery Key button title")
-            static let paperKeyDescription = NSLocalizedString("SecurityCenter.paperKeyDescription", value:"The only way to access your bitcoin if you lose or upgrade your phone.", comment: "Paper Key button description")
+            static let paperKeyDescription = NSLocalizedString("SecurityCenter.paperKeyDescription", value:"The only way to access your bitcoin if you lose or upgrade your phone.", comment: "Recovery Key button description")
             static let faceIdTitle = NSLocalizedString("SecurityCenter.faceIdTitle", value:"Face ID", comment: "Face ID button title")
         }
     }
@@ -242,18 +242,18 @@ enum S {
 
     enum RecoverWallet {
         static let next = NSLocalizedString("RecoverWallet.next", value:"Next", comment: "Next button label")
-        static let intro = NSLocalizedString("RecoverWallet.intro", value:"Recover your BRD with your paper key.", comment: "Recover wallet intro")
+        static let intro = NSLocalizedString("RecoverWallet.intro", value:"Recover your BRD with your recovery key.", comment: "Recover wallet intro")
         static let leftArrow = NSLocalizedString("RecoverWallet.leftArrow", value:"Left Arrow", comment: "Previous button accessibility label")
         static let rightArrow = NSLocalizedString("RecoverWallet.rightArrow", value:"Right Arrow", comment: "Next button accessibility label")
         static let done = NSLocalizedString("RecoverWallet.done", value:"Done", comment: "Done button text")
-        static let instruction = NSLocalizedString("RecoverWallet.instruction", value:"Enter Paper Key", comment: "Enter paper key instruction")
+        static let instruction = NSLocalizedString("RecoverWallet.instruction", value:"Enter Recovery Key", comment: "Enter recovery key instruction")
         static let header = NSLocalizedString("RecoverWallet.header", value:"Recover Wallet", comment: "Recover wallet header")
-        static let subheader = NSLocalizedString("RecoverWallet.subheader", value:"Enter the paper key for the wallet you want to recover.", comment: "Recover wallet sub-header")
+        static let subheader = NSLocalizedString("RecoverWallet.subheader", value:"Enter the recovery key for the wallet you want to recover.", comment: "Recover wallet sub-header")
 
-        static let headerResetPin = NSLocalizedString("RecoverWallet.header_reset_pin", value:"Reset PIN", comment: "Reset PIN with paper key: header")
-        static let subheaderResetPin = NSLocalizedString("RecoverWallet.subheader_reset_pin", value:"To reset your PIN, enter the words from your paper key into the boxes below.", comment: "Reset PIN with paper key: sub-header")
-        static let resetPinInfo = NSLocalizedString("RecoverWallet.reset_pin_more_info", value:"Tap here for more information.", comment: "Reset PIN with paper key: more information button.")
-        static let invalid = NSLocalizedString("RecoverWallet.invalid", value:"The paper key you entered is invalid. Please double-check each word and try again.", comment: "Invalid paper key message")
+        static let headerResetPin = NSLocalizedString("RecoverWallet.header_reset_pin", value:"Reset PIN", comment: "Reset PIN with recovery key: header")
+        static let subheaderResetPin = NSLocalizedString("RecoverWallet.subheader_reset_pin", value:"To reset your PIN, enter the words from your recovery key into the boxes below.", comment: "Reset PIN with recovery key: sub-header")
+        static let resetPinInfo = NSLocalizedString("RecoverWallet.reset_pin_more_info", value:"Tap here for more information.", comment: "Reset PIN with recovery key: more information button.")
+        static let invalid = NSLocalizedString("RecoverWallet.invalid", value:"The recovery key you entered is invalid. Please double-check each word and try again.", comment: "Invalid recovery key message")
     }
 
     enum ManageWallet {
@@ -393,8 +393,8 @@ enum S {
 
     enum ConfirmPaperPhrase {
         static let word = NSLocalizedString("ConfirmPaperPhrase.word", value:"Word #%1$@", comment: "Word label eg. Word #1, Word #2")
-        static let label = NSLocalizedString("ConfirmPaperPhrase.label", value:"To make sure everything was written down correctly, please enter the following words from your paper key.", comment: "Confirm paper phrase view label.")
-        static let error = NSLocalizedString("ConfirmPaperPhrase.error", value: "The words entered do not match your paper key. Please try again.", comment: "Confirm paper phrase error message")
+        static let label = NSLocalizedString("ConfirmPaperPhrase.label", value:"To make sure everything was written down correctly, please enter the following words from your recovery key.", comment: "Confirm paper phrase view label.")
+        static let error = NSLocalizedString("ConfirmPaperPhrase.error", value: "The words entered do not match your recovery key. Please try again.", comment: "Confirm paper phrase error message")
     }
 
     enum StartPaperPhrase {
@@ -408,7 +408,7 @@ enum S {
 
     enum Alerts {
         static let pinSet = NSLocalizedString("Alerts.pinSet", value:"PIN Set", comment: "Alert Header label (the PIN was set)")
-        static let paperKeySet = NSLocalizedString("Alerts.paperKeySet", value:"Paper Key Set", comment: "Alert Header Label (the paper key was set)")
+        static let paperKeySet = NSLocalizedString("Alerts.paperKeySet", value:"Recovery Key Set", comment: "Alert Header Label (the recovery key was set)")
         static let sendSuccess = NSLocalizedString("Alerts.sendSuccess", value:"Send Confirmation", comment: "Send success alert header label (confirmation that the send happened)")
         static let sendFailure = NSLocalizedString("Alerts.sendFailure", value:"Send failed", comment: "Send failure alert header label (the send failed to happen)")
         static let paperKeySetSubheader = NSLocalizedString("Alerts.paperKeySetSubheader", value:"Awesome!", comment: "Alert Subheader label (playfully positive)")
@@ -603,9 +603,9 @@ enum S {
         static let wiping = NSLocalizedString("WipeWallet.wiping", value: "Wiping...", comment: "Wiping activity message")
         static let failedTitle = NSLocalizedString("WipeWallet.failedTitle", value: "Failed", comment: "Failed wipe wallet alert title")
         static let failedMessage = NSLocalizedString("WipeWallet.failedMessage", value: "Failed to wipe wallet.", comment: "Failed wipe wallet alert message")
-        static let instruction = NSLocalizedString("WipeWallet.instruction", value: "To start a new wallet or restore an existing wallet, you must first erase the wallet that is currently installed. To continue, enter the current wallet's Paper Key.", comment: "Enter key to wipe wallet instruction.")
+        static let instruction = NSLocalizedString("WipeWallet.instruction", value: "To start a new wallet or restore an existing wallet, you must first erase the wallet that is currently installed. To continue, enter the current wallet's Recovery Key.", comment: "Enter key to wipe wallet instruction.")
         static let startMessage = NSLocalizedString("WipeWallet.startMessage", value: "Starting or recovering another wallet allows you to access and manage a different BRD wallet on this device.", comment: "Start wipe wallet view message")
-        static let startWarning = NSLocalizedString("WipeWallet.startWarning", value: "Your current wallet will be removed from this device. If you wish to restore it in the future, you will need to enter your Paper Key.", comment: "Start wipe wallet view warning")
+        static let startWarning = NSLocalizedString("WipeWallet.startWarning", value: "Your current wallet will be removed from this device. If you wish to restore it in the future, you will need to enter your Recovery Key.", comment: "Start wipe wallet view warning")
     }
 
     enum FeeSelector {
@@ -729,7 +729,7 @@ enum S {
         
         static let noScreenshotsRecommendation = NSLocalizedString("RecoveryKeyFlow.noScreenshotsRecommendation",
                                                                    value: "Write down your key on paper & confirm it. Screenshots are not recommended for security reasons.",
-                                                                   comment: "Recommends that the user avoids capturing the paper key with a screenshot")
+                                                                   comment: "Recommends that the user avoids capturing the recovery key with a screenshot")
         
         static let storeSecurelyRecommendation = NSLocalizedString("RecoveryKeyFlow.storeSecurelyRecommendation",
                                                                    value: "Store your key in a secure location. This is the only way to recover your wallet. BRD does not keep a copy.",

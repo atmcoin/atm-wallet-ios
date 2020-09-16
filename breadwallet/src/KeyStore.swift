@@ -653,7 +653,7 @@ extension KeyStore: WalletAuthenticator {
         return .success(account)
     }
     
-    /// Creates a new Account using the paper key and saves it to the keychain.
+    /// Creates a new Account using the recovery key and saves it to the keychain.
     /// This method should only be called after successful authentication.
     private func createAccountFromSeed() -> Account? {
         guard let seedPhrase: String = try? keychainItem(key: KeychainKey.mnemonic),

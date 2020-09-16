@@ -127,12 +127,12 @@ protocol Prompt {
     var order: Int { get }
     
     /**
-     *  The title displayed with this prompt. e.g., "Action Required" for the paper key prompt.
+     *  The title displayed with this prompt. e.g., "Action Required" for the recovery key prompt.
      */
     var title: String { get }
     
     /**
-     *  The body displayed with this prompt. e.g., "Your paper key must be saved..."
+     *  The body displayed with this prompt. e.g., "Your recovery key must be saved..."
      */
     var body: String { get }
     

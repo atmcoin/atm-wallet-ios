@@ -70,8 +70,8 @@
 "Alerts.copiedAddressesHeader" = "Adressen gekopieerd";
 /* Addresses Copied Alert sub header */
 "Alerts.copiedAddressesSubheader" = "Alle wallet-adressen zijn succesvol gekopieerd.";
-/* Alert Header Label (the paper key was set) */
-"Alerts.paperKeySet" = "Paper key set";
+/* Alert Header Label (the recovery key was set) */
+"Alerts.paperKeySet" = "Recovery key set";
 /* Alert Subheader label (playfully positive) */
 "Alerts.paperKeySetSubheader" = "Geweldig!";
 /* Alert Header label (the PIN was set) */
@@ -203,7 +203,7 @@
 /* Total Cost: ($5.00) */
 "Confirmation.totalLabel" = "Totale Prijs:";
 /* Confirm paper phrase error message */
-"ConfirmPaperPhrase.error" = "De ingevulde woorden komen niet overeen met uw paper key. Probeer het opnieuw.";
+"ConfirmPaperPhrase.error" = "De ingevulde woorden komen niet overeen met uw recovery key. Probeer het opnieuw.";
 /* Confirm paper phrase view label. */
 "ConfirmPaperPhrase.label" = "Voer de volgende woorden in van je papieren sleutel om te verzekeren dat alles correct is opgeschreven.";
 /* Word label eg. Word #1, Word #2 */
@@ -410,13 +410,13 @@
 "MenuViewController.modalTitle" = "Menu";
 /* button label */
 "MenuViewController.recoverButton" = "Portemonnee Herstellen";
-/* Paper Key Skip modal body (Android-version) */
+/* Recovery Key Skip modal body (Android-version) */
 "Modal.PaperKeySkip.Body.Android" = "U heeft uw papieren sleutel nodig om uw wallet te openen als u uw beveiligingsinstellingen op uw telefoon wijzigt.\n\nWeet u zeker dat u uw papieren sleutel later wilt instellen?";
-/* Paper Key Skip modal Continue Set Up button */
+/* Recovery Key Skip modal Continue Set Up button */
 "Modal.PaperKeySkip.Button.ContinueSetUp" = "Doorgaan met instellen";
-/* Paper Key Skip modal I'll do it later button */
+/* Recovery Key Skip modal I'll do it later button */
 "Modal.PaperKeySkip.Button.IllDoItLater" = "Ik doe dit later";
-/* Paper Key Skip modal title */
+/* Recovery Key Skip modal title */
 "Modal.PaperKeySkip.Title" = "Attentie";
 /* Node selection mode is automatic */
 "NodeSelector.automatic" = "Automatisch";
@@ -512,9 +512,9 @@
 "Prompts.NoScreenLock.body.android" = "Een schermvergrendeling voor uw apparaat is nodig om uw portemonnee te beveiligen. Ga naar \"Instellingen\" > \"Beveiliging\" > \"Schermvergrendeling\" en stel in om door te gaan.";
 /* Device encryption prompt title */
 "Prompts.NoScreenLock.title.android" = "Schermvergrendeling uitgeschakeld";
-/* Warning about recovery key (formerly paper key). */
+/* Warning about recovery key (formerly recovery key). */
 "Prompts.PaperKey.body" = "Uw Papiersleutel moet opgeslagen worden voor het geval dat u uw telefoon ooit verliest of vervangt.";
-/* Warning about paper key (Android-version) */
+/* Warning about recovery key (Android-version) */
 "Prompts.PaperKey.Body.Android" = "Stel uw papieren sleutel in voor het geval dat u uw telefoon ooit kwijtraakt of vervangt. U heeft uw sleutel nodig indien u de beveiligingsinstellingen van uw telefoon aanpast.";
 /* An action is required (You must do this action). */
 "Prompts.PaperKey.title" = "Actie Vereist";
@@ -584,25 +584,25 @@
 "RecoverWallet.done" = "Voltooid";
 /* Recover wallet header */
 "RecoverWallet.header" = "Portemonnee Herstellen";
-/* Reset PIN with paper key: header */
+/* Reset PIN with recovery key: header */
 "RecoverWallet.header_reset_pin" = "PIN Resetten";
-/* Enter paper key instruction */
+/* Enter recovery key instruction */
 "RecoverWallet.instruction" = "Papieren Sleutel Invoeren";
 /* Recover wallet intro */
 "RecoverWallet.intro" = "Herstel je BRD met je papieren sleutel.";
-/* Invalid paper key message */
+/* Invalid recovery key message */
 "RecoverWallet.invalid" = "De papieren sleutel die je hebt ingevoerd is ongeldig. Check ieder woord a.u.b. en probeer het opnieuw.";
 /* Previous button accessibility label */
 "RecoverWallet.leftArrow" = "Linker Pijl";
 /* Next button label */
 "RecoverWallet.next" = "Volgende";
-/* Reset PIN with paper key: more information button. */
+/* Reset PIN with recovery key: more information button. */
 "RecoverWallet.reset_pin_more_info" = "Tik hier voor meer informatie.";
 /* Next button accessibility label */
 "RecoverWallet.rightArrow" = "Rechter Pijl";
 /* Recover wallet sub-header */
 "RecoverWallet.subheader" = "Voer de papieren sleutel in voor de portemonnee die je wilt herstellen.";
-/* Reset PIN with paper key: sub-header */
+/* Reset PIN with recovery key: sub-header */
 "RecoverWallet.subheader_reset_pin" = "Om je PIN te resetten moet je de woorden van je papieren sleutel in onderstaande velden invoeren.";
 /* Instructs the user to enter words from the set of recovery key words. */
 "RecoveryKeyFlow.confirmRecoveryInputError" = "Het woord dat u ingevoerd heeft is niet juist. Probeer het nogmaals.";
@@ -636,7 +636,7 @@
 "RecoveryKeyFlow.keyUseHint" = "Uw code is alleen nodig voor herstel, niet voor dagelijkse toegang tot uw wallet.";
 /* Reminds the user not to take screenshots or email the recovery key words */
 "RecoveryKeyFlow.noScreenshotsOrEmailWarning" = "Maak om veiligheidsredenen geen screenshot van deze woorden en verstuur ze niet per e-mail";
-/* Recommends that the user avoids capturing the paper key with a screenshot */
+/* Recommends that the user avoids capturing the recovery key with a screenshot */
 "RecoveryKeyFlow.noScreenshotsRecommendation" = "Noteer uw code op papier en bevestig hem. Screenshots worden om veiligheidsredenen niet aangeraden.";
 /* Title displayed when the user starts the process of recovering a wallet */
 "RecoveryKeyFlow.recoveryYourWallet" = "Herstel uw wallet";
@@ -726,12 +726,12 @@
 "Search.sent" = "verstuurd";
 /* Face ID button title */
 "SecurityCenter.faceIdTitle" = "Face-ID";
-/* Paper Key button description */
+/* Recovery Key button description */
 "SecurityCenter.paperKeyDescription" = "De enige manier om toegang te hebben tot je Bitcoins is als je je telefoon verliest of upgrade.";
-/* Recovery Key button title. This used to be called 'paper key', so leaving the string key as `paperKeyTitle` in order
+/* Recovery Key button title. This used to be called 'recovery key', so leaving the string key as `paperKeyTitle` in order
  * to not break existing client code. */
 "SecurityCenter.paperKeyTitle" = "Papieren Sleutel";
-/* Paper Key button title */
+/* Recovery Key button title */
 "SecurityCenter.paperKeyTitle.android" = "Papieren Sleutel";
 /* PIN button description */
 "SecurityCenter.pinDescription" = "Beschermt je BRD van ongeautoriseerde gebruikers.";
@@ -905,9 +905,9 @@
 "ShareData.toggleLabel" = "Anonieme Data Delen?";
 /* button label */
 "StartPaperPhrase.againButtonTitle" = "Schrijf Papieren Sleutel Opnieuw Op";
-/* Paper key explanation text. */
+/* Recovery key explanation text. */
 "StartPaperPhrase.body" = "Je papieren sleutel is de enige manier om je BRD te herstellen als je telefoon verloren, gestolen, kapot of geüpgrade is.\n\nWe zullen je een lijst met woorden laten zie die je op een papiertje moet schrijven en veilig moet bewaren.";
-/* Paper key explanation text (Android-version) */
+/* Recovery key explanation text (Android-version) */
 "StartPaperPhrase.Body.Android" = "Uw papieren sleutel is de enige manier om uw BRD te herstellen indien u uw telefoon kwijtraakt of als deze gestolen of geüpgraded wordt. \n\nU heeft uw papieren sleutel tevens nodig indien u de beveiligingsinstellingen van uw apparaat aanpast.\n\nWe tonen u een lijst met woorden die u op een stuk papier kunt opschrijven en veilig dient te bewaren.";
 /* button label */
 "StartPaperPhrase.buttonTitle" = "Schrijf Papieren Sleutel Op";
@@ -1132,7 +1132,7 @@ eg. 182930 (45061 confirmations) */
 "UnlockScreen.faceIdText" = "Ontgrendelen met Face-ID";
 /* My Address button title */
 "UnlockScreen.myAddress" = "Mijn Adres";
-/* Reset PIN with Paper Key button label. */
+/* Reset PIN with Recovery Key button label. */
 "UnlockScreen.resetPin" = "PIN Resetten";
 /* Scan button title */
 "UnlockScreen.scan" = "Scannen";
@@ -1219,7 +1219,7 @@ Wallet connection settings menu item title. */
 "WipeWallet.failedMessage" = "Wissen van portomonnee niet gelukt";
 /* Failed wipe wallet alert title */
 "WipeWallet.failedTitle" = "Mislukt";
-/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] paper key that needs to be entered). */
+/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] recovery key that needs to be entered). */
 "WipeWallet.instruction" = "Om een nieuwe portemonnee te beginnen of een bestaande te laden, moet u eerst de portemonnee die momenteel geïnstalleerd is ontkoppelen. Voer de Papieren Sleutel van de huidige portemonnee in om door te gaan.";
 /* Instructions for unlinking the wallet */
 "WipeWallet.startMessage" = "Ontkoppel je portemonnee om het te verwijderen van dit toestel. Wanneer deze portemonnee ontkoppeld is kunt u een nieuwe portemonnee beginnen of een andere portemonnee laden op dit toestel.";
@@ -1231,7 +1231,7 @@ Wallet connection settings menu item title. */
 "WipeWallet.wipe" = "Wissen";
 /* Wiping activity message */
 "WipeWallet.wiping" = "Aan het wissen...";
-/* Paper key instructions. */
+/* Recovery key instructions. */
 "WritePaperPhrase.instruction" = "Schrijf elk woord in de juiste volgorde op en bewaar het op een veilige plek.";
 /* button label */
 "WritePaperPhrase.next" = "Volgende";

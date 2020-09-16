@@ -45,7 +45,7 @@
 /* Default wallet name */
 "AccountHeader.defaultWalletName" = "Mit BRD";
 /* Third party keyboard warning */
-"Alert.customKeyboard.android" = "Det ser ud til at du bruger et tastatur fra en tredjepart, som kan optage det du skriver og stjæle din Paper Key. Skift til standard Android-tastaturet for ekstra beskyttelse.";
+"Alert.customKeyboard.android" = "Det ser ud til at du bruger et tastatur fra en tredjepart, som kan optage det du skriver og stjæle din Recovery Key. Skift til standard Android-tastaturet for ekstra beskyttelse.";
 /* Error alert title */
 "Alert.error" = "Fejl";
 /* Keystore error */
@@ -70,8 +70,8 @@
 "Alerts.copiedAddressesHeader" = "Adresser kopieret";
 /* Addresses Copied Alert sub header */
 "Alerts.copiedAddressesSubheader" = "Alle pungens adresser er kopieret.";
-/* Alert Header Label (the paper key was set) */
-"Alerts.paperKeySet" = "Paper key indstillet";
+/* Alert Header Label (the recovery key was set) */
+"Alerts.paperKeySet" = "Recovery key indstillet";
 /* Alert Subheader label (playfully positive) */
 "Alerts.paperKeySetSubheader" = "Fedt!";
 /* Alert Header label (the PIN was set) */
@@ -205,7 +205,7 @@
 /* Confirm paper phrase error message */
 "ConfirmPaperPhrase.error" = "Ordene du har indtastet matcher ikke din papirnøgle. Prøv venligst igen.";
 /* Confirm paper phrase view label. */
-"ConfirmPaperPhrase.label" = "For at sørge for, at alt blev skrevet korrekt, bedes du indtaste følgende ord fra din paper key.";
+"ConfirmPaperPhrase.label" = "For at sørge for, at alt blev skrevet korrekt, bedes du indtaste følgende ord fra din recovery key.";
 /* Word label eg. Word #1, Word #2 */
 "ConfirmPaperPhrase.word" = "Ord #%1$@";
 /* Agree to legal terms button */
@@ -410,13 +410,13 @@
 "MenuViewController.modalTitle" = "Menu";
 /* button label */
 "MenuViewController.recoverButton" = "Gendan pung";
-/* Paper Key Skip modal body (Android-version) */
+/* Recovery Key Skip modal body (Android-version) */
 "Modal.PaperKeySkip.Body.Android" = "Din papirnøgle er nødvendig for at du kan åbne din tegnebog, hvis du ændrer sikkerhedsindstillingerne på din telefon.\n\nEr du sikker på at du vil oprette din papirnøgle senere?";
-/* Paper Key Skip modal Continue Set Up button */
+/* Recovery Key Skip modal Continue Set Up button */
 "Modal.PaperKeySkip.Button.ContinueSetUp" = "Fortsæt oprettelse";
-/* Paper Key Skip modal I'll do it later button */
+/* Recovery Key Skip modal I'll do it later button */
 "Modal.PaperKeySkip.Button.IllDoItLater" = "Jeg gør det senere";
-/* Paper Key Skip modal title */
+/* Recovery Key Skip modal title */
 "Modal.PaperKeySkip.Title" = "Vær opmærksom";
 /* Node selection mode is automatic */
 "NodeSelector.automatic" = "Automatisk";
@@ -512,9 +512,9 @@
 "Prompts.NoScreenLock.body.android" = "Der skal en skærmlås til på enheden, for at beskytte din pung. Gå til \"Indstillinger\" > \"Sikkerhed\" > \"Skærmlås\" og aktiver for at fortsætte.";
 /* Device encryption prompt title */
 "Prompts.NoScreenLock.title.android" = "Skærmlås deaktiveret";
-/* Warning about recovery key (formerly paper key). */
+/* Warning about recovery key (formerly recovery key). */
 "Prompts.PaperKey.body" = "Din Papirnøgle skal gemmes i tilfælde af du nogensinde mister eller skifter telefon.";
-/* Warning about paper key (Android-version) */
+/* Warning about recovery key (Android-version) */
 "Prompts.PaperKey.Body.Android" = "Opret din papirnøgle, i tilfælde af at du mister eller udskifter din telefon. Din nøgle er også påkrævet, hvis du ændrer sikkerhedsindstillingerne på din telefon.";
 /* An action is required (You must do this action). */
 "Prompts.PaperKey.title" = "Handling påkrævet";
@@ -584,26 +584,26 @@
 "RecoverWallet.done" = "Færdig";
 /* Recover wallet header */
 "RecoverWallet.header" = "Gendan pung";
-/* Reset PIN with paper key: header */
+/* Reset PIN with recovery key: header */
 "RecoverWallet.header_reset_pin" = "Nulstil PIN";
-/* Enter paper key instruction */
-"RecoverWallet.instruction" = "Indtast paper key";
+/* Enter recovery key instruction */
+"RecoverWallet.instruction" = "Indtast recovery key";
 /* Recover wallet intro */
-"RecoverWallet.intro" = "Gendan dit BRD med din paper key.";
-/* Invalid paper key message */
-"RecoverWallet.invalid" = "Den paper key du indtastede er ugyldig. Dobbelttjek hvert ord og prøv igen.";
+"RecoverWallet.intro" = "Gendan dit BRD med din recovery key.";
+/* Invalid recovery key message */
+"RecoverWallet.invalid" = "Den recovery key du indtastede er ugyldig. Dobbelttjek hvert ord og prøv igen.";
 /* Previous button accessibility label */
 "RecoverWallet.leftArrow" = "Venstre pil";
 /* Next button label */
 "RecoverWallet.next" = "Næste";
-/* Reset PIN with paper key: more information button. */
+/* Reset PIN with recovery key: more information button. */
 "RecoverWallet.reset_pin_more_info" = "Tryk her for flere oplysninger.";
 /* Next button accessibility label */
 "RecoverWallet.rightArrow" = "Højre pil";
 /* Recover wallet sub-header */
-"RecoverWallet.subheader" = "Indtast paper key til pungen du vil gendanne.";
-/* Reset PIN with paper key: sub-header */
-"RecoverWallet.subheader_reset_pin" = "For at nulstille din PIN, skal du indtaste ordene fra din paper key i boksene nedenfor.";
+"RecoverWallet.subheader" = "Indtast recovery key til pungen du vil gendanne.";
+/* Reset PIN with recovery key: sub-header */
+"RecoverWallet.subheader_reset_pin" = "For at nulstille din PIN, skal du indtaste ordene fra din recovery key i boksene nedenfor.";
 /* Instructs the user to enter words from the set of recovery key words. */
 "RecoveryKeyFlow.confirmRecoveryInputError" = "Ordet du indtastede er forkert. Prøv igen.";
 /* Instructs the user to enter words from the set of recovery key words. */
@@ -636,7 +636,7 @@
 "RecoveryKeyFlow.keyUseHint" = "Din nøgle er kun nødvendig til genopretning, ikke til hverdagsadgang til tegnebogen.";
 /* Reminds the user not to take screenshots or email the recovery key words */
 "RecoveryKeyFlow.noScreenshotsOrEmailWarning" = "Af sikkerhedshensyn skal du ikke tage skærmbilleder eller e-maile disse ord";
-/* Recommends that the user avoids capturing the paper key with a screenshot */
+/* Recommends that the user avoids capturing the recovery key with a screenshot */
 "RecoveryKeyFlow.noScreenshotsRecommendation" = "Skriv din nøgle ned på papir og bekræft den. Skærmbilleder anbefales ikke af sikkerhedsmæssige årsager.";
 /* Title displayed when the user starts the process of recovering a wallet */
 "RecoveryKeyFlow.recoveryYourWallet" = "Gendan din Tegnebog";
@@ -726,13 +726,13 @@
 "Search.sent" = "sendt";
 /* Face ID button title */
 "SecurityCenter.faceIdTitle" = "Face ID";
-/* Paper Key button description */
+/* Recovery Key button description */
 "SecurityCenter.paperKeyDescription" = "Den eneste måde at få adgang til dine bitcoin på, hvis du mister eller opgraderer din telefon.";
-/* Recovery Key button title. This used to be called 'paper key', so leaving the string key as `paperKeyTitle` in order
+/* Recovery Key button title. This used to be called 'recovery key', so leaving the string key as `paperKeyTitle` in order
  * to not break existing client code. */
-"SecurityCenter.paperKeyTitle" = "Paper key";
-/* Paper Key button title */
-"SecurityCenter.paperKeyTitle.android" = "Paper key";
+"SecurityCenter.paperKeyTitle" = "Recovery key";
+/* Recovery Key button title */
+"SecurityCenter.paperKeyTitle.android" = "Recovery key";
 /* PIN button description */
 "SecurityCenter.pinDescription" = "Beskytter dit BRD mod uberettigede brugere.";
 /* PIN button title */
@@ -904,15 +904,15 @@
 /* Share data switch label. */
 "ShareData.toggleLabel" = "Del anonyme data?";
 /* button label */
-"StartPaperPhrase.againButtonTitle" = "Skriv paper key ned igen";
-/* Paper key explanation text. */
-"StartPaperPhrase.body" = "Din paper key er den eneste måde at gendanne dit BRD på, hvis din telefon mistes, stjæles, går i stykker eller opgraderes.\n\nVi viser dig en liste over word du skal skrive ned på et papir, og holde sikkert.";
-/* Paper key explanation text (Android-version) */
+"StartPaperPhrase.againButtonTitle" = "Skriv recovery key ned igen";
+/* Recovery key explanation text. */
+"StartPaperPhrase.body" = "Din recovery key er den eneste måde at gendanne dit BRD på, hvis din telefon mistes, stjæles, går i stykker eller opgraderes.\n\nVi viser dig en liste over word du skal skrive ned på et papir, og holde sikkert.";
+/* Recovery key explanation text (Android-version) */
 "StartPaperPhrase.Body.Android" = "Din papirnøgle er den eneste måde hvorpå du kan gendanne din BRD, hvis din telefon går tabt, bliver stjålet, ødelagt eller opgraderet.\n\nDin papirnøgle er også påkrævet, hvis du ændrer sikkerhedsindstillingerne på din enhed.\n\nVi viser dig en liste med ord, som du skal skrive ned på et stykke papir og opbevare sikkert.";
 /* button label */
-"StartPaperPhrase.buttonTitle" = "Skriv paper key ned";
+"StartPaperPhrase.buttonTitle" = "Skriv recovery key ned";
 /* Argument is date; date should be on a new line */
-"StartPaperPhrase.date" = "Du skrev sidst din paper key ned den \n%1$@";
+"StartPaperPhrase.date" = "Du skrev sidst din recovery key ned den \n%1$@";
 /* button label */
 "StartViewController.createButton" = "Opret ny tegnebog";
 /* Start view message */
@@ -1132,7 +1132,7 @@ eg. 182930 (45061 confirmations) */
 "UnlockScreen.faceIdText" = "Lås op med Face ID";
 /* My Address button title */
 "UnlockScreen.myAddress" = "Min adresse";
-/* Reset PIN with Paper Key button label. */
+/* Reset PIN with Recovery Key button label. */
 "UnlockScreen.resetPin" = "Nulstil PIN";
 /* Scan button title */
 "UnlockScreen.scan" = "Scan";
@@ -1219,7 +1219,7 @@ Wallet connection settings menu item title. */
 "WipeWallet.failedMessage" = "Fejl ved sletning af wallet.";
 /* Failed wipe wallet alert title */
 "WipeWallet.failedTitle" = "Fejl";
-/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] paper key that needs to be entered). */
+/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] recovery key that needs to be entered). */
 "WipeWallet.instruction" = "For at oprette en ny pung eller gendanne en eksisterende pung, skal du først fjerne linket til den pung der er installeret på nuværende tidspunkt. For at fortsætte, skal du indtaste den nuværende pungs papirnøgle.";
 /* Instructions for unlinking the wallet */
 "WipeWallet.startMessage" = "Fjern link til pung for at fjerne den fra denne enhed. Når linket til denne pung er fjernet, kan du starte en ny pung eller gendanne en anden pung på denne enhed.";
@@ -1231,7 +1231,7 @@ Wallet connection settings menu item title. */
 "WipeWallet.wipe" = "Slet";
 /* Wiping activity message */
 "WipeWallet.wiping" = "Sletter...";
-/* Paper key instructions. */
+/* Recovery key instructions. */
 "WritePaperPhrase.instruction" = "Skriv hvert ord ned i rækkefølge og opbevar den et sikkert sted.";
 /* button label */
 "WritePaperPhrase.next" = "Næste";

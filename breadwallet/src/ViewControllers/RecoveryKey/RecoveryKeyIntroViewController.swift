@@ -44,7 +44,7 @@ struct RecoveryKeyIntroPage {
 }
 
 //
-// Base class for paper key recovery content pages, including the landing page and the
+// Base class for recovery key recovery content pages, including the landing page and the
 // educational/intro pages.
 //
 class RecoveryKeyPageCell: UICollectionViewCell {

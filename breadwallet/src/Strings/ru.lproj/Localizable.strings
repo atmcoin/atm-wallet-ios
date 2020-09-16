@@ -70,7 +70,7 @@
 "Alerts.copiedAddressesHeader" = "Адреса скопированы";
 /* Addresses Copied Alert sub header */
 "Alerts.copiedAddressesSubheader" = "Все адреса для кошелька успешно скопированы.";
-/* Alert Header Label (the paper key was set) */
+/* Alert Header Label (the recovery key was set) */
 "Alerts.paperKeySet" = "Бумажный ключ задан";
 /* Alert Subheader label (playfully positive) */
 "Alerts.paperKeySetSubheader" = "Отлично!";
@@ -410,13 +410,13 @@
 "MenuViewController.modalTitle" = "Меню";
 /* button label */
 "MenuViewController.recoverButton" = "Восстановить кошелек";
-/* Paper Key Skip modal body (Android-version) */
+/* Recovery Key Skip modal body (Android-version) */
 "Modal.PaperKeySkip.Body.Android" = "Бумажный ключ будет необходим, чтобы открыть ваш кошелек, если вы измените настройки безопасности на вашем телефоне.\n\nВы уверены, что хотите настроить бумажный ключ позже?";
-/* Paper Key Skip modal Continue Set Up button */
+/* Recovery Key Skip modal Continue Set Up button */
 "Modal.PaperKeySkip.Button.ContinueSetUp" = "Продолжить настройку";
-/* Paper Key Skip modal I'll do it later button */
+/* Recovery Key Skip modal I'll do it later button */
 "Modal.PaperKeySkip.Button.IllDoItLater" = "Я сделаю это позже";
-/* Paper Key Skip modal title */
+/* Recovery Key Skip modal title */
 "Modal.PaperKeySkip.Title" = "Внимание";
 /* Node selection mode is automatic */
 "NodeSelector.automatic" = "Автоматический";
@@ -512,9 +512,9 @@
 "Prompts.NoScreenLock.body.android" = "Для защиты вашего кошелька требуется блокировка экрана вашего устройства. Перейдите в \"Настройки\" > \"Безопасность\" > \"Блокировка экрана\" и включите, чтобы продолжить.";
 /* Device encryption prompt title */
 "Prompts.NoScreenLock.title.android" = "Блокировка экрана отключена";
-/* Warning about recovery key (formerly paper key). */
+/* Warning about recovery key (formerly recovery key). */
 "Prompts.PaperKey.body" = "Ваш бумажный ключ нужно сохранить на случай, если вы потеряете или смените свой телефон.";
-/* Warning about paper key (Android-version) */
+/* Warning about recovery key (Android-version) */
 "Prompts.PaperKey.Body.Android" = "Создайте бумажный ключ на случай, если вы потеряете или смените ваш телефон. Ключ будет также необходим, если вы измените настройки безопасности на вашем телефоне.";
 /* An action is required (You must do this action). */
 "Prompts.PaperKey.title" = "Необходимо совершить действие";
@@ -584,25 +584,25 @@
 "RecoverWallet.done" = "Готово";
 /* Recover wallet header */
 "RecoverWallet.header" = "Восстановить кошелек";
-/* Reset PIN with paper key: header */
+/* Reset PIN with recovery key: header */
 "RecoverWallet.header_reset_pin" = "Сбросить PIN-код";
-/* Enter paper key instruction */
+/* Enter recovery key instruction */
 "RecoverWallet.instruction" = "Введите бумажный ключ";
 /* Recover wallet intro */
 "RecoverWallet.intro" = "Восстановите Ваш BRD-кошелек с помощью бумажного ключа.";
-/* Invalid paper key message */
+/* Invalid recovery key message */
 "RecoverWallet.invalid" = "Введенный вами бумажный ключ недействителен. Пожалуйста, внимательно перепроверьте каждое слово и повторите попытку.";
 /* Previous button accessibility label */
 "RecoverWallet.leftArrow" = "Стрелка влево";
 /* Next button label */
 "RecoverWallet.next" = "Далее";
-/* Reset PIN with paper key: more information button. */
+/* Reset PIN with recovery key: more information button. */
 "RecoverWallet.reset_pin_more_info" = "Коснитесь здесь для получения подробной информации.";
 /* Next button accessibility label */
 "RecoverWallet.rightArrow" = "Стрелка вправо";
 /* Recover wallet sub-header */
 "RecoverWallet.subheader" = "Введите бумажный ключ для кошелька, который вы хотите восстановить.";
-/* Reset PIN with paper key: sub-header */
+/* Reset PIN with recovery key: sub-header */
 "RecoverWallet.subheader_reset_pin" = "Для сброса PIN-кода введите слова из вашего бумажного ключа в расположенные ниже поля.";
 /* Instructs the user to enter words from the set of recovery key words. */
 "RecoveryKeyFlow.confirmRecoveryInputError" = "Вы неверно ввели слово. Пожалуйста, повторите попытку.";
@@ -636,7 +636,7 @@
 "RecoveryKeyFlow.keyUseHint" = "Ваш ключ необходим только для восстановления, а не для повседневного доступа к кошельку.";
 /* Reminds the user not to take screenshots or email the recovery key words */
 "RecoveryKeyFlow.noScreenshotsOrEmailWarning" = "В целях безопасности не делайте скриншот этих слов и не отправляйте их по электронной почте";
-/* Recommends that the user avoids capturing the paper key with a screenshot */
+/* Recommends that the user avoids capturing the recovery key with a screenshot */
 "RecoveryKeyFlow.noScreenshotsRecommendation" = "Запишите ваш ключ на бумаге и подтвердите его. В целях безопасности не рекомендуется делать скриншоты.";
 /* Title displayed when the user starts the process of recovering a wallet */
 "RecoveryKeyFlow.recoveryYourWallet" = "Восстановление кошелька";
@@ -726,12 +726,12 @@
 "Search.sent" = "отправлено";
 /* Face ID button title */
 "SecurityCenter.faceIdTitle" = "Face ID";
-/* Paper Key button description */
+/* Recovery Key button description */
 "SecurityCenter.paperKeyDescription" = "Единственный способ получения доступа к вашим биткойнам в случае потери или изменения вашего телефона.";
-/* Recovery Key button title. This used to be called 'paper key', so leaving the string key as `paperKeyTitle` in order
+/* Recovery Key button title. This used to be called 'recovery key', so leaving the string key as `paperKeyTitle` in order
  * to not break existing client code. */
 "SecurityCenter.paperKeyTitle" = "Бумажный ключ";
-/* Paper Key button title */
+/* Recovery Key button title */
 "SecurityCenter.paperKeyTitle.android" = "Бумажный ключ";
 /* PIN button description */
 "SecurityCenter.pinDescription" = "Защищает ваш BRD от несанкционированных пользователей.";
@@ -905,9 +905,9 @@
 "ShareData.toggleLabel" = "Поделиться анонимными данными?";
 /* button label */
 "StartPaperPhrase.againButtonTitle" = "Выписать бумажный ключ снова";
-/* Paper key explanation text. */
+/* Recovery key explanation text. */
 "StartPaperPhrase.body" = "Бумажный ключ – это единственный способ восстановить ваш BRD-кошелек в случае потери, кражи, поломки или замены вашего телефона.\n\nМы покажем вам список слов, которые необходимо записать на листе бумаги и хранить в надежном месте.";
-/* Paper key explanation text (Android-version) */
+/* Recovery key explanation text (Android-version) */
 "StartPaperPhrase.Body.Android" = "Бумажный ключ — это единственный способ восстановить ваш кошелек BRD в случае, если ваш телефон окажется утерян, украден, сломан или обновлен.\n\nБумажный ключ будет также необходим, если вы измените настройки безопасности на вашем устройстве.\n\nМы покажем вам список слов, которые необходимо записать на бумаге и хранить в безопасном месте.";
 /* button label */
 "StartPaperPhrase.buttonTitle" = "Выписать бумажный ключ";
@@ -1132,7 +1132,7 @@ eg. 182930 (45061 confirmations) */
 "UnlockScreen.faceIdText" = "Разблокировать с помощью FaceID";
 /* My Address button title */
 "UnlockScreen.myAddress" = "Мой адрес";
-/* Reset PIN with Paper Key button label. */
+/* Reset PIN with Recovery Key button label. */
 "UnlockScreen.resetPin" = "Сбросить PIN-код";
 /* Scan button title */
 "UnlockScreen.scan" = "Сканировать";
@@ -1219,8 +1219,8 @@ Wallet connection settings menu item title. */
 "WipeWallet.failedMessage" = "Не удалось удалить кошелек.";
 /* Failed wipe wallet alert title */
 "WipeWallet.failedTitle" = "Не удалось";
-/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] paper key that needs to be entered). */
-"WipeWallet.instruction" = "Чтобы открыть новый кошелек или восстановить существующий, вы должны сначала отвязать кошелек, который в настоящее время установлен. Чтобы продолжить, введите текущий бумажный ключ (Paper Key).";
+/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] recovery key that needs to be entered). */
+"WipeWallet.instruction" = "Чтобы открыть новый кошелек или восстановить существующий, вы должны сначала отвязать кошелек, который в настоящее время установлен. Чтобы продолжить, введите текущий бумажный ключ (Recovery Key).";
 /* Instructions for unlinking the wallet */
 "WipeWallet.startMessage" = "Отвязать ваш кошелек, чтобы удалить его с этого устройства. Как только вы отвяжете этот кошелек, вы сможете открыть новый кошелек или восстановить другой на этом устройстве.";
 /* Start wipe wallet view warning */
@@ -1231,7 +1231,7 @@ Wallet connection settings menu item title. */
 "WipeWallet.wipe" = "Удалить";
 /* Wiping activity message */
 "WipeWallet.wiping" = "Удаление...";
-/* Paper key instructions. */
+/* Recovery key instructions. */
 "WritePaperPhrase.instruction" = "Выпишите все слова по порядку и храните их в надежном месте.";
 /* button label */
 "WritePaperPhrase.next" = "Далее";

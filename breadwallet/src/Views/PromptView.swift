@@ -11,7 +11,7 @@ import UIKit
 /**
  *  A view that is displayed at the top of a screen such as the home screen, typically
  *  alerting the user of some action that needs to be performed, such as adding a device
- *  passcode or writing down the paper key.
+ *  passcode or writing down the recovery key.
  */
 class PromptView: UIView {
     

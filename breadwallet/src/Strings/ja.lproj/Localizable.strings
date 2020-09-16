@@ -70,7 +70,7 @@
 "Alerts.copiedAddressesHeader" = "アドレスがコピーされました";
 /* Addresses Copied Alert sub header */
 "Alerts.copiedAddressesSubheader" = "すべてのウォレットアドレスが正常にコピーされました。";
-/* Alert Header Label (the paper key was set) */
+/* Alert Header Label (the recovery key was set) */
 "Alerts.paperKeySet" = "復元フレーズがセットされました。";
 /* Alert Subheader label (playfully positive) */
 "Alerts.paperKeySetSubheader" = "いいね！";
@@ -410,13 +410,13 @@
 "MenuViewController.modalTitle" = "メニュー";
 /* button label */
 "MenuViewController.recoverButton" = "ウォレットを復元";
-/* Paper Key Skip modal body (Android-version) */
+/* Recovery Key Skip modal body (Android-version) */
 "Modal.PaperKeySkip.Body.Android" = "ペーパー・キーはお客様の携帯電話でセキュリティ設定を変更した場合,ウォレットを開くために必要となります。\n\nペーパー・キーを後からセットアップしますか？";
-/* Paper Key Skip modal Continue Set Up button */
+/* Recovery Key Skip modal Continue Set Up button */
 "Modal.PaperKeySkip.Button.ContinueSetUp" = "セットアップを続けます";
-/* Paper Key Skip modal I'll do it later button */
+/* Recovery Key Skip modal I'll do it later button */
 "Modal.PaperKeySkip.Button.IllDoItLater" = "後で行います";
-/* Paper Key Skip modal title */
+/* Recovery Key Skip modal title */
 "Modal.PaperKeySkip.Title" = "注意";
 /* Node selection mode is automatic */
 "NodeSelector.automatic" = "自動";
@@ -512,9 +512,9 @@
 "Prompts.NoScreenLock.body.android" = "ウォレットを守るため機器の画面をロックする必要があります。「設定」 > 「セキュリティ」 > 「画面ロック」で有効にしてから続行してください。";
 /* Device encryption prompt title */
 "Prompts.NoScreenLock.title.android" = "画面ロックが無効になっています";
-/* Warning about recovery key (formerly paper key). */
+/* Warning about recovery key (formerly recovery key). */
 "Prompts.PaperKey.body" = "携帯電話の紛失時や変更時に備えて、お客様の復元フレーズは必ず保管しておいてください。";
-/* Warning about paper key (Android-version) */
+/* Warning about recovery key (Android-version) */
 "Prompts.PaperKey.Body.Android" = "携帯電話を紛失または交換した場合に備え,ペーパー・キーをセットアップします。お客様のキーは,携帯電話のセキュリティ設定を変更した場合にも必要となります。";
 /* An action is required (You must do this action). */
 "Prompts.PaperKey.title" = "アクションが要求されました";
@@ -584,25 +584,25 @@
 "RecoverWallet.done" = "終了";
 /* Recover wallet header */
 "RecoverWallet.header" = "ウォレットを復元";
-/* Reset PIN with paper key: header */
+/* Reset PIN with recovery key: header */
 "RecoverWallet.header_reset_pin" = "PINコードをリセット";
-/* Enter paper key instruction */
+/* Enter recovery key instruction */
 "RecoverWallet.instruction" = "復元フレーズを入力してください";
 /* Recover wallet intro */
 "RecoverWallet.intro" = "復元フレーズを使用し、あなたのブレッドを復元する。";
-/* Invalid paper key message */
+/* Invalid recovery key message */
 "RecoverWallet.invalid" = "あなたが入力した復元フレーズは無効です。それぞれの単語を再確認の上、もう一度お試しください。";
 /* Previous button accessibility label */
 "RecoverWallet.leftArrow" = "左矢印";
 /* Next button label */
 "RecoverWallet.next" = "次へ";
-/* Reset PIN with paper key: more information button. */
+/* Reset PIN with recovery key: more information button. */
 "RecoverWallet.reset_pin_more_info" = "詳しくはこちらをタップしてください。";
 /* Next button accessibility label */
 "RecoverWallet.rightArrow" = "右矢印";
 /* Recover wallet sub-header */
 "RecoverWallet.subheader" = "復元を希望するウォレットの復元フレーズを入力してください。";
-/* Reset PIN with paper key: sub-header */
+/* Reset PIN with recovery key: sub-header */
 "RecoverWallet.subheader_reset_pin" = "PINコードをリセットするには、復元フレーズの中から当てはまる単語を下記ボックスの中に入力してください。";
 /* Instructs the user to enter words from the set of recovery key words. */
 "RecoveryKeyFlow.confirmRecoveryInputError" = "入力した単語は正しくありません。もう一度入力してください。";
@@ -636,7 +636,7 @@
 "RecoveryKeyFlow.keyUseHint" = "キーは復元時にのみ必要です。通常のウォレットへのアクセスには必要ありません。";
 /* Reminds the user not to take screenshots or email the recovery key words */
 "RecoveryKeyFlow.noScreenshotsOrEmailWarning" = "安全上の観点から,これらの単語のスクリーンショットやメール送信はおやめください";
-/* Recommends that the user avoids capturing the paper key with a screenshot */
+/* Recommends that the user avoids capturing the recovery key with a screenshot */
 "RecoveryKeyFlow.noScreenshotsRecommendation" = "キーは紙にメモして,確認してください。安全上の理由からスクリーンショットでの保管はお勧めできません。";
 /* Title displayed when the user starts the process of recovering a wallet */
 "RecoveryKeyFlow.recoveryYourWallet" = "ウォレットの復元";
@@ -726,12 +726,12 @@
 "Search.sent" = "送信済";
 /* Face ID button title */
 "SecurityCenter.faceIdTitle" = "Face ID";
-/* Paper Key button description */
+/* Recovery Key button description */
 "SecurityCenter.paperKeyDescription" = "あなたが携帯電話を紛失したり、アップグレードした場合にご自身のビットコインへアクセスできる唯一の方法です。";
-/* Recovery Key button title. This used to be called 'paper key', so leaving the string key as `paperKeyTitle` in order
+/* Recovery Key button title. This used to be called 'recovery key', so leaving the string key as `paperKeyTitle` in order
  * to not break existing client code. */
 "SecurityCenter.paperKeyTitle" = "復元フレーズ";
-/* Paper Key button title */
+/* Recovery Key button title */
 "SecurityCenter.paperKeyTitle.android" = "復元フレーズ";
 /* PIN button description */
 "SecurityCenter.pinDescription" = "アクセス権限のないユーザーからあなたのブレッドを守ります。";
@@ -905,9 +905,9 @@
 "ShareData.toggleLabel" = "匿名データをシェアしますか?";
 /* button label */
 "StartPaperPhrase.againButtonTitle" = "復元フレーズをもう一度書き留めてください";
-/* Paper key explanation text. */
+/* Recovery key explanation text. */
 "StartPaperPhrase.body" = "復元フレーズは、スマートフォンを紛失したり、盗まれたり、壊れたり、アップグレードした場合に、ご自身のブレッドを元に戻せる唯一の方法です。\n\n単語の一覧を表示しますので、紙に書き留めて安全に保管してください。";
-/* Paper key explanation text (Android-version) */
+/* Recovery key explanation text (Android-version) */
 "StartPaperPhrase.Body.Android" = "お客様のペーパー・キーは携帯電話の紛失,盗難,故障またはアップグレードした際にBRDを復元する唯一の方法です。\n\nペーパー・キーはお客様のデバイスでセキュリティ設定を変更した際も必要となります。\n\n紙に書き留めて保管する単語リストを表示します。";
 /* button label */
 "StartPaperPhrase.buttonTitle" = "復元フレーズを書き留めてください";
@@ -1132,7 +1132,7 @@ eg. 182930 (45061 confirmations) */
 "UnlockScreen.faceIdText" = "FaceIDでロックを解除する";
 /* My Address button title */
 "UnlockScreen.myAddress" = "マイアドレス";
-/* Reset PIN with Paper Key button label. */
+/* Reset PIN with Recovery Key button label. */
 "UnlockScreen.resetPin" = "PINコードをリセット";
 /* Scan button title */
 "UnlockScreen.scan" = "スキャン";
@@ -1219,7 +1219,7 @@ Wallet connection settings menu item title. */
 "WipeWallet.failedMessage" = "ウォレットを消去できませんでした。";
 /* Failed wipe wallet alert title */
 "WipeWallet.failedTitle" = "失敗しました";
-/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] paper key that needs to be entered). */
+/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] recovery key that needs to be entered). */
 "WipeWallet.instruction" = "新しいウォレットを起動したり既存のウォレットを復元するには、まず現在インストールされているウォレットのリンクを解除する必要があります。現在使用しているウォレットの復元フレーズを入力して続行してください。";
 /* Instructions for unlinking the wallet */
 "WipeWallet.startMessage" = "ご利用ウォレットのリンクを解除してこの機器から解除してください。このウォレットのリンクが解除されると、この機器で新しいウォレットを起動したり、別のウォレット再び利用できるようになります。";
@@ -1231,7 +1231,7 @@ Wallet connection settings menu item title. */
 "WipeWallet.wipe" = "消去";
 /* Wiping activity message */
 "WipeWallet.wiping" = "消去中...";
-/* Paper key instructions. */
+/* Recovery key instructions. */
 "WritePaperPhrase.instruction" = "単語は順番通りに書き留めて、安全な場所に保管しておいてください。";
 /* button label */
 "WritePaperPhrase.next" = "次へ";

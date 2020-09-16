@@ -70,7 +70,7 @@
 "Alerts.copiedAddressesHeader" = "Adresser kopierade";
 /* Addresses Copied Alert sub header */
 "Alerts.copiedAddressesSubheader" = "Alla plånboksadresser har kopierats.";
-/* Alert Header Label (the paper key was set) */
+/* Alert Header Label (the recovery key was set) */
 "Alerts.paperKeySet" = "Ordnyckel är inställd";
 /* Alert Subheader label (playfully positive) */
 "Alerts.paperKeySetSubheader" = "Härligt!";
@@ -410,13 +410,13 @@
 "MenuViewController.modalTitle" = "Meny";
 /* button label */
 "MenuViewController.recoverButton" = "Återställ plånbok";
-/* Paper Key Skip modal body (Android-version) */
+/* Recovery Key Skip modal body (Android-version) */
 "Modal.PaperKeySkip.Body.Android" = "Din skrivna nyckel krävs för att öppna din plånbok om du ändrar säkerhetsinställningarna på din telefon. \n\nÄr du säker på att du vill vänta med att ordna en skriven nyckel? ";
-/* Paper Key Skip modal Continue Set Up button */
+/* Recovery Key Skip modal Continue Set Up button */
 "Modal.PaperKeySkip.Button.ContinueSetUp" = "Fortsätt processen";
-/* Paper Key Skip modal I'll do it later button */
+/* Recovery Key Skip modal I'll do it later button */
 "Modal.PaperKeySkip.Button.IllDoItLater" = "Jag gör det senare";
-/* Paper Key Skip modal title */
+/* Recovery Key Skip modal title */
 "Modal.PaperKeySkip.Title" = "Observera";
 /* Node selection mode is automatic */
 "NodeSelector.automatic" = "Automatisk";
@@ -512,9 +512,9 @@
 "Prompts.NoScreenLock.body.android" = "Ett skärmlås krävs på enheten för att skydda din plånbok. Gå till Inställningar > Säkerhet > Skärmlås och aktivera för att fortsätta.";
 /* Device encryption prompt title */
 "Prompts.NoScreenLock.title.android" = "Skärmlås inaktiverat";
-/* Warning about recovery key (formerly paper key). */
+/* Warning about recovery key (formerly recovery key). */
 "Prompts.PaperKey.body" = "Din pappersnyckel måste sparas ifall du skulle förlora eller byta ut din telefon.";
-/* Warning about paper key (Android-version) */
+/* Warning about recovery key (Android-version) */
 "Prompts.PaperKey.Body.Android" = "Ha en skriven nyckel ifall du skulle tappa bort eller byta telefon. Nyckeln krävs också om du ändrar säkerhetsinställningarna på din telefon. ";
 /* An action is required (You must do this action). */
 "Prompts.PaperKey.title" = "Åtgärd krävs";
@@ -584,25 +584,25 @@
 "RecoverWallet.done" = "Klar";
 /* Recover wallet header */
 "RecoverWallet.header" = "Återställ plånbok";
-/* Reset PIN with paper key: header */
+/* Reset PIN with recovery key: header */
 "RecoverWallet.header_reset_pin" = "Återställ PIN-kod";
-/* Enter paper key instruction */
+/* Enter recovery key instruction */
 "RecoverWallet.instruction" = "Ange ordnyckel";
 /* Recover wallet intro */
 "RecoverWallet.intro" = "Återställ BRD med din ordnyckel.";
-/* Invalid paper key message */
+/* Invalid recovery key message */
 "RecoverWallet.invalid" = "Den ordnyckel du angav är ogiltig. Dubbelkolla varje ord och försök igen.";
 /* Previous button accessibility label */
 "RecoverWallet.leftArrow" = "Vänster pil";
 /* Next button label */
 "RecoverWallet.next" = "Nästa";
-/* Reset PIN with paper key: more information button. */
+/* Reset PIN with recovery key: more information button. */
 "RecoverWallet.reset_pin_more_info" = "Klicka här för fler uppgifter.";
 /* Next button accessibility label */
 "RecoverWallet.rightArrow" = "Höger pil";
 /* Recover wallet sub-header */
 "RecoverWallet.subheader" = "Ange ordnyckel till den plånbok du vill återställ.";
-/* Reset PIN with paper key: sub-header */
+/* Reset PIN with recovery key: sub-header */
 "RecoverWallet.subheader_reset_pin" = "För att återställa din PIN-kod anger du orden från din ordnyckel i boxarna nedan.";
 /* Instructs the user to enter words from the set of recovery key words. */
 "RecoveryKeyFlow.confirmRecoveryInputError" = "Ordet du skrev in är felaktigt. Var god försök igen.";
@@ -636,7 +636,7 @@
 "RecoveryKeyFlow.keyUseHint" = "Din nyckel behövs endast för återställning, inte för daglig tillgång till plånboken";
 /* Reminds the user not to take screenshots or email the recovery key words */
 "RecoveryKeyFlow.noScreenshotsOrEmailWarning" = "Av säkerhetsskäl bör du undvika att ta en skärmdump eller mejla dessa ord";
-/* Recommends that the user avoids capturing the paper key with a screenshot */
+/* Recommends that the user avoids capturing the recovery key with a screenshot */
 "RecoveryKeyFlow.noScreenshotsRecommendation" = "Skriv ner din nyckel på ett papper och bekräfta den. Skärmdumpar rekommenderas inte av säkerhetsskäl.";
 /* Title displayed when the user starts the process of recovering a wallet */
 "RecoveryKeyFlow.recoveryYourWallet" = "Återställ din plånbok";
@@ -726,12 +726,12 @@
 "Search.sent" = "skickat";
 /* Face ID button title */
 "SecurityCenter.faceIdTitle" = "Face ID";
-/* Paper Key button description */
+/* Recovery Key button description */
 "SecurityCenter.paperKeyDescription" = "Det enda sättet att komma åt dina bitcoin om du förlorar eller uppgraderar din telefon.";
-/* Recovery Key button title. This used to be called 'paper key', so leaving the string key as `paperKeyTitle` in order
+/* Recovery Key button title. This used to be called 'recovery key', so leaving the string key as `paperKeyTitle` in order
  * to not break existing client code. */
 "SecurityCenter.paperKeyTitle" = "Ordnyckel";
-/* Paper Key button title */
+/* Recovery Key button title */
 "SecurityCenter.paperKeyTitle.android" = "Ordnyckel";
 /* PIN button description */
 "SecurityCenter.pinDescription" = "Skyddar ditt BRD från obehöriga användare.";
@@ -905,9 +905,9 @@
 "ShareData.toggleLabel" = "Dela anonyma uppgifter?";
 /* button label */
 "StartPaperPhrase.againButtonTitle" = "Skriv ner ordnyckel på nytt";
-/* Paper key explanation text. */
+/* Recovery key explanation text. */
 "StartPaperPhrase.body" = "Din ordnyckel  är enda sättet att återställ BRD om du förlorat din telefon, blivit bestulen på den eller har uppgraderat den.\n\nVi visar dig en lista över ord som du kan skriva ner på ett papper och gömma undan.";
-/* Paper key explanation text (Android-version) */
+/* Recovery key explanation text (Android-version) */
 "StartPaperPhrase.Body.Android" = "Det är enbart med din skrivna nyckel du kan återställa BRD om din telefon försvinner, går sönder eller uppgraderas. \n\nDen skrivna nyckeln behövs också om du ändrar säkerhetsinställningarna på din enhet. \n\nVi visar dig en lista med ord som du ska nedteckna på ett papper och förvara säkert. ";
 /* button label */
 "StartPaperPhrase.buttonTitle" = "Skriv ner ordnyckel";
@@ -1132,7 +1132,7 @@ eg. 182930 (45061 confirmations) */
 "UnlockScreen.faceIdText" = "Lås upp med Face ID";
 /* My Address button title */
 "UnlockScreen.myAddress" = "Min adress";
-/* Reset PIN with Paper Key button label. */
+/* Reset PIN with Recovery Key button label. */
 "UnlockScreen.resetPin" = "Återställ PIN-kod";
 /* Scan button title */
 "UnlockScreen.scan" = "Läs av";
@@ -1219,7 +1219,7 @@ Wallet connection settings menu item title. */
 "WipeWallet.failedMessage" = "Rensning av plånboken misslyckades.";
 /* Failed wipe wallet alert title */
 "WipeWallet.failedTitle" = "Misslyckades";
-/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] paper key that needs to be entered). */
+/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] recovery key that needs to be entered). */
 "WipeWallet.instruction" = "För att skapa en ny plånbok eller återställa en befintlig plånbok måste du först ta bort länken till den plånbok som för närvarande är installerad. Ange den nuvarande plånbokens pappersnyckel för att fortsätta.";
 /* Instructions for unlinking the wallet */
 "WipeWallet.startMessage" = "Ta bort länken till din plånbok för att ta bort den från denna enhet. När länken till denna plånbok är borttagen kan du skapa en ny plånbok eller återställa en annan plånbok på denna enhet.";
@@ -1231,7 +1231,7 @@ Wallet connection settings menu item title. */
 "WipeWallet.wipe" = "Rensa";
 /* Wiping activity message */
 "WipeWallet.wiping" = "Rensar...";
-/* Paper key instructions. */
+/* Recovery key instructions. */
 "WritePaperPhrase.instruction" = "Skriv ner varje ord i ordning och lagra dem på ett säkert ställe.";
 /* button label */
 "WritePaperPhrase.next" = "Nästa";

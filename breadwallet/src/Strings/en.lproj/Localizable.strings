@@ -45,7 +45,7 @@
 /* Default wallet name */
 "AccountHeader.defaultWalletName" = "My BRD";
 /* Third party keyboard warning */
-"Alert.customKeyboard.android" = "It looks like you are using a third-party keyboard, which can record what you type and steal your Paper Key. Please switch to the default Android keyboard for extra protection.";
+"Alert.customKeyboard.android" = "It looks like you are using a third-party keyboard, which can record what you type and steal your Recovery Key. Please switch to the default Android keyboard for extra protection.";
 /* Error alert title */
 "Alert.error" = "Error";
 /* Keystore error */
@@ -53,9 +53,9 @@
 /* KeyStore error, keys are invalidated */
 "Alert.keystore.invalidated.android" = "Your BRD encrypted data was recently invalidated because your Android lock screen was disabled.";
 /* Warn user key store data has been invalidate because the user changed their security settings. The user must uninstall. */
-"Alert.keystore.invalidated.uninstall.android" = "We can't proceed because your screen lock settings have been changed (e.g. password was disabled, fingerprints were changed). For security purposes, Android has permanently locked your key store. Therefore, your BRD app data must be wiped by uninstalling.\n\nDon’t worry, your funds are still secure! Reinstall the app and recover your wallet using your paper key.";
+"Alert.keystore.invalidated.uninstall.android" = "We can't proceed because your screen lock settings have been changed (e.g. password was disabled, fingerprints were changed). For security purposes, Android has permanently locked your key store. Therefore, your BRD app data must be wiped by uninstalling.\n\nDon’t worry, your funds are still secure! Reinstall the app and recover your wallet using your recovery key.";
 /* Warn user key store data has been invalidate because the user changed their security settings. The user must wipe their app data. */
-"Alert.keystore.invalidated.wipe.android" = "We can't proceed because your screen lock settings have been changed (e.g. password was disabled, fingerprints were changed). For security purposes, Android has permanently locked your key store. Therefore, your BRD app data must be wiped.\n\nDon’t worry, your funds are still secure! Recover your wallet using your paper key.";
+"Alert.keystore.invalidated.wipe.android" = "We can't proceed because your screen lock settings have been changed (e.g. password was disabled, fingerprints were changed). For security purposes, Android has permanently locked your key store. Therefore, your BRD app data must be wiped.\n\nDon’t worry, your funds are still secure! Recover your wallet using your recovery key.";
 /* Keystore error title */
 "Alert.keystore.title.android" = "Android Key Store Error";
 /* No internet alert message */
@@ -70,8 +70,8 @@
 "Alerts.copiedAddressesHeader" = "Addresses Copied";
 /* Addresses Copied Alert sub header */
 "Alerts.copiedAddressesSubheader" = "All wallet addresses successfully copied.";
-/* Alert Header Label (the paper key was set) */
-"Alerts.paperKeySet" = "Paper Key Set";
+/* Alert Header Label (the recovery key was set) */
+"Alerts.paperKeySet" = "Recovery Key Set";
 /* Alert Subheader label (playfully positive) */
 "Alerts.paperKeySetSubheader" = "Awesome!";
 /* Alert Header label (the PIN was set) */
@@ -203,9 +203,9 @@
 /* Total Cost: ($5.00) */
 "Confirmation.totalLabel" = "Total Cost:";
 /* Confirm paper phrase error message */
-"ConfirmPaperPhrase.error" = "The words entered do not match your paper key. Please try again.";
+"ConfirmPaperPhrase.error" = "The words entered do not match your recovery key. Please try again.";
 /* Confirm paper phrase view label. */
-"ConfirmPaperPhrase.label" = "To make sure everything was written down correctly, please enter the following words from your paper key.";
+"ConfirmPaperPhrase.label" = "To make sure everything was written down correctly, please enter the following words from your recovery key.";
 /* Word label eg. Word #1, Word #2 */
 "ConfirmPaperPhrase.word" = "Word #%1$@";
 /* Agree to legal terms button */
@@ -410,13 +410,13 @@
 "MenuViewController.modalTitle" = "Menu";
 /* button label */
 "MenuViewController.recoverButton" = "Recover Wallet";
-/* Paper Key Skip modal body (Android-version) */
-"Modal.PaperKeySkip.Body.Android" = "Your paper key is required to open your wallet if you change the security settings on your phone.\n\nAre you sure you want to set up your paper key later?";
-/* Paper Key Skip modal Continue Set Up button */
+/* Recovery Key Skip modal body (Android-version) */
+"Modal.PaperKeySkip.Body.Android" = "Your recovery key is required to open your wallet if you change the security settings on your phone.\n\nAre you sure you want to set up your recovery key later?";
+/* Recovery Key Skip modal Continue Set Up button */
 "Modal.PaperKeySkip.Button.ContinueSetUp" = "Continue Set Up";
-/* Paper Key Skip modal I'll do it later button */
+/* Recovery Key Skip modal I'll do it later button */
 "Modal.PaperKeySkip.Button.IllDoItLater" = "I'll do it later";
-/* Paper Key Skip modal title */
+/* Recovery Key Skip modal title */
 "Modal.PaperKeySkip.Title" = "Attention";
 /* Node selection mode is automatic */
 "NodeSelector.automatic" = "Automatic";
@@ -512,10 +512,10 @@
 "Prompts.NoScreenLock.body.android" = "A device screen lock is needed to safeguard your wallet. Enable screen lock in your settings to continue.";
 /* Device encryption prompt title */
 "Prompts.NoScreenLock.title.android" = "Screen lock disabled";
-/* Warning about recovery key (formerly paper key). */
+/* Warning about recovery key (formerly recovery key). */
 "Prompts.PaperKey.body" = "Your recovery key must be saved in case you lose or change your phone.";
-/* Warning about paper key (Android-version) */
-"Prompts.PaperKey.Body.Android" = "Set up your paper key in case you ever lose or replace your phone. Your key is also required if you change your phone's security settings.";
+/* Warning about recovery key (Android-version) */
+"Prompts.PaperKey.Body.Android" = "Set up your recovery key in case you ever lose or replace your phone. Your key is also required if you change your phone's security settings.";
 /* An action is required (You must do this action). */
 "Prompts.PaperKey.title" = "Action Required";
 /* Transaction rejected prompt body */
@@ -584,26 +584,26 @@
 "RecoverWallet.done" = "Done";
 /* Recover wallet header */
 "RecoverWallet.header" = "Recover Wallet";
-/* Reset PIN with paper key: header */
+/* Reset PIN with recovery key: header */
 "RecoverWallet.header_reset_pin" = "Reset PIN";
-/* Enter paper key instruction */
-"RecoverWallet.instruction" = "Enter Paper Key";
+/* Enter recovery key instruction */
+"RecoverWallet.instruction" = "Enter Recovery Key";
 /* Recover wallet intro */
-"RecoverWallet.intro" = "Recover your BRD with your paper key.";
-/* Invalid paper key message */
-"RecoverWallet.invalid" = "The paper key you entered is invalid. Please double-check each word and try again.";
+"RecoverWallet.intro" = "Recover your BRD with your recovery key.";
+/* Invalid recovery key message */
+"RecoverWallet.invalid" = "The recovery key you entered is invalid. Please double-check each word and try again.";
 /* Previous button accessibility label */
 "RecoverWallet.leftArrow" = "Left Arrow";
 /* Next button label */
 "RecoverWallet.next" = "Next";
-/* Reset PIN with paper key: more information button. */
+/* Reset PIN with recovery key: more information button. */
 "RecoverWallet.reset_pin_more_info" = "Tap here for more information.";
 /* Next button accessibility label */
 "RecoverWallet.rightArrow" = "Right Arrow";
 /* Recover wallet sub-header */
-"RecoverWallet.subheader" = "Enter the paper key for the wallet you want to recover.";
-/* Reset PIN with paper key: sub-header */
-"RecoverWallet.subheader_reset_pin" = "To reset your PIN, enter the words from your paper key into the boxes below.";
+"RecoverWallet.subheader" = "Enter the recovery key for the wallet you want to recover.";
+/* Reset PIN with recovery key: sub-header */
+"RecoverWallet.subheader_reset_pin" = "To reset your PIN, enter the words from your recovery key into the boxes below.";
 /* Instructs the user to enter words from the set of recovery key words. */
 "RecoveryKeyFlow.confirmRecoveryInputError" = "The word you entered is incorrect. Please try again.";
 /* Instructs the user to enter words from the set of recovery key words. */
@@ -636,7 +636,7 @@
 "RecoveryKeyFlow.keyUseHint" = "Your key is only needed for recovery, not for everyday wallet access.";
 /* Reminds the user not to take screenshots or email the recovery key words */
 "RecoveryKeyFlow.noScreenshotsOrEmailWarning" = "For security purposes, do not screenshot or email these words";
-/* Recommends that the user avoids capturing the paper key with a screenshot */
+/* Recommends that the user avoids capturing the recovery key with a screenshot */
 "RecoveryKeyFlow.noScreenshotsRecommendation" = "Write down your key on paper and confirm it. Screenshots are not recommended for security reasons.";
 /* Title displayed when the user starts the process of recovering a wallet */
 "RecoveryKeyFlow.recoveryYourWallet" = "Recover Your Wallet";
@@ -726,13 +726,13 @@
 "Search.sent" = "sent";
 /* Face ID button title */
 "SecurityCenter.faceIdTitle" = "Face ID";
-/* Paper Key button description */
+/* Recovery Key button description */
 "SecurityCenter.paperKeyDescription" = "The only way to access your assets if you lose or upgrade your phone.";
-/* Recovery Key button title. This used to be called 'paper key', so leaving the string key as `paperKeyTitle` in order
+/* Recovery Key button title. This used to be called 'recovery key', so leaving the string key as `paperKeyTitle` in order
  * to not break existing client code. */
 "SecurityCenter.paperKeyTitle" = "Recovery Key";
-/* Paper Key button title */
-"SecurityCenter.paperKeyTitle.android" = "Paper Key";
+/* Recovery Key button title */
+"SecurityCenter.paperKeyTitle.android" = "Recovery Key";
 /* PIN button description */
 "SecurityCenter.pinDescription" = "Protects your BRD from unauthorized users.";
 /* PIN button title */
@@ -904,13 +904,13 @@
 /* Share data switch label. */
 "ShareData.toggleLabel" = "Share Anonymous Data?";
 /* button label */
-"StartPaperPhrase.againButtonTitle" = "Write Down Paper Key Again";
-/* Paper key explanation text. */
-"StartPaperPhrase.body" = "Your paper key is the only way to restore your BRD if your phone is lost, stolen, broken, or upgraded.\n\nWe will show you a list of words to write down on a piece of paper and keep safe.";
-/* Paper key explanation text (Android-version) */
-"StartPaperPhrase.Body.Android" = "Your paper key is the only way to restore your BRD if your phone is lost, stolen, broken, or upgraded.\n\nYour paper key is also required if you change the security settings on your device.\n\nWe will show you a list of words to write down on a piece of paper and keep safe.";
+"StartPaperPhrase.againButtonTitle" = "Write Down Recovery Key Again";
+/* Recovery key explanation text. */
+"StartPaperPhrase.body" = "Your recovery key is the only way to restore your BRD if your phone is lost, stolen, broken, or upgraded.\n\nWe will show you a list of words to write down on a piece of paper and keep safe.";
+/* Recovery key explanation text (Android-version) */
+"StartPaperPhrase.Body.Android" = "Your recovery key is the only way to restore your BRD if your phone is lost, stolen, broken, or upgraded.\n\nYour recovery key is also required if you change the security settings on your device.\n\nWe will show you a list of words to write down on a piece of paper and keep safe.";
 /* button label */
-"StartPaperPhrase.buttonTitle" = "Write Down Paper Key";
+"StartPaperPhrase.buttonTitle" = "Write Down Recovery Key";
 /* Argument is date; date should be on a new line */
 "StartPaperPhrase.date" = "Last written down on\n %1$@";
 /* button label */
@@ -1132,7 +1132,7 @@ eg. 182930 (45061 confirmations) */
 "UnlockScreen.faceIdText" = "Unlock with FaceID";
 /* My Address button title */
 "UnlockScreen.myAddress" = "My Address";
-/* Reset PIN with Paper Key button label. */
+/* Reset PIN with Recovery Key button label. */
 "UnlockScreen.resetPin" = "Reset PIN";
 /* Scan button title */
 "UnlockScreen.scan" = "Scan";
@@ -1219,19 +1219,19 @@ Wallet connection settings menu item title. */
 "WipeWallet.failedMessage" = "Failed to wipe wallet.";
 /* Failed wipe wallet alert title */
 "WipeWallet.failedTitle" = "Failed";
-/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] paper key that needs to be entered). */
+/* Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] recovery key that needs to be entered). */
 "WipeWallet.instruction" = "Please enter your recovery key to wipe this wallet from your device.";
 /* Instructions for unlinking the wallet */
 "WipeWallet.startMessage" = "Starting or recovering another wallet allows you to access and manage a different BRD wallet on this device.";
 /* Start wipe wallet view warning */
-"WipeWallet.startWarning" = "Your current wallet will be removed from this device. If you wish to restore it in the future, you will need to enter your Paper Key.";
+"WipeWallet.startWarning" = "Your current wallet will be removed from this device. If you wish to restore it in the future, you will need to enter your Recovery Key.";
 /* Unlink this wallet from this device. */
 "WipeWallet.title" = "Start or Recover Another Wallet";
 /* Wipe wallet button title */
 "WipeWallet.wipe" = "Wipe";
 /* Wiping activity message */
 "WipeWallet.wiping" = "Wiping...";
-/* Paper key instructions. */
+/* Recovery key instructions. */
 "WritePaperPhrase.instruction" = "Write down each word in order and store it in a safe place.";
 /* button label */
 "WritePaperPhrase.next" = "Next";
