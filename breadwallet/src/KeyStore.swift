@@ -138,8 +138,8 @@ class KeyStore {
 
     static private var failedPins = [String]()
 
-    private let maxPinAttemptsBeforeDisable: Int64 = 3
-    private let maxPinAttemptsBeforeWipe: Int64 = 8
+    private let maxPinAttemptsBeforeDisable: Int64 = 5
+    private let maxPinAttemptsBeforeWipe: Int64 = 12
     private let defaultPinLength = 6
 
     private var allBip39WordLists: [[NSString]] = []
@@ -446,16 +446,17 @@ extension KeyStore: WalletAuthenticator {
         // fetch from keychain
         do {
             if let token: String = try keychainItem(key: KeychainKey.bdbClientToken) {
-                return completion(token)
+                KeyStore.fetchCloudKitToken(cachedToken: token, id: C.fixerAPITokenRecordId, keyChainID: KeychainKey.fixerAPIToken, completion: completion)
+            } else {
+                KeyStore.fetchCloudKitToken(id: C.bdbClientTokenRecordId, keyChainID: KeychainKey.bdbClientToken, completion: completion)
             }
         } catch let error {
             print("[KEYSTORE] keychain error: \(error.localizedDescription)")
             assertionFailure()
         }
-        KeyStore.fetchCloudKitToken(id: C.bdbClientTokenRecordId, keyChainID: KeychainKey.bdbClientToken, completion: completion)
     }
     
-    private static func fetchCloudKitToken(id: String, keyChainID: String, completion: @escaping (String?) -> Void) {
+    private static func fetchCloudKitToken(cachedToken: String = "", id: String, keyChainID: String, completion: @escaping (String?) -> Void) {
         CKContainer.default().publicCloudDatabase.fetch(withRecordID: CKRecord.ID(recordName: id)) { record, error in
             DispatchQueue.global(qos: .userInitiated).async {
                 guard let token = record?.value(forKey: "token") as? String else {
@@ -463,11 +464,13 @@ extension KeyStore: WalletAuthenticator {
                     return completion(nil)
                 }
                 print("[KEYSTORE] retreived client token from CloudKit for id: \(id)")
-                do {
-                    try setKeychainItem(key: keyChainID, item: token)
-                } catch let error {
-                    print("[KEYSTORE] keychain error: \(error.localizedDescription)")
-                    assertionFailure()
+                if token != cachedToken {
+                    do {
+                        try setKeychainItem(key: keyChainID, item: token)
+                    } catch let error {
+                        print("[KEYSTORE] keychain error: \(error.localizedDescription)")
+                        assertionFailure()
+                    }
                 }
                 completion(token)
             }

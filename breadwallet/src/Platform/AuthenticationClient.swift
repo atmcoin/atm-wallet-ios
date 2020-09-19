@@ -13,7 +13,7 @@ import WalletKit
 
 /// Handles user authentication and JWT token generation
 struct AuthenticationClient {
-    static let defaultTokenExpiration = TimeInterval(C.secondsInDay * 7)
+    static let defaultTokenExpiration = TimeInterval(C.secondsInDay * 1)
     
     let baseURL: URL
     let urlSession: URLSession
@@ -154,8 +154,9 @@ struct JWT: Codable {
     let token: String
     let expiration: Date
 
+    // TODO: Find out if this is still needed
     var isExpired: Bool {
-        return Date() > expiration
+        return true // Date() > expiration
     }
 
     private struct Header: Codable {
