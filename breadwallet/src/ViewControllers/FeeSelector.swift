@@ -13,6 +13,7 @@ enum FeeLevel: Int {
     case economy
     case regular
     case priority
+    case superEconomy
     
     //Time in millis
     func preferredTime(forCurrency: Currency) -> Int {
@@ -27,6 +28,8 @@ enum FeeLevel: Int {
             return Int(C.secondsInMinute) * 30 * 1000 //30 mins
         case .priority:
             return Int(C.secondsInMinute) * 10 * 1000 //10 mins
+        case .superEconomy:
+            return Int(C.secondsInMinute) * 60 * 13 * 1000 //13 hrs
         }
     }
 }
