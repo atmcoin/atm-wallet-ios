@@ -53,6 +53,17 @@ class ModalPresenter: Subscriber, Trackable {
     
     private let system: CoreSystem
     
+    private lazy var verifyNowButton: UIButton = {
+        let btn = UIButton()
+        btn.setTitle("Verify Now", for: .normal)
+        btn.setTitleColor(Theme.icon, for: .normal)
+        btn.sizeToFit()
+        btn.tap = { [weak self] in
+            self?.presentVerify()
+        }
+        return btn
+    }()
+    
     private func addSubscriptions() {
 
         Store.lazySubscribe(self,
@@ -387,6 +398,28 @@ class ModalPresenter: Subscriber, Trackable {
         
         return root
     }
+    
+    // TODO: Move this to CashUI
+    private func presentVerify() {
+        let alert = UIAlertController(title: "Verify Identity", message: "You can increase ATM limits by verifying your identity. Please complete the identification with your SSN number and by uploading a valid document", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Not Now", style: .default, handler: { _ in
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Verify", style: .default, handler: { _ in
+            let browser = BRBrowserViewController()
+            
+            browser.isNavigationBarHidden = true
+            browser.showsBottomToolbar = false
+            browser.statusBarStyle = .lightContent
+            
+            let req = URLRequest(url: URL(string: "https://coinsquareatm.com")!)
+            
+            browser.load(req)
+            
+            self.topViewController?.present(browser, animated: true, completion: nil)
+        }))
+        self.topViewController?.present(alert, animated: true, completion: nil)
+    }
 
     public func presentLoginScan() {
         guard let top = topViewController else { return }
@@ -593,6 +626,11 @@ class ModalPresenter: Subscriber, Trackable {
         
         // MARK: Root Menu
         var rootItems: [MenuItem] = [
+            // User
+            MenuItem(title: S.MenuButton.user, accessoryView: verifyNowButton) {
+                // Expand view
+            },
+            
             // Scan QR Code
             MenuItem(title: S.MenuButton.scan, icon: MenuItem.Icon.scan) { [weak self] in
                 self?.presentLoginScan()

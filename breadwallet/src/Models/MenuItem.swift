@@ -19,21 +19,24 @@ struct MenuItem {
         static let rewards = UIImage(named: "Star")
         static let about = UIImage(named: "about")
         static let atmMap = UIImage(named: "placemark")
+        static let user = UIImage(named: "user")
     }
     
     var title: String
     var subTitle: String?
     let icon: UIImage?
     let accessoryText: (() -> String)?
+    let accessoryView: UIView?
     let callback: () -> Void
     let faqButton: UIButton? = nil
     var shouldShow: () -> Bool = { return true }
     
-    init(title: String, subTitle: String? = nil, icon: UIImage? = nil, accessoryText: (() -> String)? = nil, callback: @escaping () -> Void) {
+    init(title: String, subTitle: String? = nil, icon: UIImage? = nil, accessoryText: (() -> String)? = nil, accessoryView: UIView? = nil, callback: @escaping () -> Void) {
         self.title = title
         self.subTitle = subTitle
         self.icon = icon?.withRenderingMode(.alwaysTemplate)
         self.accessoryText = accessoryText
+        self.accessoryView = accessoryView
         self.callback = callback
     }
     
