@@ -627,7 +627,7 @@ class ModalPresenter: Subscriber, Trackable {
         // MARK: Root Menu
         var rootItems: [MenuItem] = [
             // User
-            MenuItem(title: S.MenuButton.user, accessoryView: verifyNowButton) {
+            MenuItem(title: S.MenuButton.user, icon: MenuItem.Icon.user, accessoryView: verifyNowButton) {
                 // Expand view
             },
             
