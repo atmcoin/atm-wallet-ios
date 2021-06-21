@@ -747,14 +747,14 @@
 		752FB03D1DF8BE4B009086FB /* iphonesim.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = iphonesim.modulemap; sourceTree = "<group>"; };
 		754AE0BB1DFE8A46007FD001 /* SecureAllocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecureAllocator.swift; path = src/SecureAllocator.swift; sourceTree = "<group>"; };
 		754AE0BD1DFE8E5A007FD001 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = src/Platform/module.modulemap; sourceTree = "<group>"; };
-		75A2A7901DA5934300A983D8 /* coinsquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coinsquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A2A7901DA5934300A983D8 /* fabriikatm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fabriikatm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A2A7931DA5934300A983D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75A2A79A1DA5934300A983D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75A2A79D1DA5934300A983D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75A2A79F1DA5934300A983D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75A2A7A41DA5934300A983D8 /* breadwalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = breadwalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A2A7A41DA5934300A983D8 /* fabriikatmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fabriikatmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A2A7AA1DA5934300A983D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75A2A7AF1DA5934300A983D8 /* breadwalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = breadwalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A2A7AF1DA5934300A983D8 /* fabriikatmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fabriikatmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A2A7B31DA5934300A983D8 /* breadwalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = breadwalletUITests.swift; sourceTree = "<group>"; };
 		75A2A7B51DA5934300A983D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75A2A7F21DA5935F00A983D8 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
@@ -1480,9 +1480,9 @@
 		75A2A7911DA5934300A983D8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				75A2A7901DA5934300A983D8 /* coinsquare.app */,
-				75A2A7A41DA5934300A983D8 /* breadwalletTests.xctest */,
-				75A2A7AF1DA5934300A983D8 /* breadwalletUITests.xctest */,
+				75A2A7901DA5934300A983D8 /* fabriikatm.app */,
+				75A2A7A41DA5934300A983D8 /* fabriikatmTests.xctest */,
+				75A2A7AF1DA5934300A983D8 /* fabriikatmUITests.xctest */,
 				22A9A9961DF63426000F0016 /* libbz2.framework */,
 				CEA7E67B1F09A9D2001F8C27 /* Screenshots.xctest */,
 			);
@@ -2310,9 +2310,9 @@
 			productReference = 22A9A9961DF63426000F0016 /* libbz2.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		75A2A78F1DA5934300A983D8 /* breadwallet */ = {
+		75A2A78F1DA5934300A983D8 /* fabriikatm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75A2A7E31DA5934400A983D8 /* Build configuration list for PBXNativeTarget "breadwallet" */;
+			buildConfigurationList = 75A2A7E31DA5934400A983D8 /* Build configuration list for PBXNativeTarget "fabriikatm" */;
 			buildPhases = (
 				3ADA3F8924C8D2FE00E1CBCF /* Copy Fonts */,
 				CEE0EF531EBF8C8A0018DB36 /* Icon Versioning */,
@@ -2331,19 +2331,19 @@
 			dependencies = (
 				22A9A99C1DF63426000F0016 /* PBXTargetDependency */,
 			);
-			name = breadwallet;
+			name = fabriikatm;
 			packageProductDependencies = (
 				3A0C6087242A5CC900F0FBC2 /* WalletKit */,
 				B379B8C9250BFC520041B859 /* CashUI */,
 				3A858B29250A781700812B36 /* CoinGecko */,
 			);
 			productName = breadwallet;
-			productReference = 75A2A7901DA5934300A983D8 /* coinsquare.app */;
+			productReference = 75A2A7901DA5934300A983D8 /* fabriikatm.app */;
 			productType = "com.apple.product-type.application";
 		};
-		75A2A7A31DA5934300A983D8 /* breadwalletTests */ = {
+		75A2A7A31DA5934300A983D8 /* fabriikatmTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75A2A7E61DA5934400A983D8 /* Build configuration list for PBXNativeTarget "breadwalletTests" */;
+			buildConfigurationList = 75A2A7E61DA5934400A983D8 /* Build configuration list for PBXNativeTarget "fabriikatmTests" */;
 			buildPhases = (
 				75A2A7A01DA5934300A983D8 /* Sources */,
 				75A2A7A11DA5934300A983D8 /* Frameworks */,
@@ -2354,14 +2354,14 @@
 			dependencies = (
 				75A2A7A61DA5934300A983D8 /* PBXTargetDependency */,
 			);
-			name = breadwalletTests;
+			name = fabriikatmTests;
 			productName = breadwalletTests;
-			productReference = 75A2A7A41DA5934300A983D8 /* breadwalletTests.xctest */;
+			productReference = 75A2A7A41DA5934300A983D8 /* fabriikatmTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		75A2A7AE1DA5934300A983D8 /* breadwalletUITests */ = {
+		75A2A7AE1DA5934300A983D8 /* fabriikatmUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75A2A7E91DA5934400A983D8 /* Build configuration list for PBXNativeTarget "breadwalletUITests" */;
+			buildConfigurationList = 75A2A7E91DA5934400A983D8 /* Build configuration list for PBXNativeTarget "fabriikatmUITests" */;
 			buildPhases = (
 				75A2A7AB1DA5934300A983D8 /* Sources */,
 				75A2A7AC1DA5934300A983D8 /* Frameworks */,
@@ -2372,9 +2372,9 @@
 			dependencies = (
 				75A2A7B11DA5934300A983D8 /* PBXTargetDependency */,
 			);
-			name = breadwalletUITests;
+			name = fabriikatmUITests;
 			productName = breadwalletUITests;
-			productReference = 75A2A7AF1DA5934300A983D8 /* breadwalletUITests.xctest */;
+			productReference = 75A2A7AF1DA5934300A983D8 /* fabriikatmUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		CEA7E67A1F09A9D2001F8C27 /* Screenshots */ = {
@@ -2459,7 +2459,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 75A2A78B1DA5934300A983D8 /* Build configuration list for PBXProject "breadwallet" */;
+			buildConfigurationList = 75A2A78B1DA5934300A983D8 /* Build configuration list for PBXProject "fabriikatm" */;
 			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -2489,9 +2489,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				75A2A78F1DA5934300A983D8 /* breadwallet */,
-				75A2A7A31DA5934300A983D8 /* breadwalletTests */,
-				75A2A7AE1DA5934300A983D8 /* breadwalletUITests */,
+				75A2A78F1DA5934300A983D8 /* fabriikatm */,
+				75A2A7A31DA5934300A983D8 /* fabriikatmTests */,
+				75A2A7AE1DA5934300A983D8 /* fabriikatmUITests */,
 				759DA0D71DAC8668008CC49B /* submodules */,
 				22A9A9951DF63426000F0016 /* libbz2 */,
 				CEA7E67A1F09A9D2001F8C27 /* Screenshots */,
@@ -3166,17 +3166,17 @@
 		};
 		75A2A7A61DA5934300A983D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 75A2A78F1DA5934300A983D8 /* breadwallet */;
+			target = 75A2A78F1DA5934300A983D8 /* fabriikatm */;
 			targetProxy = 75A2A7A51DA5934300A983D8 /* PBXContainerItemProxy */;
 		};
 		75A2A7B11DA5934300A983D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 75A2A78F1DA5934300A983D8 /* breadwallet */;
+			target = 75A2A78F1DA5934300A983D8 /* fabriikatm */;
 			targetProxy = 75A2A7B01DA5934300A983D8 /* PBXContainerItemProxy */;
 		};
 		CEA7E6811F09A9D2001F8C27 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 75A2A78F1DA5934300A983D8 /* breadwallet */;
+			target = 75A2A78F1DA5934300A983D8 /* fabriikatm */;
 			targetProxy = CEA7E6801F09A9D2001F8C27 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -3447,7 +3447,7 @@
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
 				MARKETING_VERSION = 4.3.258;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fabriik.faa;
-				PRODUCT_NAME = coinsquare;
+				PRODUCT_NAME = fabriikatm;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -3485,7 +3485,7 @@
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
 				MARKETING_VERSION = 4.3.258;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fabriik.faa;
-				PRODUCT_NAME = coinsquare;
+				PRODUCT_NAME = fabriikatm;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -3512,7 +3512,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fabriikatm.app/fabriikatm";
 			};
 			name = Debug;
 		};
@@ -3537,7 +3537,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fabriikatm.app/fabriikatm";
 			};
 			name = Release;
 		};
@@ -3682,7 +3682,7 @@
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
 				MARKETING_VERSION = 4.3.258;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fabriik.faa;
-				PRODUCT_NAME = coinsquare;
+				PRODUCT_NAME = fabriikatm;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -3710,7 +3710,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brd.internalQA.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fabriikatm.app/fabriikatm";
 			};
 			name = "Debug-Internal";
 		};
@@ -3890,7 +3890,7 @@
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
 				MARKETING_VERSION = 4.3.258;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fabriik.faa;
-				PRODUCT_NAME = coinsquare;
+				PRODUCT_NAME = fabriikatm;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -3917,7 +3917,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brd.internalQA.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fabriikatm.app/fabriikatm";
 			};
 			name = "Release-Internal";
 		};
@@ -4098,7 +4098,7 @@
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
 				MARKETING_VERSION = 4.3.258;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fabriik.faa;
-				PRODUCT_NAME = coinsquare;
+				PRODUCT_NAME = fabriikatm;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -4125,7 +4125,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brd.internalQA.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fabriikatm.app/fabriikatm";
 			};
 			name = "Release-Testnet";
 		};
@@ -4378,7 +4378,7 @@
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
 				MARKETING_VERSION = 4.3.258;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fabriik.faa;
-				PRODUCT_NAME = coinsquare;
+				PRODUCT_NAME = fabriikatm;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -4406,7 +4406,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fabriikatm.app/fabriikatm";
 			};
 			name = Screenshots;
 		};
@@ -4587,7 +4587,7 @@
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
 				MARKETING_VERSION = 4.3.258;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fabriik.faa;
-				PRODUCT_NAME = coinsquare;
+				PRODUCT_NAME = fabriikatm;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -4615,7 +4615,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fabriikatm.app/fabriikatm";
 			};
 			name = "Debug-Testnet";
 		};
@@ -4795,7 +4795,7 @@
 				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
 				MARKETING_VERSION = 4.3.258;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fabriik.faa;
-				PRODUCT_NAME = coinsquare;
+				PRODUCT_NAME = fabriikatm;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -4822,7 +4822,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.voisine.breadwalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fabriikatm.app/fabriikatm";
 			};
 			name = "Release-Testflight";
 		};
@@ -4917,7 +4917,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75A2A78B1DA5934300A983D8 /* Build configuration list for PBXProject "breadwallet" */ = {
+		75A2A78B1DA5934300A983D8 /* Build configuration list for PBXProject "fabriikatm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75A2A7D91DA5934400A983D8 /* Debug */,
@@ -4932,7 +4932,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75A2A7E31DA5934400A983D8 /* Build configuration list for PBXNativeTarget "breadwallet" */ = {
+		75A2A7E31DA5934400A983D8 /* Build configuration list for PBXNativeTarget "fabriikatm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75A2A7E41DA5934400A983D8 /* Debug */,
@@ -4947,7 +4947,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75A2A7E61DA5934400A983D8 /* Build configuration list for PBXNativeTarget "breadwalletTests" */ = {
+		75A2A7E61DA5934400A983D8 /* Build configuration list for PBXNativeTarget "fabriikatmTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75A2A7E71DA5934400A983D8 /* Debug */,
@@ -4962,7 +4962,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75A2A7E91DA5934400A983D8 /* Build configuration list for PBXNativeTarget "breadwalletUITests" */ = {
+		75A2A7E91DA5934400A983D8 /* Build configuration list for PBXNativeTarget "fabriikatmUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75A2A7EA1DA5934400A983D8 /* Debug */,

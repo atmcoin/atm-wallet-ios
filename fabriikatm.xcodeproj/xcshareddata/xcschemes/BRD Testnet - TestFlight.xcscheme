@@ -15,15 +15,43 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
-               BuildableName = "coinsquare.app"
-               BlueprintName = "breadwallet"
+               BuildableName = "fabriikatm.app"
+               BlueprintName = "fabriikatm"
+               ReferencedContainer = "container:breadwallet.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "75A2A7A31DA5934300A983D8"
+               BuildableName = "fabriikatmTests.xctest"
+               BlueprintName = "fabriikatmTests"
+               ReferencedContainer = "container:breadwallet.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "75A2A7AE1DA5934300A983D8"
+               BuildableName = "fabriikatmUITests.xctest"
+               BlueprintName = "fabriikatmUITests"
                ReferencedContainer = "container:breadwallet.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Debug-Internal"
+      buildConfiguration = "Debug-Testnet"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
@@ -31,8 +59,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
-            BuildableName = "coinsquare.app"
-            BlueprintName = "breadwallet"
+            BuildableName = "fabriikatm.app"
+            BlueprintName = "fabriikatm"
             ReferencedContainer = "container:breadwallet.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -42,8 +70,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "75A2A7A31DA5934300A983D8"
-               BuildableName = "breadwalletTests.xctest"
-               BlueprintName = "breadwalletTests"
+               BuildableName = "fabriikatmTests.xctest"
+               BlueprintName = "fabriikatmTests"
                ReferencedContainer = "container:breadwallet.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -52,8 +80,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "75A2A7AE1DA5934300A983D8"
-               BuildableName = "breadwalletUITests.xctest"
-               BlueprintName = "breadwalletUITests"
+               BuildableName = "fabriikatmUITests.xctest"
+               BlueprintName = "fabriikatmUITests"
                ReferencedContainer = "container:breadwallet.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -70,7 +98,7 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug-Internal"
+      buildConfiguration = "Debug-Testnet"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       language = "en"
@@ -85,11 +113,17 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
-            BuildableName = "coinsquare.app"
-            BlueprintName = "breadwallet"
+            BuildableName = "fabriikatm.app"
+            BlueprintName = "fabriikatm"
             ReferencedContainer = "container:breadwallet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = ""
+            isEnabled = "NO">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "OS_ACTIVITY_MODE"
@@ -99,7 +133,7 @@
       </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Release-Internal"
+      buildConfiguration = "Release-Testnet"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -109,17 +143,17 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
-            BuildableName = "coinsquare.app"
-            BlueprintName = "breadwallet"
+            BuildableName = "fabriikatm.app"
+            BlueprintName = "fabriikatm"
             ReferencedContainer = "container:breadwallet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug-Internal">
+      buildConfiguration = "Debug-Testnet">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release-Internal"
+      buildConfiguration = "Release-Testnet"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

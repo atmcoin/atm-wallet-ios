@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
-               BuildableName = "coinsquare.app"
-               BlueprintName = "breadwallet"
+               BuildableName = "fabriikatm.app"
+               BlueprintName = "fabriikatm"
                ReferencedContainer = "container:breadwallet.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -31,8 +31,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
-            BuildableName = "coinsquare.app"
-            BlueprintName = "breadwallet"
+            BuildableName = "fabriikatm.app"
+            BlueprintName = "fabriikatm"
             ReferencedContainer = "container:breadwallet.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -52,8 +52,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "75A2A7A31DA5934300A983D8"
-               BuildableName = "breadwalletTests.xctest"
-               BlueprintName = "breadwalletTests"
+               BuildableName = "fabriikatmTests.xctest"
+               BlueprintName = "fabriikatmTests"
                ReferencedContainer = "container:breadwallet.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -62,8 +62,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "75A2A7AE1DA5934300A983D8"
-               BuildableName = "breadwalletUITests.xctest"
-               BlueprintName = "breadwalletUITests"
+               BuildableName = "fabriikatmUITests.xctest"
+               BlueprintName = "fabriikatmUITests"
                ReferencedContainer = "container:breadwallet.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -84,8 +84,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
-            BuildableName = "coinsquare.app"
-            BlueprintName = "breadwallet"
+            BuildableName = "fabriikatm.app"
+            BlueprintName = "fabriikatm"
             ReferencedContainer = "container:breadwallet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -101,8 +101,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "75A2A78F1DA5934300A983D8"
-            BuildableName = "coinsquare.app"
-            BlueprintName = "breadwallet"
+            BuildableName = "fabriikatm.app"
+            BlueprintName = "fabriikatm"
             ReferencedContainer = "container:breadwallet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
