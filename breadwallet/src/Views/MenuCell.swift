@@ -34,7 +34,7 @@ class MenuCell: SeparatorCell {
             label.sizeToFit()
             accessoryView = label
         } else {
-            accessoryView = nil
+            accessoryView = item.accessoryView
             accessoryType = .none
         }
         
